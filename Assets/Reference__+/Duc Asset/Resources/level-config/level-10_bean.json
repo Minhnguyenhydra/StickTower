@@ -1,0 +1,86 @@
+{
+	"goal": "",
+	"levelType": "bean",
+	"player": {
+		"point": 15
+	},
+	"castles": [
+		{
+			"floors": [
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "enemy-2",
+						"point": 10
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "object-flax",
+						"point": 10
+					},
+					"slot3": {
+						"type": "weapon-9",
+						"point": 10
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "enemy-1",
+						"point": 20
+					}
+				}
+			]
+		},
+		{
+			"currentPoint": 45,
+			"floors": [
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "object-pillar",
+						"point": 10
+					},
+					"slot3": {
+						"type": "enemy-2",
+						"point": 30
+					}
+				},
+				{
+					"slot1": {
+						"type": "object-pillar",
+						"point": 20
+					},
+					"slot2": {
+						"type": "enemy-2",
+						"point": 10
+					},
+					"slot3": {
+						"type": "enemy-2",
+						"point": 60
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "enemy-2",
+						"point": 20
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "enemy-2",
+						"point": 99
+					}
+				}
+			]
+		}
+	]
+}

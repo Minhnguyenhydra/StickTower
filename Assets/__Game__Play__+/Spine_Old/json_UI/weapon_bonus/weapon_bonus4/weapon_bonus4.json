@@ -1,0 +1,106 @@
+{
+"skeleton": {
+	"hash": "+bmkY1RbIq288AtqjR8lt9F+Vro",
+	"spine": "3.8.85",
+	"x": -149.39,
+	"y": -179.76,
+	"width": 305.36,
+	"height": 310.84,
+	"images": "../images/",
+	"audio": "E:/GaiA/GameProject/Stick_Tower/UI"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "weapon5", "parent": "root", "x": -29.97, "y": -123.6, "scaleX": 0.62, "scaleY": 0.62 },
+	{ "name": "weapon9", "parent": "weapon5", "x": 21.39, "y": 179.15 },
+	{ "name": "weapon13", "parent": "weapon5", "x": 187.6, "y": 58.89, "scaleX": 1.2735, "scaleY": 1.2735 },
+	{ "name": "weapon14", "parent": "weapon13", "x": -105.18, "y": 74.42, "scaleX": 0.7958, "scaleY": 0.7958 },
+	{ "name": "weapon15", "parent": "weapon13", "x": -127.65, "y": 27.01, "scaleX": 1.9138, "scaleY": 1.9138 }
+],
+"slots": [
+	{ "name": "weapon5", "bone": "weapon9", "attachment": "weapon5" },
+	{ "name": "FX/special_stars2", "bone": "weapon15", "color": "ffffff00", "attachment": "FX/special_stars", "blend": "additive" },
+	{ "name": "FX/special_stream2", "bone": "weapon14", "color": "ffffff00", "attachment": "FX/special_stream1" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"FX/special_stars2": {
+				"FX/special_stars": { "x": 0.5, "y": 0.5, "width": 119, "height": 87 }
+			},
+			"FX/special_stream2": {
+				"FX/special_stream1": { "width": 486, "height": 482 }
+			},
+			"weapon5": {
+				"weapon5": { "x": 22.05, "y": 35.65, "width": 229, "height": 392 }
+			}
+		}
+	}
+],
+"animations": {
+	"action1": {
+		"slots": {
+			"weapon5": {
+				"attachment": [
+					{ "time": 0.3333, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"weapon9": {
+				"scale": [
+					{ "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.1, "x": 1.245, "y": 1.245, "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.3333, "x": 0.201, "y": 0.201 }
+				]
+			}
+		}
+	},
+	"idle": {
+		"slots": {
+			"FX/special_stars2": {
+				"color": [
+					{ "color": "ffffff00" },
+					{ "time": 0.6667, "color": "ffffffff" },
+					{ "time": 1.3333, "color": "ffffff00" }
+				]
+			},
+			"FX/special_stream2": {
+				"color": [
+					{ "color": "ffffff00" },
+					{ "time": 0.3333, "color": "ffffffff" },
+					{ "time": 0.6333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.6667, "color": "ffffff00" },
+					{ "time": 1, "color": "ffffffff" },
+					{ "time": 1.3333, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"weapon9": {
+				"translate": [
+					{ "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.6667, "y": -24.24, "curve": 0.25, "c3": 0.75 },
+					{ "time": 1.3333 }
+				]
+			},
+			"weapon14": {
+				"translate": [
+					{ "y": -28.39 },
+					{ "time": 0.6333, "y": 91.26 },
+					{ "time": 0.6667, "y": -28.39 },
+					{ "time": 1.3333, "y": 91.26 }
+				]
+			},
+			"weapon15": {
+				"translate": [
+					{},
+					{ "time": 1.3333, "y": 150.07 }
+				]
+			}
+		}
+	},
+	"idle2": {}
+}
+}

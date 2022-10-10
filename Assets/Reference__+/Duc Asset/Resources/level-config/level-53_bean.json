@@ -1,0 +1,277 @@
+{
+	"goal": "Save ally",
+	"player": {
+		"point": 40
+	},
+	"levelType": "bean",
+	"require": {
+		"gold": 300
+	},
+	"gold": 600,
+	"diamond": 1,
+	"castles": [
+		{
+			"floors": [
+				{
+					"slot1": {
+						"type": "object-boom",
+						"point": 2
+					},
+					"slot2": {},
+					"slot3": {
+						"type": "enemy-2",
+						"point": 24
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "enemy-2",
+						"point": 6
+					}
+				}
+			]
+		},
+		{
+			"floors": [
+				{
+					"slot1": {
+						"type": "object-boom",
+						"point": 2
+					},
+					"slot2": {},
+					"slot3": {
+						"type": "enemy-2",
+						"point": 15
+					}
+				},
+				{
+					"slot1": {
+						"type": "object-boom",
+						"point": 2
+					},
+					"slot2": {
+						"type": "enemy-1",
+						"point": 5
+					},
+					"slot3": {
+						"type": "enemy-2",
+						"point": 10
+					}
+				},
+				{
+					"slot1": {
+						"type": "object-boom",
+						"point": 2
+					},
+					"slot2": {
+						"type": "object-pillar",
+						"point": 5
+					},
+					"slot3": {
+						"type": "weapon-55",
+						"point": 20
+					}
+				}
+			]
+		},
+		{
+			"floors": [
+				{
+					"locked": "object-key",
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "object-shield",
+						"point": 2
+					}
+				},
+				{
+					"slot1": {
+						"type": "enemy-2",
+						"point": 50
+					},
+					"slot2": {
+						"type": "enemy-1",
+						"point": 100
+					},
+					"slot3": {
+						"type": "enemy-2",
+						"point": 10
+					}
+				},
+				{
+					"slot1": {
+						"type": "enemy-2",
+						"point": 30
+					},
+					"slot2": {
+						"type": "object-pillar",
+						"point": 10
+					},
+					"slot3": {
+						"type": "enemy-4",
+						"point": 200
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "object-pillar",
+						"point": 300
+					},
+					"slot3": {
+						"type": "object-key"
+					}
+				}
+			]
+		},
+		{
+			"floors": [
+				{
+					"slot1": {
+						"type": "object-flax",
+						"point": 100
+					},
+					"slot2": {},
+					"slot3": {
+						"type": "boss-1",
+						"point": 500
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "enemy-2",
+						"point": 100
+					},
+					"slot3": {
+						"type": "object-key"
+					}
+				},
+				{
+					"locked": "object-key",
+					"slot1": {
+						"type": "object-flax",
+						"point": 80
+					},
+					"slot2": {
+						"type": "object-flax",
+						"point": 250
+					},
+					"slot3": {
+						"type": "object-food",
+						"point": 3
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "enemy-2",
+						"point": 225
+					}
+				}
+			]
+		},
+		{
+			"floors": [
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "enemy-1",
+						"point": 700
+					}
+				},
+				{
+					"slot1": {
+						"type": "enemy-2",
+						"point": 1530
+					},
+					"slot2": {
+						"type": "object-pillar",
+						"point": 1530
+					},
+					"slot3": {
+						"type": "enemy-3",
+						"point": 1120
+					}
+				},
+				{
+					"slot1": {
+						"type": "enemy-2",
+						"point": 1170
+					},
+					"slot2": {
+						"type": "object-pillar",
+						"point": 1530
+					},
+					"slot3": {
+						"type": "weapon-5",
+						"point": 3490
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "enemy-4",
+						"point": 5000
+					}
+				}
+			]
+		},
+		{
+			"floors": [
+				{
+					"slot1": {
+						"type": "object-flax",
+						"point": 10000
+					},
+					"slot2": {},
+					"slot3": {
+						"type": "object-key-1"
+					}
+				},
+				{
+					"locked": "object-key-2",
+					"slot1": {
+						"type": "enemy-3",
+						"point": 2520
+					},
+					"slot2": {},
+					"slot3": {
+						"type": "weapon-7",
+						"point": 15000
+					}
+				},
+				{
+					"locked": "object-key-1",
+					"slot1": {
+						"type": "enemy-2",
+						"point": 1110
+					},
+					"slot2": {
+						"type": "enemy-3",
+						"point": 1820
+					},
+					"slot3": {
+						"type": "object-key-2"
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "enemy-4",
+						"point": 20000
+					},
+					"slot3": {
+						"type": "ally"
+					}
+				}
+			]
+		}
+	]
+}

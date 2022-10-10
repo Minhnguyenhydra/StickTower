@@ -1,0 +1,53 @@
+{
+	"goal": "",
+	"player": {
+		"point": 4200
+	},
+	"castles": [
+		{
+			"floors": [
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "enemy-1",
+						"point": 5000
+					},
+					"slot3": {
+						"type": "object-shield",
+						"point": 2
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "weapon-16",
+						"point": 10000
+					},
+					"slot3": {
+						"type": "boss-2",
+						"point": 13500
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "object-flax",
+						"point": 10000
+					},
+					"slot3": {
+						"type": "boss-3",
+						"point": 12000
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "boss-4",
+						"point": 52000
+					}
+				}
+			]
+		}
+	]
+}

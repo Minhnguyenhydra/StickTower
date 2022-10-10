@@ -1,0 +1,475 @@
+
+skeleton1.png
+size: 1972,804
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: false
+  xy: 1485, 243
+  size: 129, 209
+  orig: 129, 209
+  offset: 0, 0
+  index: -1
+Hand_L_1
+  rotate: false
+  xy: 1631, 553
+  size: 77, 118
+  orig: 77, 118
+  offset: 0, 0
+  index: -1
+Hand_L_2
+  rotate: false
+  xy: 1603, 673
+  size: 119, 129
+  orig: 119, 129
+  offset: 0, 0
+  index: -1
+Hand_R_1
+  rotate: false
+  xy: 680, 4
+  size: 100, 103
+  orig: 100, 103
+  offset: 0, 0
+  index: -1
+Hand_R_2
+  rotate: false
+  xy: 1025, 28
+  size: 77, 154
+  orig: 77, 154
+  offset: 0, 0
+  index: -1
+Head
+  rotate: false
+  xy: 1257, 553
+  size: 242, 249
+  orig: 242, 249
+  offset: 0, 0
+  index: -1
+Leg_L_1
+  rotate: false
+  xy: 1787, 556
+  size: 99, 116
+  orig: 99, 116
+  offset: 0, 0
+  index: -1
+Leg_L_2
+  rotate: true
+  xy: 841, 117
+  size: 58, 126
+  orig: 58, 126
+  offset: 0, 0
+  index: -1
+Leg_L_3
+  rotate: true
+  xy: 840, 10
+  size: 102, 55
+  orig: 102, 55
+  offset: 0, 0
+  index: -1
+Leg_R_1
+  rotate: false
+  xy: 1879, 676
+  size: 75, 126
+  orig: 75, 126
+  offset: 0, 0
+  index: -1
+Leg_R_2
+  rotate: true
+  xy: 1051, 463
+  size: 78, 132
+  orig: 78, 132
+  offset: 0, 0
+  index: -1
+Leg_R_3
+  rotate: true
+  xy: 782, 9
+  size: 103, 56
+  orig: 103, 56
+  offset: 0, 0
+  index: -1
+skeleton2/Body
+  rotate: false
+  xy: 969, 11
+  size: 54, 164
+  orig: 54, 164
+  offset: 0, 0
+  index: -1
+skeleton2/Hand_L_1
+  rotate: false
+  xy: 1888, 558
+  size: 75, 116
+  orig: 75, 116
+  offset: 0, 0
+  index: -1
+skeleton2/Hand_L_2
+  rotate: true
+  xy: 1501, 553
+  size: 117, 128
+  orig: 117, 128
+  offset: 0, 0
+  index: -1
+skeleton2/Hand_R_1
+  rotate: false
+  xy: 580, 2
+  size: 98, 105
+  orig: 98, 105
+  offset: 0, 0
+  index: -1
+skeleton2/Hand_R_2
+  rotate: false
+  xy: 1104, 30
+  size: 75, 152
+  orig: 75, 152
+  offset: 0, 0
+  index: -1
+skeleton2/Head
+  rotate: false
+  xy: 755, 177
+  size: 258, 274
+  orig: 258, 274
+  offset: 0, 0
+  index: -1
+skeleton2/Leg_L_1
+  rotate: true
+  xy: 1342, 454
+  size: 97, 114
+  orig: 97, 114
+  offset: 0, 0
+  index: -1
+skeleton2/Leg_L_2
+  rotate: true
+  xy: 1853, 391
+  size: 45, 114
+  orig: 45, 114
+  offset: 0, 0
+  index: -1
+skeleton2/Leg_L_3
+  rotate: false
+  xy: 311, 2
+  size: 100, 53
+  orig: 100, 53
+  offset: 0, 0
+  index: -1
+skeleton2/Leg_R_1
+  rotate: false
+  xy: 1818, 129
+  size: 73, 124
+  orig: 73, 124
+  offset: 0, 0
+  index: -1
+skeleton2/Leg_R_2
+  rotate: false
+  xy: 1742, 129
+  size: 74, 124
+  orig: 74, 124
+  offset: 0, 0
+  index: -1
+skeleton2/Leg_R_3
+  rotate: false
+  xy: 1530, 16
+  size: 100, 53
+  orig: 100, 53
+  offset: 0, 0
+  index: -1
+skeleton2/weapon
+  rotate: false
+  xy: 346, 99
+  size: 193, 348
+  orig: 193, 348
+  offset: 0, 0
+  index: -1
+skeleton3/Body
+  rotate: false
+  xy: 1180, 544
+  size: 75, 258
+  orig: 75, 258
+  offset: 0, 0
+  index: -1
+skeleton3/Hand_L_1
+  rotate: false
+  xy: 1710, 553
+  size: 75, 118
+  orig: 75, 118
+  offset: 0, 0
+  index: -1
+skeleton3/Hand_L_2
+  rotate: false
+  xy: 1616, 343
+  size: 117, 128
+  orig: 117, 128
+  offset: 0, 0
+  index: -1
+skeleton3/Hand_R_1
+  rotate: true
+  xy: 1712, 13
+  size: 100, 114
+  orig: 100, 114
+  offset: 0, 0
+  index: -1
+skeleton3/Hand_R_2
+  rotate: false
+  xy: 1181, 30
+  size: 75, 152
+  orig: 75, 152
+  offset: 0, 0
+  index: -1
+skeleton3/Head
+  rotate: false
+  xy: 344, 449
+  size: 336, 353
+  orig: 336, 353
+  offset: 0, 0
+  index: -1
+skeleton3/Leg_L_1
+  rotate: true
+  xy: 1616, 243
+  size: 98, 114
+  orig: 98, 114
+  offset: 0, 0
+  index: -1
+skeleton3/Leg_L_2
+  rotate: true
+  xy: 1406, 12
+  size: 57, 122
+  orig: 57, 122
+  offset: 0, 0
+  index: -1
+skeleton3/Leg_L_3
+  rotate: true
+  xy: 897, 15
+  size: 100, 53
+  orig: 100, 53
+  offset: 0, 0
+  index: -1
+skeleton3/Leg_R_1
+  rotate: false
+  xy: 1828, 3
+  size: 73, 124
+  orig: 73, 124
+  offset: 0, 0
+  index: -1
+skeleton3/Leg_R_2
+  rotate: true
+  xy: 1574, 473
+  size: 78, 125
+  orig: 78, 125
+  offset: 0, 0
+  index: -1
+skeleton3/Leg_R_3
+  rotate: false
+  xy: 105, 2
+  size: 101, 53
+  orig: 101, 53
+  offset: 0, 0
+  index: -1
+skeleton3/weapon
+  rotate: false
+  xy: 1200, 208
+  size: 211, 244
+  orig: 211, 244
+  offset: 0, 0
+  index: -1
+skeleton4/Back
+  rotate: true
+  xy: 1258, 8
+  size: 198, 146
+  orig: 198, 146
+  offset: 0, 0
+  index: -1
+skeleton4/Body
+  rotate: true
+  xy: 807, 454
+  size: 63, 242
+  orig: 63, 242
+  offset: 0, 0
+  index: -1
+skeleton4/Hand_L_1
+  rotate: false
+  xy: 1888, 440
+  size: 75, 116
+  orig: 75, 116
+  offset: 0, 0
+  index: -1
+skeleton4/Hand_L_2
+  rotate: false
+  xy: 1536, 111
+  size: 127, 130
+  orig: 127, 130
+  offset: 0, 0
+  index: -1
+skeleton4/Hand_R_1
+  rotate: false
+  xy: 755, 114
+  size: 84, 61
+  orig: 84, 61
+  offset: 0, 0
+  index: -1
+skeleton4/Hand_R_2
+  rotate: true
+  xy: 1185, 454
+  size: 88, 155
+  orig: 88, 155
+  offset: 0, 0
+  index: -1
+skeleton4/Head
+  rotate: true
+  xy: 2, 57
+  size: 361, 342
+  orig: 361, 342
+  offset: 0, 0
+  index: -1
+skeleton4/Leg_L_1
+  rotate: true
+  xy: 1735, 255
+  size: 99, 116
+  orig: 99, 116
+  offset: 0, 0
+  index: -1
+skeleton4/Leg_L_2
+  rotate: true
+  xy: 682, 453
+  size: 64, 123
+  orig: 64, 123
+  offset: 0, 0
+  index: -1
+skeleton4/Leg_L_3
+  rotate: false
+  xy: 2, 2
+  size: 101, 53
+  orig: 101, 53
+  offset: 0, 0
+  index: -1
+skeleton4/Leg_R_1
+  rotate: false
+  xy: 1724, 674
+  size: 74, 128
+  orig: 74, 128
+  offset: 0, 0
+  index: -1
+skeleton4/Leg_R_2
+  rotate: false
+  xy: 1800, 675
+  size: 77, 127
+  orig: 77, 127
+  offset: 0, 0
+  index: -1
+skeleton4/Leg_R_3
+  rotate: false
+  xy: 208, 2
+  size: 101, 53
+  orig: 101, 53
+  offset: 0, 0
+  index: -1
+skeleton4/weapon
+  rotate: false
+  xy: 682, 519
+  size: 235, 283
+  orig: 235, 283
+  offset: 0, 0
+  index: -1
+skeleton5/Back
+  rotate: false
+  xy: 919, 543
+  size: 259, 259
+  orig: 259, 259
+  offset: 0, 0
+  index: -1
+skeleton5/Body
+  rotate: false
+  xy: 1413, 216
+  size: 70, 236
+  orig: 70, 236
+  offset: 0, 0
+  index: -1
+skeleton5/Hand_L_1
+  rotate: false
+  xy: 1803, 438
+  size: 75, 116
+  orig: 75, 116
+  offset: 0, 0
+  index: -1
+skeleton5/Hand_L_2
+  rotate: true
+  xy: 1406, 71
+  size: 135, 128
+  orig: 135, 128
+  offset: 0, 0
+  index: -1
+skeleton5/Hand_R_1
+  rotate: false
+  xy: 1501, 672
+  size: 100, 130
+  orig: 100, 130
+  offset: 0, 0
+  index: -1
+skeleton5/Hand_R_2
+  rotate: true
+  xy: 413, 8
+  size: 89, 165
+  orig: 89, 165
+  offset: 0, 0
+  index: -1
+skeleton5/Head
+  rotate: false
+  xy: 2, 420
+  size: 340, 382
+  orig: 340, 382
+  offset: 0, 0
+  index: -1
+skeleton5/Leg_L_1
+  rotate: true
+  xy: 1458, 454
+  size: 97, 114
+  orig: 97, 114
+  offset: 0, 0
+  index: -1
+skeleton5/Leg_L_2
+  rotate: false
+  xy: 1742, 356
+  size: 45, 115
+  orig: 45, 115
+  offset: 0, 0
+  index: -1
+skeleton5/Leg_L_3
+  rotate: false
+  xy: 1701, 473
+  size: 100, 78
+  orig: 100, 78
+  offset: 0, 0
+  index: -1
+skeleton5/Leg_R_1
+  rotate: false
+  xy: 1893, 265
+  size: 73, 124
+  orig: 73, 124
+  offset: 0, 0
+  index: -1
+skeleton5/Leg_R_2
+  rotate: false
+  xy: 1665, 115
+  size: 75, 126
+  orig: 75, 126
+  offset: 0, 0
+  index: -1
+skeleton5/Leg_R_3
+  rotate: true
+  xy: 1632, 8
+  size: 101, 78
+  orig: 101, 78
+  offset: 0, 0
+  index: -1
+skeleton5/weapon
+  rotate: false
+  xy: 541, 109
+  size: 212, 338
+  orig: 212, 338
+  offset: 0, 0
+  index: -1
+weapon
+  rotate: false
+  xy: 1015, 184
+  size: 183, 268
+  orig: 183, 268
+  offset: 0, 0
+  index: -1

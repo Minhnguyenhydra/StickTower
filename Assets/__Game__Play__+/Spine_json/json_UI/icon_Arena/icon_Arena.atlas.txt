@@ -1,0 +1,13 @@
+
+icon_Arena.png
+size: 132,164
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Icon_Arena
+  rotate: false
+  xy: 2, 2
+  size: 126, 157
+  orig: 126, 157
+  offset: 0, 0
+  index: -1

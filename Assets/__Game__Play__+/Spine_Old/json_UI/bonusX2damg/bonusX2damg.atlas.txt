@@ -1,0 +1,34 @@
+
+bonusX2damg.png
+size: 568,1056
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+FX/special_stars
+  rotate: false
+  xy: 2, 964
+  size: 119, 87
+  orig: 119, 87
+  offset: 0, 0
+  index: -1
+FX/special_stream1
+  rotate: false
+  xy: 2, 2
+  size: 486, 482
+  orig: 486, 482
+  offset: 0, 0
+  index: -1
+Layer 29 copy
+  rotate: false
+  xy: 123, 838
+  size: 261, 213
+  orig: 261, 213
+  offset: 0, 0
+  index: -1
+tower
+  rotate: false
+  xy: 2, 486
+  size: 564, 350
+  orig: 564, 350
+  offset: 0, 0
+  index: -1

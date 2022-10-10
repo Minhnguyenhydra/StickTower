@@ -1,0 +1,55 @@
+
+lock.png
+size: 348,290
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+chain_1
+  rotate: false
+  xy: 2, 113
+  size: 238, 175
+  orig: 238, 175
+  offset: 0, 0
+  index: -1
+chain_2
+  rotate: false
+  xy: 2, 2
+  size: 214, 109
+  orig: 214, 109
+  offset: 0, 0
+  index: -1
+lock
+  rotate: true
+  xy: 242, 154
+  size: 134, 83
+  orig: 134, 84
+  offset: 0, 1
+  index: -1
+lock_1
+  rotate: true
+  xy: 242, 118
+  size: 34, 61
+  orig: 34, 61
+  offset: 0, 0
+  index: -1
+lock_2
+  rotate: false
+  xy: 312, 91
+  size: 34, 61
+  orig: 34, 61
+  offset: 0, 0
+  index: -1
+lock_head
+  rotate: false
+  xy: 327, 244
+  size: 16, 44
+  orig: 16, 44
+  offset: 0, 0
+  index: -1
+lock_main
+  rotate: true
+  xy: 218, 8
+  size: 103, 92
+  orig: 103, 92
+  offset: 0, 0
+  index: -1

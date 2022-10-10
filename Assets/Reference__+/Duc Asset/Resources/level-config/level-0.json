@@ -1,0 +1,28 @@
+{
+	"goal": "Kill enemies",
+	"player": {
+		"point": 10
+	},
+	"castles": [
+		{
+			"floors": [
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "enemy-1",
+						"point": 5
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "enemy-2",
+						"point": 12
+					}
+				}
+			]
+		}
+	]
+}

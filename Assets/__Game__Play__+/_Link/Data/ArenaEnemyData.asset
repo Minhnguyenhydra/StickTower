@@ -1,0 +1,215 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1613150fb405ce847b2165c89d1ddc69, type: 3}
+  m_Name: ArenaEnemyData
+  m_EditorClassIdentifier: 
+  arenaDatas:
+  - damage_1: 11
+    damage_2: 19
+    damage_3: 27
+    damage_4: 34
+  - damage_1: 41
+    damage_2: 48
+    damage_3: 55
+    damage_4: 63
+  - damage_1: 71
+    damage_2: 78
+    damage_3: 85
+    damage_4: 91
+  - damage_1: 98
+    damage_2: 106
+    damage_3: 112
+    damage_4: 120
+  - damage_1: 129
+    damage_2: 137
+    damage_3: 145
+    damage_4: 153
+  - damage_1: 162
+    damage_2: 170
+    damage_3: 176
+    damage_4: 182
+  - damage_1: 189
+    damage_2: 196
+    damage_3: 205
+    damage_4: 211
+  - damage_1: 219
+    damage_2: 227
+    damage_3: 234
+    damage_4: 240
+  - damage_1: 247
+    damage_2: 253
+    damage_3: 262
+    damage_4: 270
+  - damage_1: 278
+    damage_2: 287
+    damage_3: 295
+    damage_4: 302
+  - damage_1: 311
+    damage_2: 322
+    damage_3: 334
+    damage_4: 344
+  - damage_1: 356
+    damage_2: 368
+    damage_3: 378
+    damage_4: 390
+  - damage_1: 402
+    damage_2: 414
+    damage_3: 425
+    damage_4: 434
+  - damage_1: 443
+    damage_2: 455
+    damage_3: 465
+    damage_4: 477
+  - damage_1: 489
+    damage_2: 499
+    damage_3: 508
+    damage_4: 517
+  - damage_1: 529
+    damage_2: 541
+    damage_3: 552
+    damage_4: 564
+  - damage_1: 576
+    damage_2: 587
+    damage_3: 596
+    damage_4: 605
+  - damage_1: 617
+    damage_2: 628
+    damage_3: 638
+    damage_4: 648
+  - damage_1: 657
+    damage_2: 668
+    damage_3: 680
+    damage_4: 690
+  - damage_1: 700
+    damage_2: 712
+    damage_3: 724
+    damage_4: 734
+  - damage_1: 746
+    damage_2: 757
+    damage_3: 766
+    damage_4: 775
+  - damage_1: 786
+    damage_2: 796
+    damage_3: 806
+    damage_4: 818
+  - damage_1: 829
+    damage_2: 839
+    damage_3: 849
+    damage_4: 861
+  - damage_1: 872
+    damage_2: 881
+    damage_3: 893
+    damage_4: 902
+  - damage_1: 912
+    damage_2: 924
+    damage_3: 935
+    damage_4: 946
+  - damage_1: 956
+    damage_2: 965
+    damage_3: 974
+    damage_4: 984
+  - damage_1: 993
+    damage_2: 1005
+    damage_3: 1015
+    damage_4: 1026
+  - damage_1: 1038
+    damage_2: 1047
+    damage_3: 1058
+    damage_4: 1068
+  - damage_1: 1080
+    damage_2: 1091
+    damage_3: 1100
+    damage_4: 1111
+  - damage_1: 1120
+    damage_2: 1132
+    damage_3: 1142
+    damage_4: 1152
+  - damage_1: 1164
+    damage_2: 1177
+    damage_3: 1192
+    damage_4: 1207
+  - damage_1: 1220
+    damage_2: 1233
+    damage_3: 1245
+    damage_4: 1258
+  - damage_1: 1271
+    damage_2: 1284
+    damage_3: 1298
+    damage_4: 1313
+  - damage_1: 1327
+    damage_2: 1339
+    damage_3: 1354
+    damage_4: 1369
+  - damage_1: 1383
+    damage_2: 1398
+    damage_3: 1410
+    damage_4: 1424
+  - damage_1: 1439
+    damage_2: 1452
+    damage_3: 1467
+    damage_4: 1479
+  - damage_1: 1492
+    damage_2: 1505
+    damage_3: 1518
+    damage_4: 1531
+  - damage_1: 1545
+    damage_2: 1557
+    damage_3: 1571
+    damage_4: 1586
+  - damage_1: 1601
+    damage_2: 1614
+    damage_3: 1629
+    damage_4: 1642
+  - damage_1: 1657
+    damage_2: 1672
+    damage_3: 1685
+    damage_4: 1698
+  - damage_1: 1716
+    damage_2: 1732
+    damage_3: 1749
+    damage_4: 1765
+  - damage_1: 1784
+    damage_2: 1801
+    damage_3: 1819
+    damage_4: 1836
+  - damage_1: 1854
+    damage_2: 1870
+    damage_3: 1888
+    damage_4: 1906
+  - damage_1: 1923
+    damage_2: 1939
+    damage_3: 1958
+    damage_4: 1976
+  - damage_1: 1993
+    damage_2: 2012
+    damage_3: 2028
+    damage_4: 2045
+  - damage_1: 2064
+    damage_2: 2082
+    damage_3: 2101
+    damage_4: 2120
+  - damage_1: 2137
+    damage_2: 2154
+    damage_3: 2171
+    damage_4: 2187
+  - damage_1: 2205
+    damage_2: 2221
+    damage_3: 2239
+    damage_4: 2255
+  - damage_1: 2273
+    damage_2: 2289
+    damage_3: 2306
+    damage_4: 2324
+  - damage_1: 2342
+    damage_2: 2359
+    damage_3: 2377
+    damage_4: 2396

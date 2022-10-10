@@ -1,0 +1,269 @@
+{
+	"goal": "Save ally",
+	"player": {
+		"point": 10
+	},
+	"levelType": "superhard",
+	"require": {
+		"gold": 250
+	},
+	"gold": 500,
+	"diamond": 1,
+	"castles": [
+		{
+			"floors": [
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "enemy-3",
+						"point": 15
+					},
+					"slot3": {
+						"type": "enemy-4",
+						"point": 10
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "object-shield",
+						"point": 2
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "object-pillar",
+						"point": 40
+					},
+					"slot3": {
+						"type": "object-shield",
+						"point": 2
+					}
+				}
+			]
+		},
+		{
+			"floors": [
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "weapon-44",
+						"point": 30
+					},
+					"slot3": {
+						"type": "boss-2",
+						"point": 75
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "enemy-3",
+						"point": 15
+					},
+					"slot3": {
+						"type": "enemy-4",
+						"point": 8
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "enemy-2",
+						"point": 35
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "object-pillar",
+						"point": 90
+					},
+					"slot3": {
+						"type": "enemy-1",
+						"point": 17
+					}
+				}
+			]
+		},
+		{
+			"floors": [
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "object-shield",
+						"point": 2
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "enemy-4",
+						"point": 50
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "boss-4",
+						"point": 299
+					}
+				}
+			]
+		},
+		{
+			"floors": [
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "object-pillar",
+						"point": 399
+					},
+					"slot3": {
+						"type": "object-key"
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "object-flax",
+						"point": 600
+					},
+					"slot3": {
+						"type": "object-food",
+						"point": 3
+					}
+				},
+				{
+					"locked": "object-key",
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "enemy-3",
+						"point": 300
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "enemy-2",
+						"point": 150
+					}
+				}
+			]
+		},
+		{
+			"floors": [
+				{
+					"slot1": {
+						"type": "object-flax",
+						"point": 50
+					},
+					"slot2": {
+						"type": "enemy-3",
+						"point": 99
+					},
+					"slot3": {
+						"type": "boss-3",
+						"point": 200
+					}
+				},
+				{
+					"slot1": {
+						"type": "object-flax",
+						"point": 500
+					},
+					"slot2": {},
+					"slot3": {
+						"type": "enemy-3",
+						"point": 50
+					}
+				},
+				{
+					"slot1": {
+						"type": "object-flax",
+						"point": 150
+					},
+					"slot2": {},
+					"slot3": {
+						"type": "weapon-3",
+						"point": 300
+					}
+				},
+				{
+					"slot1": {
+						"type": "object-flax",
+						"point": 200
+					},
+					"slot2": {},
+					"slot3": {
+						"type": "enemy-3",
+						"point": 300
+					}
+				}
+			]
+		},
+		{
+			"floors": [
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "enemy-3",
+						"point": 185
+					}
+				},
+				{
+					"slot1": {
+						"type": "object-pillar",
+						"point": 150
+					},
+					"slot2": {
+						"type": "enemy-3",
+						"point": 150
+					},
+					"slot3": {
+						"type": "object-key"
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "boss-1",
+						"point": 400
+					},
+					"slot3": {
+						"type": "object-key-1"
+					}
+				},
+				{
+					"locked": "object-key",
+					"slot1": {},
+					"slot2": {
+						"type": "object-pillar",
+						"point": 175
+					},
+					"slot3": {
+						"type": "object-shield",
+						"point": 2
+					}
+				},
+				{
+					"locked": "object-key-1",
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "ally"
+					}
+				}
+			]
+		}
+	]
+}

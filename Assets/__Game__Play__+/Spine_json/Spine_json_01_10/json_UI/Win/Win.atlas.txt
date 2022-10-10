@@ -1,0 +1,62 @@
+
+Win.png
+size: 1356,572
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+FX/STAR LIGHT
+  rotate: false
+  xy: 2, 16
+  size: 258, 256
+  orig: 258, 256
+  offset: 0, 0
+  index: -1
+Layer 121 copy1
+  rotate: false
+  xy: 939, 154
+  size: 414, 414
+  orig: 414, 414
+  offset: 0, 0
+  index: -1
+Layer 4
+  rotate: false
+  xy: 262, 2
+  size: 266, 188
+  orig: 266, 188
+  offset: 0, 0
+  index: -1
+Layer 5
+  rotate: false
+  xy: 2, 274
+  size: 935, 294
+  orig: 935, 294
+  offset: 0, 0
+  index: -1
+Layer 7
+  rotate: true
+  xy: 753, 46
+  size: 226, 178
+  orig: 226, 178
+  offset: 0, 0
+  index: -1
+Layer 7 copy
+  rotate: true
+  xy: 530, 8
+  size: 182, 221
+  orig: 182, 221
+  offset: 0, 0
+  index: -1
+Layer 7 copy 2
+  rotate: false
+  xy: 933, 19
+  size: 240, 133
+  orig: 240, 133
+  offset: 0, 0
+  index: -1
+you win
+  rotate: false
+  xy: 262, 192
+  size: 427, 80
+  orig: 427, 80
+  offset: 0, 0
+  index: -1

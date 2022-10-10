@@ -1,0 +1,41 @@
+
+9_chest.png
+size: 302,299
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: false
+  xy: 2, 199
+  size: 208, 98
+  orig: 208, 98
+  offset: 0, 0
+  index: -1
+1-1
+  rotate: true
+  xy: 2, 2
+  size: 195, 114
+  orig: 195, 114
+  offset: 0, 0
+  index: -1
+1-2
+  rotate: false
+  xy: 212, 233
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+2
+  rotate: false
+  xy: 118, 94
+  size: 182, 103
+  orig: 182, 103
+  offset: 0, 0
+  index: -1
+fx
+  rotate: false
+  xy: 118, 12
+  size: 171, 80
+  orig: 171, 81
+  offset: 0, 0
+  index: -1

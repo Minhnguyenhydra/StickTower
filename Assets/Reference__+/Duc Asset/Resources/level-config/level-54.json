@@ -1,0 +1,61 @@
+{
+	"goal": "",
+	"player": {
+		"point": 10
+	},
+	"castles": [
+		{
+			"floors": [
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "enemy-1",
+						"point": 10
+					},
+					"slot3": {
+						"type": "weapon-49",
+						"point": 15
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "enemy-1",
+						"point": 5
+					},
+					"slot3": {
+						"type": "enemy-2",
+						"point": 25
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "enemy-2",
+						"point": 30
+					},
+					"slot3": {
+						"type": "boss-2",
+						"point": 89
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "enemy-2",
+						"point": 45
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "boss-4",
+						"point": 199
+					}
+				}
+			]
+		}
+	]
+}

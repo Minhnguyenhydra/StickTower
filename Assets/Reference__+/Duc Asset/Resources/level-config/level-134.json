@@ -1,0 +1,83 @@
+{
+	"goal": "Bonus level",
+	"levelType": "bonus",
+	"player": {
+		"point": 5
+	},
+	"castles": [
+		{
+			"floors": [
+				{
+					"slot1": {
+						"type": "object-treasure",
+						"point": 20
+					},
+					"slot2": {
+						"type": "object-treasure",
+						"point": 20
+					},
+					"slot3": {
+						"type": "object-treasure",
+						"point": 20
+					}
+				},
+				{
+					"slot1": {
+						"type": "object-treasure",
+						"point": 20
+					},
+					"slot2": {
+						"type": "object-treasure",
+						"point": 20
+					},
+					"slot3": {
+						"type": "object-treasure",
+						"point": 20
+					}
+				},
+				{
+					"slot1": {
+						"type": "object-treasure",
+						"point": 20
+					},
+					"slot2": {
+						"type": "object-treasure",
+						"point": 20
+					},
+					"slot3": {
+						"type": "object-treasure",
+						"point": 20
+					}
+				},
+				{
+					"slot1": {
+						"type": "object-treasure",
+						"point": 20
+					},
+					"slot2": {
+						"type": "object-treasure",
+						"point": 20
+					},
+					"slot3": {
+						"type": "object-treasure",
+						"point": 20
+					}
+				},
+				{
+					"slot1": {
+						"type": "object-treasure",
+						"point": 100
+					},
+					"slot2": {
+						"type": "object-treasure",
+						"point": 100
+					},
+					"slot3": {
+						"type": "object-treasure",
+						"point": 100
+					}
+				}
+			]
+		}
+	]
+}

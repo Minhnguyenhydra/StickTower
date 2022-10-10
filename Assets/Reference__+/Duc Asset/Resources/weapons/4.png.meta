@@ -1,0 +1,338 @@
+fileFormatVersion: 2
+guid: 3a9298c5d385e1049ae0bf764d5e1a42
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 4
+  maxTextureSize: 358
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 2
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 0
+  flipbookColumns: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites: []
+    outline:
+    - - {x: -32, y: 162}
+      - {x: 21, y: 116}
+      - {x: 21, y: 118}
+      - {x: 24, y: 121}
+      - {x: 25, y: 121}
+      - {x: 28, y: 118}
+      - {x: 28, y: 115}
+      - {x: 24, y: 114}
+      - {x: 47, y: 94}
+      - {x: 89, y: 19}
+      - {x: 89, y: -179}
+      - {x: 34, y: -179}
+      - {x: -51, y: -114}
+      - {x: -89, y: 57}
+      - {x: -89, y: 179}
+      - {x: -80, y: 179}
+    physicsShape:
+    - - {x: 63, y: -83}
+      - {x: 74, y: -79}
+      - {x: 89, y: -72}
+      - {x: 89, y: -66}
+      - {x: 77, y: -54}
+      - {x: 71, y: -36}
+      - {x: 71, y: -25}
+      - {x: 88, y: -22}
+      - {x: 89, y: -22}
+      - {x: 89, y: -7}
+      - {x: 88, y: 0}
+      - {x: 79, y: 22}
+      - {x: 74, y: 33}
+      - {x: 60, y: 61}
+      - {x: 48, y: 76}
+      - {x: 39, y: 87}
+      - {x: 15, y: 112}
+      - {x: 3, y: 123}
+      - {x: -10, y: 135}
+      - {x: -18, y: 141}
+      - {x: -35, y: 151}
+      - {x: -56, y: 163}
+      - {x: -78, y: 174}
+      - {x: -81, y: 174}
+      - {x: -83, y: 173}
+      - {x: -83, y: 171}
+      - {x: -79, y: 162}
+      - {x: -64, y: 143}
+      - {x: -48, y: 111}
+      - {x: -38, y: 81}
+      - {x: -31, y: 50}
+      - {x: -30, y: 38}
+      - {x: -25, y: 33}
+      - {x: -14, y: 27}
+      - {x: -7, y: 15}
+      - {x: 5, y: 15}
+      - {x: 16, y: 5}
+      - {x: 20, y: -5}
+      - {x: 21, y: -17}
+      - {x: 16, y: -30}
+      - {x: 10, y: -34}
+      - {x: -12, y: -25}
+      - {x: -16, y: -20}
+      - {x: -19, y: -22}
+      - {x: -22, y: -29}
+      - {x: -22, y: -36}
+      - {x: -23, y: -55}
+      - {x: -22, y: -69}
+      - {x: -19, y: -88}
+      - {x: -17, y: -97}
+      - {x: -14, y: -101}
+      - {x: -5, y: -100}
+      - {x: 11, y: -97}
+      - {x: 31, y: -92}
+      - {x: 34, y: -103}
+      - {x: 37, y: -112}
+      - {x: 45, y: -147}
+      - {x: 48, y: -172}
+      - {x: 54, y: -179}
+      - {x: 63, y: -179}
+      - {x: 84, y: -175}
+      - {x: 89, y: -171}
+      - {x: 89, y: -155}
+      - {x: 75, y: -119}
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices:
+    - {x: 110, y: 295}
+    - {x: 112, y: 292}
+    - {x: 113, y: 293}
+    - {x: 110, y: 294}
+    - {x: 114, y: 300}
+    - {x: 117, y: 294}
+    - {x: 117, y: 297}
+    - {x: 113, y: 300}
+    - {x: 110, y: 297}
+    - {x: 136, y: 273}
+    - {x: 178, y: 0}
+    - {x: 178, y: 198}
+    - {x: 123, y: 0}
+    - {x: 57, y: 341}
+    - {x: 38, y: 65}
+    - {x: 9, y: 358}
+    - {x: 0, y: 358}
+    - {x: 0, y: 236}
+    indices: 030000000d0000000000000011000000100000000e0000000f0000000e000000100000000d0000000e0000000f0000000c0000000e0000000d000000030000000c0000000d000000010000000c00000003000000020000000c00000001000000090000000c000000020000000a0000000c000000090000000b0000000a00000009000000000000000800000002000000070000000200000008000000040000000200000007000000050000000200000004000000060000000500000004000000030000000000000001000000020000000100000000000000
+    edges: []
+    weights:
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 0
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 0
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 0
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 0
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 0
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 0
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 0
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 0
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 0
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 0
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 0
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 0
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 0
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 0
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 0
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 0
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 0
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 0
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

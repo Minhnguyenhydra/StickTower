@@ -1,0 +1,13 @@
+
+piggy_bank.png
+size: 316,293
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+pig
+  rotate: false
+  xy: 2, 2
+  size: 312, 289
+  orig: 312, 289
+  offset: 0, 0
+  index: -1

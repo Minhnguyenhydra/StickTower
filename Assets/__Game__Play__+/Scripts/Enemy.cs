@@ -1,0 +1,427 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using Spine;
+using Spine.Unity;
+using DG.Tweening;
+[DefaultExecutionOrder(10)]
+public class Enemy : MonoBehaviour
+{
+    #region Khai báo biến
+    public bool isBossLass;
+    public bool isBoss_UNTIL;
+    public bool isEnemyFly;
+    public bool isEnemyBoar;
+    public bool isEnemy_Have_Key;
+    public int health;
+    [Header("Con to hay nhỏ===== để set time die")]
+
+    public bool isBig_Enemy;
+    [Header("Animation")]
+    public SkeletonAnimation skeletonAnimation;
+
+    public AnimationReferenceAsset Action_Idle;
+    public AnimationReferenceAsset Action_Attack;
+    public AnimationReferenceAsset Action_Run;
+    public AnimationReferenceAsset Action_Takedamge;
+    public AnimationReferenceAsset Action_Die;
+    public AnimationReferenceAsset Action_Victory;
+    public AnimationReferenceAsset Action_Lose;
+    [Header("------Enemy nào cầm chìa mới cần điền------")]
+    public Key_Floor key_Floor_To_Open_Lock_Floor;
+    ////[Header("------Enemy cuối mới cần điền floor_This------")]
+    [Header("------Not Need Asign--To view------")]
+    public Floor floor_This;
+    public Transform tf_Enemy;
+    public bool isDieing;// đang chạy anim die, thì ko attack Enemy này thêm được nữa
+    public bool isFist_config;
+    public Health_Bar health_Bar;
+    [Header("------Indext Fix= 4 lần Attack Player------")]
+    public int index_Hit_Player = 0;
+    #endregion
+    // Start is called before the first frame update
+    void Start()
+    {
+        isFist_config = false;
+        tf_Enemy = transform;
+        //health = Constant.GetHealt_By_Type();
+        Set_Spawn_Health_Bar();
+        //
+        //Phải gắn Enemy vào Point trước
+        if (GetComponentInParent<Point_In_Floor>() != null)
+        {
+            GetComponentInParent<Point_In_Floor>().Set_Enemy_Attach(this);
+            GetComponentInParent<Point_In_Floor>().Set_Not_Empty();
+        }
+        Set_Idle();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        Set_ConFig_Floor_One_Time();
+    }
+
+    #region Đánh dấu đã chít để Player ko đánh Enemy này nữa trong khi chạy anim die, attack
+    public void Set_BoolIsDieing()
+    {
+        isDieing = true;
+    }
+    #endregion
+    #region Show máu bắn ra :))
+    public void Set_Show_Blood()
+    {
+        if (tf_Enemy != null)
+        {
+            GameObject obj = (GameObject)Instantiate(Resources.Load(Constant.Path_Frefab_Blood), tf_Enemy.position + Constant.Enemy_offset_Blood, tf_Enemy.rotation);
+        }
+
+        if (key_Floor_To_Open_Lock_Floor != null)
+        {
+            key_Floor_To_Open_Lock_Floor.Set_Move_To_Lock();
+
+        }
+    }
+    #endregion
+    #region Base to set Skin, Anim
+    //Anim
+    public void SetAnimation(AnimationReferenceAsset _anim, bool _loop, float _time_Scale)//Set No loop
+    {
+        skeletonAnimation.state.SetAnimation(0, _anim, _loop).TimeScale = _time_Scale;
+    }
+    //TODO: đổi skin
+    public void Set_Skin(string _str_Skin)
+    {
+        skeletonAnimation.Skeleton.SetSkin(_str_Skin);
+        skeletonAnimation.Skeleton.SetSlotsToSetupPose();
+        skeletonAnimation.LateUpdate();
+    }
+
+    public void SetCharacterState_Loop(AnimationReferenceAsset _anim)//Set loop
+    {
+        SetAnimation(_anim, true, 1f);
+    }
+    public void SetCharacterState_NoLoop(AnimationReferenceAsset _anim)//Set loop
+    {
+        SetAnimation(_anim, false, 1f);
+    }
+
+    public void ReSetCharacterState()
+    {
+        skeletonAnimation.ClearState();
+    }
+    #endregion
+    #region Set IE Delay Action, to die, attack to idle
+    IEnumerator Delay_die()
+    {
+        //nếu màn có con Enemy này cầm key
+        if (isEnemy_Have_Key)
+        {
+            Key_3_Manager.Ins.Set_Key_Fly();
+        }
+        //Từ đầu .... Show máu
+        health_Bar.Set_Hide_Health_Bar();
+        SetCharacterState_NoLoop(Action_Attack);
+        float _time_show_blood = Constant.Time_Player_Show_Blood;
+        yield return Cache.GetWFS(_time_show_blood);
+
+
+        //Show máu...................
+        SoundManager.Ins.Play_FX_Hit_Enemy_Random();
+        Set_Show_Blood();
+
+        SetCharacterState_Loop(Action_Takedamge);
+
+
+        //Delay player dùng hết Skill.......
+        #region  Get_Index_Skill Player đang dùng
+        //Đã set Player Attack trước rồi mới set action cho enemy
+        int index_Skill = Player.ins.Get_Index_Skil_Using_Attack();
+
+        float time_Until_End_Skill = Constant.Get_Time_Skill(index_Skill);
+
+        float time_action_Hit = Constant.Get_Time_action_Hit_Enemy(isBig_Enemy);
+
+        yield return Cache.GetWFS(time_Until_End_Skill - time_action_Hit - _time_show_blood);
+
+
+
+        //Hit cách 1 lúc trước khi kết thúc action Skill của Player.......
+        //ADD: enemy Hit.............
+        //SetCharacterState_NoLoop(Action_Takedamge);
+
+        //nếu random ra index dùng skill, sẽ Delay Boss attack lâu hơn
+        yield return Cache.GetWFS(time_action_Hit);
+        #endregion
+
+
+
+        //bật anim enemy die........
+        SetCharacterState_NoLoop(Action_Die);
+        SoundManager.Ins.Play_FX_Hit_Enemy_Random();
+        float time_action_Die = Constant.Get_Time_action_Die_Enemy(isBig_Enemy);
+        yield return Cache.GetWFS(time_action_Die);
+
+
+        //xóa enemy...//
+        if (isBossLass)
+        {
+            yield return Cache.GetWFS(0.8f);
+            //Set Mái xanh.....delay win
+            GameManager.Ins.Set_Mai_Xanh_Delay_Win(floor_This);
+#if UNITY_EDITOR
+            Debug.Log("=========Mai Xanh========");
+#endif
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            Destroy(this.gameObject);
+
+        }
+        //gameObject.SetActive(false);
+    }
+    IEnumerator Delay_AttackTo_Idle()
+    {
+        SetCharacterState_NoLoop(Action_Attack);
+        yield return Cache.GetWFS(Constant.Time_Player_Die_attack);
+        ReSetCharacterState();
+        SetCharacterState_Loop(Action_Idle);
+    }
+    #endregion
+    #region Set Animation
+    public void Set_Attack()
+    {
+        StartCoroutine(Delay_AttackTo_Idle());
+    }
+    public void Set_Idle()
+    {
+        SetCharacterState_Loop(Action_Idle);
+    }
+    public void Set_Anim_Attack()
+    {
+        SetCharacterState_NoLoop(Action_Attack);
+    }
+    public void Set_Anim_Run()
+    {
+        SetCharacterState_Loop(Action_Run);
+    }
+    public void Set_Anim_Takedame()
+    {
+        SetCharacterState_NoLoop(Action_Takedamge);
+    }
+    public void Set_Anim_Die()
+    {
+        
+        StartCoroutine(Delay_die());
+    }
+    public void Set_Anim_Victory()
+    {
+        SetCharacterState_Loop(Action_Victory);
+    }
+    public void Set_Anim_Lose()
+    {
+        SetCharacterState_NoLoop(Action_Lose);
+    }
+    #endregion
+    #region Health
+    public void Set_Spawn_Health_Bar()
+    {
+        GameObject obj = (GameObject)Instantiate(Resources.Load(Constant.Path_Frefab_Health_Bar_Red), tf_Enemy);
+        health_Bar = obj.GetComponent<Health_Bar>();
+        if (isEnemyFly)
+        {
+            health_Bar.tf_Health_Bar.localPosition = Constant.Enemy_Local_Pos_Health_Bar_Fly;
+        }
+        else if (isEnemyBoar)
+        {
+            health_Bar.tf_Health_Bar.localPosition = Constant.Enemy_Local_Pos_Health_Bar_Boar;
+        }
+        else
+        {
+            health_Bar.tf_Health_Bar.localPosition = Constant.Enemy_Local_Pos_Health_Bar_Normal;
+        }
+        
+        health_Bar.Set_Health_Imedetly(health);
+    }
+    public int Get_Health()
+    {
+        return health;
+    }
+    #endregion
+    #region Lấy thông tin Floor mà Enemy đang đứng lúc vào game
+    public void Set_ConFig_Floor_One_Time()
+    {
+        if (!isFist_config)
+        {
+            isFist_config = true;
+            floor_This = GetComponentInParent<Floor>();
+            if (isBoss_UNTIL)
+            {
+                GameManager.Ins.enemyBoss_auto_Asign = this;
+            }
+        }
+    }
+    #endregion
+    public void Set_Attack_8s_Fight_Boss()
+    {
+        StartCoroutine(IE_Attack_8s());
+    }
+    IEnumerator IE_Attack_8s()
+    {
+        float tt = Time.time;
+        yield return Cache.GetWFS(1);
+        // 1
+
+
+
+        Set_Anim_Attack();
+        yield return Cache.GetWFS(1);
+        //2
+
+        Player.ins.Set_Show_Blood();
+        int _health_Player = Player.ins.Get_Health();
+        Player.ins.health_Bar.Set_Step_By_Step_Health(_health_Player, Mathf.RoundToInt(_health_Player * 0.85f),1);
+
+        ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Fill_Health_Player(0.85f);
+        yield return Cache.GetWFS(1);
+        //3
+
+
+
+        
+        Set_Anim_Attack();
+        yield return Cache.GetWFS(1);
+        //4
+
+
+
+        Player.ins.Set_Show_Blood();
+        Player.ins.health_Bar.Set_Step_By_Step_Health(Mathf.RoundToInt(_health_Player * 0.85f), Mathf.RoundToInt(_health_Player * 0.5f), 1);
+
+
+        ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Fill_Health_Player(0.5f);
+
+        yield return Cache.GetWFS(1);
+        //5
+
+
+
+        //
+        //2s
+        Set_Anim_Attack();
+        yield return Cache.GetWFS(1);
+        //6
+
+
+        Player.ins.Set_Show_Blood();
+        Player.ins.health_Bar.Set_Step_By_Step_Health(Mathf.RoundToInt(_health_Player * 0.5f), Mathf.RoundToInt(_health_Player * 0.2f), 1);
+
+        ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Fill_Health_Player(0.2f);
+
+        yield return Cache.GetWFS(1);
+        //7
+
+
+
+        //
+        //2s
+        Set_Anim_Attack();
+        yield return Cache.GetWFS(1);
+        //8
+
+
+
+        ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).isBlock = true;
+        Player.ins.Set_Show_Blood();
+        if (Player.ins.Get_Health() > health)
+        {
+            
+            Player.ins.health_Bar.Set_Step_By_Step_Health(Mathf.RoundToInt(_health_Player * 0.2f), Mathf.RoundToInt(_health_Player * 0.1f), 1);
+
+            //((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Fill_Health_Player(0.1f);
+            ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).img_Health_Boss.DOFillAmount(0, 0.5f).OnComplete(()=> { health_Bar.gameObject.SetActive(false);
+            });
+            health_Bar.Set_Step_By_Step_Health(Mathf.RoundToInt(health), 0, 0.5f);
+            //((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).img_Health_BossRed.DOFillAmount(0, 0.5f);
+            ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Anim_Red_R();
+        }
+        else
+        {
+            Player.ins.health_Bar.Set_Step_By_Step_Health(Mathf.RoundToInt(_health_Player * 0.2f), 0, 1);
+
+            ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Fill_Health_Player(0,true);
+            ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).obj_Health_Red_L.SetActive(true);
+            ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Anim_Red_L();
+        }
+        yield return Cache.GetWFS(1);
+        //9
+
+
+
+
+        Player.ins.isDoneFight_Boss = true;
+        if (Player.ins.Get_Health() > health)
+        {
+            SetCharacterState_NoLoop(Action_Die);
+            SoundManager.Ins.PlayFx(FxID.giantDeath);
+            yield return Cache.GetWFS(2.6f);
+
+
+
+
+
+            GameManager.Ins.Set_Mai_Xanh_Delay_Win(floor_This);
+        }
+        else
+        {
+            Set_Anim_Victory();
+            Player.ins.Set_Anim_Die();
+            yield return Cache.GetWFS(2.2f);
+            GameManager.Ins.Set_Lose_Level(floor_This);
+        }
+
+        //yield return Cache.GetWFS(3);
+
+
+
+
+
+        ////
+        //if (Player.ins.Get_Health() > health)
+        //{
+        //    GameManager.Ins.Set_Mai_Xanh_Delay_Win(floor_This);
+        //}
+        //else
+        //{
+        //    GameManager.Ins.Set_Lose_Level(floor_This);
+        //}
+
+        //Debug.Log(Time.time - tt);
+    }
+    //
+    public void Set_Delay_Show_Health_Fight_Boos()
+    {
+        if (index_Hit_Player == 0)
+        {
+            ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).img_Health_Boss.fillAmount =(0.95f);
+        }
+        else if (index_Hit_Player == 1)
+        {
+            ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).img_Health_Boss.fillAmount = (0.85f);
+        }
+        else if (index_Hit_Player == 2)
+        {
+            ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).img_Health_Boss.fillAmount = (0.75f);
+        }
+        else if (index_Hit_Player == 3)
+        {
+            ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).img_Health_Boss.fillAmount = (0.65f);
+        }
+        else
+        {
+            ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).img_Health_Boss.fillAmount = (0.55f);
+        }
+        index_Hit_Player++;
+    }
+}

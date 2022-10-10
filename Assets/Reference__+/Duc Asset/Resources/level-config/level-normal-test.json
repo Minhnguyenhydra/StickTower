@@ -1,0 +1,105 @@
+{
+	"goal": "Kill enemies",
+	"levelType": "normal",
+	"player": {
+		"point": 999
+	},
+	"gold": 100,
+	"diamond": 1,
+	"require": {
+		"ads": false,
+		"gold": 0,
+		"diamond": 0
+	},
+	"castles": [
+		{
+			"floors": [
+				{
+					"slot1": {
+						"type": "enemy-5",
+						"point": 60,
+						"shield": 50
+					},
+					"slot2": {
+						"type": "enemy-3",
+						"point": 50
+					},
+					"slot3": {
+						"type": "enemy-1",
+						"point": 0
+					}
+				},
+				{
+					"slot1": {
+						"type": "enemy-5",
+						"point": 60,
+						"shield": 80
+					},
+					"slot2": {
+						"type": "enemy-5",
+						"point": 60,
+						"shield": 80
+					},
+					"slot3": {
+						"type": "enemy-5",
+						"point": 60,
+						"shield": 80
+					}
+				}
+			]
+		},
+		{
+			"floors": [
+				{
+					"slot1": {
+						"type": "enemy-5",
+						"point": 60,
+						"shield": 50
+					},
+					"slot2": {
+						"type": "enemy-3",
+						"point": 50
+					},
+					"slot3": {
+						"type": "enemy-1",
+						"point": 0
+					}
+				},
+				{
+					"slot1": {
+						"type": "enemy-5",
+						"point": 60,
+						"shield": 80
+					},
+					"slot2": {
+						"type": "enemy-5",
+						"point": 60,
+						"shield": 80
+					},
+					"slot3": {
+						"type": "enemy-5",
+						"point": 60,
+						"shield": 80
+					}
+				},
+				{
+					"slot1": {
+						"type": "enemy-5",
+						"point": 60,
+						"shield": 80
+					},
+					"slot2": {
+						"type": "enemy-5",
+						"point": 60,
+						"shield": 80
+					},
+					"slot3": {
+						"type": "object-treasure",
+						"point": 60,
+						"shield": 80
+					}
+				}
+			]
+		}
+	]
+}

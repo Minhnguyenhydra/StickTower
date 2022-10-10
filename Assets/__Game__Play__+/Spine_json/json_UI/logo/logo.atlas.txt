@@ -1,0 +1,20 @@
+
+logo.png
+size: 940,452
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Icon_Arena
+  rotate: false
+  xy: 810, 291
+  size: 126, 157
+  orig: 126, 157
+  offset: 0, 0
+  index: -1
+Logo_StickTower
+  rotate: false
+  xy: 2, 2
+  size: 806, 446
+  orig: 806, 446
+  offset: 0, 0
+  index: -1

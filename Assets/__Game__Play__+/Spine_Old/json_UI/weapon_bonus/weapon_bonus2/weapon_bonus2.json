@@ -1,0 +1,106 @@
+{
+"skeleton": {
+	"hash": "OpTuJSb/2XuZq2tuWsDlE4wrAW8",
+	"spine": "3.8.85",
+	"x": -162.3,
+	"y": -159.26,
+	"width": 325.6,
+	"height": 322.92,
+	"images": "../images/",
+	"audio": "E:/GaiA/GameProject/Stick_Tower/UI"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "weapon3", "parent": "root", "x": -22.3, "y": -107.18, "scaleX": 0.8419, "scaleY": 0.8419 },
+	{ "name": "weapon10", "parent": "weapon3", "x": 13.19, "y": 125.39 },
+	{ "name": "weapon16", "parent": "weapon3", "x": 132.26, "y": 55.51 },
+	{ "name": "weapon17", "parent": "weapon16", "x": -105.18, "y": 74.42, "scaleX": 0.7958, "scaleY": 0.7958 },
+	{ "name": "weapon18", "parent": "weapon16", "x": -127.65, "y": 27.01, "scaleX": 1.9138, "scaleY": 1.9138 }
+],
+"slots": [
+	{ "name": "weapon3", "bone": "weapon10", "attachment": "weapon3" },
+	{ "name": "FX/special_stars3", "bone": "weapon18", "color": "ffffff00", "attachment": "FX/special_stars", "blend": "additive" },
+	{ "name": "FX/special_stream3", "bone": "weapon17", "color": "ffffff00", "attachment": "FX/special_stream1" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"FX/special_stars3": {
+				"FX/special_stars": { "x": 0.5, "y": 0.5, "width": 119, "height": 87 }
+			},
+			"FX/special_stream3": {
+				"FX/special_stream1": { "width": 486, "height": 482 }
+			},
+			"weapon3": {
+				"weapon3": { "x": 21.32, "y": 24.25, "width": 199, "height": 261 }
+			}
+		}
+	}
+],
+"animations": {
+	"action1": {
+		"slots": {
+			"weapon3": {
+				"attachment": [
+					{ "time": 0.3333, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"weapon10": {
+				"scale": [
+					{ "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.1, "x": 1.245, "y": 1.245, "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.3333, "x": 0.201, "y": 0.201 }
+				]
+			}
+		}
+	},
+	"idle": {
+		"slots": {
+			"FX/special_stars3": {
+				"color": [
+					{ "color": "ffffff00" },
+					{ "time": 0.6667, "color": "ffffffff" },
+					{ "time": 1.3333, "color": "ffffff00" }
+				]
+			},
+			"FX/special_stream3": {
+				"color": [
+					{ "color": "ffffff00" },
+					{ "time": 0.3333, "color": "ffffffff" },
+					{ "time": 0.6333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.6667, "color": "ffffff00" },
+					{ "time": 1, "color": "ffffffff" },
+					{ "time": 1.3333, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"weapon10": {
+				"translate": [
+					{ "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.6667, "y": -24.24, "curve": 0.25, "c3": 0.75 },
+					{ "time": 1.3333 }
+				]
+			},
+			"weapon17": {
+				"translate": [
+					{ "y": -28.39 },
+					{ "time": 0.6333, "y": 91.26 },
+					{ "time": 0.6667, "y": -28.39 },
+					{ "time": 1.3333, "y": 91.26 }
+				]
+			},
+			"weapon18": {
+				"translate": [
+					{},
+					{ "time": 1.3333, "y": 150.07 }
+				]
+			}
+		}
+	},
+	"idle2": {}
+}
+}

@@ -1,0 +1,41 @@
+
+Lock_Key.png
+size: 196,200
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+lock/Layer 1
+  rotate: false
+  xy: 132, 13
+  size: 48, 71
+  orig: 48, 71
+  offset: 0, 0
+  index: -1
+lock/Layer 2
+  rotate: false
+  xy: 2, 2
+  size: 128, 63
+  orig: 128, 63
+  offset: 0, 0
+  index: -1
+lock/Layer 3
+  rotate: false
+  xy: 62, 143
+  size: 129, 55
+  orig: 129, 55
+  offset: 0, 0
+  index: -1
+lock/Layer 4
+  rotate: false
+  xy: 62, 86
+  size: 128, 55
+  orig: 128, 55
+  offset: 0, 0
+  index: -1
+lock/Layer 5
+  rotate: true
+  xy: 2, 67
+  size: 131, 58
+  orig: 131, 58
+  offset: 0, 0
+  index: -1

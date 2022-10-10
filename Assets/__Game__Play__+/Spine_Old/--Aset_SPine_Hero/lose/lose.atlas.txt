@@ -1,0 +1,55 @@
+
+lose.png
+size: 744,480
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: false
+  xy: 2, 24
+  size: 252, 124
+  orig: 254, 126
+  offset: 1, 1
+  index: -1
+2
+  rotate: false
+  xy: 476, 2
+  size: 264, 95
+  orig: 267, 97
+  offset: 1, 1
+  index: -1
+You Lose
+  rotate: true
+  xy: 692, 99
+  size: 238, 50
+  orig: 240, 52
+  offset: 1, 1
+  index: -1
+banner
+  rotate: false
+  xy: 2, 339
+  size: 713, 139
+  orig: 713, 139
+  offset: 0, 0
+  index: -1
+flag_1
+  rotate: true
+  xy: 337, 152
+  size: 185, 353
+  orig: 186, 353
+  offset: 0, 0
+  index: -1
+flag_2
+  rotate: true
+  xy: 2, 150
+  size: 187, 333
+  orig: 187, 333
+  offset: 0, 0
+  index: -1
+skull
+  rotate: false
+  xy: 337, 14
+  size: 137, 136
+  orig: 139, 138
+  offset: 1, 1
+  index: -1

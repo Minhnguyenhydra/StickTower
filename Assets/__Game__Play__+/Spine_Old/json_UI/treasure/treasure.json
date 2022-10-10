@@ -1,0 +1,60 @@
+{
+"skeleton": {
+	"hash": "uw55/3fTFgZesZCDdCyoxJbVuvk",
+	"spine": "3.8.85",
+	"x": -122.51,
+	"y": -99.01,
+	"width": 253,
+	"height": 246,
+	"images": "../images/",
+	"audio": "E:/GaiA/GameProject/Stick_Tower/UI"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "Layer 9", "parent": "root", "x": 8.22, "y": -129.93 },
+	{ "name": "Layer 11", "parent": "Layer 9", "x": -1.49, "y": 120.23 }
+],
+"slots": [
+	{ "name": "Layer 9", "bone": "Layer 11", "attachment": "Layer 9" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"Layer 9": {
+				"Chest_open": { "x": 16.73, "y": 14.64, "width": 294, "height": 208 },
+				"Layer 9": { "x": -2.75, "y": 33.69, "width": 253, "height": 246 }
+			}
+		}
+	}
+],
+"animations": {
+	"idle": {
+		"bones": {
+			"Layer 11": {
+				"rotate": [
+					{},
+					{ "time": 0.1, "angle": -4.5 },
+					{ "time": 0.2 },
+					{ "time": 0.3, "angle": -4.5 },
+					{ "time": 0.4 },
+					{ "time": 0.5, "angle": -4.5 },
+					{ "time": 0.6 },
+					{ "time": 0.7, "angle": -4.5 },
+					{ "time": 0.8 }
+				]
+			}
+		}
+	},
+	"idle2": {},
+	"open": {
+		"slots": {
+			"Layer 9": {
+				"attachment": [
+					{ "name": "Chest_open" }
+				]
+			}
+		}
+	}
+}
+}

@@ -1,0 +1,99 @@
+{
+	"goal": "Save ally",
+	"player": {
+		"point": 37
+	},
+	"levelType": "hard",
+	"castles": [
+		{
+			"floors": [
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "enemy-1",
+						"point": 33
+					},
+					"slot3": {
+						"type": "boss-1",
+						"point": 110
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "enemy-2",
+						"point": 38
+					},
+					"slot3": {
+						"type": "weapon-29",
+						"point": 60
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "enemy-2",
+						"point": 70
+					},
+					"slot3": {
+						"type": "enemy-2",
+						"point": 55
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "object-pillar",
+						"point": 75
+					},
+					"slot3": {
+						"type": "boss-2",
+						"point": 220
+					}
+				}
+			]
+		},
+		{
+			"floors": [
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "enemy-1",
+						"point": 200
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "object-pillar",
+						"point": 285
+					},
+					"slot3": {
+						"type": "object-shield",
+						"point": 2
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "enemy-2",
+						"point": 315
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "boss-2",
+						"point": 1111
+					},
+					"slot3": {
+						"type": "ally",
+						"point": 0
+					}
+				}
+			]
+		}
+	]
+}

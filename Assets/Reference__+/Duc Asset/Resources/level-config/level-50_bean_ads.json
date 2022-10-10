@@ -1,0 +1,60 @@
+{
+	"goal": "Find treasure",
+	"player": {
+		"point": 10
+	},
+	"levelType": "bean",
+	"require":{
+		"ads": 1
+	},
+	"castles": [
+		{
+			"floors": [
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "enemy-3",
+						"point": 12
+					},
+					"slot3": {
+						"type": "enemy-4",
+						"point": 25
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "object-pillar",
+						"point": 10
+					},
+					"slot3": {
+						"type": "weapon-45",
+						"point": 30
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "enemy-4",
+						"point": 8
+					},
+					"slot3": {
+						"type": "enemy-2",
+						"point": 15
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "object-pillar",
+						"point": 75
+					},
+					"slot3": {
+						"type": "object-treasure",
+						"point": 50
+					}
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,55 @@
+
+fly.png
+size: 1176,548
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Arm_L_1
+  rotate: false
+  xy: 2, 3
+  size: 150, 101
+  orig: 150, 101
+  offset: 0, 0
+  index: -1
+Arm_L_2
+  rotate: false
+  xy: 869, 275
+  size: 304, 268
+  orig: 304, 268
+  offset: 0, 0
+  index: -1
+Arm_R_1
+  rotate: false
+  xy: 154, 7
+  size: 86, 97
+  orig: 86, 97
+  offset: 0, 0
+  index: -1
+Arm_R_2
+  rotate: false
+  xy: 761, 2
+  size: 304, 268
+  orig: 304, 268
+  offset: 0, 0
+  index: -1
+Head
+  rotate: false
+  xy: 2, 106
+  size: 437, 437
+  orig: 437, 437
+  offset: 0, 0
+  index: -1
+Wing_L
+  rotate: false
+  xy: 441, 272
+  size: 426, 271
+  orig: 426, 271
+  offset: 0, 0
+  index: -1
+Wing_R
+  rotate: false
+  xy: 441, 18
+  size: 318, 252
+  orig: 318, 252
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,106 @@
+{
+	"goal": "",
+	"player": {
+		"point": 25
+	},
+	"levelType": "bean",
+	"castles": [
+		{
+			"floors": [
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "enemy-1",
+						"point": 12
+					},
+					"slot3": {
+						"type": "enemy-2",
+						"point": 28
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+					},
+					"slot3": {
+						"type": "enemy-4",
+						"point": 77
+					}
+				},
+				{
+					"slot1": {
+						"type": "object-pillar",
+						"point": 26
+					},
+					"slot2": {
+						"type": "enemy-2",
+						"point": 19
+					},
+					"slot3": {
+						"type": "weapon-8",
+						"point": 33
+					}
+				}
+			]
+		},
+		{
+			"floors": [
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "enemy-1",
+						"point": 250
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "weapon-60",
+						"point": 1000
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "object-pillar",
+						"point": 500
+					},
+					"slot3": {
+						"type": "object-key",
+						"point": 0
+					}
+				},
+				{
+					"locked": "object-key",
+					"slot1": {},
+					"slot2": {
+						"type": "enemy-4",
+						"point": 900
+					},
+					"slot3": {
+						"type": "object-shield",
+						"point": 2
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "boss-1",
+						"point": 450
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "boss-4",
+						"point": 4444
+					}
+				}
+			]
+		}
+	]
+}

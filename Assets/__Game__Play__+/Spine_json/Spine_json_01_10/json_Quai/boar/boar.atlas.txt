@@ -1,0 +1,48 @@
+
+boar.png
+size: 1316,488
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+pig/Leg_L_1
+  rotate: false
+  xy: 977, 44
+  size: 165, 178
+  orig: 165, 178
+  offset: 0, 0
+  index: -1
+pig/Leg_L_2
+  rotate: false
+  xy: 977, 224
+  size: 166, 261
+  orig: 166, 261
+  offset: 0, 0
+  index: -1
+pig/Leg_R_1
+  rotate: false
+  xy: 1144, 44
+  size: 165, 178
+  orig: 165, 178
+  offset: 0, 0
+  index: -1
+pig/Leg_R_2
+  rotate: false
+  xy: 1145, 224
+  size: 166, 261
+  orig: 166, 261
+  offset: 0, 0
+  index: -1
+pig/body
+  rotate: false
+  xy: 2, 2
+  size: 820, 483
+  orig: 820, 483
+  offset: 0, 0
+  index: -1
+pig/tail
+  rotate: true
+  xy: 824, 137
+  size: 348, 151
+  orig: 348, 151
+  offset: 0, 0
+  index: -1

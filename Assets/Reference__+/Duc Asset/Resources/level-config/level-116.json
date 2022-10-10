@@ -1,0 +1,61 @@
+{
+	"goal": "Save ally",
+	"player": {
+		"point": 2500
+	},
+	"castles": [
+		{
+			"floors": [
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "enemy-3",
+						"point": 6000
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "boss-1",
+						"point": 13000
+					},
+					"slot3": {
+						"type": "object-key"
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "enemy-2",
+						"point": 3000
+					},
+					"slot3": {
+						"type": "weapon",
+						"point": 789
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "object-pillar",
+						"point": 500
+					},
+					"slot3": {
+						"type": "enemy-4",
+						"point": 1500
+					}
+				},
+				{
+					"locked": "object-key",
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "ally",
+						"point": 0
+					}
+				}
+			]
+		}
+	]
+}

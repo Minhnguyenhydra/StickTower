@@ -1,0 +1,185 @@
+{
+  "skins": [
+    {
+      "skin": "0",
+      "gold": 0,
+      "diamond": 0,
+      "ads": false,
+      "spin": false,
+      "dailyReward": false,
+      "rescue": ""
+    },
+    {
+      "skin": "1",
+      "gold": 100,
+      "diamond": 0,
+      "ads": false,
+      "spin": false,
+      "dailyReward": false,
+      "rescue": ""
+    },
+    {
+      "skin": "2",
+      "gold": 5000,
+      "diamond": 0,
+      "ads": false,
+      "spin": false,
+      "dailyReward": false,
+      "rescue": ""
+    },
+    {
+      "skin": "3",
+      "gold": 0,
+      "diamond": 0,
+      "ads": false,
+      "spin": false,
+      "dailyReward": false,
+      "rescue": 10
+    },
+    {
+      "skin": "4",
+      "gold": 0,
+      "diamond": 0,
+      "ads": true,
+      "spin": false,
+      "dailyReward": false,
+      "rescue": ""
+    },
+    {
+      "skin": "5",
+      "gold": 5000,
+      "diamond": 0,
+      "ads": false,
+      "spin": false,
+      "dailyReward": false,
+      "rescue": ""
+    },
+    {
+      "skin": "6",
+      "gold": 5000,
+      "diamond": 0,
+      "ads": false,
+      "spin": false,
+      "dailyReward": false,
+      "rescue": ""
+    },
+    {
+      "skin": "7",
+      "gold": 0,
+      "diamond": 25,
+      "ads": false,
+      "spin": false,
+      "dailyReward": false,
+      "rescue": ""
+    },
+    {
+      "skin": "8",
+      "gold": 5000,
+      "diamond": 0,
+      "ads": false,
+      "spin": false,
+      "dailyReward": false,
+      "rescue": 0
+    },
+    {
+      "skin": "9",
+      "gold": 0,
+      "diamond": 0,
+      "ads": false,
+      "spin": false,
+      "dailyReward": false,
+      "rescue": 20
+    },
+    {
+      "skin": "10",
+      "gold": 0,
+      "diamond": 30,
+      "ads": false,
+      "spin": false,
+      "dailyReward": false,
+      "rescue": "",
+      "treasure": false
+    },
+    {
+      "skin": "11",
+      "gold": 5000,
+      "diamond": 0,
+      "ads": false,
+      "spin": false,
+      "dailyReward": false,
+      "rescue": ""
+    },
+    {
+      "skin": "12",
+      "gold": 0,
+      "diamond": 0,
+      "ads": false,
+      "spin": false,
+      "dailyReward": false,
+      "rescue": 30
+    },
+    {
+      "skin": "13",
+      "gold": 0,
+      "diamond": 0,
+      "ads": false,
+      "spin": false,
+      "dailyReward": false,
+      "rescue": 40
+    },
+    {
+      "skin": "14",
+      "gold": 0,
+      "diamond": 40,
+      "ads": false,
+      "spin": false,
+      "dailyReward": false,
+      "rescue": ""
+    },
+    {
+      "skin": "15",
+      "gold": 0,
+      "diamond": 20,
+      "ads": false,
+      "spin": false,
+      "dailyReward": false,
+      "rescue": ""
+    },
+    {
+      "skin": "16",
+      "gold": 0,
+      "diamond": 0,
+      "ads": true,
+      "spin": false,
+      "dailyReward": false,
+      "rescue": 0
+    },
+    {
+      "skin": "17",
+      "gold": 10000,
+      "diamond": 0,
+      "ads": false,
+      "spin": false,
+      "dailyReward": false,
+      "rescue": ""
+    },
+    {
+      "skin": "18",
+      "gold": 5000,
+      "diamond": 0,
+      "ads": false,
+      "spin": false,
+      "dailyReward": false,
+      "rescue": ""
+    },
+    {
+      "skin": "19",
+      "gold": 10000,
+      "diamond": 0,
+      "ads": false,
+      "spin": false,
+      "dailyReward": false,
+      "rescue": ""
+    }
+  ]
+}

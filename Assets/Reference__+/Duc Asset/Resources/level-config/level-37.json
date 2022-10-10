@@ -1,0 +1,28 @@
+{
+	"goal": "",
+	"player": {
+		"point": 40
+	},
+	"castles": [
+		{
+			"floors": [
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "object-food",
+						"point": 3
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "boss-1",
+						"point": 100
+					}
+				}
+			]
+		}
+	]
+}

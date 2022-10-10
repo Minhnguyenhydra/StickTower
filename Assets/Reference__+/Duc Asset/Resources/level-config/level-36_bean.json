@@ -1,0 +1,38 @@
+{
+	"goal": "",
+	"levelType": "bean",
+	"player": {
+		"point": 41
+	},
+	"castles": [
+		{
+			"floors": [
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "enemy-3",
+						"point": 45
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "object-food",
+						"point": 3
+					}
+				},
+				{
+					"specialKey": true,
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "boss-4",
+						"point": 150
+					}
+				}
+			]
+		}
+	]
+}

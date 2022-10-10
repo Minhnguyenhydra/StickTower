@@ -1,0 +1,239 @@
+{
+	"goal": "Find treasure",
+	"levelType": "bean",
+	"player": {
+		"point": 30
+	},
+	"require":{
+		"gold": 100
+	},
+	"gold": 200,
+	"diamond": 1,
+	"castles": [
+		{
+			"floors": [
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "weapon-22",
+						"point": 15
+					},
+					"slot3": {
+						"type": "enemy-2",
+						"point": 34
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "enemy-3",
+						"point": 46
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "object-pillar",
+						"point": 25
+					},
+					"slot3": {
+						"type": "enemy-1",
+						"point": 31
+					}
+				}
+			]
+		},
+		{
+			"floors": [
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "enemy-4",
+						"point": 132
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "object-pillar",
+						"point": 50
+					},
+					"slot3": {
+						"type": "enemy-2",
+						"point": 61
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "object-pillar",
+						"point": 50
+					},
+					"slot3": {
+						"type": "enemy-3",
+						"point": 46
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "enemy-4",
+						"point": 150
+					}
+				}
+			]
+		},
+		{
+			"floors": [
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "object-flax",
+						"point": 50
+					},
+					"slot3": {
+						"type": "enemy-2",
+						"point": 400
+					}
+				},
+				{
+					"slot1": {
+						"type": "object-flax",
+						"point": 100
+					},
+					"slot2": {
+						"type": "object-pillar",
+						"point": 50
+					},
+					"slot3": {
+						"type": "enemy-4",
+						"point": 200
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "object-pillar",
+						"point": 50
+					},
+					"slot3": {
+						"type": "enemy-3",
+						"point": 700
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "boss-1",
+						"point": 999
+					}
+				}
+			]
+		},
+		{
+			"floors": [
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "enemy-3",
+						"point": 1400
+					},
+					"slot3": {
+						"type": "object-key"
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "enemy-1",
+						"point": 100
+					}
+				},
+				{
+					"slot1": {
+						"type": "object-pillar",
+						"point": 2640
+					},
+					"slot2": {
+						"type": "object-pillar",
+						"point": 3500
+					},
+					"slot3": {
+						"type": "enemy-4",
+						"point": 5000
+					}
+				},
+				{
+					"locked": "object-key",
+					"slot1": {},
+					"slot2": {
+						"type": "weapon-25",
+						"point": 1700
+					},
+					"slot3": {
+						"type": "object-shield",
+						"point": 2
+					}
+				}
+			]
+		},
+		{
+			"floors": [
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "enemy-2",
+						"point": 1000
+					}
+				},
+				{
+					"slot1": {
+						"type": "enemy-2",
+						"point": 2000
+					},
+					"slot2": {},
+					"slot3": {
+						"type": "boss-2",
+						"point": 20000
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "enemy-4",
+						"point": 1000
+					}
+				},
+				{
+					"slot1": {
+						"type": "object-pillar",
+						"point": 4000
+					},
+					"slot2": {},
+					"slot3": {
+						"type": "boss-3",
+						"point": 10000
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "boss-4",
+						"point": 40000
+					},
+					"slot3": {
+						"type": "object-treasure",
+						"point": 50
+					}
+				}
+			]
+		}
+	]
+}

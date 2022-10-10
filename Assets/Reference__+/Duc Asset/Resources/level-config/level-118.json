@@ -1,0 +1,36 @@
+{
+	"goal": "",
+	"player": {
+		"point": 2700
+	},
+	"castles": [
+		{
+			"floors": [
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "weapon-6",
+						"point": 2500
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "boss-1",
+						"point": 1111
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "enemy-4",
+						"point": 4999
+					}
+				}
+			]
+		}
+	]
+}

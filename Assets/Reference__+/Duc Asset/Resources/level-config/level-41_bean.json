@@ -1,0 +1,130 @@
+{
+	"goal": "Save ally",
+	"player": {
+		"point": 10
+	},
+	"levelType": "bean",
+	"castles": [
+		{
+			"floors": [
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "enemy-1",
+						"point": 5
+					},
+					"slot3": {
+						"type": "enemy-1",
+						"point": 10
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "object-pillar",
+						"point": 30
+					},
+					"slot3": {
+						"type": "enemy-2",
+						"point": 15
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "enemy-2",
+						"point": 21
+					}
+				}
+			]
+		},
+		{
+			"floors": [
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "enemy-1",
+						"point": 35
+					},
+					"slot3": {
+						"type": "weapon-23",
+						"point": 15
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "boss-1",
+						"point": 65
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "enemy-2",
+						"point": 20
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "object-flax",
+						"point": 125
+					},
+					"slot3": {
+						"type": "enemy-1",
+						"point": 5
+					}
+				}
+			]
+		},
+		{
+			"floors": [
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "enemy-1",
+						"point": 50
+					},
+					"slot3": {
+						"type": "weapon-23",
+						"point": 20
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "enemy-4",
+						"point": 100
+					}
+				},
+				{
+					"slot1": {
+						"type": "enemy-2",
+						"point": 5
+					},
+					"slot2": {
+						"type": "boss-2",
+						"point": 200
+					},
+					"slot3": {
+						"type": "object-key"
+					}
+				},
+				{
+					"locked": "object-key",
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "ally",
+						"point": 0
+					}
+				}
+			]
+		}
+	]
+}

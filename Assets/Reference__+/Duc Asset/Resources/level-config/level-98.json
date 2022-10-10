@@ -1,0 +1,62 @@
+{
+	"goal": "Find treasure",
+	"player": {
+		"point": 600
+	},
+	"castles": [
+		{
+			"floors": [
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "boss-3",
+						"point": 3333
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "boss-2",
+						"point": 1999
+					},
+					"slot3": {
+						"type": "object-shield",
+						"point": 2
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "boss-1",
+						"point": 590
+					}
+				},
+				{
+					"locked": "object-key",
+					"slot1": {},
+					"slot2": {
+						"type": "enemy-4",
+						"point": 16999
+					},
+					"slot3": {
+						"type": "object-treasure",
+						"point": 50
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "object-food",
+						"point": 3
+					},
+					"slot3": {
+						"type": "object-key",
+						"point": 0
+					}
+				}
+			]
+		}
+	]
+}

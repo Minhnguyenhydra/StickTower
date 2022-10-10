@@ -1,0 +1,27 @@
+
+weapon_bonus3.png
+size: 664,488
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+FX/special_stars
+  rotate: false
+  xy: 490, 99
+  size: 119, 87
+  orig: 119, 87
+  offset: 0, 0
+  index: -1
+FX/special_stream1
+  rotate: false
+  xy: 2, 2
+  size: 486, 482
+  orig: 486, 482
+  offset: 0, 0
+  index: -1
+weapon4
+  rotate: false
+  xy: 490, 188
+  size: 169, 296
+  orig: 169, 296
+  offset: 0, 0
+  index: -1

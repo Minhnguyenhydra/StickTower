@@ -1,0 +1,13 @@
+
+damg1.png
+size: 232,236
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Layer 19 copy
+  rotate: false
+  xy: 2, 2
+  size: 227, 230
+  orig: 227, 230
+  offset: 0, 0
+  index: -1

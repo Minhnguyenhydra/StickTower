@@ -1,0 +1,80 @@
+{
+	"goal": "Save ally",
+	"levelType": "bean",
+	"player": {
+		"point": 10
+	},
+	"castles": [
+		{
+			"floors": [
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "object-flax",
+						"point": 5
+					},
+					"slot3": {
+						"type": "enemy-3",
+						"point": 20
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "weapon-91",
+						"point": 10
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "weapon-27",
+						"point": 30
+					},
+					"slot3": {
+						"type": "enemy-3",
+						"point": 15
+					}
+				}
+			]
+		},
+		{
+			"floors": [
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "object-flax",
+						"point": 30
+					},
+					"slot3": {
+						"type": "enemy-3",
+						"point": 40
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "enemy-4",
+						"point": 15
+					},
+					"slot3": {
+						"type": "boss-1",
+						"point": 40
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "boss-4",
+						"point": 140
+					},
+					"slot3": {
+						"type": "ally",
+						"point": 0
+					}
+				}
+			]
+		}
+	]
+}

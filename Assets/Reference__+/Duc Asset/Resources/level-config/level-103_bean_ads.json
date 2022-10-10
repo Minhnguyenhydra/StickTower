@@ -1,0 +1,321 @@
+{
+	"goal": "Kill enemies",
+	"player": {
+		"point": 5
+	},
+	"levelType": "bean",	
+	"require":{
+		"ads": 1
+	},
+	"gold": 2000,
+	"diamond": 1,
+	"castles": [
+		{
+			"floors": [
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "weapon-13",
+						"point": 5
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "enemy-1",
+						"point": 6
+					},
+					"slot3": {
+						"type": "enemy-3",
+						"point": 20
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "enemy-2",
+						"point": 12
+					}
+				}
+			]
+		},
+		{
+			"floors": [
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "enemy-1",
+						"point": 20
+					},
+					"slot3": {
+						"type": "enemy-3",
+						"point": 70
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "enemy-1",
+						"point": 100
+					},
+					"slot3": {
+						"type": "object-key"
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "enemy-3",
+						"point": 20
+					}
+				},
+				{
+					"locked": "object-key",
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "enemy-3",
+						"point": 42
+					}
+				}
+			]
+		},
+		{
+			"floors": [
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "object-flax",
+						"point": 135
+					},
+					"slot3": {
+						"type": "enemy-1",
+						"point": 150
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "object-pillar",
+						"point": 125
+					},
+					"slot3": {
+						"type": "enemy-2",
+						"point": 155
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "enemy-3",
+						"point": 195
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "enemy-4",
+						"point": 499
+					},
+					"slot3": {
+						"type": "boss-3",
+						"point": 1000
+					}
+				}
+			]
+		},
+		{
+			"currentPoint": 2039,
+			"floors": [
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "object-boom",
+						"point": 2
+					},
+					"slot3": {
+						"type": "boss-4",
+						"point": 5000
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "object-pillar",
+						"point": 2000
+					},
+					"slot3": {
+						"type": "weapon-5",
+						"point": 3000
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "enemy-3",
+						"point": 3000
+					}
+				},
+				{
+					"slot1": {},
+					"slot2": {
+						"type": "object-pillar",
+						"point": 499
+					},
+					"slot3": {
+						"type": "enemy-4",
+						"point": 5000
+					}
+				}
+			]
+		},
+		{
+			"currentPoint": 10270,
+			"floors": [
+				{
+					"slot1": {
+						"type": "enemy-1",
+						"point": 100
+					},
+					"slot2": {
+						"type": "object-pillar",
+						"point": 500
+					},
+					"slot3": {
+						"type": "boss-1",
+						"point": 9999
+					}
+				},
+				{
+					"slot1": {
+						"type": "enemy-1",
+						"point": 400
+					},
+					"slot2": {
+						"type": "object-pillar",
+						"point": 100
+					},
+					"slot3": {
+						"type": "enemy-4",
+						"point": 20000
+					}
+				},
+				{
+					"slot1": {
+						"type": "enemy-1",
+						"point": 100
+					},
+					"slot2": {
+						"type": "object-pillar",
+						"point": 10000
+					},
+					"slot3": {
+						"type": "enemy-4",
+						"point": 20000
+					}
+				},
+				{
+					"slot1": {
+						"type": "enemy-1",
+						"point": 100
+					},
+					"slot2": {
+						"type": "object-pillar",
+						"point": 9999
+					},
+					"slot3": {
+						"type": "boss-4",
+						"point": 20000
+					}
+				}
+			]
+		},
+		{
+			"currentPoint": 60370,
+			"floors": [
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "object-shield",
+						"point": 2
+					}
+				},
+				{
+					"slot1": {
+						"type": "object-boom",
+						"point": 2
+					},
+					"slot2": {
+						"type": "object-boom",
+						"point": 2
+					},
+					"slot3": {
+						"type": "object-key"
+					}
+				},
+				{
+					"locked": "object-key",
+					"slot1": {
+						"type": "object-boom",
+						"point": 2
+					},
+					"slot2": {
+						"type": "object-boom",
+						"point": 2
+					},
+					"slot3": {
+						"type": "boss-3",
+						"point": 7500
+					}
+				}
+			]
+		},
+		{
+			"currentPoint": 15046,
+			"floors": [
+				{
+					"slot1": {},
+					"slot2": {},
+					"slot3": {
+						"type": "object-food",
+						"point": 3
+					}
+				},
+				{
+					"slot1": {
+						"type": "object-boom",
+						"point": 2
+					},
+					"slot2": {
+						"type": "object-boom",
+						"point": 2
+					},
+					"slot3": {
+						"type": "object-boom",
+						"point": 2
+					}
+				},
+				{
+					"slot1": {
+						"type": "object-boom",
+						"point": 2
+					},
+					"slot2": {
+						"type": "object-boom",
+						"point": 2
+					},
+					"slot3": {
+						"type": "boss-4",
+						"point": 9999
+					}
+				}
+			]
+		}
+	]
+}

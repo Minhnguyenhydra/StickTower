@@ -1,0 +1,47 @@
+{
+"skeleton": {
+	"hash": "n9VBxv/j2+D97adSQANXxEhuYzE",
+	"spine": "3.8.85",
+	"x": -401.25,
+	"y": -208.47,
+	"width": 806,
+	"height": 446,
+	"images": "../images/",
+	"audio": "E:/GaiA/GameProject/Stick_Tower/UI"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "Layer 29 copy", "parent": "root", "x": 1.75, "y": 14.53 }
+],
+"slots": [
+	{ "name": "Icon_Arena", "bone": "Layer 29 copy", "attachment": "Icon_Arena" },
+	{ "name": "Layer 29 copy", "bone": "Layer 29 copy", "attachment": "Logo_StickTower" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"Icon_Arena": {
+				"Icon_Arena": { "y": 0.5, "width": 126, "height": 157 }
+			},
+			"Layer 29 copy": {
+				"Logo_StickTower": { "width": 806, "height": 446 }
+			}
+		}
+	}
+],
+"animations": {
+	"idle": {
+		"bones": {
+			"Layer 29 copy": {
+				"scale": [
+					{ "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.6667, "x": 1.021, "y": 1.021, "curve": 0.25, "c3": 0.75 },
+					{ "time": 1.3333 }
+				]
+			}
+		}
+	},
+	"idle2": {}
+}
+}
