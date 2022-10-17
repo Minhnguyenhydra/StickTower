@@ -43,8 +43,8 @@ public class Constant
     public readonly static float Time_Count_Attack_Player = 1;
     public readonly static float Time_Count_Attack_Enemy = 2;
     public readonly static float Time_Count_Skill_1 = 2f;
-    public readonly static float Time_Count_Skill_2 = 4f;
-    public readonly static float Time_Count_Skill_3 = 4f;
+    public readonly static float Time_Count_Skill_2 = 2.7f;
+    public readonly static float Time_Count_Skill_3 = 2.7f;
     //Sword_Ads_TopLeft
     public readonly static float Time_Sword_ADs_Go_To_Mid = 0.6f;
     public readonly static float Time_Sword_ADs_Mid_To_Player = 0.9f;

@@ -2547,6 +2547,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 3521460}
+    - target: {fileID: 129171450320422709, guid: afd437ca0e3e00240b233cec10110c71, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 129171450320422712, guid: afd437ca0e3e00240b233cec10110c71, type: 3}
       propertyPath: m_Name
       value: Canvas_main_Parent
@@ -3768,7 +3772,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8797440987416079936, guid: 35e5dd44d7b6ffc4bbf96a8d8c1d2c97, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -113.49
+      value: -113.48999
       objectReference: {fileID: 0}
     - target: {fileID: 8797440987499217867, guid: 35e5dd44d7b6ffc4bbf96a8d8c1d2c97, type: 3}
       propertyPath: m_Name
@@ -3876,7 +3880,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8797440987503021614, guid: 35e5dd44d7b6ffc4bbf96a8d8c1d2c97, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -113.49
+      value: -113.48999
       objectReference: {fileID: 0}
     - target: {fileID: 8797440987529575527, guid: 35e5dd44d7b6ffc4bbf96a8d8c1d2c97, type: 3}
       propertyPath: m_SizeDelta.x
@@ -13327,11 +13331,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6152246840904276229, guid: 2f664489d5848234f8d20d2db2519ceb, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.48
+      value: 0.63
       objectReference: {fileID: 0}
     - target: {fileID: 6152246840904276229, guid: 2f664489d5848234f8d20d2db2519ceb, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.48
+      value: 0.63
       objectReference: {fileID: 0}
     - target: {fileID: 6152246840904276229, guid: 2f664489d5848234f8d20d2db2519ceb, type: 3}
       propertyPath: m_LocalScale.z

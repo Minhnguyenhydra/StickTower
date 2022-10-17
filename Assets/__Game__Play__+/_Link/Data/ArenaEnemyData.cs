@@ -31,6 +31,7 @@ public class ArenaEnemyData : ScriptableObject
 
     private int RandomDamage(int level)
     {
+       // Debug.Log("dfd");
         if (level <= 10)
         {
             return Random.Range(6, 10);

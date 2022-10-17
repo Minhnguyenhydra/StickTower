@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using TMPro;
 
 public class CanvasGamePlay : UICanvas
 {
@@ -13,6 +14,8 @@ public class CanvasGamePlay : UICanvas
     private Parrent_Castle parrent_Castle_This_Level;
     public Text txt_Level;
     public Animator anim_GamePlay;
+    public int int_Damge;
+    public TextMeshProUGUI txt_Damge;
     private void Start()
     {
         
@@ -54,6 +57,13 @@ public class CanvasGamePlay : UICanvas
 
             }
 
+        }
+        int_Damge = Random.Range(5, 11);
+        txt_Damge.SetText(int_Damge.ToString("N0"));
+
+        if (level %5 == 0 && level > 4)
+        {
+            UIManager.Ins.OpenUI(UIID.UICBonusSkill);
         }
     }
 
@@ -141,7 +151,7 @@ public class CanvasGamePlay : UICanvas
     {
         if (Sword_Ads_TopLeft.Ins != null)
         {
-            Sword_Ads_TopLeft.Ins.Set_Go_To_Herro();
+            Sword_Ads_TopLeft.Ins.Set_Go_To_Herro(int_Damge);
             obj_Btn_ADs_Sword.SetActive(false);
         }
     }

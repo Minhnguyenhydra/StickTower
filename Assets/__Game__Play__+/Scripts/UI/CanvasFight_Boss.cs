@@ -128,6 +128,11 @@ public class CanvasFight_Boss : UICanvas
         {
             list_Obj_Btn_Skill_3[i].SetActive(false);
         }
+        Player.ins.health_Bar.Set_Hide_Health_Bar();
+        if (GameManager.Ins.enemyBoss_auto_Asign != null)
+        {
+            GameManager.Ins.enemyBoss_auto_Asign.health_Bar.Set_Hide_Health_Bar();
+        }
         //
         //ko sử dụng đến 3 nút kỹ năng nữa
         /*
@@ -272,18 +277,19 @@ public class CanvasFight_Boss : UICanvas
 
                     isAttacking = true;
                     int index_Skill = Player.ins.Set_Random_Skill_attack_BOSS();
-                    if (index_Skill == 1)
-                    {
-                        time_Count_Downt_attack = Constant.Time_Count_Skill_1;
-                    }
-                    if (index_Skill == 2)
-                    {
-                        time_Count_Downt_attack = Constant.Time_Count_Skill_2;
-                    }
-                    if (index_Skill == 3)
-                    {
-                        time_Count_Downt_attack = Constant.Time_Count_Skill_3;
-                    }
+                    //Debug.Log(index_Skill);
+                    time_Count_Downt_attack = Constant.Get_Time_Skill(index_Skill);
+                    //if (index_Skill == 1)
+                    //{
+                    //}
+                    //if (index_Skill == 2)
+                    //{
+                    //    time_Count_Downt_attack = Constant.Time_Count_Skill_2;
+                    //}
+                    //if (index_Skill == 3)
+                    //{
+                    //    time_Count_Downt_attack = Constant.Time_Count_Skill_3;
+                    //}
                     //if (index_Skill == 4)
                     //{
                     //    time_Count_Downt_attack = Constant.Time_Count_Attack_Player;

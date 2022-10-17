@@ -109,10 +109,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -715,7 +713,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6570}
     - Class: 114
-      Script: {instanceID: 50354}
+      Script: {instanceID: 139144}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -11026,19 +11024,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6570}
     - Class: 114
-      Script: {instanceID: 50656}
+      Script: {instanceID: 49772}
     - Class: 114
-      Script: {instanceID: 402218}
+      Script: {instanceID: 873480}
     - Class: 114
-      Script: {instanceID: 402960}
+      Script: {instanceID: 874222}
     - Class: 114
-      Script: {instanceID: 402962}
+      Script: {instanceID: 874224}
     - Class: 114
-      Script: {instanceID: 402964}
+      Script: {instanceID: 874226}
     - Class: 114
-      Script: {instanceID: 403008}
+      Script: {instanceID: 874272}
     - Class: 114
-      Script: {instanceID: 403010}
+      Script: {instanceID: 874274}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -11768,7 +11766,7 @@ ScriptsOnlyBuild:
     className: UserData
   - hash:
       serializedVersion: 2
-      Hash: e326732db23dd510015d761d858b3ccb
+      Hash: 6e3794150e41f38b43df8e31609f6506
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -12260,7 +12258,7 @@ ScriptsOnlyBuild:
     className: Floor
   - hash:
       serializedVersion: 2
-      Hash: ba201db485cfb9d59f25756ef633322c
+      Hash: c2a2c80813a58aa168a79da92e7c29ae
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CanvasGamePlay

@@ -321,7 +321,7 @@ public class Enemy : MonoBehaviour
                 ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Fill_Health_Player(0.75f);
             }
             //1s
-            yield return Cache.GetWFS(6);
+            yield return Cache.GetWFS(4);
             // hết lan 1
             if (!isDieing_Fight_Boss && Player.ins != null)
             {
@@ -341,7 +341,7 @@ public class Enemy : MonoBehaviour
                 ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Fill_Health_Player(0.5f);
             }
             //1s
-            yield return Cache.GetWFS(6);
+            yield return Cache.GetWFS(4);
             //hết  lan 2
             if (!isDieing_Fight_Boss && Player.ins != null)
             {
@@ -361,7 +361,7 @@ public class Enemy : MonoBehaviour
                 ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Fill_Health_Player(0.25f);
             }
             //1s
-            yield return Cache.GetWFS(6);
+            yield return Cache.GetWFS(4);
             //hết  lan 3
             if (!isDieing_Fight_Boss && Player.ins != null)
             {

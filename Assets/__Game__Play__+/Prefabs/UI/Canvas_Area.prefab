@@ -2163,6 +2163,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1568750874647224964}
     m_Modifications:
+    - target: {fileID: 3842638092092395779, guid: ec262172841bb394ba70f7e178c61d3d, type: 3}
+      propertyPath: m_text
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 9202021629118103480, guid: ec262172841bb394ba70f7e178c61d3d, type: 3}
       propertyPath: m_Name
       value: BuyHeroButton (2)
@@ -2273,6 +2277,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1568750874647224964}
     m_Modifications:
+    - target: {fileID: 3842638092092395779, guid: ec262172841bb394ba70f7e178c61d3d, type: 3}
+      propertyPath: m_text
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 9202021628170993100, guid: ec262172841bb394ba70f7e178c61d3d, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.6
@@ -2429,6 +2437,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1568750874647224964}
     m_Modifications:
+    - target: {fileID: 3842638092092395779, guid: ec262172841bb394ba70f7e178c61d3d, type: 3}
+      propertyPath: m_text
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 9202021629118103480, guid: ec262172841bb394ba70f7e178c61d3d, type: 3}
       propertyPath: m_Name
       value: BuyHeroButton (1)
@@ -2539,6 +2551,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1568750874647224964}
     m_Modifications:
+    - target: {fileID: 3842638092092395779, guid: ec262172841bb394ba70f7e178c61d3d, type: 3}
+      propertyPath: m_text
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 9202021629118103480, guid: ec262172841bb394ba70f7e178c61d3d, type: 3}
       propertyPath: m_Name
       value: BuyHeroButton (3)

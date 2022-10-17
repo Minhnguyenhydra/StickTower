@@ -246,7 +246,8 @@ MonoBehaviour:
   health: 30
   house_Build_Of_Player: {fileID: 0}
   Action_Attack: {fileID: 11400000, guid: 3891344c49bd26a45a283d06acde182a, type: 2}
-  Action_Die: {fileID: 11400000, guid: 4aaddc8f55f504c478c79113afdfae8c, type: 2}
+  Action_Die: {fileID: 11400000, guid: 9f7ac964878ebad41b4a3e07354171b6, type: 2}
+  Action_Die_loop: {fileID: 11400000, guid: 4aaddc8f55f504c478c79113afdfae8c, type: 2}
   Action_Hit: {fileID: 11400000, guid: 40d70d1b04631f044bb6f98a386f13c6, type: 2}
   Action_Idle: {fileID: 11400000, guid: 130b8411b960d874b86fb166017bfea9, type: 2}
   Action_Run: {fileID: 11400000, guid: 0cc437bcbc0ee014db1c229deba9c27c, type: 2}
@@ -297,6 +298,7 @@ MonoBehaviour:
   Action_buffdamge: {fileID: 11400000, guid: 43ced47659ce4e345a6f35471960dee4, type: 2}
   Action_Dam: {fileID: 11400000, guid: b330a5950463d554489d5c6dac805b4c, type: 2}
   isDoneFight_Boss: 0
+  isD_Dieing_Fight_Boss: 0
   enemy_Hitting: {fileID: 0}
   is_Block_Raycas: 0
   pos_Old_Player: {x: 0, y: 0, z: 0}

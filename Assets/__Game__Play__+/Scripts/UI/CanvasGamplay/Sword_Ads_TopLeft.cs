@@ -34,7 +34,7 @@ public class Sword_Ads_TopLeft : Singleton<Sword_Ads_TopLeft>
         
     }
     [ContextMenu("TEST")]
-    public void Set_Go_To_Herro()
+    public void Set_Go_To_Herro(int damege)
     {
         tf_this_Sword.gameObject.SetActive(true);
         tf_this_Sword.DOMove(tf_Sword_Ads_Go_Mid.position, Constant.Time_Sword_ADs_Go_To_Mid).OnComplete(
@@ -44,8 +44,8 @@ public class Sword_Ads_TopLeft : Singleton<Sword_Ads_TopLeft>
                 {
                     string name_Skin = Constant.Get_Skin_Name_By_Id_Sword(id_Sword);
                     Player.ins.Set_Skin(name_Skin);
-                    Player.ins.health_Bar.Set_Step_By_Step_Health(Player.ins.health, Player.ins.health + 2, 1);// +2 damge
-                    Player.ins.Set_Add_Health(2);//X2 damge
+                    Player.ins.health_Bar.Set_Step_By_Step_Health(Player.ins.health, Player.ins.health + damege, 1);// +2 damge
+                    Player.ins.Set_Add_Health(damege);//X2 damge
                     //bật anim ở Hero nhận đc dame
                     Player.ins.Set_Anim_TakeSword();
                     Destroy(this.gameObject);

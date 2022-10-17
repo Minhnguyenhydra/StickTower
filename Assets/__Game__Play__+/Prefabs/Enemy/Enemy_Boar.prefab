@@ -45,9 +45,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBossLass: 0
+  isBoss_UNTIL: 0
   isEnemyFly: 0
   isEnemyBoar: 1
+  isEnemy_Have_Key: 0
   health: 5
+  isBig_Enemy: 0
   skeletonAnimation: {fileID: 6658463363705268990}
   Action_Idle: {fileID: 11400000, guid: 47e89707d898c8d49ab4d8ee91b6ea8a, type: 2}
   Action_Attack: {fileID: 11400000, guid: 052ed479adef9bd429d22ae026f5eedb, type: 2}
@@ -56,11 +59,14 @@ MonoBehaviour:
   Action_Die: {fileID: 11400000, guid: eb43f666e072ca94db4d79e768094008, type: 2}
   Action_Victory: {fileID: 11400000, guid: 052ed479adef9bd429d22ae026f5eedb, type: 2}
   Action_Lose: {fileID: 11400000, guid: eb43f666e072ca94db4d79e768094008, type: 2}
+  key_Floor_To_Open_Lock_Floor: {fileID: 0}
   floor_This: {fileID: 0}
   tf_Enemy: {fileID: 0}
   isDieing: 0
+  isDieing_Fight_Boss: 0
   isFist_config: 0
   health_Bar: {fileID: 0}
+  index_Hit_Player: 0
 --- !u!1 &6658463363705268991
 GameObject:
   m_ObjectHideFlags: 0
@@ -89,7 +95,7 @@ Transform:
   m_GameObject: {fileID: 6658463363705268991}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1}
   m_Children: []
   m_Father: {fileID: 6658463363686776296}
   m_RootOrder: 0

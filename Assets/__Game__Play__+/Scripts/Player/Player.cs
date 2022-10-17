@@ -65,6 +65,7 @@ public class Player : MonoBehaviour
 
     public AnimationReferenceAsset Action_Attack;
     public AnimationReferenceAsset Action_Die;
+    public AnimationReferenceAsset Action_Die_loop;
     public AnimationReferenceAsset Action_Hit;
     public AnimationReferenceAsset Action_Idle;
     public AnimationReferenceAsset Action_Run;
@@ -252,7 +253,10 @@ public class Player : MonoBehaviour
     public void Set_Enemy_Hit_By_event()
     {
         //Debug.Log("===================Hit=================");
-        enemy_Hitting.Set_Anim_Takedame();
+        if (enemy_Hitting != null)
+        {
+            enemy_Hitting.Set_Anim_Takedame();
+        }
     }
     //Đã set Player Attack trước rồi mới set action cho enemy
     public int Get_Index_Skil_Using_Attack()
@@ -406,8 +410,10 @@ public class Player : MonoBehaviour
         ReSetCharacterState();
         SetCharacterState_NoLoop(Action_Die);
         yield return Cache.GetWFS(Constant.Time_Player_Die_die);
+        ReSetCharacterState();
+        SetCharacterState_Loop(Action_Die_loop);
         GameManager.Ins.Set_Lose_Level(floor_stay);
-        Destroy(this.gameObject);
+        //Destroy(this.gameObject);
         //gameObject.SetActive(false);
     }
     IEnumerator Delay_AttackTo_Idle(bool _isOpn_Reward = false)
@@ -485,7 +491,7 @@ public class Player : MonoBehaviour
         /////int offset = 2;
         ///
         /////_index_Skin_Wearing bắt đầu từ 0
-        
+
 
         if (id_Skin_Wearing == 0)
         {
@@ -504,7 +510,7 @@ public class Player : MonoBehaviour
                 SetCharacterState_NoLoop(Action_char_1_Skill_3);
                 index_Skill_Use = 13;
             }
-            
+
             else// (ii == 4)
             {
                 SetCharacterState_NoLoop(Action_Attack);
@@ -529,7 +535,7 @@ public class Player : MonoBehaviour
                 SetCharacterState_NoLoop(Action_char_2_Skill_3);
                 index_Skill_Use = 23;
             }
-            
+
             else// (ii == 4)
             {
                 SetCharacterState_NoLoop(Action_Attack);
@@ -554,7 +560,7 @@ public class Player : MonoBehaviour
                 SetCharacterState_NoLoop(Action_char_3_Skill_3);
                 index_Skill_Use = 33;
             }
-            
+
             else// (ii == 4)
             {
                 SetCharacterState_NoLoop(Action_Attack);
@@ -579,7 +585,7 @@ public class Player : MonoBehaviour
                 SetCharacterState_NoLoop(Action_char_3_Skill_3);
                 index_Skill_Use = 43;
             }
-            
+
             else// (ii == 4)
             {
                 SetCharacterState_NoLoop(Action_Attack);
@@ -604,7 +610,7 @@ public class Player : MonoBehaviour
                 SetCharacterState_NoLoop(Action_char_5_Skill_3);
                 index_Skill_Use = 53;
             }
-            
+
             else// (ii == 4)
             {
                 SetCharacterState_NoLoop(Action_Attack);
@@ -654,7 +660,7 @@ public class Player : MonoBehaviour
                 SetCharacterState_NoLoop(Action_char_7_Skill_3);
                 index_Skill_Use = 73;
             }
-            
+
             else// (ii == 4)
             {
                 SetCharacterState_NoLoop(Action_Attack);
@@ -662,8 +668,8 @@ public class Player : MonoBehaviour
                 SoundManager.Ins.PlayFx(FxID.attack_GamePlay);
             }
         }
-        
-        else// (id_Skin_Wearing == 7)
+
+        else if (id_Skin_Wearing == 7)
         {
             if (ii == 1)
             {
@@ -680,7 +686,7 @@ public class Player : MonoBehaviour
                 SetCharacterState_NoLoop(Action_char_8_Skill_3);
                 index_Skill_Use = 83;
             }
-            
+
             else// (ii == 4)
             {
                 SetCharacterState_NoLoop(Action_Attack);
@@ -689,8 +695,168 @@ public class Player : MonoBehaviour
             }
         }
 
-        
-        return ii;
+        else if (id_Skin_Wearing == 8)
+        {
+            if (ii == 91)
+            {
+                SetCharacterState_NoLoop(Action_char_9_Skill_1);
+                index_Skill_Use = 1;
+            }
+            else if (ii == 2)
+            {
+                SetCharacterState_NoLoop(Action_char_9_Skill_2);
+                index_Skill_Use = 2;
+            }
+            else if (ii == 3)
+            {
+                SetCharacterState_NoLoop(Action_char_9_Skill_3);
+                index_Skill_Use = 3;
+            }
+
+            else// (ii == 4)
+            {
+                SetCharacterState_NoLoop(Action_Attack);
+                index_Skill_Use = 0;
+                SoundManager.Ins.PlayFx(FxID.attack_GamePlay);
+            }
+        }
+
+
+        else if (id_Skin_Wearing == 9)
+        {
+            if (ii == 1)
+            {
+                SetCharacterState_NoLoop(Action_char_10_Skill_1);
+                index_Skill_Use = 1;
+            }
+            else if (ii == 2)
+            {
+                SetCharacterState_NoLoop(Action_char_10_Skill_2);
+                index_Skill_Use = 2;
+            }
+            else if (ii == 3)
+            {
+                SetCharacterState_NoLoop(Action_char_10_Skill_3);
+                index_Skill_Use = 3;
+            }
+
+            else// (ii == 4)
+            {
+                SetCharacterState_NoLoop(Action_Attack);
+                index_Skill_Use = 0;
+                SoundManager.Ins.PlayFx(FxID.attack_GamePlay);
+            }
+        }
+
+
+        else if (id_Skin_Wearing == 10)
+        {
+            if (ii == 1)
+            {
+                SetCharacterState_NoLoop(Action_char_11_Skill_1);
+                index_Skill_Use = 1;
+            }
+            else if (ii == 2)
+            {
+                SetCharacterState_NoLoop(Action_char_11_Skill_2);
+                index_Skill_Use = 2;
+            }
+            else if (ii == 3)
+            {
+                SetCharacterState_NoLoop(Action_char_11_Skill_3);
+                index_Skill_Use = 3;
+            }
+
+            else// (ii == 4)
+            {
+                SetCharacterState_NoLoop(Action_Attack);
+                index_Skill_Use = 0;
+                SoundManager.Ins.PlayFx(FxID.attack_GamePlay);
+            }
+        }
+
+
+        else if (id_Skin_Wearing == 11)
+        {
+            if (ii == 1)
+            {
+                SetCharacterState_NoLoop(Action_char_12_Skill_1);
+                index_Skill_Use = 1;
+            }
+            else if (ii == 2)
+            {
+                SetCharacterState_NoLoop(Action_char_12_Skill_2);
+                index_Skill_Use = 2;
+            }
+            else if (ii == 3)
+            {
+                SetCharacterState_NoLoop(Action_char_12_Skill_3);
+                index_Skill_Use = 3;
+            }
+
+            else// (ii == 4)
+            {
+                SetCharacterState_NoLoop(Action_Attack);
+                index_Skill_Use = 0;
+                SoundManager.Ins.PlayFx(FxID.attack_GamePlay);
+            }
+        }
+
+
+        else if (id_Skin_Wearing == 12)
+        {
+            if (ii == 1)
+            {
+                SetCharacterState_NoLoop(Action_char_13_Skill_1);
+                index_Skill_Use = 1;
+            }
+            else if (ii == 2)
+            {
+                SetCharacterState_NoLoop(Action_char_13_Skill_2);
+                index_Skill_Use = 2;
+            }
+            else if (ii == 3)
+            {
+                SetCharacterState_NoLoop(Action_char_13_Skill_3);
+                index_Skill_Use = 3;
+            }
+
+            else// (ii == 4)
+            {
+                SetCharacterState_NoLoop(Action_Attack);
+                index_Skill_Use = 0;
+                SoundManager.Ins.PlayFx(FxID.attack_GamePlay);
+            }
+        }
+
+
+        else //if (id_Skin_Wearing == 13)
+        {
+            if (ii == 1)
+            {
+                SetCharacterState_NoLoop(Action_char_14_Skill_1);
+                index_Skill_Use = 1;
+            }
+            else if (ii == 2)
+            {
+                SetCharacterState_NoLoop(Action_char_14_Skill_2);
+                index_Skill_Use = 2;
+            }
+            else if (ii == 3)
+            {
+                SetCharacterState_NoLoop(Action_char_14_Skill_3);
+                index_Skill_Use = 3;
+            }
+
+            else// (ii == 4)
+            {
+                SetCharacterState_NoLoop(Action_Attack);
+                index_Skill_Use = 0;
+                SoundManager.Ins.PlayFx(FxID.attack_GamePlay);
+            }
+        }
+
+        return index_Skill_Use;
     }
 
     #endregion
@@ -1069,7 +1235,7 @@ public class Player : MonoBehaviour
         }
 
         //Debug.Log(id_Skin_Wearing);
-        return ii;
+        return index_Skill_Use;
     }
 
     #endregion
@@ -1227,7 +1393,10 @@ public class Player : MonoBehaviour
                 isReach_Last_Point_Level = true;
 
                 //
-                Set_Go_To_Point_End_Level(floor_stay.tf_Point_End_Level, Enum_Type_Take_Last_Level.Enemy, floor_stay.list_Point_In_Floor[0].enemy_Attack_This_Point.Get_Health());
+                if (PlayerPrefs_Manager.Get_Index_Level_Normal() != 38)
+                {
+                    Set_Go_To_Point_End_Level(floor_stay.tf_Point_End_Level, Enum_Type_Take_Last_Level.Enemy, floor_stay.list_Point_In_Floor[0].enemy_Attack_This_Point.Get_Health());
+                }
             }
             else if (floor_stay.list_Point_In_Floor[0].princess_Attack_This_Point != null)
             {

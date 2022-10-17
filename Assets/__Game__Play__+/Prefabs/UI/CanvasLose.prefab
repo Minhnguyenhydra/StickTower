@@ -2954,7 +2954,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: No, thank
+  m_Text: No, thanks
 --- !u!1 &8206860772108758475
 GameObject:
   m_ObjectHideFlags: 0
@@ -3511,9 +3511,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2af662e3d84c94d46803a194118df649, type: 2}
-  - {fileID: 2100000, guid: 39714b8b5be283344856b657dd188b4e, type: 2}
-  - {fileID: 2100000, guid: 117cda8890d407c4e8725e9936854dd9, type: 2}
+  - {fileID: 2100000, guid: 935a0dd74c2454547ae4a75a6209c508, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

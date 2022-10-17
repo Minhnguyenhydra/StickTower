@@ -34,7 +34,11 @@ public class CanvasMainMenu : UICanvas
         if (UIManager.Ins.IsOpened(UIID.UICFight_Boss))
         {
             UIManager.Ins.CloseUI(UIID.UICFight_Boss);
-            Destroy(GameManager.Ins.enemyBoss_auto_Asign.gameObject);
+            if (GameManager.Ins.enemyBoss_auto_Asign != null)
+            {
+                Destroy(GameManager.Ins.enemyBoss_auto_Asign.gameObject);
+
+            }
         }
         ((CanvasFade)UIManager.Ins.GetUI(UIID.UICFade)).Set_Fade_In();
     }
