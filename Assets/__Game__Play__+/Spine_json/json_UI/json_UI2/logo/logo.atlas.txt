@@ -1,0 +1,34 @@
+
+logo.png
+size: 1716,472
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+UI2/3
+  rotate: false
+  xy: 2, 2
+  size: 835, 468
+  orig: 835, 468
+  offset: 0, 0
+  index: -1
+UI2/Logo_StickTower
+  rotate: false
+  xy: 839, 125
+  size: 626, 345
+  orig: 626, 345
+  offset: 0, 0
+  index: -1
+UI2/rui
+  rotate: false
+  xy: 1467, 241
+  size: 245, 229
+  orig: 245, 229
+  offset: 0, 0
+  index: -1
+UI2/rui2
+  rotate: false
+  xy: 1467, 10
+  size: 245, 229
+  orig: 245, 229
+  offset: 0, 0
+  index: -1

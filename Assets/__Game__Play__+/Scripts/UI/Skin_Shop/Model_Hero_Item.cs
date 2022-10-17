@@ -71,14 +71,12 @@ public class Model_Hero_Item : MonoBehaviour
     }
     public void Try_Button()
     {
-        Debug.Log("1");
         Change_Hero();
     }
     
     public void Can_Click_If_Have_Button()
     {
 
-        Debug.Log("2");
         Get_State_Skin();
         if (_enum_State_Item_Skin == Enum_State_Item_Skin.Have_Wearing || _enum_State_Item_Skin == Enum_State_Item_Skin.Have_No_Wear)
         {
@@ -92,7 +90,6 @@ public class Model_Hero_Item : MonoBehaviour
     public void Change_Hero()
     {
 
-        Debug.Log("3");
         //Đổi trạng thái Skin cũ thành chưa mặc
         int _ID_old_Skin = PlayerPrefs_Manager.Get_ID_Name_Skin_Wearing();
         PlayerPrefs_Manager.Set_Have_No_Wear_Skin(_ID_old_Skin);

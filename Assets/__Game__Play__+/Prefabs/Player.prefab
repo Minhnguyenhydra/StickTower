@@ -29,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3510746701502545119}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.48, y: 0.48, z: 0.4}
+  m_LocalPosition: {x: 0.2333, y: 0, z: 0}
+  m_LocalScale: {x: 0.62, y: 0.62, z: 0.51820004}
   m_Children: []
   m_Father: {fileID: 8412493010505819487}
   m_RootOrder: 0
@@ -62,10 +62,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2af662e3d84c94d46803a194118df649, type: 2}
-  - {fileID: 2100000, guid: b7e6aa07a15281c49adb63f472e8dcf3, type: 2}
-  - {fileID: 2100000, guid: 2af662e3d84c94d46803a194118df649, type: 2}
-  - {fileID: 2100000, guid: 39714b8b5be283344856b657dd188b4e, type: 2}
+  - {fileID: 2100000, guid: 935a0dd74c2454547ae4a75a6209c508, type: 2}
+  - {fileID: 2100000, guid: 83f6a93232b83424b83e393be059275b, type: 2}
+  - {fileID: 2100000, guid: 935a0dd74c2454547ae4a75a6209c508, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -99,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 22ad3588827a0954fa907e7658259d8e, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: 0762820781c062a42add2e85167e6fd6, type: 2}
   initialSkinName: hero1/weapon_bonus1
   initialFlipX: 0
   initialFlipY: 0
@@ -226,7 +225,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f360a9da96cd3f541be36c2d3e50ddf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  floor_stay: {fileID: 0}
   skeletonAnimation: {fileID: 8422075650565658969}
+  eventName_hit: hit
   eventName_sfx_char_skill_1: mp3/sfx_char_skill_1
   eventName_sfx_char_skill_2: mp3/sfx_char_skill_2
   eventName_sfx_char_skill_3: mp3/sfx_char_skill_3
@@ -244,45 +245,63 @@ MonoBehaviour:
   boxCollider_Player: {fileID: 1185867302309388883}
   health: 30
   house_Build_Of_Player: {fileID: 0}
-  Action_Attack: {fileID: 11400000, guid: 60b29f89ca9a10141b4627ce21fa20ea, type: 2}
-  Action_Die: {fileID: 11400000, guid: 74bdd850b6a53574496f1a6d00a85a44, type: 2}
-  Action_Hit: {fileID: 11400000, guid: a40b8b6df460fcf42b7a38acc3aee5bb, type: 2}
-  Action_Idle: {fileID: 11400000, guid: 1b488cb7bd1fda540899b96af7fb217b, type: 2}
-  Action_Run: {fileID: 11400000, guid: 5c15b2f4c45fc8b4f8967e0424207e11, type: 2}
-  Action_char_1_Skill_1: {fileID: 11400000, guid: 1ce3c177d51cf0f4989257e2d4302b5b, type: 2}
-  Action_char_1_Skill_2: {fileID: 11400000, guid: 14ab78cd49816f14cac78a500115fea3, type: 2}
-  Action_char_1_Skill_3: {fileID: 11400000, guid: 588b2e5abf95dd44d85f48a9324b7f3d, type: 2}
-  Action_char_2_Skill_1: {fileID: 11400000, guid: 0023604457742d84aae3b63bb21e3c65, type: 2}
-  Action_char_2_Skill_2: {fileID: 11400000, guid: e84611b57bd18544398fa271df342966, type: 2}
-  Action_char_2_Skill_3: {fileID: 11400000, guid: 39f26fbafe6a93f45b26a1fe3a670525, type: 2}
-  Action_char_3_Skill_1: {fileID: 11400000, guid: ed4404dff5d765045973d7b8a45b6bef, type: 2}
-  Action_char_3_Skill_2: {fileID: 11400000, guid: 10c896b2704c65e40abac695c9f57a4e, type: 2}
-  Action_char_3_Skill_3: {fileID: 11400000, guid: 15b63c3f1cf156542ae75be18694f641, type: 2}
-  Action_char_4_Skill_1: {fileID: 11400000, guid: 7534adc1e329c2c4a93bc63896970959, type: 2}
-  Action_char_4_Skill_2: {fileID: 11400000, guid: fb548be709dca5049ba303d69fa9902e, type: 2}
-  Action_char_4_Skill_3: {fileID: 11400000, guid: 6fb32689147c9d54e89643df1f8c6151, type: 2}
-  Action_char_5_Skill_1: {fileID: 11400000, guid: 7a5784cb1dffaa240b0ef3282abefd33, type: 2}
-  Action_char_5_Skill_2: {fileID: 11400000, guid: f6af86e2b9490364eb1973be009e580f, type: 2}
-  Action_char_5_Skill_3: {fileID: 11400000, guid: c97176f206d0dd949a8094c4cba584fd, type: 2}
-  Action_char_6_Skill_1: {fileID: 11400000, guid: 28ffd356293d1fc45a9cbcdd7e1fa012, type: 2}
-  Action_char_6_Skill_2: {fileID: 11400000, guid: 631ca70bd05a2f54eaa2fe2bd50b0f20, type: 2}
-  Action_char_6_Skill_3: {fileID: 11400000, guid: f694d16f059d2c447bb3e83c1011a3ec, type: 2}
-  Action_char_7_Skill_1: {fileID: 11400000, guid: 9737890b4d6d46d4fb1554caf3d90e92, type: 2}
-  Action_char_7_Skill_2: {fileID: 11400000, guid: 0429442d6d2bf0841833c2566c253b17, type: 2}
-  Action_char_7_Skill_3: {fileID: 11400000, guid: ee5644b7d4323b44e91f5c8a7809ecd9, type: 2}
-  Action_char_8_Skill_1: {fileID: 11400000, guid: 05a60e289d73432469b5d6f427ec35ea, type: 2}
-  Action_char_8_Skill_2: {fileID: 11400000, guid: 4ff0538105c804b4ba1faf79e19822f5, type: 2}
-  Action_char_8_Skill_3: {fileID: 11400000, guid: 5dc3ed8b6b00c2b4da8f966f251b63e7, type: 2}
-  Action_Victory: {fileID: 11400000, guid: 21b6ca92704610c449d20e32b91074f4, type: 2}
-  Action_Lose: {fileID: 11400000, guid: c516cfc20f7e6174e97d56f0cc158b3c, type: 2}
-  Action_buffdamge: {fileID: 11400000, guid: b343ffbfae9dfcf4095864f6484d010a, type: 2}
-  Action_Dam: {fileID: 11400000, guid: 56b414e1ec89fdd4d942eee8e18855d7, type: 2}
+  Action_Attack: {fileID: 11400000, guid: 3891344c49bd26a45a283d06acde182a, type: 2}
+  Action_Die: {fileID: 11400000, guid: 4aaddc8f55f504c478c79113afdfae8c, type: 2}
+  Action_Hit: {fileID: 11400000, guid: 40d70d1b04631f044bb6f98a386f13c6, type: 2}
+  Action_Idle: {fileID: 11400000, guid: 130b8411b960d874b86fb166017bfea9, type: 2}
+  Action_Run: {fileID: 11400000, guid: 0cc437bcbc0ee014db1c229deba9c27c, type: 2}
+  Action_char_1_Skill_1: {fileID: 11400000, guid: f97514f98fa05f24cbcce8579dd8c6c9, type: 2}
+  Action_char_1_Skill_2: {fileID: 11400000, guid: 11269dd3adf39824f8d243ee3859ac1e, type: 2}
+  Action_char_1_Skill_3: {fileID: 11400000, guid: f9ff039ca9a5fa24b8b15c7f7450a38c, type: 2}
+  Action_char_2_Skill_1: {fileID: 11400000, guid: 7770cbb94875b574fa833a428ef84e2c, type: 2}
+  Action_char_2_Skill_2: {fileID: 11400000, guid: 92656c128509d8349881c77894324ff4, type: 2}
+  Action_char_2_Skill_3: {fileID: 11400000, guid: f8dba51dfcbf20c4daf83c54f582147b, type: 2}
+  Action_char_3_Skill_1: {fileID: 11400000, guid: b5576bc87f8dd0d44a446de507569a96, type: 2}
+  Action_char_3_Skill_2: {fileID: 11400000, guid: b243865827e22114aa8281d042c147d7, type: 2}
+  Action_char_3_Skill_3: {fileID: 11400000, guid: b014b3c00cfb8b546995c4eca9b6f036, type: 2}
+  Action_char_4_Skill_1: {fileID: 11400000, guid: b66f7757aff5e694f95b284f355da31f, type: 2}
+  Action_char_4_Skill_2: {fileID: 11400000, guid: 5c0f35f784b98b2469a8378b493935ee, type: 2}
+  Action_char_4_Skill_3: {fileID: 11400000, guid: 2e4104aa2cc22a04eb6503ecd2c5936e, type: 2}
+  Action_char_5_Skill_1: {fileID: 11400000, guid: 4bf1ea826ab830e4baeff21f6d7a62f1, type: 2}
+  Action_char_5_Skill_2: {fileID: 11400000, guid: 2f7b5d2b03e889949b69469e01829970, type: 2}
+  Action_char_5_Skill_3: {fileID: 11400000, guid: e101dc7d64ecac74bb4bc7a9eef81755, type: 2}
+  Action_char_6_Skill_1: {fileID: 11400000, guid: f10d0124adfb7224ebc4626d7f05961a, type: 2}
+  Action_char_6_Skill_2: {fileID: 11400000, guid: d6e1d01b628ad4047b4bae5fd4504630, type: 2}
+  Action_char_6_Skill_3: {fileID: 11400000, guid: 9552013bf9a39ff4c8f3e7ff8e37212f, type: 2}
+  Action_char_7_Skill_1: {fileID: 11400000, guid: 2cf50c883f936f2459a6698a7b4da18e, type: 2}
+  Action_char_7_Skill_2: {fileID: 11400000, guid: 7d7fe141fd3fae1469e80f329499aec2, type: 2}
+  Action_char_7_Skill_3: {fileID: 11400000, guid: d4c27331a4009ac44bdf27542ae14462, type: 2}
+  Action_char_8_Skill_1: {fileID: 11400000, guid: 4e967edeeb7cc504190253229c75ae09, type: 2}
+  Action_char_8_Skill_2: {fileID: 11400000, guid: eb4f1aff3e45f5e49b23833b71909664, type: 2}
+  Action_char_8_Skill_3: {fileID: 11400000, guid: ec79e9cd31d509a40a7c16ff93b6a136, type: 2}
+  Action_char_9_Skill_1: {fileID: 11400000, guid: 0279049f1cd9d2a479addbd81e92d86a, type: 2}
+  Action_char_9_Skill_2: {fileID: 11400000, guid: b9e460dc1272cc04483dfd11a7722f08, type: 2}
+  Action_char_9_Skill_3: {fileID: 11400000, guid: cdb1cebee77e63e4cab1238b0f5ca051, type: 2}
+  Action_char_10_Skill_1: {fileID: 11400000, guid: a8c880357b67bfb4a8c3467c0a60cfae, type: 2}
+  Action_char_10_Skill_2: {fileID: 11400000, guid: a4a936342c0d7e04cb14868a74856c43, type: 2}
+  Action_char_10_Skill_3: {fileID: 11400000, guid: 9ab3a75527deed34091de9d046218f43, type: 2}
+  Action_char_11_Skill_1: {fileID: 11400000, guid: d0e5088d85ad62f4d94b548a70970c61, type: 2}
+  Action_char_11_Skill_2: {fileID: 11400000, guid: 90fe52232225147408d4e6dfd12e528d, type: 2}
+  Action_char_11_Skill_3: {fileID: 11400000, guid: 7b873fb5f141adb439e3df03f4e86f90, type: 2}
+  Action_char_12_Skill_1: {fileID: 11400000, guid: d9c1a8bbdfac6e54d9275d1e8cd8ec57, type: 2}
+  Action_char_12_Skill_2: {fileID: 11400000, guid: 7abe8e63574de6845a676add7df7ab8c, type: 2}
+  Action_char_12_Skill_3: {fileID: 11400000, guid: a542ed3f903adf1489890d81a67007b4, type: 2}
+  Action_char_13_Skill_1: {fileID: 11400000, guid: 718f26bc1b93f8143b0c440b17425fe3, type: 2}
+  Action_char_13_Skill_2: {fileID: 11400000, guid: 9a5e56406c400c9489dfd4476146756d, type: 2}
+  Action_char_13_Skill_3: {fileID: 11400000, guid: 924a7213396425c43a588588c7e559f4, type: 2}
+  Action_char_14_Skill_1: {fileID: 11400000, guid: e62cff6958a54334a9a14b62818bdeb2, type: 2}
+  Action_char_14_Skill_2: {fileID: 11400000, guid: be926da401e6dec4a8bba58ce1c2d490, type: 2}
+  Action_char_14_Skill_3: {fileID: 11400000, guid: 1659473add7e2454c97caacda86da33c, type: 2}
+  Action_Victory: {fileID: 11400000, guid: b8a1b108efbe1bd478388f1633ea813b, type: 2}
+  Action_Lose: {fileID: 11400000, guid: 5eb5da38c86b29d409ac090cd5a86e16, type: 2}
+  Action_buffdamge: {fileID: 11400000, guid: 43ced47659ce4e345a6f35471960dee4, type: 2}
+  Action_Dam: {fileID: 11400000, guid: b330a5950463d554489d5c6dac805b4c, type: 2}
   isDoneFight_Boss: 0
+  enemy_Hitting: {fileID: 0}
   is_Block_Raycas: 0
   pos_Old_Player: {x: 0, y: 0, z: 0}
   isCanHold: 0
   isHittingBoss: 0
-  floor_stay: {fileID: 0}
   indext_Point_In_Floor_Stay: 0
   health_Bar: {fileID: 0}
   isLast_Point_Level: 0

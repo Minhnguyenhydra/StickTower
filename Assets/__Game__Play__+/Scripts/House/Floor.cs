@@ -10,7 +10,7 @@ public class Floor : MonoBehaviour//obj gắn Script này có Colider
     [Header("Nếu là Level Rewward chỉ cần điền 2 điểm: đầu và điểm cuối vào list này")]
     [Header("Nếu là Level Bình thường cần điền đủ")]
     public List<Point_In_Floor> list_Point_In_Floor;
-    private Stroke_Blue stroke_Blue;
+    public Stroke_Blue stroke_Blue;
     //
     public bool is_Floor_Last_Of_house;//phải đánh dấu biến này ngoài Scene trước ở Floor đã xác định
     public bool is_Floor_Last_Of_Level;//phải đánh dấu biến này ngoài Scene trước ở Floor đã xác định

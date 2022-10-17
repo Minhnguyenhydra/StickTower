@@ -1,0 +1,20 @@
+
+arena.png
+size: 340,272
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+UI2/ARENA
+  rotate: false
+  xy: 2, 2
+  size: 278, 267
+  orig: 278, 267
+  offset: 0, 0
+  index: -1
+UI2/ARENA2
+  rotate: true
+  xy: 282, 29
+  size: 240, 55
+  orig: 240, 55
+  offset: 0, 0
+  index: -1

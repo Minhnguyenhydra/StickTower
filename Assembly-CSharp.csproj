@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{7F0C1B3A-AD92-702B-8A40-20718551FE9C}</ProjectGuid>
+    <ProjectGuid>{B53F6BDF-9715-305A-6519-3963D28F416B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -216,6 +216,7 @@
     <None Include="Assets\__Game__Play__+\Spine_json\json_UI\key\key.atlas.txt" />
     <None Include="Assets\__Game__Play__+\Spine_Old\json_UI\weapon_bonus\weapon_bonus1_SkeletonData\weapon_bonus1.atlas.txt" />
     <None Include="Assets\Reference__+\Duc Asset\Resources\shaders\uiimagecrop.shader" />
+    <None Include="Assets\__Game__Play__+\Spine_json\json_UI\json_UI2\arena\arena.atlas.txt" />
     <None Include="Assets\__Game__Play__+\Spine_Old\--Aset_SPine_Hero\Creep\Creep.atlas.txt" />
     <None Include="Assets\__Game__Play__+\Spine_json\json_UI\Lose\Lose.atlas.txt" />
     <None Include="Assets\Reference__+\Duc Asset\Shader\Spine_Skeleton.shader" />
@@ -249,6 +250,8 @@
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\__Game__Play__+\Spine_Old\--Aset_SPine_Hero\ef_combat\ef_combat.atlas.txt" />
+    <None Include="Assets\__Game__Play__+\Spine_json\Spine_json_01_10\json_boss_1110\Boss.atlas.txt" />
+    <None Include="Assets\__Game__Play__+\Spine_json\json_UI\json_UI2\challenge\challenge.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\__Game__Play__+\Spine_json\json_UI\icon_Arena\icon_Arena.atlas.txt" />
     <None Include="Assets\__Game__Play__+\Spine_json\json_UI\damg2\damg2.atlas.txt" />
@@ -265,6 +268,7 @@
     <None Include="Assets\Reference__+\Duc Asset\Resources\shaders\softmaskshader.shader" />
     <None Include="Assets\__Game__Play__+\Spine_Old\json_UI\LockKey\Lock_Key.atlas.txt" />
     <None Include="Assets\__Game__Play__+\Spine_Old\--Aset_SPine_Hero\skeleton\skeleton.atlas.txt" />
+    <None Include="Assets\__Game__Play__+\Spine_json\Spine_json_01_10\json_character_15_10_OK\Hero1.atlas.txt" />
     <None Include="Assets\Reference__+\Duc Asset\TextAsset\Boss1.atlas.txt" />
     <None Include="Assets\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\__Game__Play__+\Spine_json\Spine_json_01_10\json_boss\Boss.atlas.txt" />
@@ -285,7 +289,9 @@
     <None Include="Assets\__Game__Play__+\Spine_Old\--Aset_SPine_Hero\9_chest\9_chest.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\__Game__Play__+\Spine_json\json_UI\treasure\treasure.atlas.txt" />
+    <None Include="Assets\__Game__Play__+\Spine_json\json_UI\json_UI2\gold_bank\goldBank.atlas.txt" />
     <None Include="Assets\Reference__+\Duc Asset\Resources\shaders\uiscreen.shader" />
+    <None Include="Assets\__Game__Play__+\Spine_json\json_UI\json_UI2\skin\skin.atlas.txt" />
     <None Include="Assets\__Game__Play__+\Spine_Old\--Aset_SPine_Hero\Hero_0\Hero.atlas_0.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\__Game__Play__+\Spine_Old\--Aset_SPine_Hero\__chest\chest.atlas.txt" />
@@ -297,6 +303,7 @@
     <None Include="Assets\Reference__+\Duc Asset\TextAsset\Princess.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\Reference__+\Duc Asset\Resources\shaders\ui particle addsmooth.shader" />
+    <None Include="Assets\__Game__Play__+\Spine_json\json_UI\json_UI2\logo\logo.atlas.txt" />
     <None Include="Assets\__Game__Play__+\Spine_json\json_UI\icon_Skin\icon_Skin.atlas.txt" />
     <None Include="Assets\__Game__Play__+\Spine_json\json_UI\weapon_bonus\weapon_bonus3\weapon_bonus3.atlas.txt" />
   </ItemGroup>
@@ -955,15 +962,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{BF1FFF76-6B2E-D839-9965-DC0304E2D331}</Project>
+      <Project>{52BFD76B-911C-B089-3CDA-BF4FA920523B}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
     <ProjectReference Include="spine-unity.csproj">
-      <Project>{A0F9986E-6500-61E4-ACD6-57C0D3AF2C4C}</Project>
+      <Project>{AF6A1687-451D-DFAD-91CD-B806FD869EC2}</Project>
       <Name>spine-unity</Name>
     </ProjectReference>
     <ProjectReference Include="spine-unity-editor.csproj">
-      <Project>{D5CBE249-9C85-0B9D-3D42-FAF611975D88}</Project>
+      <Project>{DADED65D-7BD9-E6F8-0847-C08A8AF07C67}</Project>
       <Name>spine-unity-editor</Name>
     </ProjectReference>
   </ItemGroup>

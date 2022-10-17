@@ -1,0 +1,20 @@
+
+challenge.png
+size: 332,264
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+UI2/CHALLENGE
+  rotate: false
+  xy: 2, 2
+  size: 270, 257
+  orig: 270, 257
+  offset: 0, 0
+  index: -1
+UI2/CHALLENGE2
+  rotate: true
+  xy: 274, 19
+  size: 240, 55
+  orig: 240, 55
+  offset: 0, 0
+  index: -1

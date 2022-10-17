@@ -2853,6 +2853,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chalange_Pay 100
       objectReference: {fileID: 0}
+    - target: {fileID: 972764566599937339, guid: 5c4a5a61d831f6f44ad3cbf2b1f75391, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 972764566787708798, guid: 5c4a5a61d831f6f44ad3cbf2b1f75391, type: 3}
+      propertyPath: m_Text
+      value: 'WATCH ADVERTISEMENT
+
+        TO PLAY THIS LEVEL'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c4a5a61d831f6f44ad3cbf2b1f75391, type: 3}
 --- !u!114 &702180877 stripped

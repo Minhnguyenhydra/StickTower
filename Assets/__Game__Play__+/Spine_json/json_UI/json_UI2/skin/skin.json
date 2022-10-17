@@ -1,0 +1,47 @@
+{
+"skeleton": {
+	"hash": "tu+vvwFqJBQJKtKw39oHl3fOF/Y",
+	"spine": "3.8.85",
+	"x": -123.14,
+	"y": -143.84,
+	"width": 260,
+	"height": 342.37,
+	"images": "../images/",
+	"audio": "E:/GaiA/GameProject/Stick_Tower/UI"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "SKIN", "parent": "root", "x": 1.63, "y": -164.69 },
+	{ "name": "SKIN3", "parent": "SKIN", "x": 0.92, "y": 200.87 }
+],
+"slots": [
+	{ "name": "SKIN", "bone": "SKIN3", "attachment": "UI2/SKIN" },
+	{ "name": "SKIN1", "bone": "SKIN", "attachment": "UI2/SKIN1" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"SKIN": {
+				"UI2/SKIN": { "x": 4.31, "y": 19.85, "width": 260, "height": 285 }
+			},
+			"SKIN1": {
+				"UI2/SKIN1": { "x": 5.23, "y": 48.35, "width": 240, "height": 55 }
+			}
+		}
+	}
+],
+"animations": {
+	"animation": {
+		"bones": {
+			"SKIN3": {
+				"scale": [
+					{ "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.5, "x": 1.051, "y": 1.051, "curve": 0.25, "c3": 0.75 },
+					{ "time": 1 }
+				]
+			}
+		}
+	}
+}
+}

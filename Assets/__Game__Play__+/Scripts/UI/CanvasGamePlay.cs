@@ -47,7 +47,7 @@ public class CanvasGamePlay : UICanvas
         int level = PlayerPrefs_Manager.Get_Index_Level_Normal();
         if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 1)
         {
-            if (level == 30 || level == 26 || level == 16 || level == 14 || level == 22)
+            if (level == 30 || level == 26 || level == 16 || level == 14 || level == 22|| level == 35)
             {
                 UIManager.Ins.OpenUI(UIID.UICPay_Gold_To_Play);
                 StartCoroutine(IE_Waiting_Player_Initalize());

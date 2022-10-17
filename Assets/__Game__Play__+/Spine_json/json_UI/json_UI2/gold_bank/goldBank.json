@@ -1,0 +1,48 @@
+{
+"skeleton": {
+	"hash": "5HIpZxIYw5p0fkcoGhttSNNMMgU",
+	"spine": "3.8.85",
+	"x": -141.31,
+	"y": -151,
+	"width": 266,
+	"height": 325.14,
+	"images": "../images/",
+	"audio": "E:/GaiA/GameProject/Stick_Tower/UI"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "BONUS COIN", "parent": "root", "x": -13.33, "y": -173.87 },
+	{ "name": "BONUS COIN2", "parent": "BONUS COIN", "x": 4.2, "y": 182.95 }
+],
+"slots": [
+	{ "name": "BONUS COIN", "bone": "BONUS COIN2", "attachment": "UI2/BONUS COIN" },
+	{ "name": "PiggyBank_Alert", "bone": "BONUS COIN" },
+	{ "name": "PIGGY BANK", "bone": "BONUS COIN", "attachment": "UI2/PIGGY BANK" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"BONUS COIN": {
+				"UI2/BONUS COIN": { "x": 0.81, "y": 22.56, "width": 266, "height": 285 }
+			},
+			"PIGGY BANK": {
+				"UI2/PIGGY BANK": { "x": 5.2, "y": 50.38, "width": 240, "height": 55 }
+			}
+		}
+	}
+],
+"animations": {
+	"animation": {
+		"bones": {
+			"BONUS COIN2": {
+				"scale": [
+					{ "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.5, "x": 1.052, "y": 1.052, "curve": 0.25, "c3": 0.75 },
+					{ "time": 1 }
+				]
+			}
+		}
+	}
+}
+}

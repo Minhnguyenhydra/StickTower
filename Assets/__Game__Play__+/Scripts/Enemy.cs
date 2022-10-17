@@ -34,6 +34,7 @@ public class Enemy : MonoBehaviour
     public Floor floor_This;
     public Transform tf_Enemy;
     public bool isDieing;// đang chạy anim die, thì ko attack Enemy này thêm được nữa
+    public bool isDieing_Fight_Boss;// Chỉ đánh Boss
     public bool isFist_config;
     public Health_Bar health_Bar;
     [Header("------Indext Fix= 4 lần Attack Player------")]
@@ -130,7 +131,7 @@ public class Enemy : MonoBehaviour
         SoundManager.Ins.Play_FX_Hit_Enemy_Random();
         Set_Show_Blood();
 
-        SetCharacterState_Loop(Action_Takedamge);
+        //SetCharacterState_Loop(Action_Takedamge);
 
 
         //Delay player dùng hết Skill.......
@@ -161,6 +162,33 @@ public class Enemy : MonoBehaviour
         SoundManager.Ins.Play_FX_Hit_Enemy_Random();
         float time_action_Die = Constant.Get_Time_action_Die_Enemy(isBig_Enemy);
         yield return Cache.GetWFS(time_action_Die);
+
+
+
+
+
+        
+        if (floor_This.is_Floor_Last_Of_house && !floor_This.is_Floor_Last_Of_Level)
+        {
+            //Nếu enemy là cuối cùng của Floor cuối cùng của 1 nhà... set delay chuyển nhà
+            Point_In_Floor pp = GetComponentInParent<Point_In_Floor>();
+
+            if (pp == floor_This.list_Point_In_Floor[0])
+            {
+                //Drag_Drop_Manager.Instance.Set_Delay_Take_House(floor_This,0);
+                floor_This.Set_Floor_To_Floor_Of_Player();
+                floor_This.house_Build_Of_This.Set_Mai_Xanh();
+                floor_This.house_Build_Of_This.Set_This_To_Team_Player();
+                Drag_Drop_Manager.Instance.Set_Delay_Take_House(floor_This, 0);
+            }
+
+        }
+        
+
+
+
+
+
 
 
         //xóa enemy...//
@@ -263,13 +291,214 @@ public class Enemy : MonoBehaviour
         }
     }
     #endregion
-    public void Set_Attack_8s_Fight_Boss()
+    public void Set_Attack_8s_Fight_Boss(bool _isPlayer_Stronger)
     {
-        StartCoroutine(IE_Attack_8s());
+        if (Player.ins != null)
+        {
+            Player.ins.enemy_Hitting = this;
+        }
+        StartCoroutine(IE_Attack_8s(_isPlayer_Stronger));
     }
-    IEnumerator IE_Attack_8s()
+    IEnumerator IE_Attack_8s(bool _isPlayer_Stronger)
     {
-        float tt = Time.time;
+        
+        if (_isPlayer_Stronger)
+        {
+            // tối đa 4 lần
+            Set_Anim_Attack();
+            yield return Cache.GetWFS(1);
+            if (!isDieing_Fight_Boss)
+            {
+                Player.ins.Set_Show_Blood();
+                //Player.ins.Set_Anim_Hit();
+            }
+            int _health_Player = Player.ins.Get_Health();
+            //damge 25
+            if (!isDieing_Fight_Boss)
+            {
+                Player.ins.health_Bar.Set_Step_By_Step_Health(_health_Player,75, 1);
+
+                ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Fill_Health_Player(0.75f);
+            }
+            //1s
+            yield return Cache.GetWFS(6);
+            // hết lan 1
+            if (!isDieing_Fight_Boss && Player.ins != null)
+            {
+                Set_Anim_Attack();
+            }
+            yield return Cache.GetWFS(1);
+            if (!isDieing_Fight_Boss && Player.ins != null)
+            {
+                Player.ins.Set_Show_Blood();
+                //Player.ins.Set_Anim_Hit();
+            }
+            //damge 25
+            if (!isDieing_Fight_Boss && Player.ins != null)
+            {
+                Player.ins.health_Bar.Set_Step_By_Step_Health(_health_Player,50, 1);
+
+                ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Fill_Health_Player(0.5f);
+            }
+            //1s
+            yield return Cache.GetWFS(6);
+            //hết  lan 2
+            if (!isDieing_Fight_Boss && Player.ins != null)
+            {
+                Set_Anim_Attack();
+            }
+            yield return Cache.GetWFS(1);
+            if (!isDieing_Fight_Boss && Player.ins != null)
+            {
+                Player.ins.Set_Show_Blood();
+                //Player.ins.Set_Anim_Hit();
+            }
+            //damge 25
+            if (!isDieing_Fight_Boss && Player.ins != null)
+            {
+                Player.ins.health_Bar.Set_Step_By_Step_Health(_health_Player,25, 1);
+
+                ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Fill_Health_Player(0.25f);
+            }
+            //1s
+            yield return Cache.GetWFS(6);
+            //hết  lan 3
+            if (!isDieing_Fight_Boss && Player.ins != null)
+            {
+                Set_Anim_Attack();
+            }
+            yield return Cache.GetWFS(1);
+            if (!isDieing_Fight_Boss && Player.ins != null)
+            {
+                Player.ins.Set_Show_Blood();
+                //Player.ins.Set_Anim_Hit();
+            }
+            //damge 25
+            if (!isDieing_Fight_Boss && Player.ins != null)
+            {
+                Player.ins.health_Bar.Set_Step_By_Step_Health(_health_Player,0, 1);
+
+                ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Fill_Health_Player(0.0f);
+                
+            }
+            //1s
+            yield return Cache.GetWFS(1);
+            //hết  lan 4
+            if (!isDieing_Fight_Boss)
+            {
+                Player.ins.Set_Show_Blood();
+                Player.ins.isD_Dieing_Fight_Boss = true;
+                //Player.ins.Set_Anim_Hit();
+            }
+            yield return Cache.GetWFS(0.5f);
+            if (!isDieing_Fight_Boss)
+            {
+                Player.ins.Set_Anim_Die();
+                ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Anim_Red_L();
+                SetCharacterState_NoLoop(Action_Victory);
+                //SoundManager.Ins.PlayFx(FxID.giantDeath);
+                yield return Cache.GetWFS(2.6f);
+
+                GameManager.Ins.Set_Lose_Level(floor_This);
+            }
+        }
+        else//Damge Player nho hon
+        {
+
+            // tối đa 3 lần
+            Set_Anim_Attack();
+            yield return Cache.GetWFS(1);
+            if (!isDieing_Fight_Boss && Player.ins != null)
+            {
+                Player.ins.Set_Show_Blood();
+                //Player.ins.Set_Anim_Hit();
+            }
+            int _health_Player = Player.ins.Get_Health();
+            //damge 25
+            if (!isDieing_Fight_Boss && Player.ins != null)
+            {
+                Player.ins.health_Bar.Set_Step_By_Step_Health(_health_Player, 70, 1);
+
+                ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Fill_Health_Player(0.70f);
+            }
+            //1s
+            yield return Cache.GetWFS(1);
+            // hết lan 1
+
+            Set_Anim_Attack();
+            yield return Cache.GetWFS(1);
+            if (!isDieing_Fight_Boss && Player.ins != null)
+            {
+                Player.ins.Set_Show_Blood();
+                //Player.ins.Set_Anim_Hit();
+            }
+            //damge 25
+            if (!isDieing_Fight_Boss && Player.ins != null)
+            {
+                Player.ins.health_Bar.Set_Step_By_Step_Health(_health_Player, 40, 1);
+
+                ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Fill_Health_Player(0.4f);
+            }
+            //1s
+            yield return Cache.GetWFS(1);
+            //hết  lan 2
+
+            Set_Anim_Attack();
+            yield return Cache.GetWFS(1);
+            if (!isDieing_Fight_Boss && Player.ins != null)
+            {
+                Player.ins.Set_Show_Blood();
+                //Player.ins.Set_Anim_Hit();
+            }
+            //damge 25
+            if (!isDieing_Fight_Boss && Player.ins != null)
+            {
+                Player.ins.health_Bar.Set_Step_By_Step_Health(_health_Player, 10, 1);
+
+                ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Fill_Health_Player(0.1f);
+            }
+            //1s
+            yield return Cache.GetWFS(1);
+            //hết  lan 3
+
+            Set_Anim_Attack();
+            yield return Cache.GetWFS(1);
+            if (!isDieing_Fight_Boss && Player.ins != null)
+            {
+                Player.ins.Set_Show_Blood();
+                //Player.ins.Set_Anim_Hit();
+            }
+            //damge 25
+            if (!isDieing_Fight_Boss && Player.ins != null)
+            {
+                Player.ins.health_Bar.Set_Step_By_Step_Health(_health_Player, 0, 1);
+
+                ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Fill_Health_Player(0.0f);
+
+            }
+            //1s
+            yield return Cache.GetWFS(1);
+            //hết  lan 3
+            if (!isDieing_Fight_Boss && Player.ins != null)
+            {
+                Player.ins.Set_Show_Blood();
+                Player.ins.isD_Dieing_Fight_Boss = true;
+                //Player.ins.Set_Anim_Hit();
+            }
+            yield return Cache.GetWFS(0.5f);
+            if (!isDieing_Fight_Boss && Player.ins != null)
+            {
+                ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Anim_Red_L();
+
+                Set_Anim_Victory();
+                Player.ins.Set_Anim_Die();
+                yield return Cache.GetWFS(2.2f);
+                GameManager.Ins.Set_Lose_Level(floor_This);
+            }
+        }
+
+        #region old
+        /*
         yield return Cache.GetWFS(1);
         // 1
 
@@ -398,30 +627,84 @@ public class Enemy : MonoBehaviour
         //}
 
         //Debug.Log(Time.time - tt);
+        */
+        #endregion 
     }
     //
-    public void Set_Delay_Show_Health_Fight_Boos()
+    public void Set_Delay_Show_Health_Fight_Boos(bool _isPlayer_Stronger)
     {
-        if (index_Hit_Player == 0)
+        if (_isPlayer_Stronger)
         {
-            ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).img_Health_Boss.fillAmount =(0.95f);
-        }
-        else if (index_Hit_Player == 1)
-        {
-            ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).img_Health_Boss.fillAmount = (0.85f);
-        }
-        else if (index_Hit_Player == 2)
-        {
-            ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).img_Health_Boss.fillAmount = (0.75f);
-        }
-        else if (index_Hit_Player == 3)
-        {
-            ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).img_Health_Boss.fillAmount = (0.65f);
+            StartCoroutine(IE_Show_Blood_In_8s_Fight_Boot());
         }
         else
         {
-            ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).img_Health_Boss.fillAmount = (0.55f);
+            StartCoroutine(IE_Show_Blood_In_8s_Fight_Boot());
+        }
+        
+    }
+
+    IEnumerator IE_Show_Blood_In_8s_Fight_Boot()
+    {
+        yield return Cache.GetWFS(1);
+
+        if (index_Hit_Player == 0)
+        {
+            ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).img_Health_Boss.fillAmount = (0.8f);
+            health = 80;
+            health_Bar.Set_Step_By_Step_Health(100, health, 1);
+        }
+        else if (index_Hit_Player == 1)
+        {
+            ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).img_Health_Boss.fillAmount = (0.6f);
+            health = 60;
+            health_Bar.Set_Step_By_Step_Health(80, 60, 1);
+        }
+        else if (index_Hit_Player == 2)
+        {
+            ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).img_Health_Boss.fillAmount = (0.4f);
+            health = 40;
+            health_Bar.Set_Step_By_Step_Health(60, 40, 1);
+        }
+        else if (index_Hit_Player == 3)
+        {
+            ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).img_Health_Boss.fillAmount = (0.2f);
+            health = 20;
+            health_Bar.Set_Step_By_Step_Health(40, 20, 1);
+        }
+        else
+        {
+            ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).img_Health_Boss.fillAmount = (0.0f);
+            health = 0;
+            health_Bar.Set_Step_By_Step_Health(20, 0, 1);
+            
+
+            Debug.Log("==sfs===");
         }
         index_Hit_Player++;
+
+        Set_Show_Blood();
+        Set_Anim_Takedame();
+        if (index_Hit_Player == 5)
+        {
+            isDieing_Fight_Boss = true;
+            health_Bar.Set_Hide_Health_Bar();
+            ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Anim_Red_R();
+        }
+        Cache.GetWFS(0.5f);
+        if (index_Hit_Player == 5)
+        {
+            //isDieing_Fight_Boss = true;
+            //Set_Anim_Die();
+            if (!Player.ins.isD_Dieing_Fight_Boss)
+            {
+                SetCharacterState_NoLoop(Action_Die);
+                SoundManager.Ins.PlayFx(FxID.giantDeath);
+                ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Anim_Red_R();
+                Cache.GetWFS(2.5f);
+                GameManager.Ins.Set_Mai_Xanh_Delay_Win(floor_This);
+
+            }
+        }
     }
 }

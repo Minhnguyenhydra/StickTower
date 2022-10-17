@@ -4071,12 +4071,16 @@ PrefabInstance:
       value: 136
       objectReference: {fileID: 0}
     - target: {fileID: 1307083927815842411, guid: 33bf6e504c444d44cbda1f878c00fa76, type: 3}
+      propertyPath: isBossLass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1307083927815842411, guid: 33bf6e504c444d44cbda1f878c00fa76, type: 3}
       propertyPath: isBig_Enemy
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1307083927815842411, guid: 33bf6e504c444d44cbda1f878c00fa76, type: 3}
       propertyPath: isBoss_UNTIL
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1307083927815842412, guid: 33bf6e504c444d44cbda1f878c00fa76, type: 3}
       propertyPath: m_RootOrder
@@ -4126,6 +4130,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 1765391275474086670, guid: 33bf6e504c444d44cbda1f878c00fa76, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1765391275474086670, guid: 33bf6e504c444d44cbda1f878c00fa76, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 870be849f10da74469046026f0ada961, type: 2}
     - target: {fileID: 1970416070724380192, guid: 33bf6e504c444d44cbda1f878c00fa76, type: 3}
       propertyPath: m_Mesh
       value: 

@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Init_Area : Singleton<Init_Area>
 {
-    public enum AnimName { attack, idle, hit, die, lose, run, victory, skill_1, skill_2, skill_3, walk }
+    public enum AnimName { attack, idle, hit, die, lose, run, victory,victory2, skill_1, skill_2, skill_3, walk }
 
     public UserData userData;
 
     public PlayerArena player;
     public EnemyArena enemy;
-
+    //Quan add
+    public int count_time_attack = 0;//1 2 3 4
     private void Awake()
     {
         userData?.OnInitData();
@@ -105,11 +106,21 @@ public class Init_Area : Singleton<Init_Area>
 
             
             SoundManager.Ins.PlayFx(FxID.attack_Arena);
-            yield return new WaitForSeconds(3f);
+            count_time_attack++;
+            if (count_time_attack > 2 )
+            {
+                yield return new WaitForSeconds(6f);//Change : 3f//Boss
+                //Debug.Log("=====");
+            }
+            else
+            {
+                yield return new WaitForSeconds(3f);//Change : 3f
 
+            }
+            //Debug.Log
             if (player.Damage > enemy.Damage)
             {
-                ChangeAnim(AnimName.victory.ToString(), true, AnimName.die.ToString(), false);
+                ChangeAnim(AnimName.victory2.ToString(), true, AnimName.die.ToString(), false);
 
                 
                 SoundManager.Ins.PlayFx(FxID.giantDeath);
@@ -137,7 +148,7 @@ public class Init_Area : Singleton<Init_Area>
         }
 
         {
-            ChangeAnim(AnimName.victory.ToString(), true, AnimName.die.ToString(), false);
+            ChangeAnim(AnimName.victory2.ToString(), true, AnimName.die.ToString(), false);
             //save level
             userData.SetIntData(UserData.Key_LevelArena, ref userData.levelArena, userData.levelArena + 1);
             //TODO: show ui victory

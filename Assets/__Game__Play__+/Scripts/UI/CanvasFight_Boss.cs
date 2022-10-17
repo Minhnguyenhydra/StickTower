@@ -6,8 +6,10 @@ using DG.Tweening;
 //Do nếu để cùng Canvas tổng thì Canvas Pig sẽ có oder layer bằng với Canvas tổng, mà Skeleton muốn gắn lên Canvas tổng phải có Oder layer cao hơn, do đó các Skeleton ko liên quan sẽ bị nổi lên ở Canvas Pink Bank này, do đó phải gắn canvas Pig Bank này ở canvas riêng có chỉ số Oder cao hơn
 public class CanvasFight_Boss : UICanvas
 {
+    public bool _isPlayer_Stronger;
     public GameObject obj_Health_Red_L;
     public GameObject obj_Health_Red_R;
+    public GameObject obj_Hand_tut;
     [Header("Điền idBoss level nay vào đây")]
     public int idBoss;//0-3
     public int numberStar_Rate; 
@@ -100,6 +102,10 @@ public class CanvasFight_Boss : UICanvas
    
     private void OnEnable()
     {
+        if (GameManager.Ins.enemyBoss_auto_Asign != null)
+        {
+            _isPlayer_Stronger = (Player.ins.health > GameManager.Ins.enemyBoss_auto_Asign.health);
+        }
         Player.ins.isHittingBoss = true;
         Obj_Panel_Start.SetActive(true);
         Obj_canvas_Start.SetActive(true);
@@ -235,15 +241,35 @@ public class CanvasFight_Boss : UICanvas
     {
         anim_RateUs.SetTrigger("red_R");
     }
+    public void Set_Anim_Hand()
+    {
+        if (obj_Hand_tut != null)//lv 5 mới != null
+        {
+            obj_Hand_tut.SetActive(true);
+            anim_RateUs.SetTrigger("hand");
+            
+        }
+    }
+    public void Set_Off_Anim_Hand()
+    {
+        if (obj_Hand_tut != null)
+        {
+            obj_Hand_tut.SetActive(false);
+
+        }
+    }
     public void Attack_Button_()
     {
-        if (!isBlock)
+        if (!isBlock && !GameManager.Ins.enemyBoss_auto_Asign.isDieing_Fight_Boss && !Player.ins.isD_Dieing_Fight_Boss)
         {
             SoundManager.Ins.PlayFx(FxID.click);
             if (time_Count_Downt_attack <= 0 && Check_Can_Hit() && Player.ins != null)
             {
                 if (!Player.ins.isDoneFight_Boss)
                 {
+                    Set_Off_Anim_Hand();
+
+
                     isAttacking = true;
                     int index_Skill = Player.ins.Set_Random_Skill_attack_BOSS();
                     if (index_Skill == 1)
@@ -264,7 +290,7 @@ public class CanvasFight_Boss : UICanvas
                     //}
                     /////////time_Count_Downt_attack = Constant.Time_Count_Attack_Player;
                     ////Player.ins.Set_Anim_Attack();
-                    GameManager.Ins.enemyBoss_auto_Asign.Set_Delay_Show_Health_Fight_Boos();
+                    GameManager.Ins.enemyBoss_auto_Asign.Set_Delay_Show_Health_Fight_Boos(_isPlayer_Stronger);
                 }
 
             }
@@ -338,7 +364,7 @@ public class CanvasFight_Boss : UICanvas
                 Set_Tru_Gold_Or_ADs_Mua_Skill(1);
 
 
-                GameManager.Ins.enemyBoss_auto_Asign.Set_Delay_Show_Health_Fight_Boos();
+                GameManager.Ins.enemyBoss_auto_Asign.Set_Delay_Show_Health_Fight_Boos(_isPlayer_Stronger);
             }
             
         }
@@ -368,7 +394,7 @@ public class CanvasFight_Boss : UICanvas
                 Player.ins.health_Bar.Set_Step_By_Step_Health(Player.ins.Get_Health(), Mathf.RoundToInt(Player.ins.Get_Health() * buff), 0.5f);
                 Player.ins.health = Mathf.RoundToInt(Player.ins.Get_Health() * buff);
 
-                GameManager.Ins.enemyBoss_auto_Asign.Set_Delay_Show_Health_Fight_Boos();
+                GameManager.Ins.enemyBoss_auto_Asign.Set_Delay_Show_Health_Fight_Boos(_isPlayer_Stronger);
             }
             
         }
@@ -400,7 +426,7 @@ public class CanvasFight_Boss : UICanvas
                 Player.ins.health = Mathf.RoundToInt(Player.ins.Get_Health() * buff);
 
 
-                GameManager.Ins.enemyBoss_auto_Asign.Set_Delay_Show_Health_Fight_Boos();
+                GameManager.Ins.enemyBoss_auto_Asign.Set_Delay_Show_Health_Fight_Boos(_isPlayer_Stronger);
             }
             
         }
@@ -419,16 +445,28 @@ public class CanvasFight_Boss : UICanvas
     IEnumerator IE_DelayClose()
     {
         anim_RateUs.SetTrigger(Constant.Trigger_PigBankClose);
-        yield return Cache.GetWFS(Constant.Time_Delay_PigBank_Close*2);
+        yield return Cache.GetWFS(Constant.Time_Delay_PigBank_Close * 2);
         Close();
     }
     IEnumerator IE_DelayClose_CanvasFight_Start()
     {
         yield return Cache.GetWFS(Constant.Time_DelayClose_CanvasFight_Start);
-        GameManager.Ins.enemyBoss_auto_Asign.Set_Attack_8s_Fight_Boss();
+        
+        
+
+        Player.ins.health = 100;
+        Player.ins.health_Bar.Set_Health_Imedetly(100);
+
+        GameManager.Ins.enemyBoss_auto_Asign.health = 100;
+        GameManager.Ins.enemyBoss_auto_Asign.health_Bar.Set_Health_Imedetly(100);
+
+
+
+        GameManager.Ins.enemyBoss_auto_Asign.Set_Attack_8s_Fight_Boss(_isPlayer_Stronger);
         Obj_Panel_Hit.SetActive(true);
         Obj_canvas_Start.SetActive(false);
         Obj_Panel_Start.SetActive(false);
+        Set_Anim_Hand();//lv 5 obj_hand != null mới bật
     }
     [ContextMenu("_Reset_Skill")]
     public void Reset_Skill()

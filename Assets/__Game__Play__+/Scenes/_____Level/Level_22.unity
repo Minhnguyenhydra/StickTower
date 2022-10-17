@@ -769,6 +769,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 1765391275474086670, guid: 33bf6e504c444d44cbda1f878c00fa76, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1765391275474086670, guid: 33bf6e504c444d44cbda1f878c00fa76, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 870be849f10da74469046026f0ada961, type: 2}
     - target: {fileID: 1970416070724380192, guid: 33bf6e504c444d44cbda1f878c00fa76, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -3006,6 +3014,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Try_Again_Before_Pay_100
       objectReference: {fileID: 0}
+    - target: {fileID: 6044573729820093173, guid: bf79263287c8cb2449b4c52f7c9a2719, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6044573731279908770, guid: bf79263287c8cb2449b4c52f7c9a2719, type: 3}
+      propertyPath: m_Text
+      value: 'WATCH ADVERTISEMENT
+
+        TO PLAY THIS LEVEL'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf79263287c8cb2449b4c52f7c9a2719, type: 3}
 --- !u!114 &622947301 stripped
@@ -3188,6 +3206,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 1765391275474086670, guid: 33bf6e504c444d44cbda1f878c00fa76, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1765391275474086670, guid: 33bf6e504c444d44cbda1f878c00fa76, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 870be849f10da74469046026f0ada961, type: 2}
     - target: {fileID: 1970416070724380192, guid: 33bf6e504c444d44cbda1f878c00fa76, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -3277,6 +3303,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 1765391275474086670, guid: 33bf6e504c444d44cbda1f878c00fa76, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1765391275474086670, guid: 33bf6e504c444d44cbda1f878c00fa76, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 870be849f10da74469046026f0ada961, type: 2}
     - target: {fileID: 1970416070724380192, guid: 33bf6e504c444d44cbda1f878c00fa76, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -10374,6 +10408,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chalange_Pay 100
       objectReference: {fileID: 0}
+    - target: {fileID: 972764566599937339, guid: 5c4a5a61d831f6f44ad3cbf2b1f75391, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 972764566787708798, guid: 5c4a5a61d831f6f44ad3cbf2b1f75391, type: 3}
+      propertyPath: m_Text
+      value: 'WATCH ADVERTISEMENT
+
+        TO PLAY THIS LEVEL'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c4a5a61d831f6f44ad3cbf2b1f75391, type: 3}
 --- !u!114 &1561255555 stripped
@@ -12203,6 +12247,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 1765391275474086670, guid: 33bf6e504c444d44cbda1f878c00fa76, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1765391275474086670, guid: 33bf6e504c444d44cbda1f878c00fa76, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 870be849f10da74469046026f0ada961, type: 2}
     - target: {fileID: 1970416070724380192, guid: 33bf6e504c444d44cbda1f878c00fa76, type: 3}
       propertyPath: m_Mesh
       value: 

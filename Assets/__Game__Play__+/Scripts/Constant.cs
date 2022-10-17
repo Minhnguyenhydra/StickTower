@@ -21,10 +21,11 @@ public class Constant
     public readonly static float Time_Player_Die_attack = 1f;//0.5
     public readonly static float Time_Player_Die_die = 1.5f;
     public readonly static float Time_Delay_Win_Reward = 1;
+    public readonly static float Time_Delay_move_to_next_house = 1;
     //
     public readonly static float Time_Player_Attack_idle = 1.5f;
     public readonly static float Time_Cam_Move = 2f;
-    public readonly static float Time_Cam_Delay_Move_Next_House = 2.5f;
+    public readonly static float Time_Cam_Delay_Move_Next_House = 1f;
     public readonly static float Time_Delay_Load_Scene = 1f;
     public readonly static float Time_Delay_Fade_Win = 3.5f;
     public readonly static int Time_Delay_Show_No_Thank = 2;
@@ -213,6 +214,18 @@ public class Constant
                 return "hero7/weapon_nomal";
             case 7:
                 return "hero8/weapon_nomal";
+            case 8:
+                return "hero9/weapon_nomal";
+            case 9:
+                return "hero10/weapon_nomal";
+            case 10:
+                return "hero11/weapon_nomal";
+            case 11:
+                return "hero12/weapon_nomal";
+            case 12:
+                return "hero13/weapon_nomal";
+            case 13:
+                return "hero14/weapon_nomal";
             default:
                 return "hero1/weapon_nomal";
         }
@@ -270,6 +283,51 @@ public class Constant
                 return 2.4f;
             case 83:
                 return 2.1f;
+
+            case 91:
+                return 2.4f;
+            case 92:
+                return 3.7f;
+            case 93:
+                return 2.2f;
+                
+            case 101:
+                return 2.1f;
+            case 102:
+                return 3.7f;
+            case 103:
+                return 3.9f;
+                
+            case 111:
+                return 2.8f;
+            case 112:
+                return 2.4f;
+            case 113:
+                return 2.4f;
+                
+            case 121:
+                return 2f;
+            case 122:
+                return 2.5f;
+            case 123:
+                return 2.1f;
+                
+            case 131:
+                return 3.7f;
+            case 132:
+                return 2.1f;
+            case 133:
+                return 2.4f;
+
+
+            case 141:
+                return 3.7f;
+            case 142:
+                return 2.9f;
+            case 143:
+                return 3.8f;
+
+
             default:
                 return 1.2f;
         }
@@ -318,6 +376,18 @@ public class Constant
                 return "hero7/weapon_bonus" + _ID_Sword.ToString();
             case 7:
                 return "hero8/weapon_bonus" + _ID_Sword.ToString();
+            case 8:
+                return "hero9/weapon_bonus" + _ID_Sword.ToString();
+            case 9:
+                return "hero10/weapon_bonus" + _ID_Sword.ToString();
+            case 10:
+                return "hero11/weapon_bonus" + _ID_Sword.ToString();
+            case 11:
+                return "hero12/weapon_bonus" + _ID_Sword.ToString();
+            case 12:
+                return "hero13/weapon_bonus" + _ID_Sword.ToString();
+            case 13:
+                return "hero14/weapon_bonus" + _ID_Sword.ToString();
             default:
                 return "hero1/weapon_bonus" + _ID_Sword.ToString();
         }
@@ -432,7 +502,7 @@ public class Constant
             case 38:
                 return "Level 38 - Kill enemies";
             case 39:
-                return "Level 397 - Kill enemies";
+                return "Level 39 - Kill enemies";
             case 40:
                 return "Level 40 - Kill enemies";
             case 41:

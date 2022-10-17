@@ -1093,6 +1093,22 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 6456779334149499697, guid: 5b61d4cb458c67e4c85e3400e501d1ea, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6456779334149499697, guid: 5b61d4cb458c67e4c85e3400e501d1ea, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 935a0dd74c2454547ae4a75a6209c508, type: 2}
+    - target: {fileID: 6456779334149499697, guid: 5b61d4cb458c67e4c85e3400e501d1ea, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 83f6a93232b83424b83e393be059275b, type: 2}
+    - target: {fileID: 6456779334149499697, guid: 5b61d4cb458c67e4c85e3400e501d1ea, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 935a0dd74c2454547ae4a75a6209c508, type: 2}
     - target: {fileID: 6456779334149499698, guid: 5b61d4cb458c67e4c85e3400e501d1ea, type: 3}
       propertyPath: m_Name
       value: Spine GameObject (Hero1) - 2
@@ -1755,8 +1771,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6456779334149499697, guid: 5b61d4cb458c67e4c85e3400e501d1ea, type: 3}
       propertyPath: m_Materials.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6456779334149499697, guid: 5b61d4cb458c67e4c85e3400e501d1ea, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 935a0dd74c2454547ae4a75a6209c508, type: 2}
+    - target: {fileID: 6456779334149499697, guid: 5b61d4cb458c67e4c85e3400e501d1ea, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 83f6a93232b83424b83e393be059275b, type: 2}
+    - target: {fileID: 6456779334149499697, guid: 5b61d4cb458c67e4c85e3400e501d1ea, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 935a0dd74c2454547ae4a75a6209c508, type: 2}
     - target: {fileID: 6456779334149499698, guid: 5b61d4cb458c67e4c85e3400e501d1ea, type: 3}
       propertyPath: m_Name
       value: Spine GameObject (Hero1) - 3
@@ -1890,6 +1918,22 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 70
       objectReference: {fileID: 0}
+    - target: {fileID: 6456779334149499697, guid: 5b61d4cb458c67e4c85e3400e501d1ea, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6456779334149499697, guid: 5b61d4cb458c67e4c85e3400e501d1ea, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 935a0dd74c2454547ae4a75a6209c508, type: 2}
+    - target: {fileID: 6456779334149499697, guid: 5b61d4cb458c67e4c85e3400e501d1ea, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 83f6a93232b83424b83e393be059275b, type: 2}
+    - target: {fileID: 6456779334149499697, guid: 5b61d4cb458c67e4c85e3400e501d1ea, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 935a0dd74c2454547ae4a75a6209c508, type: 2}
     - target: {fileID: 6456779334149499698, guid: 5b61d4cb458c67e4c85e3400e501d1ea, type: 3}
       propertyPath: m_Name
       value: Spine GameObject (Hero1) - 4
@@ -2964,20 +3008,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6456779334149499697, guid: 5b61d4cb458c67e4c85e3400e501d1ea, type: 3}
       propertyPath: m_Materials.Array.size
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6456779334149499697, guid: 5b61d4cb458c67e4c85e3400e501d1ea, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8f632b824eeaab4498bb0a0cf984c0c0, type: 2}
+      objectReference: {fileID: 2100000, guid: 935a0dd74c2454547ae4a75a6209c508, type: 2}
     - target: {fileID: 6456779334149499697, guid: 5b61d4cb458c67e4c85e3400e501d1ea, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: ad7bd3116889af8488806620be8b1066, type: 2}
+      objectReference: {fileID: 2100000, guid: 83f6a93232b83424b83e393be059275b, type: 2}
     - target: {fileID: 6456779334149499697, guid: 5b61d4cb458c67e4c85e3400e501d1ea, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: 2100000, guid: 415519404b6abee429edcf13c276b332, type: 2}
+      objectReference: {fileID: 2100000, guid: 935a0dd74c2454547ae4a75a6209c508, type: 2}
     - target: {fileID: 6456779334149499697, guid: 5b61d4cb458c67e4c85e3400e501d1ea, type: 3}
       propertyPath: m_Materials.Array.data[3]
       value: 
@@ -6412,16 +6456,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6456779334149499697, guid: 5b61d4cb458c67e4c85e3400e501d1ea, type: 3}
       propertyPath: m_Materials.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6456779334149499697, guid: 5b61d4cb458c67e4c85e3400e501d1ea, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 935a0dd74c2454547ae4a75a6209c508, type: 2}
     - target: {fileID: 6456779334149499697, guid: 5b61d4cb458c67e4c85e3400e501d1ea, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 415519404b6abee429edcf13c276b332, type: 2}
+      objectReference: {fileID: 2100000, guid: 83f6a93232b83424b83e393be059275b, type: 2}
     - target: {fileID: 6456779334149499697, guid: 5b61d4cb458c67e4c85e3400e501d1ea, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: 2100000, guid: ad7bd3116889af8488806620be8b1066, type: 2}
+      objectReference: {fileID: 2100000, guid: 935a0dd74c2454547ae4a75a6209c508, type: 2}
     - target: {fileID: 6456779334149499697, guid: 5b61d4cb458c67e4c85e3400e501d1ea, type: 3}
       propertyPath: m_Materials.Array.data[3]
       value: 
@@ -6615,6 +6663,22 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6456779334149499697, guid: 5b61d4cb458c67e4c85e3400e501d1ea, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6456779334149499697, guid: 5b61d4cb458c67e4c85e3400e501d1ea, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 935a0dd74c2454547ae4a75a6209c508, type: 2}
+    - target: {fileID: 6456779334149499697, guid: 5b61d4cb458c67e4c85e3400e501d1ea, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 83f6a93232b83424b83e393be059275b, type: 2}
+    - target: {fileID: 6456779334149499697, guid: 5b61d4cb458c67e4c85e3400e501d1ea, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 935a0dd74c2454547ae4a75a6209c508, type: 2}
     - target: {fileID: 6456779334149499698, guid: 5b61d4cb458c67e4c85e3400e501d1ea, type: 3}
       propertyPath: m_Name
       value: Spine GameObject (Hero1) - Main

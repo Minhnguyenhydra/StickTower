@@ -17,6 +17,7 @@ public class CanvasArea : UICanvas
 
     public UserData userData;
     public bool isOnFight_Once;//chỉ được ấn Fight 1 lần mỗi level
+    public RectTransform rect_Boot_Of_Canvas;//chỉ được ấn Fight 1 lần mỗi level
 
     private void Start()
     {
@@ -33,7 +34,17 @@ public class CanvasArea : UICanvas
         gem_In_Level = PlayerPrefs_Manager.Get_Gem();
         txt_Coin.text = gold_In_Level.ToString();
         txt_gem.text = gem_In_Level.ToString();
+        SetOrigin_Boot_Canvas();
     }
+    public void Set_Downt_Boot_Canvas()
+    {
+        rect_Boot_Of_Canvas.DOAnchorPosY(-2000, 1);
+    }
+    public void SetOrigin_Boot_Canvas()
+    {
+        rect_Boot_Of_Canvas.anchoredPosition = new Vector3(0, -26.36f,0);
+    }
+
 
     public void Home_Button()
     {
@@ -70,6 +81,7 @@ public class CanvasArea : UICanvas
         SoundManager.Ins.PlayFx(FxID.click);
         if (!isOnFight_Once)
         {
+            Set_Downt_Boot_Canvas();
             isOnFight_Once = true;
             Init_Area.Ins.Fighting();
         }

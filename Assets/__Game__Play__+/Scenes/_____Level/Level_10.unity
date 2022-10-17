@@ -8125,6 +8125,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Free Skin
       objectReference: {fileID: 0}
+    - target: {fileID: 1740634066485356004, guid: efe2f52571efb7e42bbd9e3912b6d121, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1740634066485356005, guid: efe2f52571efb7e42bbd9e3912b6d121, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -8208,6 +8212,26 @@ PrefabInstance:
     - target: {fileID: 1740634066485356005, guid: efe2f52571efb7e42bbd9e3912b6d121, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166850561372228978, guid: efe2f52571efb7e42bbd9e3912b6d121, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166850561372228978, guid: efe2f52571efb7e42bbd9e3912b6d121, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 935a0dd74c2454547ae4a75a6209c508, type: 2}
+    - target: {fileID: 2166850561372228978, guid: efe2f52571efb7e42bbd9e3912b6d121, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 83f6a93232b83424b83e393be059275b, type: 2}
+    - target: {fileID: 2166850561372228978, guid: efe2f52571efb7e42bbd9e3912b6d121, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 935a0dd74c2454547ae4a75a6209c508, type: 2}
+    - target: {fileID: 5236531943367988721, guid: efe2f52571efb7e42bbd9e3912b6d121, type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efe2f52571efb7e42bbd9e3912b6d121, type: 3}

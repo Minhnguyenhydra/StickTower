@@ -157,7 +157,7 @@ public class GameManager : Singleton<GameManager>
         UIManager.Ins.OpenUI(UIID.UICFail);
 
         //Fight Boos
-        UIManager.Ins.OpenUI(UIID.UICFight_Boss);
+        //UIManager.Ins.OpenUI(UIID.UICFight_Boss);
         UIManager.Ins.CloseUI(UIID.UICFight_Boss);
         //
     }

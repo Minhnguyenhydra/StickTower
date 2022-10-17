@@ -1,0 +1,356 @@
+
+Boss.png
+size: 3024,1568
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Arm_L_1
+  rotate: true
+  xy: 1572, 16
+  size: 265, 283
+  orig: 265, 283
+  offset: 0, 0
+  index: -1
+Arm_L_2
+  rotate: true
+  xy: 1832, 877
+  size: 260, 385
+  orig: 260, 385
+  offset: 0, 0
+  index: -1
+Arm_R_1
+  rotate: true
+  xy: 1866, 95
+  size: 249, 282
+  orig: 249, 282
+  offset: 0, 0
+  index: -1
+Arm_R_2
+  rotate: true
+  xy: 906, 791
+  size: 251, 373
+  orig: 251, 373
+  offset: 0, 0
+  index: -1
+FX/Skill2_tuti_00000
+  rotate: false
+  xy: 2275, 750
+  size: 232, 232
+  orig: 232, 232
+  offset: 0, 0
+  index: -1
+FX/Skill2_tuti_00001
+  rotate: false
+  xy: 2321, 516
+  size: 232, 232
+  orig: 232, 232
+  offset: 0, 0
+  index: -1
+FX/Skill2_tuti_00002
+  rotate: false
+  xy: 2555, 535
+  size: 232, 232
+  orig: 232, 232
+  offset: 0, 0
+  index: -1
+FX/Skill2_tuti_00003
+  rotate: false
+  xy: 2789, 576
+  size: 232, 232
+  orig: 232, 232
+  offset: 0, 0
+  index: -1
+FX/Skill2_tuti_00004
+  rotate: false
+  xy: 2789, 342
+  size: 232, 232
+  orig: 232, 232
+  offset: 0, 0
+  index: -1
+FX/Skill2_tuti_00005
+  rotate: false
+  xy: 2555, 301
+  size: 232, 232
+  orig: 232, 232
+  offset: 0, 0
+  index: -1
+FX/Skill2_tuti_00006
+  rotate: false
+  xy: 2408, 67
+  size: 232, 232
+  orig: 232, 232
+  offset: 0, 0
+  index: -1
+FX/Skill2_tuti_00007
+  rotate: false
+  xy: 2642, 67
+  size: 232, 232
+  orig: 232, 232
+  offset: 0, 0
+  index: -1
+FX/at_slash
+  rotate: false
+  xy: 2150, 126
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FX/bg_crack2
+  rotate: true
+  xy: 2668, 997
+  size: 301, 51
+  orig: 301, 51
+  offset: 0, 0
+  index: -1
+FX/ground_impact1
+  rotate: true
+  xy: 1654, 806
+  size: 223, 153
+  orig: 223, 153
+  offset: 0, 0
+  index: -1
+FX/ground_impact2
+  rotate: false
+  xy: 1809, 648
+  size: 314, 227
+  orig: 314, 227
+  offset: 0, 0
+  index: -1
+FX/ground_impact3
+  rotate: false
+  xy: 2, 44
+  size: 431, 310
+  orig: 431, 310
+  offset: 0, 0
+  index: -1
+FX/ground_impact4
+  rotate: false
+  xy: 1358, 1142
+  size: 492, 424
+  orig: 492, 424
+  offset: 0, 0
+  index: -1
+Leg_L
+  rotate: false
+  xy: 2125, 660
+  size: 148, 215
+  orig: 148, 215
+  offset: 0, 0
+  index: -1
+Leg_R
+  rotate: false
+  xy: 2125, 660
+  size: 148, 215
+  orig: 148, 215
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 906, 1044
+  size: 450, 522
+  orig: 450, 522
+  offset: 0, 0
+  index: -1
+boss2/Arm_L_1
+  rotate: true
+  xy: 2302, 984
+  size: 314, 364
+  orig: 314, 364
+  offset: 0, 0
+  index: -1
+boss2/Arm_L_2
+  rotate: true
+  xy: 452, 700
+  size: 260, 394
+  orig: 260, 394
+  offset: 0, 0
+  index: -1
+boss2/Arm_R_1
+  rotate: true
+  xy: 2742, 1059
+  size: 252, 280
+  orig: 252, 280
+  offset: 0, 0
+  index: -1
+boss2/Arm_R_2
+  rotate: true
+  xy: 1281, 767
+  size: 262, 371
+  orig: 262, 371
+  offset: 0, 0
+  index: -1
+boss2/Leg_L
+  rotate: false
+  xy: 2876, 127
+  size: 146, 213
+  orig: 146, 213
+  offset: 0, 0
+  index: -1
+boss2/Leg_R
+  rotate: true
+  xy: 1180, 15
+  size: 146, 213
+  orig: 146, 213
+  offset: 0, 0
+  index: -1
+boss2/body
+  rotate: false
+  xy: 2, 356
+  size: 434, 501
+  orig: 434, 501
+  offset: 0, 0
+  index: -1
+boss2/head
+  rotate: false
+  xy: 848, 489
+  size: 361, 300
+  orig: 361, 300
+  offset: 0, 0
+  index: -1
+boss2/weapon
+  rotate: false
+  xy: 2129, 384
+  size: 190, 274
+  orig: 190, 274
+  offset: 0, 0
+  index: -1
+boss3/Arm_L_1
+  rotate: false
+  xy: 1263, 178
+  size: 307, 316
+  orig: 307, 316
+  offset: 0, 0
+  index: -1
+boss3/Arm_L_2
+  rotate: true
+  xy: 1211, 496
+  size: 269, 357
+  orig: 269, 357
+  offset: 0, 0
+  index: -1
+boss3/Arm_R_1
+  rotate: true
+  xy: 2742, 1313
+  size: 253, 280
+  orig: 253, 280
+  offset: 0, 0
+  index: -1
+boss3/Arm_R_2
+  rotate: false
+  xy: 1866, 346
+  size: 261, 300
+  orig: 261, 300
+  offset: 0, 0
+  index: -1
+boss3/Leg_L
+  rotate: true
+  xy: 965, 6
+  size: 155, 213
+  orig: 155, 213
+  offset: 0, 0
+  index: -1
+boss3/Leg_R
+  rotate: false
+  xy: 1654, 591
+  size: 153, 213
+  orig: 153, 213
+  offset: 0, 0
+  index: -1
+boss3/body
+  rotate: false
+  xy: 452, 962
+  size: 452, 604
+  orig: 452, 604
+  offset: 0, 0
+  index: -1
+boss3/head
+  rotate: true
+  xy: 1852, 1265
+  size: 301, 448
+  orig: 301, 448
+  offset: 0, 0
+  index: -1
+boss3/weapon
+  rotate: true
+  xy: 1852, 1139
+  size: 124, 419
+  orig: 124, 419
+  offset: 0, 0
+  index: -1
+boss4/Arm_L_1
+  rotate: false
+  xy: 965, 163
+  size: 296, 324
+  orig: 296, 324
+  offset: 0, 0
+  index: -1
+boss4/Arm_L_2
+  rotate: false
+  xy: 438, 2
+  size: 303, 379
+  orig: 303, 379
+  offset: 0, 0
+  index: -1
+boss4/Arm_R_1
+  rotate: true
+  xy: 2721, 810
+  size: 247, 280
+  orig: 247, 280
+  offset: 0, 0
+  index: -1
+boss4/Arm_R_2
+  rotate: false
+  xy: 743, 10
+  size: 220, 371
+  orig: 220, 371
+  offset: 0, 0
+  index: -1
+boss4/Leg_L
+  rotate: false
+  xy: 2408, 301
+  size: 145, 213
+  orig: 145, 213
+  offset: 0, 0
+  index: -1
+boss4/Leg_R
+  rotate: false
+  xy: 2509, 769
+  size: 152, 213
+  orig: 152, 213
+  offset: 0, 0
+  index: -1
+boss4/body
+  rotate: false
+  xy: 2, 859
+  size: 448, 707
+  orig: 448, 707
+  offset: 0, 0
+  index: -1
+boss4/head
+  rotate: true
+  xy: 2302, 1300
+  size: 266, 438
+  orig: 266, 438
+  offset: 0, 0
+  index: -1
+boss4/weapon
+  rotate: false
+  xy: 1572, 283
+  size: 292, 306
+  orig: 292, 306
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 438, 383
+  size: 369, 315
+  orig: 369, 315
+  offset: 0, 0
+  index: -1
+weapon
+  rotate: true
+  xy: 1358, 1031
+  size: 109, 472
+  orig: 109, 472
+  offset: 0, 0
+  index: -1

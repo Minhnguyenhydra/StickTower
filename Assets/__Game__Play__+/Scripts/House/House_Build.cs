@@ -81,7 +81,7 @@ public class House_Build : MonoBehaviour
             else
             {
                 //Chuyển chuyển thành nhà player và di cam tớ nhà tiếp theo
-                Drag_Drop_Manager.Instance.Set_Delay_Take_House(_floor,0);
+                //Drag_Drop_Manager.Instance.Set_Delay_Take_House(_floor,0);
             }
         }
     }

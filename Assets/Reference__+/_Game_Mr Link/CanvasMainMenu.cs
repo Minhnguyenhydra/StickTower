@@ -136,13 +136,13 @@ public class CanvasMainMenu : UICanvas
         if (gold_Pink_bank == Constant.Gold_Max_Pink_Bank)
         {
             obj_Full_Gold_Pink_bank.SetActive(true);
-            obj_Normal_Gold_Pink_bank.SetActive(false);
+            //obj_Normal_Gold_Pink_bank.SetActive(false);
         }
         else
         {
             obj_Full_Gold_Pink_bank.SetActive(false);
-            obj_Normal_Gold_Pink_bank.SetActive(true);
-            txt_Gold_Pink_Bank.text = gold_Pink_bank.ToString();
+            //obj_Normal_Gold_Pink_bank.SetActive(true);
+            //txt_Gold_Pink_Bank.text = gold_Pink_bank.ToString();
         }
         int idSkin = PlayerPrefs_Manager.Get_ID_Name_Skin_Wearing();
         Set_Skin(Constant.Get_Skin_Name_By_Id(idSkin));

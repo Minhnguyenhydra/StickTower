@@ -27,7 +27,7 @@ public class HeroArena : MonoBehaviour
         {
             int i = Random.Range(0, 3);
             int index_hero = PlayerPrefs_Manager.Get_ID_Name_Skin_Wearing()+1;
-            Debug.Log(index_hero);
+            //Debug.Log(index_hero);
             switch (i)
             {
                 case 0:

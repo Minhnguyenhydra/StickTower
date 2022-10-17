@@ -280,7 +280,7 @@ public class Drag_Drop_Manager : Singleton_Q<Drag_Drop_Manager>
 
                                                 Player.ins.tf_Player.position = floor_Raycast_To.list_Point_In_Floor[i].tf_Point_In_Floor.position;
                                                 Player.ins.Set_Pos_Old(vec_pos_Can_Place_In_Floor);
-                                                Debug.Log("99");
+                                                //Debug.Log("99");
                                             }
 
                                         }
@@ -355,6 +355,12 @@ public class Drag_Drop_Manager : Singleton_Q<Drag_Drop_Manager>
             //đánh nhau với ENEMY
             if (_floor.list_Point_In_Floor[_indexPoint - 1].enemy_Attack_This_Point != null)
             {
+                if (Player.ins != null)
+                {
+                    Player.ins.enemy_Hitting = _floor.list_Point_In_Floor[_indexPoint - 1].enemy_Attack_This_Point;
+                }
+
+
                 if (_isDelayPlayer_attack_By_Downt)
                 {
                     StartCoroutine(IE_Player_Attack(_floor, _indexPoint));
@@ -512,29 +518,38 @@ public class Drag_Drop_Manager : Singleton_Q<Drag_Drop_Manager>
     #region Delay Mái nhà chuyển xanh, di chuyển camera sang nhà mới
     public void Set_Delay_Take_House(Floor _floor, int _indexPoint)
     {
+        //Set_Take_New_House(_floor);
         StartCoroutine(IE_Delay_Take_House(_floor, _indexPoint));
     }
     IEnumerator IE_Delay_Take_House(Floor _floor, int _indexPoint)
     {
         //ko dùng đến biến _indexPoint
         
-        yield return Cache.GetWFS(Constant.Time_Player_Die_attack);
+        yield return Cache.GetWFS(Constant.Time_Delay_move_to_next_house );
         Set_Take_New_House(_floor);
         
 
         //Nếu điểm camera di chuyển chưa tới điểm cuối của các tòa nhà nếu Level chứa nhiều tào nhà
+        //if (index_Pos_Cam_Move_In_List < number_House)
+        //{
+        //    Camera_Manager.Ins.Move_Cam(index_Pos_Cam_Move_In_List);
+        //    index_Pos_Cam_Move_In_List++;
+        //}
+    }
+    #region Đổi màu mái nhà
+    public void Set_Take_New_House(Floor _floor)
+    {
+        //_floor.Set_Floor_To_Floor_Of_Player();
+        ////_floor.house_Build_Of_This.Set_Mai_Xanh();
+        //_floor.house_Build_Of_This.Set_This_To_Team_Player();
+        //~~~~
         if (index_Pos_Cam_Move_In_List < number_House)
         {
             Camera_Manager.Ins.Move_Cam(index_Pos_Cam_Move_In_List);
             index_Pos_Cam_Move_In_List++;
         }
-    }
-    #region Đổi màu mái nhà
-    public void Set_Take_New_House(Floor _floor)
-    {
-        _floor.Set_Floor_To_Floor_Of_Player();
-        _floor.house_Build_Of_This.Set_Mai_Xanh();
-        _floor.house_Build_Of_This.Set_This_To_Team_Player();
+
+
         ((CanvasGamePlay)UIManager.Ins.GetUI(UIID.UICGamePlay)).Set_Active_Castle_Each_Time_Chiem_Duoc(index_House_Chiem_Duoc);
         index_House_Chiem_Duoc++;
     }
@@ -586,7 +601,7 @@ public class Drag_Drop_Manager : Singleton_Q<Drag_Drop_Manager>
                         //Set Victory
                         if (!_floor.is_Floor_Last_Of_Level)
                         {
-                            StartCoroutine(IE_Delay_Take_House(_floor, _indexPoint));
+                            //StartCoroutine(IE_Delay_Take_House(_floor, _indexPoint));
 
                         }
                         else

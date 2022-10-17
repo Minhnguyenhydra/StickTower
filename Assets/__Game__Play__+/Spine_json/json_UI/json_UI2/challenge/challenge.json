@@ -1,0 +1,47 @@
+{
+"skeleton": {
+	"hash": "w/fKpiYwKOgAHZWvUpCdhhvCDLA",
+	"spine": "3.8.85",
+	"x": -130.94,
+	"y": -132.42,
+	"width": 270,
+	"height": 296.05,
+	"images": "../images/",
+	"audio": "E:/GaiA/GameProject/Stick_Tower/UI"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "CHALLENGE", "parent": "root", "x": -8.42, "y": -157.4 },
+	{ "name": "CHALLENGE3", "parent": "CHALLENGE", "x": 7.97, "y": 156.8 }
+],
+"slots": [
+	{ "name": "CHALLENGE", "bone": "CHALLENGE3", "attachment": "UI2/CHALLENGE" },
+	{ "name": "CHALLENGE2", "bone": "CHALLENGE", "attachment": "UI2/CHALLENGE2" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"CHALLENGE": {
+				"UI2/CHALLENGE": { "x": 4.51, "y": 35.73, "width": 270, "height": 257 }
+			},
+			"CHALLENGE2": {
+				"UI2/CHALLENGE2": { "x": 13.84, "y": 52.48, "width": 240, "height": 55 }
+			}
+		}
+	}
+],
+"animations": {
+	"animation": {
+		"bones": {
+			"CHALLENGE3": {
+				"scale": [
+					{ "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.5, "x": 1.051, "y": 1.051, "curve": 0.25, "c3": 0.75 },
+					{ "time": 1 }
+				]
+			}
+		}
+	}
+}
+}

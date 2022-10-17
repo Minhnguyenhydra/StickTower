@@ -152,7 +152,7 @@ public class CanvasWinQ : UICanvas
         string name_Skin = Constant.Get_Skin_Name_By_Id(id_Skin);
         Set_Skin(name_Skin);
         //
-        if (PlayerPrefs_Manager.Get_Index_Level_Normal() == 10|| PlayerPrefs_Manager.Get_Index_Level_Normal() == 20)
+        if (PlayerPrefs_Manager.Get_Index_Level_Normal() == 10|| PlayerPrefs_Manager.Get_Index_Level_Normal() == 20 || PlayerPrefs_Manager.Get_Index_Level_Normal() == 30)
         {
             UIManager.Ins.OpenUI(UIID.UICFreeSkin);
         }

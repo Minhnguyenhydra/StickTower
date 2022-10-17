@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{BF1FFF76-6B2E-D839-9965-DC0304E2D331}</ProjectGuid>
+    <ProjectGuid>{52BFD76B-911C-B089-3CDA-BF4FA920523B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
@@ -725,11 +725,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="spine-unity.csproj">
-      <Project>{A0F9986E-6500-61E4-ACD6-57C0D3AF2C4C}</Project>
+      <Project>{AF6A1687-451D-DFAD-91CD-B806FD869EC2}</Project>
       <Name>spine-unity</Name>
     </ProjectReference>
     <ProjectReference Include="spine-unity-editor.csproj">
-      <Project>{D5CBE249-9C85-0B9D-3D42-FAF611975D88}</Project>
+      <Project>{DADED65D-7BD9-E6F8-0847-C08A8AF07C67}</Project>
       <Name>spine-unity-editor</Name>
     </ProjectReference>
   </ItemGroup>
