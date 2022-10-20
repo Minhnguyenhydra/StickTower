@@ -171,10 +171,11 @@ public class Player : MonoBehaviour
         {
             ins = this;
         }
-        Set_Pos_Old(tf_Player.position);
+        //Set_Pos_Old(tf_Player.position);
         Set_Anim_Idle();
         
         Set_Skin(Constant.Get_Skin_Name_By_Id(PlayerPrefs_Manager.Get_ID_Name_Skin_Wearing()));
+        Set_Fix_Pos_Player();
     }
     
     public void Init_sfx_char_skill_Player()
@@ -276,6 +277,10 @@ public class Player : MonoBehaviour
     public void Set_Pos_Old(Vector3 _pos_Old)
     {
         pos_Old_Player = new Vector3(_pos_Old.x, _pos_Old.y, _pos_Old.z);
+    }
+    public void Set_vi_tri_cu()//set vị trí cũ sau thả chuột
+    {
+      tf_Player.position =  pos_Old_Player ;
     }
     #endregion
     #region Set Animation
@@ -1481,8 +1486,8 @@ public class Player : MonoBehaviour
                 SetCharacterState_Loop(Action_Idle);
                 Set_Un_Block_Colider_Player();
             }
-            Set_Pos_Old(floor_pos_End.list_Point_In_Floor[1].tf_Point_In_Floor.position);
-            Debug.Log("3");
+            //Set_Pos_Old(floor_pos_End.list_Point_In_Floor[1].tf_Point_In_Floor.position);
+            Set_Fix_Pos_Player();
             Set_Un_Block_Colider_Player();
         });
     }

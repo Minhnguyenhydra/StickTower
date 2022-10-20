@@ -110,10 +110,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -718,7 +716,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6572}
     - Class: 114
-      Script: {instanceID: 331386}
+      Script: {instanceID: 47536}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -11031,19 +11029,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6572}
     - Class: 114
-      Script: {instanceID: 46446}
+      Script: {instanceID: 46308}
     - Class: 114
-      Script: {instanceID: 329510}
+      Script: {instanceID: 155872}
     - Class: 114
-      Script: {instanceID: 330252}
+      Script: {instanceID: 156614}
     - Class: 114
-      Script: {instanceID: 330254}
+      Script: {instanceID: 156616}
     - Class: 114
-      Script: {instanceID: 330256}
+      Script: {instanceID: 156618}
     - Class: 114
-      Script: {instanceID: 330302}
+      Script: {instanceID: 156664}
     - Class: 114
-      Script: {instanceID: 330304}
+      Script: {instanceID: 156666}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -12385,4 +12383,4 @@ ScriptsOnlyBuild:
   - Assets/__Game__Play__+/Scenes/_____Level/Level_49.unity
   - Assets/__Game__Play__+/Scenes/_____Level/Level_50.unity
   - Assets/__Game__Play__+/Scenes/Area/Ar_Level_0.unity
-  playerPath: C:/Users/taqua/Desktop/StickTower.apk
+  playerPath: C:/Users/taqua/Desktop/StickTower55.apk

@@ -251,8 +251,10 @@ public class Drag_Drop_Manager : Singleton_Q<Drag_Drop_Manager>
                                     if (floor_Raycast_To.house_Build_Of_This.houseType == Enum_TypeHouse.player)
                                     {
                                         vec_pos_Can_Place_In_Floor = floor_Raycast_To.list_Point_In_Floor[1].tf_Point_In_Floor.position;
-                                        Player.ins.Set_Pos_Old(vec_pos_Can_Place_In_Floor);
-                                        Debug.Log("000999999");
+                                        //Player.ins.Set_Pos_Old(vec_pos_Can_Place_In_Floor);
+                                        Player.ins.Set_Fix_Pos_Player();
+
+
                                     }
 
 
@@ -280,7 +282,8 @@ public class Drag_Drop_Manager : Singleton_Q<Drag_Drop_Manager>
                                                 //SetParent vào điểm gắn để đi xuống cùng Floor nếu Floor sụp xuống
 
                                                 Player.ins.tf_Player.position = floor_Raycast_To.list_Point_In_Floor[i].tf_Point_In_Floor.position;
-                                                Player.ins.Set_Pos_Old(Player.ins.tf_Player.position);
+                                                //Player.ins.Set_Pos_Old(Player.ins.tf_Player.position);
+                                                Player.ins.Set_Fix_Pos_Player();
                                                 //Debug.Log("99");
                                             }
 
@@ -689,10 +692,10 @@ public class Drag_Drop_Manager : Singleton_Q<Drag_Drop_Manager>
     }
     #endregion
     #region Refresh lại vị trí Player đứng trên Floor, để khi kéo Player ra ngoài mà ko trúng Floor nào sẽ quay lại vị trí này
-    public void Set_Pos_Old_Player()
+    public void Set_Pos_Old_Player()//set vị trí cũ sau thả chuột
     {
         Player.ins.Set_Un_Block_Colider_Player();
-        Player.ins.tf_Player.position = Player.ins.pos_Old_Player;
+        Player.ins.Set_vi_tri_cu();
     }
     #endregion
     #region Lấy mọi colider mà 1 tia Racast từ camera bắn qua chuột, cho vào Array có 6 phần tử

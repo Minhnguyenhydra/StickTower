@@ -40,10 +40,12 @@ public class CanvasLose : UICanvas
 
         if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge()==1)
         {
+            obj_Btn_ADs.SetActive(true);
             txt_Level.text = "LEVEL " + (PlayerPrefs_Manager.Get_Index_Level_Normal()).ToString();
 
         }else if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 2)
         {
+            obj_Btn_ADs.SetActive(true);
             txt_Level.text = "LEVEL " + (PlayerPrefs.GetInt(UserData.Key_LevelArena)).ToString();
         }
         else if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 3)
@@ -164,7 +166,8 @@ public class CanvasLose : UICanvas
         ((CanvasFade)UIManager.Ins.GetUI(UIID.UICFade)).Set_Fade_Out();
         yield return Cache.GetWFS(Constant.Time_Fade);
         Close();
-        Debug.Log(PlayerPrefs.GetInt(UserData.Key_1GamPlay_Or_2Area_Or_3Challenge));
+        //Debug.Log(PlayerPrefs.GetInt(UserData.Key_1GamPlay_Or_2Area_Or_3Challenge));
+
         if (PlayerPrefs.GetInt(UserData.Key_1GamPlay_Or_2Area_Or_3Challenge) == 1)
         {
             int indexLevel = PlayerPrefs_Manager.Get_Index_Level_Normal() + 1;

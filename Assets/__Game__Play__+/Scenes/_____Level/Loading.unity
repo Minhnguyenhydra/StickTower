@@ -5478,57 +5478,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5861756894188218954}
     m_Modifications:
-    - target: {fileID: 1756666437435519404, guid: 4e95699e4953f1b41a51635cca3ba9c3, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3865373592050745698, guid: 4e95699e4953f1b41a51635cca3ba9c3, type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3865373592050745698, guid: 4e95699e4953f1b41a51635cca3ba9c3, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 935a0dd74c2454547ae4a75a6209c508, type: 2}
-    - target: {fileID: 3865373592050745698, guid: 4e95699e4953f1b41a51635cca3ba9c3, type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: 83f6a93232b83424b83e393be059275b, type: 2}
-    - target: {fileID: 3865373592050745698, guid: 4e95699e4953f1b41a51635cca3ba9c3, type: 3}
-      propertyPath: m_Materials.Array.data[2]
-      value: 
-      objectReference: {fileID: 2100000, guid: 935a0dd74c2454547ae4a75a6209c508, type: 2}
-    - target: {fileID: 8206860770524499265, guid: 4e95699e4953f1b41a51635cca3ba9c3, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8206860770524499278, guid: 4e95699e4953f1b41a51635cca3ba9c3, type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8206860770524499278, guid: 4e95699e4953f1b41a51635cca3ba9c3, type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: 5245aaaeda298b248b3f9d3fe98c26c4, type: 2}
-    - target: {fileID: 8206860770524499278, guid: 4e95699e4953f1b41a51635cca3ba9c3, type: 3}
-      propertyPath: m_Materials.Array.data[2]
-      value: 
-      objectReference: {fileID: 2100000, guid: ac582775c7069a44a8672e36d2220b26, type: 2}
-    - target: {fileID: 8206860770524499278, guid: 4e95699e4953f1b41a51635cca3ba9c3, type: 3}
-      propertyPath: m_Materials.Array.data[3]
-      value: 
-      objectReference: {fileID: 2100000, guid: 5245aaaeda298b248b3f9d3fe98c26c4, type: 2}
-    - target: {fileID: 8206860770849607846, guid: 4e95699e4953f1b41a51635cca3ba9c3, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 8206860771373263218, guid: 4e95699e4953f1b41a51635cca3ba9c3, type: 3}
       propertyPath: m_Name
       value: CanvasLose
-      objectReference: {fileID: 0}
-    - target: {fileID: 8206860771373263218, guid: 4e95699e4953f1b41a51635cca3ba9c3, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8206860771373263220, guid: 4e95699e4953f1b41a51635cca3ba9c3, type: 3}
       propertyPath: m_Pivot.x
