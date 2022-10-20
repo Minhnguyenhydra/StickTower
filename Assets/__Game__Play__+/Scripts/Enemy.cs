@@ -37,6 +37,7 @@ public class Enemy : MonoBehaviour
     public bool isDieing_Fight_Boss;// Chỉ đánh Boss
     public bool isFist_config;
     public Health_Bar health_Bar;
+    public bool isFist_time_Die;
     [Header("------Indext Fix= 4 lần Attack Player------")]
     public int index_Hit_Player = 0;
     #endregion
@@ -115,6 +116,8 @@ public class Enemy : MonoBehaviour
     #region Set IE Delay Action, to die, attack to idle
     IEnumerator Delay_die()
     {
+        
+        
         //nếu màn có con Enemy này cầm key
         if (isEnemy_Have_Key)
         {
@@ -123,6 +126,7 @@ public class Enemy : MonoBehaviour
         //Từ đầu .... Show máu
         health_Bar.Set_Hide_Health_Bar();
         SetCharacterState_NoLoop(Action_Attack);
+
         float _time_show_blood = Constant.Time_Player_Show_Blood;
         yield return Cache.GetWFS(_time_show_blood);
 
@@ -164,9 +168,6 @@ public class Enemy : MonoBehaviour
         yield return Cache.GetWFS(time_action_Die);
 
 
-
-
-
         
         if (floor_This.is_Floor_Last_Of_house && !floor_This.is_Floor_Last_Of_Level)
         {
@@ -186,15 +187,10 @@ public class Enemy : MonoBehaviour
         
 
 
-
-
-
-
-
         //xóa enemy...//
         if (isBossLass)
         {
-            yield return Cache.GetWFS(0.8f);
+            yield return Cache.GetWFS(0.1f);//0.8
             //Set Mái xanh.....delay win
             GameManager.Ins.Set_Mai_Xanh_Delay_Win(floor_This);
 #if UNITY_EDITOR
@@ -207,10 +203,12 @@ public class Enemy : MonoBehaviour
             Destroy(this.gameObject);
 
         }
-        //gameObject.SetActive(false);
+            //gameObject.SetActive(false);
+        
     }
     IEnumerator Delay_AttackTo_Idle()
     {
+
         SetCharacterState_NoLoop(Action_Attack);
         yield return Cache.GetWFS(Constant.Time_Player_Die_attack);
         ReSetCharacterState();
@@ -240,8 +238,12 @@ public class Enemy : MonoBehaviour
     }
     public void Set_Anim_Die()
     {
-        
-        StartCoroutine(Delay_die());
+        if (!isFist_time_Die)
+        {
+            isFist_time_Die = true;
+            StartCoroutine(Delay_die());
+
+        }
     }
     public void Set_Anim_Victory()
     {
@@ -304,7 +306,7 @@ public class Enemy : MonoBehaviour
         
         if (_isPlayer_Stronger)
         {
-            // tối đa 4 lần
+            // tối đa 5 lần
             Set_Anim_Attack();
             yield return Cache.GetWFS(1);
             if (!isDieing_Fight_Boss)
@@ -316,9 +318,9 @@ public class Enemy : MonoBehaviour
             //damge 25
             if (!isDieing_Fight_Boss)
             {
-                Player.ins.health_Bar.Set_Step_By_Step_Health(_health_Player,75, 1);
+                Player.ins.health_Bar.Set_Step_By_Step_Health(_health_Player,80, 1);
 
-                ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Fill_Health_Player(0.75f);
+                ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Fill_Health_Player(0.8f);
             }
             //1s
             yield return Cache.GetWFS(4);
@@ -336,9 +338,9 @@ public class Enemy : MonoBehaviour
             //damge 25
             if (!isDieing_Fight_Boss && Player.ins != null)
             {
-                Player.ins.health_Bar.Set_Step_By_Step_Health(_health_Player,50, 1);
+                Player.ins.health_Bar.Set_Step_By_Step_Health(_health_Player,60, 1);
 
-                ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Fill_Health_Player(0.5f);
+                ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Fill_Health_Player(0.6f);
             }
             //1s
             yield return Cache.GetWFS(4);
@@ -356,9 +358,29 @@ public class Enemy : MonoBehaviour
             //damge 25
             if (!isDieing_Fight_Boss && Player.ins != null)
             {
-                Player.ins.health_Bar.Set_Step_By_Step_Health(_health_Player,25, 1);
+                Player.ins.health_Bar.Set_Step_By_Step_Health(_health_Player,40, 1);
 
-                ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Fill_Health_Player(0.25f);
+                ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Fill_Health_Player(0.4f);
+            }
+            //1s
+            yield return Cache.GetWFS(4);
+            //hết  lan 2
+            if (!isDieing_Fight_Boss && Player.ins != null)
+            {
+                Set_Anim_Attack();
+            }
+            yield return Cache.GetWFS(1);
+            if (!isDieing_Fight_Boss && Player.ins != null)
+            {
+                Player.ins.Set_Show_Blood();
+                //Player.ins.Set_Anim_Hit();
+            }
+            //damge 25
+            if (!isDieing_Fight_Boss && Player.ins != null)
+            {
+                Player.ins.health_Bar.Set_Step_By_Step_Health(_health_Player, 20, 1);
+
+                ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Fill_Health_Player(0.2f);
             }
             //1s
             yield return Cache.GetWFS(4);
@@ -701,7 +723,7 @@ public class Enemy : MonoBehaviour
                 SetCharacterState_NoLoop(Action_Die);
                 SoundManager.Ins.PlayFx(FxID.giantDeath);
                 ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Anim_Red_R();
-                Cache.GetWFS(2.5f);
+                Cache.GetWFS(0.1f);//2.5
                 GameManager.Ins.Set_Mai_Xanh_Delay_Win(floor_This);
 
             }

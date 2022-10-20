@@ -61,9 +61,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1feacace6c289db48854824d12a84db5, type: 2}
-  - {fileID: 2100000, guid: fa6000de60228724eb74fb6af2968fe5, type: 2}
-  - {fileID: 2100000, guid: 1feacace6c289db48854824d12a84db5, type: 2}
+  - {fileID: 2100000, guid: 5923325ba14e9904b9032de675c60ac0, type: 2}
+  - {fileID: 2100000, guid: 466dc0fdfc74b4c45884a64db4936fc7, type: 2}
+  - {fileID: 2100000, guid: 5923325ba14e9904b9032de675c60ac0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: d0f5c52a1437ae344bc125d20ea1f0c7, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: 65973cfdd5b7f7d4aa8d0bc3143c140c, type: 2}
   initialSkinName: boss1
   initialFlipX: 0
   initialFlipY: 0

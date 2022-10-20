@@ -95,7 +95,7 @@ public class SoundManager : Singleton<SoundManager>
 
             //indexSound = Random.Range(0, soundAus.Length);
             //PlaySound((SoundID)indexSound);
-            PlaySound(SoundID.menu);
+            //PlaySound(SoundID.menu);
             //Debug.Log((SoundID)indexSound);
         }
     }

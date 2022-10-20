@@ -257,10 +257,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 541035043045665050, guid: 57ec1ac1a5af06b4eb2f68f0bc56c6a0, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 541035043045665050, guid: 57ec1ac1a5af06b4eb2f68f0bc56c6a0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d472d809672eb034d93f2a2da00ae587, type: 2}
+    - target: {fileID: 541035043045665050, guid: 57ec1ac1a5af06b4eb2f68f0bc56c6a0, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: c938fbc9e596b6c468ac4e59b1cc67ef, type: 2}
+    - target: {fileID: 541035043045665050, guid: 57ec1ac1a5af06b4eb2f68f0bc56c6a0, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: d472d809672eb034d93f2a2da00ae587, type: 2}
     - target: {fileID: 3469284485315297660, guid: 57ec1ac1a5af06b4eb2f68f0bc56c6a0, type: 3}
       propertyPath: skeletonDataAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 0762820781c062a42add2e85167e6fd6, type: 2}
+      objectReference: {fileID: 11400000, guid: 25f796f88ba8a26478e6d7ce73c802d7, type: 2}
     - target: {fileID: 6378490267436138555, guid: 57ec1ac1a5af06b4eb2f68f0bc56c6a0, type: 3}
       propertyPath: m_Mesh
       value: 

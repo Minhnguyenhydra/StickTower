@@ -281,10 +281,13 @@ public class Player : MonoBehaviour
     #region Set Animation
     public void Set_Attack(bool _isOpn_Reward = false)
     {
+        Set_Fix_Pos_Player();
+
         StartCoroutine(Delay_AttackTo_Idle(_isOpn_Reward));
     }
     public void Set_Anim_Attack()
     {
+        Set_Fix_Pos_Player();
         //SoundManager.Ins.PlayFx(FxID.attack_GamePlay);
         Set_Block_Colider_Player();
         ReSetCharacterState();
@@ -697,20 +700,20 @@ public class Player : MonoBehaviour
 
         else if (id_Skin_Wearing == 8)
         {
-            if (ii == 91)
+            if (ii == 1)
             {
                 SetCharacterState_NoLoop(Action_char_9_Skill_1);
-                index_Skill_Use = 1;
+                index_Skill_Use = 91;
             }
             else if (ii == 2)
             {
                 SetCharacterState_NoLoop(Action_char_9_Skill_2);
-                index_Skill_Use = 2;
+                index_Skill_Use = 92;
             }
             else if (ii == 3)
             {
                 SetCharacterState_NoLoop(Action_char_9_Skill_3);
-                index_Skill_Use = 3;
+                index_Skill_Use = 93;
             }
 
             else// (ii == 4)
@@ -727,17 +730,17 @@ public class Player : MonoBehaviour
             if (ii == 1)
             {
                 SetCharacterState_NoLoop(Action_char_10_Skill_1);
-                index_Skill_Use = 1;
+                index_Skill_Use = 101;
             }
             else if (ii == 2)
             {
                 SetCharacterState_NoLoop(Action_char_10_Skill_2);
-                index_Skill_Use = 2;
+                index_Skill_Use = 102;
             }
             else if (ii == 3)
             {
                 SetCharacterState_NoLoop(Action_char_10_Skill_3);
-                index_Skill_Use = 3;
+                index_Skill_Use = 103;
             }
 
             else// (ii == 4)
@@ -754,17 +757,17 @@ public class Player : MonoBehaviour
             if (ii == 1)
             {
                 SetCharacterState_NoLoop(Action_char_11_Skill_1);
-                index_Skill_Use = 1;
+                index_Skill_Use = 111;
             }
             else if (ii == 2)
             {
                 SetCharacterState_NoLoop(Action_char_11_Skill_2);
-                index_Skill_Use = 2;
+                index_Skill_Use = 112;
             }
             else if (ii == 3)
             {
                 SetCharacterState_NoLoop(Action_char_11_Skill_3);
-                index_Skill_Use = 3;
+                index_Skill_Use = 113;
             }
 
             else// (ii == 4)
@@ -781,17 +784,17 @@ public class Player : MonoBehaviour
             if (ii == 1)
             {
                 SetCharacterState_NoLoop(Action_char_12_Skill_1);
-                index_Skill_Use = 1;
+                index_Skill_Use = 121;
             }
             else if (ii == 2)
             {
                 SetCharacterState_NoLoop(Action_char_12_Skill_2);
-                index_Skill_Use = 2;
+                index_Skill_Use = 122;
             }
             else if (ii == 3)
             {
                 SetCharacterState_NoLoop(Action_char_12_Skill_3);
-                index_Skill_Use = 3;
+                index_Skill_Use = 123;
             }
 
             else// (ii == 4)
@@ -808,17 +811,17 @@ public class Player : MonoBehaviour
             if (ii == 1)
             {
                 SetCharacterState_NoLoop(Action_char_13_Skill_1);
-                index_Skill_Use = 1;
+                index_Skill_Use = 131;
             }
             else if (ii == 2)
             {
                 SetCharacterState_NoLoop(Action_char_13_Skill_2);
-                index_Skill_Use = 2;
+                index_Skill_Use = 132;
             }
             else if (ii == 3)
             {
                 SetCharacterState_NoLoop(Action_char_13_Skill_3);
-                index_Skill_Use = 3;
+                index_Skill_Use = 133;
             }
 
             else// (ii == 4)
@@ -835,17 +838,17 @@ public class Player : MonoBehaviour
             if (ii == 1)
             {
                 SetCharacterState_NoLoop(Action_char_14_Skill_1);
-                index_Skill_Use = 1;
+                index_Skill_Use = 141;
             }
             else if (ii == 2)
             {
                 SetCharacterState_NoLoop(Action_char_14_Skill_2);
-                index_Skill_Use = 2;
+                index_Skill_Use = 142;
             }
             else if (ii == 3)
             {
                 SetCharacterState_NoLoop(Action_char_14_Skill_3);
-                index_Skill_Use = 3;
+                index_Skill_Use = 143;
             }
 
             else// (ii == 4)
@@ -1073,22 +1076,23 @@ public class Player : MonoBehaviour
             }
         }
 
+
         else if (id_Skin_Wearing == 8)
         {
-            if (ii == 91)
+            if (ii == 1)
             {
                 SetCharacterState_NoLoop(Action_char_9_Skill_1);
-                index_Skill_Use = 1;
+                index_Skill_Use = 91;
             }
             else if (ii == 2)
             {
                 SetCharacterState_NoLoop(Action_char_9_Skill_2);
-                index_Skill_Use = 2;
+                index_Skill_Use = 92;
             }
             else if (ii == 3)
             {
                 SetCharacterState_NoLoop(Action_char_9_Skill_3);
-                index_Skill_Use = 3;
+                index_Skill_Use = 93;
             }
 
             else// (ii == 4)
@@ -1105,17 +1109,17 @@ public class Player : MonoBehaviour
             if (ii == 1)
             {
                 SetCharacterState_NoLoop(Action_char_10_Skill_1);
-                index_Skill_Use = 1;
+                index_Skill_Use = 101;
             }
             else if (ii == 2)
             {
                 SetCharacterState_NoLoop(Action_char_10_Skill_2);
-                index_Skill_Use = 2;
+                index_Skill_Use = 102;
             }
             else if (ii == 3)
             {
                 SetCharacterState_NoLoop(Action_char_10_Skill_3);
-                index_Skill_Use = 3;
+                index_Skill_Use = 103;
             }
 
             else// (ii == 4)
@@ -1132,17 +1136,17 @@ public class Player : MonoBehaviour
             if (ii == 1)
             {
                 SetCharacterState_NoLoop(Action_char_11_Skill_1);
-                index_Skill_Use = 1;
+                index_Skill_Use = 111;
             }
             else if (ii == 2)
             {
                 SetCharacterState_NoLoop(Action_char_11_Skill_2);
-                index_Skill_Use = 2;
+                index_Skill_Use = 112;
             }
             else if (ii == 3)
             {
                 SetCharacterState_NoLoop(Action_char_11_Skill_3);
-                index_Skill_Use = 3;
+                index_Skill_Use = 113;
             }
 
             else// (ii == 4)
@@ -1159,17 +1163,17 @@ public class Player : MonoBehaviour
             if (ii == 1)
             {
                 SetCharacterState_NoLoop(Action_char_12_Skill_1);
-                index_Skill_Use = 1;
+                index_Skill_Use = 121;
             }
             else if (ii == 2)
             {
                 SetCharacterState_NoLoop(Action_char_12_Skill_2);
-                index_Skill_Use = 2;
+                index_Skill_Use = 122;
             }
             else if (ii == 3)
             {
                 SetCharacterState_NoLoop(Action_char_12_Skill_3);
-                index_Skill_Use = 3;
+                index_Skill_Use = 123;
             }
 
             else// (ii == 4)
@@ -1186,17 +1190,17 @@ public class Player : MonoBehaviour
             if (ii == 1)
             {
                 SetCharacterState_NoLoop(Action_char_13_Skill_1);
-                index_Skill_Use = 1;
+                index_Skill_Use = 131;
             }
             else if (ii == 2)
             {
                 SetCharacterState_NoLoop(Action_char_13_Skill_2);
-                index_Skill_Use = 2;
+                index_Skill_Use = 132;
             }
             else if (ii == 3)
             {
                 SetCharacterState_NoLoop(Action_char_13_Skill_3);
-                index_Skill_Use = 3;
+                index_Skill_Use = 133;
             }
 
             else// (ii == 4)
@@ -1213,17 +1217,17 @@ public class Player : MonoBehaviour
             if (ii == 1)
             {
                 SetCharacterState_NoLoop(Action_char_14_Skill_1);
-                index_Skill_Use = 1;
+                index_Skill_Use = 141;
             }
             else if (ii == 2)
             {
                 SetCharacterState_NoLoop(Action_char_14_Skill_2);
-                index_Skill_Use = 2;
+                index_Skill_Use = 142;
             }
             else if (ii == 3)
             {
                 SetCharacterState_NoLoop(Action_char_14_Skill_3);
-                index_Skill_Use = 3;
+                index_Skill_Use = 143;
             }
 
             else// (ii == 4)
@@ -1334,7 +1338,7 @@ public class Player : MonoBehaviour
     //Sau khi đánh thắng Enemy còn lại khi đến Boss cuối của 1 Level(Boss cuối, hoặc Công chúa, hoặc hòm,...) thì tự đến điểm cuối đó
     public void Set_Go_To_Point_End_Level(Transform _tf_End_Level, Enum_Type_Take_Last_Level _type_Take_Last_Level, int _health_If_Enemy = 0)
     {
-        
+        Set_Block_Colider_Player();
         Set_Anim_Run();
         tf_Player.DOMove(_tf_End_Level.position, Constant.Time_Player_Move_End_Level).OnComplete(() =>
         {
@@ -1375,7 +1379,8 @@ public class Player : MonoBehaviour
                     floor_stay.list_Point_In_Floor[0].princess_Attack_This_Point.Set_Victory();
 
                 }
-                StartCoroutine(Delay_Win());
+                GameManager.Ins.Set_Mai_Xanh_Delay_Win(floor_stay);
+                //StartCoroutine(Delay_Win());
             }
         });
     }
@@ -1392,8 +1397,35 @@ public class Player : MonoBehaviour
                 isLast_Point_Level = true;
                 isReach_Last_Point_Level = true;
 
+                
                 //
-                if (PlayerPrefs_Manager.Get_Index_Level_Normal() != 38)
+                if (PlayerPrefs_Manager.Get_Index_Level_Normal() != 38 && PlayerPrefs_Manager.Get_Index_Level_Normal() != 44&& PlayerPrefs_Manager.Get_Index_Level_Normal() != 47)
+                {
+                    Set_Go_To_Point_End_Level(floor_stay.tf_Point_End_Level, Enum_Type_Take_Last_Level.Enemy, floor_stay.list_Point_In_Floor[0].enemy_Attack_This_Point.Get_Health());
+                }
+            }
+            else if (floor_stay.list_Point_In_Floor[0].princess_Attack_This_Point != null)
+            {
+                isReach_Last_Point_Level = true;
+                Set_Go_To_Point_End_Level(floor_stay.tf_Point_End_Level, Enum_Type_Take_Last_Level.Princess);
+            }
+            else if (floor_stay.list_Point_In_Floor[0].reward_Attack_This_Point != null)
+            {
+                isReach_Last_Point_Level = true;
+                Set_Go_To_Point_End_Level(floor_stay.tf_Point_End_Level, Enum_Type_Take_Last_Level.Reward);
+            }
+        }
+        else if (indext_Point_In_Floor_Stay == 1 && floor_stay.is_Floor_Last_Of_Level)
+        {
+            //
+            if (floor_stay.list_Point_In_Floor[0].enemy_Attack_This_Point != null)
+            {
+                isLast_Point_Level = true;
+                isReach_Last_Point_Level = true;
+
+
+                //
+                if (PlayerPrefs_Manager.Get_Index_Level_Normal() != 38 && PlayerPrefs_Manager.Get_Index_Level_Normal() != 44 && PlayerPrefs_Manager.Get_Index_Level_Normal() != 47)
                 {
                     Set_Go_To_Point_End_Level(floor_stay.tf_Point_End_Level, Enum_Type_Take_Last_Level.Enemy, floor_stay.list_Point_In_Floor[0].enemy_Attack_This_Point.Get_Health());
                 }
@@ -1475,7 +1507,11 @@ public class Player : MonoBehaviour
         Set_Anim_Idle();
         Set_Un_Block_Colider_Player();
     }
-
+    public void Set_Fix_Pos_Player()
+    {
+        //TODO: Fix vị trí Player lơ lửng
+        pos_Old_Player = tf_Player.position;
+    }
 }
 
 /*

@@ -523,17 +523,6 @@ PrefabInstance:
       objectReference: {fileID: 572620346}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fca6fa56ba3fe9d4bb164811d1aaf58e, type: 3}
---- !u!114 &136941974 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3084026206248775595, guid: fca6fa56ba3fe9d4bb164811d1aaf58e, type: 3}
-  m_PrefabInstance: {fileID: 136941973}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f27680448d67f44408b4d11d015e89ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &212119680
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3807,7 +3796,11 @@ PrefabInstance:
     - target: {fileID: 8343629656310436905, guid: ce14ef297ed9253408f622e8690ce469, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 136941974}
+      objectReference: {fileID: 804168747}
+    - target: {fileID: 8343629656310436905, guid: ce14ef297ed9253408f622e8690ce469, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AreaButton
+      objectReference: {fileID: 0}
     - target: {fileID: 8343629656341820768, guid: ce14ef297ed9253408f622e8690ce469, type: 3}
       propertyPath: m_Mesh
       value: 

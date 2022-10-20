@@ -111,6 +111,7 @@ public class CanvasWinQ : UICanvas
         }
         else
         {
+            EfxManager.ins.Set_Gold_Fly_Pig_OK();
             obj_Image_Claim_ADs.SetActive(true);
             obj_Image_Claim_No_ADs.SetActive(false);
         }
@@ -122,10 +123,14 @@ public class CanvasWinQ : UICanvas
         StartCoroutine(Set_Delay_Show_No_Thank());
         //
         Set_Check_Show_Btn();
-        Set_Step_By_Step_Gold(PlayerPrefs_Manager.Get_Gold(), PlayerPrefs_Manager.Get_Gold() + Constant.Get_Gold_Reward_By_level(PlayerPrefs_Manager.Get_Index_Level_Normal() - 1), 1);
-        Set_Step_By_Step_Gem(PlayerPrefs_Manager.Get_Gem(), PlayerPrefs_Manager.Get_Gem() + Constant.Get_Gem_By_level(PlayerPrefs_Manager.Get_Index_Level_Normal() - 1), 1);
+        //Set_Step_By_Step_Gold(PlayerPrefs_Manager.Get_Gold(), PlayerPrefs_Manager.Get_Gold() + Constant.Get_Gold_Reward_By_level(PlayerPrefs_Manager.Get_Index_Level_Normal() - 1), 1);
+        //Set_Step_By_Step_Gem(PlayerPrefs_Manager.Get_Gem(), PlayerPrefs_Manager.Get_Gem() + Constant.Get_Gem_By_level(PlayerPrefs_Manager.Get_Index_Level_Normal() - 1), 1);
+
+        Invoke("Set_Up_Gold_Fly", 1.5f);
+
         //Lấy level -1 là level vừa chơi vì đã cộng sau khi win rồi
         EfxManager.ins.Set_GoldTop_FX();
+        
 
         int gold_Current = PlayerPrefs_Manager.Get_Gold() + Constant.Get_Gold_Bonus_By_Level(PlayerPrefs_Manager.Get_Index_Level_Normal() - 1);
 
@@ -161,6 +166,12 @@ public class CanvasWinQ : UICanvas
         Set_Spawn_Icon(level+2);
         StartCoroutine(IE_Scale_iceon_before());
     }
+    public void Set_Up_Gold_Fly()
+    {
+        Set_Step_By_Step_Gold(PlayerPrefs_Manager.Get_Gold(), PlayerPrefs_Manager.Get_Gold() + Constant.Get_Gold_Reward_By_level(PlayerPrefs_Manager.Get_Index_Level_Normal() - 1), 1);
+        Set_Step_By_Step_Gem(PlayerPrefs_Manager.Get_Gem(), PlayerPrefs_Manager.Get_Gem() + Constant.Get_Gem_By_level(PlayerPrefs_Manager.Get_Index_Level_Normal() - 1), 1);
+    }
+    
     public void Set_Tile_BG()
     {
         //Reset image
@@ -261,7 +272,7 @@ public class CanvasWinQ : UICanvas
 
         txt_Gem.text = PlayerPrefs_Manager.Get_Gem().ToString("N0");
 
-        if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 1 || PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 3)
+        if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 1)
         {
             txt_Level.text = "LEVEL " + (PlayerPrefs_Manager.Get_Index_Level_Normal()+1).ToString();
 
@@ -270,7 +281,11 @@ public class CanvasWinQ : UICanvas
         {
             txt_Level.text = "LEVEL " + (PlayerPrefs.GetInt(UserData.Key_LevelArena)).ToString();
         }
-
+        else if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 3)
+        {
+            
+            txt_Level.text = "LEVEL " + (PlayerPrefs_Manager.Get__QLevel_Challenge()).ToString();
+        }
     }
     #endregion
     #region Area
@@ -278,6 +293,10 @@ public class CanvasWinQ : UICanvas
     {
         SoundManager.Ins.PlayFx(FxID.click);
         //UNDONE...
+        //Load Scene Area
+        PlayerPrefs.SetInt(UserData.Key_1GamPlay_Or_2Area_Or_3Challenge, 2);
+        Scene_Manager_Q.Load_Scene("Ar_Level_0");
+        //Set_Fade_And_Close();
         Close();
     }
     #endregion
@@ -421,11 +440,11 @@ public class CanvasWinQ : UICanvas
         }
         else if (PlayerPrefs.GetInt(UserData.Key_1GamPlay_Or_2Area_Or_3Challenge) == 3)
         {
-            int indexLevel = PlayerPrefs_Manager.Get_Index_Level_Normal();
-            Scene_Manager_Q.Load_Scene(Constant.StringLevel + indexLevel.ToString());
+            UIManager.Ins.OpenUI(UIID.UICMainMenu);
+            UIManager.Ins.OpenUI(UIID.UICChallenge);
 
         }
-        
+
         //SceneManager.LoadScene(Constant.StringLevel + indexLevel.ToString(), LoadSceneMode.Single);
     }
     
@@ -450,8 +469,9 @@ public class CanvasWinQ : UICanvas
             }
             else if (PlayerPrefs.GetInt(UserData.Key_1GamPlay_Or_2Area_Or_3Challenge) == 3)
             {
-                int indexLevel = PlayerPrefs_Manager.Get_Index_Level_Normal();
-                Scene_Manager_Q.Load_Scene(Constant.StringLevel + indexLevel.ToString());
+                UIManager.Ins.OpenUI(UIID.UICMainMenu);
+                UIManager.Ins.OpenUI(UIID.UICChallenge);
+
             }
 
 

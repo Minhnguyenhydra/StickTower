@@ -234,7 +234,8 @@ public class Drag_Drop_Manager : Singleton_Q<Drag_Drop_Manager>
                                             //SetParent vào điểm gắn để đi xuống cùng Floor nếu Floor sụp xuống
 
                                             Player.ins.tf_Player.position = floor_Raycast_To.list_Point_In_Floor[i].tf_Point_In_Floor.position;
-                                            Player.ins.Set_Pos_Old(vec_pos_Can_Place_In_Floor);
+                                            //Player.ins.Set_Pos_Old(vec_pos_Can_Place_In_Floor);
+                                            Player.ins.Set_Pos_Old(Player.ins.tf_Player.position);
                                             //Debug.Log("1");
                                             if (index_Step_Tut_0_use != 2)
                                             {
@@ -279,7 +280,7 @@ public class Drag_Drop_Manager : Singleton_Q<Drag_Drop_Manager>
                                                 //SetParent vào điểm gắn để đi xuống cùng Floor nếu Floor sụp xuống
 
                                                 Player.ins.tf_Player.position = floor_Raycast_To.list_Point_In_Floor[i].tf_Point_In_Floor.position;
-                                                Player.ins.Set_Pos_Old(vec_pos_Can_Place_In_Floor);
+                                                Player.ins.Set_Pos_Old(Player.ins.tf_Player.position);
                                                 //Debug.Log("99");
                                             }
 

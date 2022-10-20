@@ -27,6 +27,7 @@ public class CanvasMainMenu : UICanvas
     public SkeletonAnimation skeletonAnimation;
     private void OnEnable()
     {
+        SoundManager.Ins.PlaySound(SoundID.menu);
         Set_Init_Gold_Pink_bank();
         Set_Reload_Gold_Gem_Title();
         isFist_Click = false;

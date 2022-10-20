@@ -2449,6 +2449,7 @@ MonoBehaviour:
   uIID_Of_Canvas: 0
   grandfather_Castle: {fileID: 8797440987541422037}
   obj_Btn_ADs_Sword: {fileID: 8797440987529575524}
+  obj_Btn_NextLevel: {fileID: 8797440987416079937}
   txt_Level: {fileID: 8797440988432093186}
   anim_GamePlay: {fileID: 8797440988222175954}
   int_Damge: 0

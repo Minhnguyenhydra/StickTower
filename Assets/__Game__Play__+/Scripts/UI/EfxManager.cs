@@ -12,6 +12,9 @@ public class EfxManager : SingletonMonoBehaviour<EfxManager>
     public RectTransform rect_Start;
     public RectTransform rect_Gold;
     public RectTransform rect_Gem;
+
+    public RectTransform rect_Bank_start;
+    public RectTransform rect_Bank_end;
     public RectTransform rect_Piggy;
 
 
@@ -80,7 +83,38 @@ public class EfxManager : SingletonMonoBehaviour<EfxManager>
             });
         }
     }
-    
+    public void Set_Gold_Fly_Pig_OK()
+    {
+        StartCoroutine(IE_Set_Gold_Fly_Pig_OK());
+    }
+    IEnumerator IE_Set_Gold_Fly_Pig_OK()
+    {
+        yield return Cache.GetWFS(3);
+        Set_Gold_Fly_Pig(rect_Bank_start.position, rect_Bank_end.position);
+        yield return Cache.GetWFS(1);
+        Set_Gold_Fly_Pig(rect_Bank_start.position, rect_Bank_end.position);
+        yield return Cache.GetWFS(1);
+        Set_Gold_Fly_Pig(rect_Bank_start.position, rect_Bank_end.position);
+        yield return Cache.GetWFS(1);
+        Set_Gold_Fly_Pig(rect_Bank_start.position, rect_Bank_end.position);
+        yield return Cache.GetWFS(1);
+        Set_Gold_Fly_Pig(rect_Bank_start.position, rect_Bank_end.position);
+    }
+    public void Set_Gold_Fly_Pig(Vector3 startPos, Vector3 endPos)
+    {
+        var tempImg = SimplePool.Spawn(gold.gameObject, startPos, Quaternion.identity).GetComponent<RectTransform>();
+        tempImg.transform.SetParent(efxHolder);
+        tempImg.position = startPos;
+        tempImg.transform.localScale = Vector3.one * 0.95f;
+
+
+        tempImg.transform.DOMove(endPos, 1f);
+        tempImg.transform.DOScale(0, 1f).OnComplete(() => {
+            //++++++++SoundController.PlaySoundOneShot(SoundController.ins.gem_collect);
+            SoundManager.Ins.PlayFx(FxID.collect_coin);
+            SimplePool.Despawn(tempImg.gameObject);
+        }); ;
+    }
     public void GetGemFx(Vector3 startPos, Vector3 endPos)
     {
         for (int i = 0; i < Random.Range(15, 25); i++)

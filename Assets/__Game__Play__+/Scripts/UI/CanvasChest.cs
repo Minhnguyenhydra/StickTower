@@ -10,6 +10,7 @@ public class CanvasChest : UICanvas
     public Text txt_Gold;//gold ở bank đầy
     public Text txt_Gem;//gold ở bank đầy
     public Text txt_Level_Set;//gold ở bank đầy
+    public Text txt_Level_Set_arena;//gold ở bank đầy
     #endregion
     private void OnEnable()
     {
@@ -32,6 +33,19 @@ public class CanvasChest : UICanvas
         result = Mathf.Clamp(result, 0, 50);
         PlayerPrefs_Manager.Set_Index_Level_Normal(result);
     }
+    
+    [ContextMenu("Set Level")]
+    public void SetLEVEL_arena()
+    {
+        int result = System.Int32.Parse(txt_Level_Set_arena.text);
+        result = Mathf.Clamp(result, 0, 50);
+        PlayerPrefs.SetInt("LevelArena", result);
+    }
+
+
+
+
+
     [ContextMenu("Set Full Gold")]
     public void SetFullGold()
     {

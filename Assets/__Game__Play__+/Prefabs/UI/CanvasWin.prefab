@@ -544,7 +544,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 336, y: -131.41}
+  m_AnchoredPosition: {x: 336, y: -118}
   m_SizeDelta: {x: 100, y: 143.22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2742928055733753331
@@ -606,7 +606,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: a838777e4ccc0524d8ed8a279bf9666f, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -826,7 +826,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -348, y: -134.25}
+  m_AnchoredPosition: {x: -353.2, y: -120.2}
   m_SizeDelta: {x: 167.37, y: 206.31}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6280268936486405499
@@ -980,9 +980,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 935a0dd74c2454547ae4a75a6209c508, type: 2}
-  - {fileID: 2100000, guid: 83f6a93232b83424b83e393be059275b, type: 2}
-  - {fileID: 2100000, guid: 935a0dd74c2454547ae4a75a6209c508, type: 2}
+  - {fileID: 2100000, guid: 319874e9345f32b458fbee077bb5b0c8, type: 2}
+  - {fileID: 2100000, guid: 380e1e1bd251f28439deb27dc493dc0f, type: 2}
+  - {fileID: 2100000, guid: 319874e9345f32b458fbee077bb5b0c8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1016,7 +1016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 0762820781c062a42add2e85167e6fd6, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: 25f796f88ba8a26478e6d7ce73c802d7, type: 2}
   initialSkinName: hero2/weapon_bonus1
   initialFlipX: 0
   initialFlipY: 0
@@ -1175,13 +1175,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: a838777e4ccc0524d8ed8a279bf9666f, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  skeletonDataAsset: {fileID: 11400000, guid: 1dda964a678cfc04984c2d5f9a413935, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: cbaff83d4b0f79843b7a7029dc251a33, type: 2}
   initialSkinName: default
   initialFlipX: 0
   initialFlipY: 0
@@ -4945,7 +4945,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 387, y: -172.45001}
-  m_SizeDelta: {x: 300, y: 300}
+  m_SizeDelta: {x: 300, y: 246.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8343629656310436911
 CanvasRenderer:
@@ -4975,7 +4975,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 71f2194badc1131469d20727df04cf9d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5029,21 +5029,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: EfxManager, Assembly-CSharp
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 8343629655301455770}
-        m_TargetAssemblyTypeName: Test_Random_Multi_Reward, Assembly-CSharp
-        m_MethodName: Set_ADs_To_Stop_Random
+        m_TargetAssemblyTypeName: CanvasWinQ, Assembly-CSharp
+        m_MethodName: AreaButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5413,8 +5401,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -467.96, y: -259}
-  m_SizeDelta: {x: 934.94, y: 264}
+  m_AnchoredPosition: {x: -467.96, y: -237.4}
+  m_SizeDelta: {x: 934.94, y: 242.4}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &8343629656466179478
 CanvasRenderer:
@@ -6164,7 +6152,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.7525, y: -174}
+  m_AnchoredPosition: {x: 1.7525, y: -147.53}
   m_SizeDelta: {x: 568.49, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8343629656739228624
@@ -7046,7 +7034,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 386.17004, y: 178}
-  m_SizeDelta: {x: 205.63, y: 241.27}
+  m_SizeDelta: {x: 205.63, y: 247.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8343629656981166307
 CanvasRenderer:
@@ -7076,7 +7064,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 71f2194badc1131469d20727df04cf9d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7130,8 +7118,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CanvasMainMenu, Assembly-CSharp
+      - m_Target: {fileID: 8343629655301455770}
+        m_TargetAssemblyTypeName: CanvasWinQ, Assembly-CSharp
         m_MethodName: PigBankButton
         m_Mode: 1
         m_Arguments:
@@ -7192,7 +7180,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -371, y: 195.54999}
-  m_SizeDelta: {x: 300, y: 300}
+  m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8343629657001965714
 CanvasRenderer:
@@ -7222,7 +7210,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 71f2194badc1131469d20727df04cf9d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7582,7 +7570,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: a838777e4ccc0524d8ed8a279bf9666f, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:

@@ -89,7 +89,7 @@ public class PlayerPrefs_Manager
     {
         if (PlayerPrefs.GetInt(Constant.Player_IndexLevel_Normal, 0) > 50)
         {
-            return 50;
+            return 30;
         }
         else
         {
@@ -223,8 +223,15 @@ public class PlayerPrefs_Manager
     }
 
     #endregion
-    #region
-
+    #region Challenge
+    public static void Set_QLevel_Challenge(int _QLevel_Challenge)
+    {
+        PlayerPrefs.SetInt(Constant.String_Level_Challenge, _QLevel_Challenge);
+    }
+    public static int Get__QLevel_Challenge()
+    {
+        return PlayerPrefs.GetInt(Constant.String_Level_Challenge, 22);
+    }
     #endregion
     #region
 

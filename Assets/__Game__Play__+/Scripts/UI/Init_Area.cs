@@ -104,11 +104,26 @@ public class Init_Area : Singleton<Init_Area>
 
             ChangeAnim(AnimName.attack.ToString(), true, AnimName.attack.ToString(), true);
 
+
             
+            
+
             SoundManager.Ins.PlayFx(FxID.attack_Arena);
             count_time_attack++;
             if (count_time_attack > 2 )
             {
+                //set fill health bar boss
+                if (Health_Bar_Boss_Manager.Ins != null)
+                {
+                    if (player.Damage > enemy.Damage)
+                    {
+                        Health_Bar_Boss_Manager.Ins.Set_Fill_Health_Bar_Boss(true, 6);
+                    }
+                    else
+                    {
+                        Health_Bar_Boss_Manager.Ins.Set_Fill_Health_Bar_Boss(false, 6);
+                    }
+                }
                 yield return new WaitForSeconds(6f);//Change : 3f//Boss
                 //Debug.Log("=====");
             }
@@ -120,9 +135,8 @@ public class Init_Area : Singleton<Init_Area>
             //Debug.Log
             if (player.Damage > enemy.Damage)
             {
-                ChangeAnim(AnimName.victory2.ToString(), true, AnimName.die.ToString(), false);
+                 ChangeAnim(AnimName.victory2.ToString(), true, AnimName.die.ToString(), false);
 
-                
                 SoundManager.Ins.PlayFx(FxID.giantDeath);
             }
             else
@@ -139,16 +153,28 @@ public class Init_Area : Singleton<Init_Area>
                 yield break;
             }
 
-            yield return new WaitForSeconds(1.5f);
 
-        //turn 3
+            if (count_time_attack > 2)
+            {
+                yield return new WaitForSeconds(3.5f);
+            }
+            else
+            {
+                yield return new WaitForSeconds(1.5f);
+
+            }
+
+            //turn 3
             enemy.NextStage();
-
+            
             yield return new WaitForSeconds(1.5f);
         }
 
         {
             ChangeAnim(AnimName.victory2.ToString(), true, AnimName.die.ToString(), false);
+
+            
+            //Debug.Log("=== 2 ==");
             //save level
             userData.SetIntData(UserData.Key_LevelArena, ref userData.levelArena, userData.levelArena + 1);
             //TODO: show ui victory

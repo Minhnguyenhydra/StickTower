@@ -16,6 +16,7 @@ public class GameManager : Singleton<GameManager>
     //[SerializeField] CSVData csv;
     //private static GameState gameState = GameState.MainMenu;
     private Enum_State_Attack_Boos state_Attack_Boos;
+    private bool isFireWork_1_lv_38;
     
     
     // Start is called before the first frame update
@@ -60,7 +61,7 @@ public class GameManager : Singleton<GameManager>
     private void Start()
     {
         ///// TOTEST:  StartCoroutine(IE_Load_Fade_In());
-        SoundManager.Ins.PlaySound(SoundID.menu);
+        //SoundManager.Ins.PlaySound(SoundID.menu);
     }
     
     public void Set_Mai_Xanh_Delay_Win(Floor _floor)
@@ -80,7 +81,21 @@ public class GameManager : Singleton<GameManager>
         _floor.house_Build_Of_This.Set_Mai_Xanh();
         _floor.house_Build_Of_This.Set_This_To_Team_Player();
         //Fire work
-        Set_Spawn_FireWord(Player.ins.tf_Player);
+
+        if (PlayerPrefs_Manager.Get_Index_Level_Normal() != 32)
+        {
+            Set_Spawn_FireWord(Player.ins.tf_Player);
+        }
+        else
+        {
+            if (!isFireWork_1_lv_38)
+            {
+                isFireWork_1_lv_38 = true;
+                Set_Spawn_FireWord(Player.ins.tf_Player);
+            }
+        }
+
+
         Player.ins.Set_Anim_Victory();
         SoundManager.Ins.PlayFx(FxID.yes);
         //GameObject obj = (GameObject)Instantiate(Resources.Load(Constant.Path_Frefab_fx_win_ball), Player.ins.tf_Player.position, Player.ins.tf_Player.rotation);
@@ -123,43 +138,63 @@ public class GameManager : Singleton<GameManager>
         ((CanvasFade)UIManager.Ins.GetUI(UIID.UICFade)).Set_Fade_Out();
         yield return Cache.GetWFS(Constant.Time_Delay_Load_Scene);
         ((CanvasGamePlay)UIManager.Ins.GetUI(UIID.UICGamePlay)).Close();
-        UIManager.Ins.OpenUI(UIID.UICWin_Level);
 
-        //Mở khóa canvas rương nếu level đủ 3 chìa
-        int lv = PlayerPrefs_Manager.Get_Index_Level_Normal();
-        if (lv == 13 || lv == 23 )
-        {
-            PlayerPrefs_Manager.Set_Number_Key_Treasure(0);
-            UIManager.Ins.OpenUI(UIID.UICShopPrize);
-        }
+
+
+            UIManager.Ins.OpenUI(UIID.UICWin_Level);
+
+            //Mở khóa canvas rương nếu level đủ 3 chìa
+            int lv = PlayerPrefs_Manager.Get_Index_Level_Normal();
+            if (lv == 13 || lv == 23 )
+            {
+                PlayerPrefs_Manager.Set_Number_Key_Treasure(0);
+                UIManager.Ins.OpenUI(UIID.UICShopPrize);
+            }
         
-        if (lv == 6)
-        {
-            UIManager.Ins.OpenUI(UIID.UICRateUs);
-        }
+            if (lv == 6)
+            {
+                UIManager.Ins.OpenUI(UIID.UICRateUs);
+            }
 
-        // tăng level lên 1
-        PlayerPrefs_Manager.Set_Index_Level_Normal(lv + 1);
+            // tăng level lên 1
+            PlayerPrefs_Manager.Set_Index_Level_Normal(lv + 1);
+            //Fight Boos
+            UIManager.Ins.OpenUI(UIID.UICFight_Boss);
+            UIManager.Ins.CloseUI(UIID.UICFight_Boss);
+            //
+        
 
-        //Fight Boos
-        UIManager.Ins.OpenUI(UIID.UICFight_Boss);
-        UIManager.Ins.CloseUI(UIID.UICFight_Boss);
-        //
     }
     //
     IEnumerator Set_Delay_Show_Canvas_Lose()
     {
-        yield return Cache.GetWFS(Constant.Time_Delay_Fade_Win);
+        if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() != 3)
+        {
+            yield return Cache.GetWFS(Constant.Time_Delay_Fade_Win);
+        }
+        else
+        {
+            float time_change = Constant.Time_Delay_Fade_Win - 2;
+            time_change = Mathf.Clamp(time_change, 0.5f,10);
+            yield return Cache.GetWFS(time_change);//TODO: Fix màn rewward thua hiển thị chậm ở Challenge
+        }
+        
         UIManager.Ins.OpenUI(UIID.UICFade);
         ((CanvasFade)UIManager.Ins.GetUI(UIID.UICFade)).Set_Fade_Out();
         yield return Cache.GetWFS(Constant.Time_Delay_Load_Scene);
         ((CanvasGamePlay)UIManager.Ins.GetUI(UIID.UICGamePlay)).Close();
+
+
         UIManager.Ins.OpenUI(UIID.UICFail);
 
         //Fight Boos
-        //UIManager.Ins.OpenUI(UIID.UICFight_Boss);
-        UIManager.Ins.CloseUI(UIID.UICFight_Boss);
+        UIManager.Ins.OpenUI(UIID.UICFight_Boss);
+        if (UIManager.Ins.IsOpenedUI(UIID.UICFight_Boss))
+        {
+            UIManager.Ins.CloseUI(UIID.UICFight_Boss);
+        }
         //
+       
     }
 
     //TOTEST

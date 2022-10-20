@@ -87,7 +87,7 @@ public class House_Build : MonoBehaviour
     }
      IEnumerator Delay_Win(Floor _floor)
     {
-        yield return Cache.GetWFS(Constant.Time_Delay_Fade_Win);
+        yield return Cache.GetWFS(0.1f);//Constant.Time_Delay_Fade_Win
         GameManager.Ins.Set_Mai_Xanh_Delay_Win(_floor);
     }
     public void Set_Floor_Up_Top( )

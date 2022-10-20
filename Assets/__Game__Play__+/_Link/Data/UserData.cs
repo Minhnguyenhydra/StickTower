@@ -86,8 +86,12 @@ public class UserData : ScriptableObject
     public void OnInitData()
     {
         levelArena = PlayerPrefs.GetInt(Key_LevelArena, 0);
-        //PlayerPrefs.SetInt(Key_LevelArena, 30);
-        levelArena = Mathf.Clamp(levelArena,0, 50);
+        //PlayerPrefs.SetInt(Key_LevelArena, 1);
+        if (levelArena > 50)
+        {
+            levelArena = 30;
+        }
+        //levelArena = Mathf.Clamp(levelArena,0, 50);
         PlayingLevel = PlayerPrefs.GetInt(Key_Level, 0);
         Cash = PlayerPrefs.GetInt(Key_Cash, 0);
         musicIsOn = PlayerPrefs.GetInt(Key_FxIsOn, 1) == 1;

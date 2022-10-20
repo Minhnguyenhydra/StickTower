@@ -24,44 +24,49 @@ public class CanvasChallenge : UICanvas
         SoundManager.Ins.PlayFx(FxID.click);
         PlayerPrefs_Manager.Set_Key_1GamPlay_Or_2Area_Or_3Challenge(3);
         //UNDO: làm vội chưa làm hết các logic level
-        int level = PlayerPrefs_Manager.Get_Index_Level_Normal();
-        if (true)
-        {
-            if (level >= 22)
-            {
-                Scene_Manager_Q.Load_Scene("Challenge_Level_22");
-                
-            }
-            else
-            {
+        //int level = PlayerPrefs_Manager.Get_Index_Level_Normal();
+        //if (true)
+        //{
+        //    if (level == 22)
+        //    {
+        //        Scene_Manager_Q.Load_Scene("Level_22");
 
-            }
-        }
-        else if (ChallengeControll.ins.ii == 1)
-        {
+        //    }
+        //    else
+        //    {
 
-        }
-
-        else if (ChallengeControll.ins.ii == 2)
+        //    }
+        //}
+       
+        if (challengeControll.ii == 0)
         {
 
+            PlayerPrefs_Manager.Set_QLevel_Challenge(22);
+            Scene_Manager_Q.Load_Scene("Level_22");
         }
-        else if (ChallengeControll.ins.ii == 3)
+
+        else if (challengeControll.ii == 1)
         {
 
+            PlayerPrefs_Manager.Set_QLevel_Challenge(43);
+            Scene_Manager_Q.Load_Scene("Level_43");
         }
-        else if (ChallengeControll.ins.ii == 4)
-        {
-
-        }
-        else if (ChallengeControll.ins.ii == 5)
+        else if (challengeControll.ii == 2)
         {
 
         }
-        
+        else if (challengeControll.ii == 3)
+        {
+
+        }
+        else if (challengeControll.ii == 4)
+        {
+
+        }
     }
     public void Buy_Btn()
     {
+        
         SoundManager.Ins.PlayFx(FxID.click);
         PlayerPrefs_Manager.Set_Gold(PlayerPrefs_Manager.Get_Gold() - 100);
         PlayerPrefs_Manager.Set_Replay_Level(22);

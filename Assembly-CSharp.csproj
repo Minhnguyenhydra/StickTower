@@ -65,6 +65,7 @@
     <Compile Include="Assets\__Game__Play__+\Scripts\Singleton_Q.cs" />
     <Compile Include="Assets\__Game__Play__+\Scripts\Sword.cs" />
     <Compile Include="Assets\__Game__Play__+\Scripts\House\Point_In_Floor.cs" />
+    <Compile Include="Assets\__Game__Play__+\Scripts\Health_Bar_Boss_Manager.cs" />
     <Compile Include="Assets\__Game__Play__+\Scripts\CanvasFade.cs" />
     <Compile Include="Assets\__Game__Play__+\Scripts\3 Chest_Lv_Full\Reward_Lv_Full.cs" />
     <Compile Include="Assets\__Game__Play__+\Scripts\House\Stroke_Blue.cs" />
@@ -213,6 +214,7 @@
     <None Include="Assets\__Game__Play__+\Spine_Old\json_Character\json_boss\Boss.atlas.txt" />
     <None Include="Assets\__Game__Play__+\Spine_Old\json_UI\Win\Win.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\__Game__Play__+\Icons\json_character_final\Hero1.atlas.txt" />
     <None Include="Assets\__Game__Play__+\Spine_json\json_UI\key\key.atlas.txt" />
     <None Include="Assets\__Game__Play__+\Spine_Old\json_UI\weapon_bonus\weapon_bonus1_SkeletonData\weapon_bonus1.atlas.txt" />
     <None Include="Assets\Reference__+\Duc Asset\Resources\shaders\uiimagecrop.shader" />

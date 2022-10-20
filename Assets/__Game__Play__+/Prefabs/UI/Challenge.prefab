@@ -6555,7 +6555,7 @@ MonoBehaviour:
   IsDestroyOnClose: 0
   uIID_Of_Canvas: 12
   anim_Challenge: {fileID: 3368080417930926704}
-  challengeControll: {fileID: 0}
+  challengeControll: {fileID: 3368080418969422400}
   e_Event_Close:
     m_PersistentCalls:
       m_Calls: []

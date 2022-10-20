@@ -454,7 +454,7 @@ Transform:
   m_GameObject: {fileID: 6456779334149499698}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.01999998, y: -0.34000015, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_Children:
   - {fileID: 6456779333588624584}
   - {fileID: 6456779333825449396}
@@ -488,10 +488,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ad7bd3116889af8488806620be8b1066, type: 2}
-  - {fileID: 2100000, guid: 415519404b6abee429edcf13c276b332, type: 2}
-  - {fileID: 2100000, guid: ad7bd3116889af8488806620be8b1066, type: 2}
-  - {fileID: 2100000, guid: 8f632b824eeaab4498bb0a0cf984c0c0, type: 2}
+  - {fileID: 2100000, guid: 935a0dd74c2454547ae4a75a6209c508, type: 2}
+  - {fileID: 2100000, guid: 83f6a93232b83424b83e393be059275b, type: 2}
+  - {fileID: 2100000, guid: 935a0dd74c2454547ae4a75a6209c508, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -525,7 +524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 0762820781c062a42add2e85167e6fd6, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: b87d6c07a0572c8419462bf38901b60f, type: 2}
   initialSkinName: hero1/weapon_bonus1
   initialFlipX: 0
   initialFlipY: 0

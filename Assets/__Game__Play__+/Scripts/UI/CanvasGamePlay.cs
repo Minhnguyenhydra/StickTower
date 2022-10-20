@@ -10,6 +10,7 @@ public class CanvasGamePlay : UICanvas
     public Grandfather_Castle grandfather_Castle;//biến này để xét bao nhiêu Castle được bật tùy từng level... Castle là ảnh các tường thành trên màn hình, cứ chiếm được 1 nhà là cái ảnh này sẽ được in đậm
     private int level_curent;
     public GameObject obj_Btn_ADs_Sword;
+    public GameObject obj_Btn_NextLevel;
     private int number_Castle_This_Level;
     private Parrent_Castle parrent_Castle_This_Level;
     public Text txt_Level;
@@ -50,7 +51,7 @@ public class CanvasGamePlay : UICanvas
         int level = PlayerPrefs_Manager.Get_Index_Level_Normal();
         if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 1)
         {
-            if (level == 30 || level == 26 || level == 16 || level == 14 || level == 22|| level == 35)
+            if (level == 30 || level == 26 || level == 16 || level == 14 || level == 22|| level == 35|| level == 43)
             {
                 UIManager.Ins.OpenUI(UIID.UICPay_Gold_To_Play);
                 StartCoroutine(IE_Waiting_Player_Initalize());
@@ -64,6 +65,26 @@ public class CanvasGamePlay : UICanvas
         if (level %5 == 0 && level > 4)
         {
             UIManager.Ins.OpenUI(UIID.UICBonusSkill);
+        }
+        if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 3)
+        {
+            level_curent = PlayerPrefs_Manager.Get__QLevel_Challenge();
+            txt_Level.text = Constant.Get_Tile_Game_Play_By_Level(level_curent);
+
+            if (UIManager.Ins.IsOpenedUI(UIID.UICPay_Gold_To_Play))
+            {
+                UIManager.Ins.IsOpenedUI(UIID.UICPay_Gold_To_Play);
+
+            }
+            
+        }
+        if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 3 || PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 2)
+        {
+            if (obj_Btn_NextLevel != null)
+            {
+                obj_Btn_NextLevel.SetActive(false);
+
+            }
         }
     }
 
@@ -125,7 +146,26 @@ public class CanvasGamePlay : UICanvas
         UIManager.Ins.OpenUI(UIID.UICFade);
         ((CanvasFade)UIManager.Ins.GetUI(UIID.UICFade)).Set_Fade_Out();
         yield return Cache.GetWFS(Constant.Time_Fade);
-        Scene_Manager_Q.Load_Scene(Constant.Get_Scene_Name_NormalBy_Level(level_curent));
+
+        if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() != 3)
+        {
+            Scene_Manager_Q.Load_Scene(Constant.Get_Scene_Name_NormalBy_Level(level_curent));
+        }
+        else if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 3)
+        {
+            if (obj_Btn_NextLevel != null)
+            {
+                obj_Btn_NextLevel.SetActive(false);
+
+                //trước khi vào Challenge đã lưu chỉ số level Challenge sẽ chơi rồi, Replay Challenge chỉ load lại chỉ số đó
+               int level_Current_Challenge = PlayerPrefs_Manager.Get__QLevel_Challenge();
+                Scene_Manager_Q.Load_Scene("Level_"+ level_Current_Challenge.ToString());
+            }
+        }
+
+
+
+        
         Close();
     }
     public void SkipLevel_Button()

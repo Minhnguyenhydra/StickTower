@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c3d4cc5b475091e44b22c92bfb091c86, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 349405f2b9be33441a23180971f949c0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c3d4cc5b475091e44b22c92bfb091c86, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 26af0c5bcd12cae489900e6ed562f3b6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -515,7 +515,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c3d4cc5b475091e44b22c92bfb091c86, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2d8ba8090a5a8f744983402e5cfeea3c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -590,7 +590,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c3d4cc5b475091e44b22c92bfb091c86, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ff6bfb82bdc654d40b7a7d2c2bdc5be8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -665,7 +665,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c3d4cc5b475091e44b22c92bfb091c86, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7b5143392f6278145baf12990b48555f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3560,6 +3560,7 @@ MonoBehaviour:
   _isPlayer_Stronger: 0
   obj_Health_Red_L: {fileID: 7504605537413533937}
   obj_Health_Red_R: {fileID: 3106890154714417651}
+  obj_Hand_tut: {fileID: 0}
   idBoss: 0
   numberStar_Rate: 0
   isRated: 0
@@ -5824,7 +5825,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c3d4cc5b475091e44b22c92bfb091c86, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4b351ab8c61d08142a9e3c7dafdd0236, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

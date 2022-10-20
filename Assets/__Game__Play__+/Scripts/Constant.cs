@@ -19,7 +19,7 @@ public class Constant
     public readonly static float Time_Player_Hit_Skill_2 = 2.9f;//0.5
     public readonly static float Time_Player_Hit_Skill_3 = 3.5f;//0.5
     public readonly static float Time_Player_Die_attack = 1f;//0.5
-    public readonly static float Time_Player_Die_die = 1.5f;
+    public readonly static float Time_Player_Die_die = 1.834f;
     public readonly static float Time_Delay_Win_Reward = 1;
     public readonly static float Time_Delay_move_to_next_house = 1;
     //
@@ -174,6 +174,7 @@ public class Constant
     public readonly static string String_Shop_Unlock_Level = "UNLOCK LEVEL ";
     public readonly static string String_Number_Key_Treasure = "NumBerKeyHave";
     public readonly static string String_Number_Star_Rate = "NumberStar_Rate";
+    public readonly static string String_Level_Challenge = "QLevel_Challenge";
     
     public static int Get_Gold_Bonus_By_Level(int _level)
     {
@@ -186,6 +187,7 @@ public class Constant
             return 100;
         }
     }
+
     public static string Get_Scene_Name_NormalBy_Level(int _level)
     {
         return "Level_" + _level.ToString();
@@ -323,9 +325,9 @@ public class Constant
             case 141:
                 return 3.7f;
             case 142:
-                return 2.9f;
+                return 3.9f;
             case 143:
-                return 3.8f;
+                return 2.8f;
 
 
             default:

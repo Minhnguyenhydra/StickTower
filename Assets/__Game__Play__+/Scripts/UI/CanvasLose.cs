@@ -8,6 +8,7 @@ using Spine.Unity;
 public class CanvasLose : UICanvas
 {
     public GameObject obj_Btn_No_Thank;
+    public GameObject obj_Btn_ADs;
     bool isFist_Click;
     [Header("Animation")]
     public SkeletonAnimation skeletonAnimation;
@@ -37,7 +38,7 @@ public class CanvasLose : UICanvas
         txt_Gem.text = PlayerPrefs_Manager.Get_Gem().ToString("N0");
 
 
-        if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge()==1|| PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 3)
+        if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge()==1)
         {
             txt_Level.text = "LEVEL " + (PlayerPrefs_Manager.Get_Index_Level_Normal()).ToString();
 
@@ -45,11 +46,20 @@ public class CanvasLose : UICanvas
         {
             txt_Level.text = "LEVEL " + (PlayerPrefs.GetInt(UserData.Key_LevelArena)).ToString();
         }
+        else if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 3)
+        {
+            if (obj_Btn_ADs != null)
+            {
+                obj_Btn_ADs.SetActive(false);
+                txt_Level.text = "LEVEL " + (PlayerPrefs_Manager.Get__QLevel_Challenge()).ToString();
+            }
+        }
 
         //init Skin
         int id_Skin = PlayerPrefs_Manager.Get_ID_Name_Skin_Wearing();
         string name_Skin = Constant.Get_Skin_Name_By_Id(id_Skin);
         Set_Skin(name_Skin);
+        
     }
     #endregion
     #region Home
@@ -141,8 +151,8 @@ public class CanvasLose : UICanvas
         }
         else if (PlayerPrefs.GetInt(UserData.Key_1GamPlay_Or_2Area_Or_3Challenge) == 3)
         {
-            int indexLevel = PlayerPrefs_Manager.Get_Index_Level_Normal();
-            Scene_Manager_Q.Load_Scene(Constant.StringLevel + indexLevel.ToString());
+            UIManager.Ins.OpenUI(UIID.UICMainMenu);
+            UIManager.Ins.OpenUI(UIID.UICChallenge);
 
         }
         //SceneManager.LoadScene(Constant.StringLevel + indexLevel.ToString(), LoadSceneMode.Single);
