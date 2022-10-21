@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/__Game__Play__+/Scripts/UI/BgScaleFitScreenSize_CanvasWin.cs.meta
-guid: f46ee005634a77545956a56104963e36
-========
-guid: dff18f06146db204ab0bfb1e1a218d06
->>>>>>>> develop:Assets/__Game__Play__+/Scripts/Ads/AdsManager.cs.meta
+guid: 8eeeb77681bda854f9f1e9a3fd1a443f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

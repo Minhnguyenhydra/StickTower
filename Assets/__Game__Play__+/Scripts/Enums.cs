@@ -34,7 +34,7 @@ public enum UIID
     UICTry_Replay = 21,
     
 }
-public enum Screne_Size { Doc_720, Doc_1024, Nothing }//Nothing để lúc đầu đặt _screne_Size_current!= _screne_Size_last để check size luôn lần đầu chạy hàm checkScreen trong script BgScale...
+public enum Screne_Size { Doc_720, Doc_1024 ,Nothing }//Nothing để lúc đầu đặt _screne_Size_current!= _screne_Size_last để check size luôn lần đầu chạy hàm checkScreen trong script BgScale...
 public enum Enum_TypeHouse { player, enemy_Normal, enemy_Tree, enemy_Reward }
 public enum Enum_Type_Take_Last_Level { Enemy, Princess, Reward }
 public enum Enum_State_Attack_Boos { Not_Reach, Win, Lose }
