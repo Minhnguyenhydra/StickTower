@@ -465,7 +465,7 @@ public class Player : MonoBehaviour
         //nếu random ra index dùng skill, sẽ Delay Boss attack lâu hơn
         yield return Cache.GetWFS(time_Until_End_Skill);
         #endregion
-        Set_Un_Block_Colider_Player();
+        //Set_Un_Block_Colider_Player();
         ReSetCharacterState();
         SetCharacterState_Loop(Action_Idle);
 
@@ -473,6 +473,7 @@ public class Player : MonoBehaviour
 
         //Nếu là đánh Boss win
         yield return Cache.GetWFS(Constant.Time_Player_Show_Blood);
+        Set_Un_Block_Colider_Player();
         if (isLast_Point_Level)
         {
             GameManager.Ins.Set_Bool_Win_Boss();

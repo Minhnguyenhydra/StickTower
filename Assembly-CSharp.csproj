@@ -128,7 +128,7 @@
     <Compile Include="Assets\__Game__Play__+\Scripts\House\House_Fix_Lv_26.cs" />
     <Compile Include="Assets\__Game__Play__+\Scripts\Lock_Floor\Key_Floor.cs" />
     <Compile Include="Assets\__Game__Play__+\Scripts\UI\CanvasBonusSkill.cs" />
-    <Compile Include="Assets\__Game__Play__+\Scripts\UI\BgScaleFitScreenSize.cs" />
+    <Compile Include="Assets\__Game__Play__+\Scripts\UI\BgScaleFitScreenSize_CanvasWin.cs" />
     <Compile Include="Assets\__Game__Play__+\Scripts\Manager\Scene_Manager_Q.cs" />
     <Compile Include="Assets\Reference__+\_Game_Mr Link\_LinkFolder\UICanvas.cs" />
     <Compile Include="Assets\Reference__+\_Game_Mr Link\_LinkFolder\UIManager.cs" />
