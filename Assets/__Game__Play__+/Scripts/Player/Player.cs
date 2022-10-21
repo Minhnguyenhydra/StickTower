@@ -280,11 +280,11 @@ public class Player : MonoBehaviour
     #region Set nhớ vị trí trước khi Player được thả
     public void Set_Pos_Old(Vector3 _pos_Old)
     {
-        pos_Old_Player = new Vector3(_pos_Old.x, _pos_Old.y, _pos_Old.z);
+        pos_Old_Player = _pos_Old;
     }
     public void Set_vi_tri_cu()//set vị trí cũ sau thả chuột
     {
-      tf_Player.position =  pos_Old_Player ;
+      tf_Player.localPosition =  pos_Old_Player ;
     }
     #endregion
     #region Set Animation
@@ -1520,7 +1520,7 @@ public class Player : MonoBehaviour
     public void Set_Fix_Pos_Player()
     {
         //TODO: Fix vị trí Player lơ lửng
-        pos_Old_Player = tf_Player.position;
+        pos_Old_Player = tf_Player.localPosition;
     }
 }
 
