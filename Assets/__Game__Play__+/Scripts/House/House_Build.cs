@@ -69,8 +69,11 @@ public class House_Build : MonoBehaviour
         
     }
 
+
     public void Set_Check_Next_House_Or_Victory(Floor _floor)
     {
+
+        //level Mở rương mới dùng
         if (number_Floor_Remain == 1)
         {
             if (isHouseLast_Level)
@@ -81,7 +84,11 @@ public class House_Build : MonoBehaviour
             else
             {
                 //Chuyển chuyển thành nhà player và di cam tớ nhà tiếp theo
-                //Drag_Drop_Manager.Instance.Set_Delay_Take_House(_floor,0);
+                _floor.Set_Floor_To_Floor_Of_Player();
+                _floor.house_Build_Of_This.Set_Mai_Xanh();
+                _floor.house_Build_Of_This.Set_This_To_Team_Player();
+
+                Drag_Drop_Manager.Instance.Set_Delay_Take_House(_floor,0);
             }
         }
     }
@@ -113,6 +120,14 @@ public class House_Build : MonoBehaviour
             obj_Mai_Do.SetActive(false);
             obj_Nen_Player.SetActive(true);
             obj_Nen_Enemy.SetActive(false);
+            for (int i = 0; i < list_Floor.Count; i++)
+            {
+                if (list_Floor[i] != null)
+                {
+                    list_Floor[i].Set_Floor_To_Floor_Of_Player();
+
+                }
+            }
         }
     }
 

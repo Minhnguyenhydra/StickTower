@@ -170,10 +170,17 @@ public class CanvasGamePlay : UICanvas
     }
     public void SkipLevel_Button()
     {
-        SoundManager.Ins.PlayFx(FxID.click);
-        level_curent += 1;
-        anim_GamePlay.SetTrigger(Constant.Trigger_GamePlay_Close);
-        StartCoroutine(IE_Delay_SkipLevel());
+        if (Player.ins != null)
+        {
+            if (!Player.ins.isDie)
+            {
+                SoundManager.Ins.PlayFx(FxID.click);
+                level_curent += 1;
+                anim_GamePlay.SetTrigger(Constant.Trigger_GamePlay_Close);
+                StartCoroutine(IE_Delay_SkipLevel());
+
+            }
+        }
     }
     IEnumerator IE_Delay_SkipLevel()
     {

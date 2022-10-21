@@ -194,7 +194,7 @@ public class Enemy : MonoBehaviour
             //Set Mái xanh.....delay win
             GameManager.Ins.Set_Mai_Xanh_Delay_Win(floor_This);
 #if UNITY_EDITOR
-            Debug.Log("=========Mai Xanh========");
+            
 #endif
             Destroy(this.gameObject);
         }
@@ -701,12 +701,12 @@ public class Enemy : MonoBehaviour
             health_Bar.Set_Step_By_Step_Health(20, 0, 1);
             
 
-            Debug.Log("==sfs===");
+            
         }
         index_Hit_Player++;
 
         Set_Show_Blood();
-        Set_Anim_Takedame();
+        //Set_Anim_Takedame();
         if (index_Hit_Player == 5)
         {
             isDieing_Fight_Boss = true;

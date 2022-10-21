@@ -80,12 +80,11 @@ public class Key_3_Manager : Singleton<Key_3_Manager>
             });
         }); 
         ;
-        //PlayerPrefs_Manager.Set_Number_Key_Treasure(PlayerPrefs_Manager.Get_Number_Key_Treasure()+ 1);
     }
     [ContextMenu("TEST--Debug key--")]
     public void Set_sfgdsy()
     {
-        Debug.Log(PlayerPrefs_Manager.Get_Number_Key_Treasure());
+        //Debug.Log(PlayerPrefs_Manager.Get_Number_Key_Treasure());
     }
     [ContextMenu("TEST--Set_ResetKey")]
     public void Set_ResetKey()

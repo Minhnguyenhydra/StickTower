@@ -155,7 +155,7 @@ public class CanvasMainMenu : UICanvas
     public void Set_Off_Full_Pink_bank()
     {
         obj_Full_Gold_Pink_bank.SetActive(false);
-        obj_Normal_Gold_Pink_bank.SetActive(true);
+        obj_Normal_Gold_Pink_bank.SetActive(false);
     }
     #endregion
     [ContextMenu("test_Win")]

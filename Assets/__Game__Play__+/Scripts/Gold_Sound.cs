@@ -21,7 +21,7 @@ public class Gold_Sound : MonoBehaviour
         {
             fxSource.PlayOneShot(au);
 
-            Debug.Log(SoundManager.Ins.Get_AudioClip(ID));
+            //Debug.Log(SoundManager.Ins.Get_AudioClip(ID));
         }
     }
 }

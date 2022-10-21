@@ -43,9 +43,7 @@ public class Camera_Manager : Singleton<Camera_Manager>
     {
         yield return Cache.GetWFS(Constant.Time_Cam_Delay_Move_Next_House);
 
-        //float ttt = Time.time;
-        //Debug.Log(Time.time - ttt);
-        Debug.Log(Constant.Time_Cam_Delay_Move_Next_House);
+        
 
         tf_Cam.DOMoveX(list_Pos_Cam_move[_index_Move].position.x, Constant.Time_Cam_Move);
     }

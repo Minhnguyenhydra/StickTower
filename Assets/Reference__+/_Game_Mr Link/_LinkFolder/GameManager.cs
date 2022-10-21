@@ -145,7 +145,7 @@ public class GameManager : Singleton<GameManager>
 
             //Mở khóa canvas rương nếu level đủ 3 chìa
             int lv = PlayerPrefs_Manager.Get_Index_Level_Normal();
-            if (lv == 13 || lv == 23 )
+            if (lv == 13 || lv == 23 || lv == 31 || lv == 46 )
             {
                 PlayerPrefs_Manager.Set_Number_Key_Treasure(0);
                 UIManager.Ins.OpenUI(UIID.UICShopPrize);
@@ -155,9 +155,12 @@ public class GameManager : Singleton<GameManager>
             {
                 UIManager.Ins.OpenUI(UIID.UICRateUs);
             }
-
-            // tăng level lên 1
-            PlayerPrefs_Manager.Set_Index_Level_Normal(lv + 1);
+        if (lv == 10 || lv == 20 || lv == 30)
+        {
+            UIManager.Ins.OpenUI(UIID.UICFreeSkin);
+        }
+        // tăng level lên 1
+        PlayerPrefs_Manager.Set_Index_Level_Normal(lv + 1);
             //Fight Boos
             UIManager.Ins.OpenUI(UIID.UICFight_Boss);
             UIManager.Ins.CloseUI(UIID.UICFight_Boss);

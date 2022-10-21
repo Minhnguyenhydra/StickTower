@@ -9,6 +9,7 @@ public class CanvasLose : UICanvas
 {
     public GameObject obj_Btn_No_Thank;
     public GameObject obj_Btn_ADs;
+    public GameObject obj_Btn_Replay_Arena;
     bool isFist_Click;
     [Header("Animation")]
     public SkeletonAnimation skeletonAnimation;
@@ -52,7 +53,9 @@ public class CanvasLose : UICanvas
         {
             if (obj_Btn_ADs != null)
             {
+
                 obj_Btn_ADs.SetActive(false);
+                obj_Btn_Replay_Arena.SetActive(true);
                 txt_Level.text = "LEVEL " + (PlayerPrefs_Manager.Get__QLevel_Challenge()).ToString();
             }
         }
@@ -161,6 +164,9 @@ public class CanvasLose : UICanvas
     }
     IEnumerator IE_Delay_Fade_ADs_Close()
     {
+        int lv = PlayerPrefs_Manager.Get_Index_Level_Normal();
+        // tăng level lên 1
+        PlayerPrefs_Manager.Set_Index_Level_Normal(lv + 1);
         yield return Cache.GetWFS(Constant.Time_Fade);
         UIManager.Ins.OpenUI(UIID.UICFade);
         ((CanvasFade)UIManager.Ins.GetUI(UIID.UICFade)).Set_Fade_Out();
@@ -170,7 +176,7 @@ public class CanvasLose : UICanvas
 
         if (PlayerPrefs.GetInt(UserData.Key_1GamPlay_Or_2Area_Or_3Challenge) == 1)
         {
-            int indexLevel = PlayerPrefs_Manager.Get_Index_Level_Normal() + 1;
+            int indexLevel = PlayerPrefs_Manager.Get_Index_Level_Normal();
             Scene_Manager_Q.Load_Scene(Constant.StringLevel + indexLevel.ToString());
         }
         else if (PlayerPrefs.GetInt(UserData.Key_1GamPlay_Or_2Area_Or_3Challenge) == 2)
@@ -183,5 +189,12 @@ public class CanvasLose : UICanvas
             Scene_Manager_Q.Load_Scene(Constant.StringLevel + indexLevel.ToString());
         }
         //SceneManager.LoadScene(Constant.StringLevel + indexLevel.ToString(), LoadSceneMode.Single);
+    }
+
+    public void RePlay_Challenge_Button()
+    {
+       int level = PlayerPrefs_Manager.Get__QLevel_Challenge();
+        Scene_Manager_Q.Load_Scene("Level_"+ level.ToString());
+        SoundManager.Ins.PlayFx(FxID.click);
     }
 }
