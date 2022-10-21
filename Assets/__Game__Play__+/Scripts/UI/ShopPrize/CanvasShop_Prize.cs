@@ -61,6 +61,9 @@ public class CanvasShop_Prize : UICanvas
         SoundManager.Ins.PlayFx(FxID.click);
         e_Event_Close.Invoke();
         //UIManager.Ins.OpenUI(UIID.UICMainMenu);
+
+        ((CanvasWinQ)UIManager.Ins.GetUI(UIID.UICWin_Level)).Set_Gold_EFX();
+
         Close();
     }
     public void ADsTake_3_Key_button()

@@ -133,6 +133,7 @@ public class Player : MonoBehaviour
     public AnimationReferenceAsset Action_Dam;
     [Header("------Not Need Asign--To view------")]
      public bool isDoneFight_Boss;
+     public bool isDie;
      public bool isD_Dieing_Fight_Boss;
      public Enemy enemy_Hitting;
      public bool is_Block_Raycas;
@@ -198,7 +199,7 @@ public class Player : MonoBehaviour
     }
     private void HandleAnimationStateEvent(TrackEntry trackEntry, Spine.Event e)
     {
-        if (logDebugMessage) Debug.Log("Event fired! " + e.Data.Name);
+        //if (logDebugMessage) Debug.Log("Event fired! " + e.Data.Name);
         //bool eventMatch = string.Equals(e.Data.Name, eventName, System.StringComparison.Ordinal); // Testing recommendation: String compare.
         //bool eventMatch = (eventData == e.Data); // Performance recommendation: Match cached reference instead of string.
         if (eventData_sfx_char_skill_1 == e.Data)
@@ -256,7 +257,10 @@ public class Player : MonoBehaviour
         //Debug.Log("===================Hit=================");
         if (enemy_Hitting != null)
         {
-            enemy_Hitting.Set_Anim_Takedame();
+            if (!enemy_Hitting.isBoss_UNTIL)//ko bật aniHit khi đánh Boss
+            {
+                enemy_Hitting.Set_Anim_Takedame();
+            }
         }
     }
     //Đã set Player Attack trước rồi mới set action cho enemy
@@ -345,6 +349,7 @@ public class Player : MonoBehaviour
     }
     public void Set_Anim_Die()
     {
+        isDie = true;
         //SoundManager.Ins.Play_Get_Hit_Player();
         Set_Block_Colider_Player();
         ReSetCharacterState();
@@ -472,7 +477,6 @@ public class Player : MonoBehaviour
         {
             GameManager.Ins.Set_Bool_Win_Boss();
             Set_Config_Boss_Die_End_Level();
-            Debug.Log("Set_boss die ... ở player");
         }
         //
         //yield return Cache.GetWFS(time_Until_End_Skill - Constant.Time_Player_Show_Blood);
@@ -1377,7 +1381,7 @@ public class Player : MonoBehaviour
                 //Set anim Hòm bị mở+ vàng bay lên
                 SetCharacterState_Loop(Action_Victory);
 #if UNITY_EDITOR
-                Debug.Log("Player victory");
+                //Debug.Log("Player victory");
 #endif
                 if (floor_stay.list_Point_In_Floor[0].princess_Attack_This_Point != null)
                 {
@@ -1406,7 +1410,7 @@ public class Player : MonoBehaviour
                 //
                 if (PlayerPrefs_Manager.Get_Index_Level_Normal() != 38 && PlayerPrefs_Manager.Get_Index_Level_Normal() != 44&& PlayerPrefs_Manager.Get_Index_Level_Normal() != 47)
                 {
-                    Set_Go_To_Point_End_Level(floor_stay.tf_Point_End_Level, Enum_Type_Take_Last_Level.Enemy, floor_stay.list_Point_In_Floor[0].enemy_Attack_This_Point.Get_Health());
+                    //Set_Go_To_Point_End_Level(floor_stay.tf_Point_End_Level, Enum_Type_Take_Last_Level.Enemy, floor_stay.list_Point_In_Floor[0].enemy_Attack_This_Point.Get_Health());
                 }
             }
             else if (floor_stay.list_Point_In_Floor[0].princess_Attack_This_Point != null)
@@ -1463,6 +1467,7 @@ public class Player : MonoBehaviour
     }
     IEnumerator IE_Delay_Run_To_End(Floor floor_pos_End)
     {
+        Set_Block_Colider_Player();
         yield return Cache.GetWFS(Constant.Time_Delay_Run_To_End_Reward);
         //SetCharacterState_Loop(Action_Run);
         SetAnimation(Action_Dam, true, 2f);

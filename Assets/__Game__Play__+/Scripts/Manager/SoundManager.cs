@@ -82,7 +82,7 @@ public class SoundManager : Singleton<SoundManager>
     }
     public AudioClip Get_AudioClip(FxID ID)
     {
-        Debug.Log((int)ID);
+        //Debug.Log((int)ID);
         return fxAus[(int)ID];
     }
     //

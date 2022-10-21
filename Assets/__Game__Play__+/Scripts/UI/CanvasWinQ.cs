@@ -111,7 +111,7 @@ public class CanvasWinQ : UICanvas
         }
         else
         {
-            EfxManager.ins.Set_Gold_Fly_Pig_OK();
+            //EfxManager.ins.Set_Gold_Fly_Pig_OK();
             obj_Image_Claim_ADs.SetActive(true);
             obj_Image_Claim_No_ADs.SetActive(false);
         }
@@ -126,10 +126,16 @@ public class CanvasWinQ : UICanvas
         //Set_Step_By_Step_Gold(PlayerPrefs_Manager.Get_Gold(), PlayerPrefs_Manager.Get_Gold() + Constant.Get_Gold_Reward_By_level(PlayerPrefs_Manager.Get_Index_Level_Normal() - 1), 1);
         //Set_Step_By_Step_Gem(PlayerPrefs_Manager.Get_Gem(), PlayerPrefs_Manager.Get_Gem() + Constant.Get_Gem_By_level(PlayerPrefs_Manager.Get_Index_Level_Normal() - 1), 1);
 
-        Invoke("Set_Up_Gold_Fly", 1.5f);
 
         //Lấy level -1 là level vừa chơi vì đã cộng sau khi win rồi
-        EfxManager.ins.Set_GoldTop_FX();
+        //Debug.Log("==sdfs===" + level);
+        int _level_fix = level + 1;
+        if (_level_fix != 6 && _level_fix != 10 && _level_fix != 13 && _level_fix != 20 && _level_fix != 23 && _level_fix != 30 && _level_fix != 31 && _level_fix != 46 && _level_fix != 1 && _level_fix != 2 && _level_fix != 3)
+        {
+            //Debug.Log("==sdfs===");
+            Set_Gold_EFX();
+
+        }
         
 
         int gold_Current = PlayerPrefs_Manager.Get_Gold() + Constant.Get_Gold_Bonus_By_Level(PlayerPrefs_Manager.Get_Index_Level_Normal() - 1);
@@ -157,17 +163,25 @@ public class CanvasWinQ : UICanvas
         string name_Skin = Constant.Get_Skin_Name_By_Id(id_Skin);
         Set_Skin(name_Skin);
         //
-        if (PlayerPrefs_Manager.Get_Index_Level_Normal() == 10|| PlayerPrefs_Manager.Get_Index_Level_Normal() == 20 || PlayerPrefs_Manager.Get_Index_Level_Normal() == 30)
-        {
-            UIManager.Ins.OpenUI(UIID.UICFreeSkin);
-        }
+        
         //
         Set_Tile_BG();
         Set_Spawn_Icon(level+2);
         StartCoroutine(IE_Scale_iceon_before());
     }
+    public void Set_Gold_EFX()
+    {
+        EfxManager.ins.Set_GoldTop_FX();
+        EfxManager.ins.Set_Gold_Fly_Pig_OK();
+        Invoke("Set_Up_Gold_Fly", 1.5f);
+    }
+    public void Set_update_Gold()
+    {
+        txt_Gold_Boot.text = PlayerPrefs_Manager.Get_Gold().ToString();
+    }
     public void Set_Up_Gold_Fly()
     {
+        
         Set_Step_By_Step_Gold(PlayerPrefs_Manager.Get_Gold(), PlayerPrefs_Manager.Get_Gold() + Constant.Get_Gold_Reward_By_level(PlayerPrefs_Manager.Get_Index_Level_Normal() - 1), 1);
         Set_Step_By_Step_Gem(PlayerPrefs_Manager.Get_Gem(), PlayerPrefs_Manager.Get_Gem() + Constant.Get_Gem_By_level(PlayerPrefs_Manager.Get_Index_Level_Normal() - 1), 1);
     }
@@ -285,6 +299,7 @@ public class CanvasWinQ : UICanvas
         {
             
             txt_Level.text = "LEVEL " + (PlayerPrefs_Manager.Get__QLevel_Challenge()).ToString();
+            PlayerPrefs_Manager.Set_Key_1GamPlay_Or_2Area_Or_3Challenge(1);
         }
     }
     #endregion
@@ -458,7 +473,7 @@ public class CanvasWinQ : UICanvas
             //StartCoroutine(Delay_Increa_Gem());
             
 
-            if (PlayerPrefs.GetInt(UserData.Key_1GamPlay_Or_2Area_Or_3Challenge) == 1)
+            if (PlayerPrefs.GetInt(UserData.Key_1GamPlay_Or_2Area_Or_3Challenge) == 1 || PlayerPrefs.GetInt(UserData.Key_1GamPlay_Or_2Area_Or_3Challenge) == 3)
             {
                 int indexLevel = PlayerPrefs_Manager.Get_Index_Level_Normal();
                 Scene_Manager_Q.Load_Scene(Constant.StringLevel + indexLevel.ToString());
@@ -467,12 +482,12 @@ public class CanvasWinQ : UICanvas
             {
                 Scene_Manager_Q.Load_Scene("Ar_Level_0");
             }
-            else if (PlayerPrefs.GetInt(UserData.Key_1GamPlay_Or_2Area_Or_3Challenge) == 3)
-            {
-                UIManager.Ins.OpenUI(UIID.UICMainMenu);
-                UIManager.Ins.OpenUI(UIID.UICChallenge);
+            //else if (PlayerPrefs.GetInt(UserData.Key_1GamPlay_Or_2Area_Or_3Challenge) == 3)
+            //{
+            //    UIManager.Ins.OpenUI(UIID.UICMainMenu);
+            //    UIManager.Ins.OpenUI(UIID.UICChallenge);
 
-            }
+            //}
 
 
 

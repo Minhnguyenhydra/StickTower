@@ -25,10 +25,8 @@ public class CanvasFreeSkin : UICanvas
     }
     private void OnEnable()
     {
-        //idSkin = Constant.Get_Id_Skin_Free_By_Level(PlayerPrefs_Manager.Get_Index_Level_Normal()-1);
         idSkin = Constant.Get_Id_Skin_Free_By_Level(PlayerPrefs_Manager.Get_Index_Level_Normal());
-        Debug.Log(PlayerPrefs_Manager.Get_Index_Level_Normal() - 1);
-        Debug.Log(idSkin);
+        
         string nameSkin = Constant.Get_Skin_Name_By_Id(idSkin);
         Set_Skin(nameSkin);
     }
@@ -54,6 +52,10 @@ public class CanvasFreeSkin : UICanvas
             GameManager.Ins.Set_Spawn_FireWord(tf_Spawn_Fire_Work);
         }
         yield return Cache.GetWFS(Constant.Time_Delay_PigBank_Close);
+
+
+        ((CanvasWinQ)UIManager.Ins.GetUI(UIID.UICWin_Level)).Set_Gold_EFX();
+
         Close();
     }
     //

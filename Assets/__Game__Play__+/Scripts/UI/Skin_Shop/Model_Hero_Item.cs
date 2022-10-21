@@ -40,7 +40,7 @@ public class Model_Hero_Item : MonoBehaviour
     #region Button
     public void WatchADs_Button()
     {
-        Debug.Log("4");
+        
         Change_Hero();
     }
     public void Gold_Button()
@@ -58,8 +58,7 @@ public class Model_Hero_Item : MonoBehaviour
     public void Gem_Button()
     {
         int new_gem = PlayerPrefs_Manager.Get_Gem() - skin_Item_SO.gem;
-        Debug.Log(skin_Item_SO.gem);
-        Debug.Log(new_gem);
+        
         if (new_gem >= 0)
         {
             PlayerPrefs_Manager.Set_Gem(new_gem);

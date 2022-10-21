@@ -98,6 +98,9 @@ public class CanvasRateUs : UICanvas
     {
         anim_RateUs.SetTrigger(Constant.Trigger_PigBankClose);
         yield return Cache.GetWFS(Constant.Time_Delay_PigBank_Close*2);
+
+        ((CanvasWinQ)UIManager.Ins.GetUI(UIID.UICWin_Level)).Set_Gold_EFX();
+
         Close();
     }
 }
