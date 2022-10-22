@@ -229,7 +229,6 @@ public class Drag_Drop_Manager : Singleton_Q<Drag_Drop_Manager>
                                             Player.ins.tf_Player.SetParent(floor_Raycast_To.list_Point_In_Floor[i].tf_Point_In_Floor);
                                             vec_pos_Can_Place_In_Floor = floor_Raycast_To.list_Point_In_Floor[i].tf_Point_In_Floor.position;
                                             Player.ins.Set_Floor_Indext_Point(floor_Raycast_To, i);
-                                            Player.ins.Set_Block_Colider_Player();
                                             //Nếu có tâng nào đang sụp xuống thì Delay attack player
                                             Set_Check_State_Player_Do_Next(floor_Raycast_To, i, isDelayPlayer_attack_By_Downt);
                                             //SetParent vào điểm gắn để đi xuống cùng Floor nếu Floor sụp xuống
@@ -278,7 +277,6 @@ public class Drag_Drop_Manager : Singleton_Q<Drag_Drop_Manager>
                                                 Player.ins.tf_Player.SetParent(floor_Raycast_To.list_Point_In_Floor[i].tf_Point_In_Floor);
                                                 vec_pos_Can_Place_In_Floor = floor_Raycast_To.list_Point_In_Floor[i].tf_Point_In_Floor.position;
                                                 Player.ins.Set_Floor_Indext_Point(floor_Raycast_To, i);
-                                                Player.ins.Set_Block_Colider_Player();
                                                 //Nếu có tâng nào đang sụp xuống thì Delay attack player
                                                 Set_Check_State_Player_Do_Next(floor_Raycast_To, i, isDelayPlayer_attack_By_Downt);
                                                 //SetParent vào điểm gắn để đi xuống cùng Floor nếu Floor sụp xuống
@@ -313,7 +311,6 @@ public class Drag_Drop_Manager : Singleton_Q<Drag_Drop_Manager>
                                 {
                                     Player.ins.tf_Player.position = floor_Raycast_To.list_Point_In_Floor[1].tf_Point_In_Floor.position;
                                 }
-                                Player.ins.Set_Block_Colider_Player();
                                 //Nếu có tâng nào đang sụp xuống thì Delay attack player
                                 Set_Check_State_Player_Do_Next(floor_Raycast_To, 0, isDelayPlayer_attack_By_Downt);
                                 //SetParent vào điểm gắn để đi xuống cùng Floor nếu Floor sụp xuống
@@ -358,9 +355,13 @@ public class Drag_Drop_Manager : Singleton_Q<Drag_Drop_Manager>
         if (_floor.house_Build_Of_This.houseType != Enum_TypeHouse.enemy_Reward)
         {
             #region Nếu điểm trước mặt n chứa Enemy
+
+
             //đánh nhau với ENEMY
             if (_floor.list_Point_In_Floor[_indexPoint - 1].enemy_Attack_This_Point != null)
             {
+                Player.ins.Set_Block_Colider_Player();
+
                 if (Player.ins != null)
                 {
                     Player.ins.enemy_Hitting = _floor.list_Point_In_Floor[_indexPoint - 1].enemy_Attack_This_Point;
@@ -383,6 +384,8 @@ public class Drag_Drop_Manager : Singleton_Q<Drag_Drop_Manager>
             //Dẵm vào TRAP
             else if (_floor.list_Point_In_Floor[_indexPoint - 1].trap_Hit != null)
             {
+                Player.ins.Set_Block_Colider_Player();
+
                 Player.ins.Delay_Hit_To_Idle();
                 if (Player.ins.Get_Health() > (-_floor.list_Point_In_Floor[_indexPoint - 1].trap_Hit.health))
                 {
