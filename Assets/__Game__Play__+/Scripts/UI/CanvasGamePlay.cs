@@ -130,6 +130,7 @@ public class CanvasGamePlay : UICanvas
     public void Home_Button()
     {
         SoundManager.Ins.PlayFx(FxID.click);
+        GameManager.Ins.GMState = GameManager.GameState.Stoped;
         UIManager.Ins.OpenUI(UIID.UICMainMenu);
         Close();
     }
@@ -137,6 +138,7 @@ public class CanvasGamePlay : UICanvas
     public void RePlay_Button()
     {
         SoundManager.Ins.PlayFx(FxID.click);
+        GameManager.Ins.GMState = GameManager.GameState.Stoped;
         anim_GamePlay.SetTrigger(Constant.Trigger_GamePlay_Close);
         StartCoroutine(IE_Delay_Replay());
         
@@ -175,6 +177,7 @@ public class CanvasGamePlay : UICanvas
             if (!Player.ins.isDie)
             {
                 SoundManager.Ins.PlayFx(FxID.click);
+                GameManager.Ins.GMState = GameManager.GameState.Stoped;
                 level_curent += 1;
                 anim_GamePlay.SetTrigger(Constant.Trigger_GamePlay_Close);
                 StartCoroutine(IE_Delay_SkipLevel());

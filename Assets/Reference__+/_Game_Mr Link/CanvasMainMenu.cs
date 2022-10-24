@@ -76,6 +76,7 @@ public class CanvasMainMenu : UICanvas
     #region Button Play
     public void PlayGameButton()
     {
+        GameManager.Ins.GMState = GameManager.GameState.Playing;
         SoundManager.Ins.PlayFx(FxID.click);
         //UIManager.Ins.OpenUI(UIID.UICGamePlay);
         //UIManager.Ins.OpenUI(UIID.UICWin_Level);

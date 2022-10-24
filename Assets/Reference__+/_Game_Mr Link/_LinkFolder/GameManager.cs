@@ -9,6 +9,13 @@ yield return new WaitUntil(() => isDone);
  */
 public class GameManager : Singleton<GameManager>
 {
+    public enum GameState
+    {
+        Playing,
+        Stoped
+    }
+
+
     [Header("------Not need asing------")]
     public Enemy enemyBoss_auto_Asign;
     [Header("------Mr Link------")]
@@ -17,9 +24,9 @@ public class GameManager : Singleton<GameManager>
     //private static GameState gameState = GameState.MainMenu;
     private Enum_State_Attack_Boos state_Attack_Boos;
     private bool isFireWork_1_lv_38;
-    
-    
-    // Start is called before the first frame update
+
+
+    public GameState GMState;
 
     
     protected void Awake()
@@ -46,7 +53,7 @@ public class GameManager : Singleton<GameManager>
         //UIManager.Ins.OpenUI(UIID.UICMainMenu);
         
     }
-    
+
     //public static void ChangeState(GameState state)
     //{
     //    gameState = state;
@@ -57,15 +64,24 @@ public class GameManager : Singleton<GameManager>
     //    return gameState == state;
     //}
 
+    private void OnEnable()
+    {
+        GMState = GameState.Playing;
+    }
+
     //Vì lỡ đặt Script Floor ở Object ko phải Parent của obj Point nên ko Getcompont in parent <Floor> được, nên Floor cuối phải kéo vào
     private void Start()
     {
         ///// TOTEST:  StartCoroutine(IE_Load_Fade_In());
         //SoundManager.Ins.PlaySound(SoundID.menu);
+        //corShowCanvasWin = StartCoroutine(Set_Delay_Show_Canvas_Win());
     }
     
     public void Set_Mai_Xanh_Delay_Win(Floor _floor)
     {
+        if (GMState == GameState.Stoped)
+            return;
+
         if (Player.ins != null)
         {
             Player.ins.health_Bar.Set_Hide_Health_Bar();
@@ -103,7 +119,6 @@ public class GameManager : Singleton<GameManager>
         ((CanvasGamePlay)UIManager.Ins.GetUI(UIID.UICGamePlay)).Set_Active_Castle_Nha_Cuoi_Chiem_Duoc();
 
         StartCoroutine(Set_Delay_Show_Canvas_Win());
-        
     }
     public void Set_Spawn_FireWord(Transform _tf_Where_Spawn)
     {
@@ -182,10 +197,10 @@ public class GameManager : Singleton<GameManager>
             yield return Cache.GetWFS(time_change);//TODO: Fix màn rewward thua hiển thị chậm ở Challenge
         }
         
-        UIManager.Ins.OpenUI(UIID.UICFade);
-        ((CanvasFade)UIManager.Ins.GetUI(UIID.UICFade)).Set_Fade_Out();
-        yield return Cache.GetWFS(Constant.Time_Delay_Load_Scene);
-        ((CanvasGamePlay)UIManager.Ins.GetUI(UIID.UICGamePlay)).Close();
+        //UIManager.Ins.OpenUI(UIID.UICFade);
+        //((CanvasFade)UIManager.Ins.GetUI(UIID.UICFade)).Set_Fade_Out();
+        //yield return Cache.GetWFS(Constant.Time_Delay_Load_Scene);
+        //((CanvasGamePlay)UIManager.Ins.GetUI(UIID.UICGamePlay)).Close();
 
 
         UIManager.Ins.OpenUI(UIID.UICFail);

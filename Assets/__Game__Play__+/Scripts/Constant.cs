@@ -27,7 +27,7 @@ public class Constant
     public readonly static float Time_Cam_Move = 2f;
     public readonly static float Time_Cam_Delay_Move_Next_House = 1f;
     public readonly static float Time_Delay_Load_Scene = 1f;
-    public readonly static float Time_Delay_Fade_Win = 3.5f;
+    public readonly static float Time_Delay_Fade_Win = 0.5f;
     public readonly static int Time_Delay_Show_No_Thank = 2;
     public readonly static float Time_Fade = 1;
     public readonly static float Time_Loading = 2;
@@ -518,13 +518,13 @@ public class Constant
             case 45:
                 return "Level 45 - Save Ally";
             case 46:
-                return "Level 46 - Save Ally";
+                return "Level 46 - Find treasure";
             case 47:
-                return "Level 47 - Save Ally";
+                return "Level 47 - Kill enemies";
             case 48:
                 return "Level 48 - Save Ally";
             case 49:
-                return "Level 49 - Save Ally";
+                return "Level 49 - Kill enemies";
             case 50:
                 return "Level 50 - Save Ally";
             case 51:

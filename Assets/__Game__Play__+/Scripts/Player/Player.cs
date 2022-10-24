@@ -5,6 +5,7 @@ using Spine;
 using UnityEngine.UI;
 using Spine.Unity;
 using DG.Tweening;
+using System.Linq;
 
 public class Player : MonoBehaviour
 {
@@ -154,6 +155,8 @@ public class Player : MonoBehaviour
     public bool is_Time_Lv26_Ready_To_Fix;
     [Header("------Only use to View Random Skill------")]
     private int index_Skill_Use = 4;
+
+    private Button[] btnsInGame;
     #endregion
 
     // Start is called before the first frame update
@@ -174,11 +177,26 @@ public class Player : MonoBehaviour
         }
         //Set_Pos_Old(tf_Player.position);
         Set_Anim_Idle();
-        
+
         Set_Skin(Constant.Get_Skin_Name_By_Id(PlayerPrefs_Manager.Get_ID_Name_Skin_Wearing()));
         Set_Fix_Pos_Player();
+
+        StartCoroutine(GetButtonsInGame());
     }
-    
+
+    private IEnumerator GetButtonsInGame()
+    {
+        yield return new WaitForEndOfFrame();
+
+        GameObject[] buttons = GameObject.FindGameObjectsWithTag("btn");
+        btnsInGame = new Button[buttons.Length];
+        for (int i = 0; i < buttons.Length; i++)
+        {
+            btnsInGame[i] = buttons[i].GetComponent<Button>();
+        }
+
+    }
+
     public void Init_sfx_char_skill_Player()
     {
         eventData_hit = skeletonAnimation.Skeleton.Data.FindEvent(eventName_hit);
@@ -349,6 +367,9 @@ public class Player : MonoBehaviour
     }
     public void Set_Anim_Die()
     {
+        for (int i = 0; i < btnsInGame.Length; i++)
+            btnsInGame[i].interactable = false;
+
         isDie = true;
         //SoundManager.Ins.Play_Get_Hit_Player();
         Set_Block_Colider_Player();
@@ -357,6 +378,9 @@ public class Player : MonoBehaviour
     }
     public void Set_Anim_Victory()
     {
+        for (int i = 0; i < btnsInGame.Length; i++)
+            btnsInGame[i].interactable = false;
+
         SoundManager.Ins.PlayFx(FxID.yes);
         Set_Block_Colider_Player();
         
