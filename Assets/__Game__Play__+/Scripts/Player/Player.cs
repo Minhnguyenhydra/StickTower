@@ -428,7 +428,7 @@ public class Player : MonoBehaviour
     {
         Set_Block_Colider_Player();
         health_Bar.Set_Hide_Health_Bar();
-        SetCharacterState_NoLoop(Action_Attack);
+        //SetCharacterState_NoLoop(Action_Attack);
 
         //Nếu là đánh Boss
         if (isLast_Point_Level)
@@ -436,19 +436,20 @@ public class Player : MonoBehaviour
             GameManager.Ins.Set_Bool_Lose_Boss();
             Set_Config_Boss_Win_End_Level();
         }
-        yield return Cache.GetWFS(Constant.Time_Player_Show_Blood);
+        //yield return Cache.GetWFS(Constant.Time_Player_Show_Blood);
         Set_Show_Blood();
         //ADD: Hit --> Die
         SetCharacterState_NoLoop(Action_Hit);
         SoundManager.Ins.PlayFx(FxID.hit_Player);
-        yield return Cache.GetWFS(Constant.Time_Player_Die_attack - Constant.Time_Player_Show_Blood);
+        //yield return Cache.GetWFS(Constant.Time_Player_Die_attack - Constant.Time_Player_Show_Blood);
         //
         yield return Cache.GetWFS(Constant.Time_Player_Die_attack - Constant.Time_Player_Show_Blood);
-        ReSetCharacterState();
-        SetCharacterState_NoLoop(Action_Die);
-        yield return Cache.GetWFS(Constant.Time_Player_Die_die);
+        //ReSetCharacterState();
+        //SetCharacterState_NoLoop(Action_Die);
+        //yield return Cache.GetWFS(Constant.Time_Player_Die_die);
         ReSetCharacterState();
         SetCharacterState_Loop(Action_Die_loop);
+        yield return Cache.GetWFS(0.1f);
         GameManager.Ins.Set_Lose_Level(floor_stay);
         //Destroy(this.gameObject);
         //gameObject.SetActive(false);

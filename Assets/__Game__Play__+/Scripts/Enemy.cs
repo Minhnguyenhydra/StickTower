@@ -499,7 +499,7 @@ public class Enemy : MonoBehaviour
 
             }
             //1s
-            yield return Cache.GetWFS(1);
+            //yield return Cache.GetWFS(1);
             //hết  lan 3
             if (!isDieing_Fight_Boss && Player.ins != null)
             {
@@ -507,7 +507,7 @@ public class Enemy : MonoBehaviour
                 Player.ins.isD_Dieing_Fight_Boss = true;
                 //Player.ins.Set_Anim_Hit();
             }
-            yield return Cache.GetWFS(0.5f);
+            //yield return Cache.GetWFS(0.5f);
             if (!isDieing_Fight_Boss && Player.ins != null)
             {
                 ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Anim_Red_L();
