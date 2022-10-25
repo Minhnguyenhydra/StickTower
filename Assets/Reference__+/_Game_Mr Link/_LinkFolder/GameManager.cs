@@ -9,6 +9,7 @@ yield return new WaitUntil(() => isDone);
  */
 public class GameManager : Singleton<GameManager>
 {
+    public static bool isStarted;
     public enum GameState
     {
         Playing,
@@ -203,11 +204,11 @@ public class GameManager : Singleton<GameManager>
             time_change = Mathf.Clamp(time_change, 0.5f,10);
             yield return Cache.GetWFS(time_change);//TODO: Fix màn rewward thua hiển thị chậm ở Challenge
         }
-        
+
         //UIManager.Ins.OpenUI(UIID.UICFade);
         //((CanvasFade)UIManager.Ins.GetUI(UIID.UICFade)).Set_Fade_Out();
         //yield return Cache.GetWFS(Constant.Time_Delay_Load_Scene);
-        //((CanvasGamePlay)UIManager.Ins.GetUI(UIID.UICGamePlay)).Close();
+        ((CanvasGamePlay)UIManager.Ins.GetUI(UIID.UICGamePlay)).Close();
 
 
         UIManager.Ins.OpenUI(UIID.UICFail);

@@ -9,6 +9,13 @@ public class CanvasLoading : UICanvas
     public Image imgProgress;
     private void Start()
     {
+        if (GameManager.isStarted)
+        {
+            UIManager.Ins.OpenUI(UIID.UICMainMenu);
+            Close();
+            return;
+        }
+
         imgProgress.DOFillAmount(1, Constant.Time_Loading)
             .SetEase(Ease.InOutQuad).OnComplete(()=>
                 {
@@ -16,6 +23,8 @@ public class CanvasLoading : UICanvas
                     UIManager.Ins.OpenUI(UIID.UICMainMenu);
                 }
             );
+
+        GameManager.isStarted = true;
     }
     public void SetPercent(float to, float time)
     {

@@ -131,7 +131,7 @@ public class CanvasGamePlay : UICanvas
     {
         SoundManager.Ins.PlayFx(FxID.click);
         GameManager.Ins.GMState = GameManager.GameState.Stoped;
-        UIManager.Ins.OpenUI(UIID.UICMainMenu);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
         Close();
     }
 

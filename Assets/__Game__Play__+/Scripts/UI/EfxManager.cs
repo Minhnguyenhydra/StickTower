@@ -85,7 +85,7 @@ public class EfxManager : SingletonMonoBehaviour<EfxManager>
     }
     public void Set_Gold_Fly_Pig_OK()
     {
-        StartCoroutine(IE_Set_Gold_Fly_Pig_OK());
+        //StartCoroutine(IE_Set_Gold_Fly_Pig_OK());
     }
     IEnumerator IE_Set_Gold_Fly_Pig_OK()
     {
