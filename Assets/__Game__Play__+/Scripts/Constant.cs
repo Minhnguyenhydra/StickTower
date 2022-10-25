@@ -426,11 +426,11 @@ public class Constant
             case 0:
                 return "Level 0 - Kill enemies";
             case 1:
-                return "Level 1 - Find treasure";
+                return "Level 1 - Kill enemies";
             case 2:
                 return "Level 2 - Kill enemies";
             case 3:
-                return "Level 3 - Kill enemies";
+                return "Level 3 - Find treasure";
             case 4:
                 return "Level 4 - Save ally";
             case 5:
@@ -448,9 +448,9 @@ public class Constant
             case 11:
                 return "Level 11 - Save ally";
             case 12:
-                return "Level 12 - Find treasure";
+                return "Level 12 - Kill enemies";
             case 13:
-                return "Level 13 - Kill enemies";
+                return "Level 13 - Find treasure";
             case 14:
                 return "Level 14 - Find treasure";
             case 15:
@@ -464,7 +464,7 @@ public class Constant
             case 19:
                 return "Level 19 - Kill enemies";
             case 20:
-                return "Level 20 - Kill enemies";
+                return "Level 20 - Find treasure";
             case 21:
                 return "Level 21 - Save ally";
             case 22:
@@ -478,7 +478,7 @@ public class Constant
             case 26:
                 return "Level 26 - Bonus level";
             case 27:
-                return "Level 27 - Kill enemies";
+                return "Level 27 - Find treasure";
             case 28:
                 return "Level 28 - Kill enemies";
             case 29:
@@ -487,38 +487,38 @@ public class Constant
                 return "Level 30 - Save ally";
            
             case 31:
-                return "Level 31 - Kill enemies";
+                return "Level 31 - Find treasure";
 
             case 32:
-                return "Level 32 - Kill enemies";
+                return "Level 32 - Save ally";
             case 33:
                 return "Level 33 - Kill enemies";
             case 34:
-                return "Level 34 - Kill enemies";
+                return "Level 34 - Save ally";
             case 35:
-                return "Level 35 - Kill enemies";
+                return "Level 35 - Bonus level";
             case 36:
-                return "Level 36 - Kill enemies";
+                return "Level 36 - Find treasure";
             case 37:
                 return "Level 37 - Kill enemies";
             case 38:
                 return "Level 38 - Kill enemies";
             case 39:
-                return "Level 39 - Kill enemies";
+                return "Level 39 - Save ally";
             case 40:
                 return "Level 40 - Kill enemies";
             case 41:
-                return "Level 41 - Kill enemies";
+                return "Level 41 - Save ally";
             case 42:
                 return "Level 42 - Kill enemies";
             case 43:
-                return "Level 43 - Kill enemies";
+                return "Level 43 - Save ally"; 
             case 44:
-                return "Level 44 - Save Ally";
+                return "Level 44 - Kill enemies";
             case 45:
-                return "Level 45 - Save Ally";
+                return "Level 45 - Bonus level";
             case 46:
-                return "Level 46 - Kill enemies";
+                return "Level 46 - Find treasure";
             case 47:
                 return "Level 47 - Kill enemies";
             case 48:
@@ -526,7 +526,7 @@ public class Constant
             case 49:
                 return "Level 49 - Kill enemies";
             case 50:
-                return "Level 50 - Save Ally";
+                return "Level 50 - Kill enemies";
             case 51:
                 return "Level 51 - Save Ally";
             case 52:
@@ -574,7 +574,7 @@ public class Constant
             case 7:
                 return 1;
             case 8:
-                return 2;
+                return 1;
             case 9:
                 return 1;
             case 10:
@@ -618,13 +618,13 @@ public class Constant
             case 29:
                 return 1;
             case 30:
-                return 2;
+                return 1;
             case 31:
                 return 1;
             case 32:
-                return 1;
+                return 2;
             case 33:
-                return 1;
+                return 2;
             case 34:
                 return 1;
             case 35:
@@ -640,11 +640,11 @@ public class Constant
             case 40:
                 return 1;
             case 41:
-                return 1;
+                return 3;
             case 42:
                 return 1;
             case 43:
-                return 1;
+                return 6;
             case 44:
                 return 1;
             case 45:
@@ -656,7 +656,7 @@ public class Constant
             case 48:
                 return 1;
             case 49:
-                return 1;
+                return 2;
             case 50:
                 return 1;
             case 51:
