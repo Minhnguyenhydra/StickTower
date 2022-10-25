@@ -518,7 +518,7 @@ public class Constant
             case 45:
                 return "Level 45 - Save Ally";
             case 46:
-                return "Level 46 - Find treasure";
+                return "Level 46 - Kill enemies";
             case 47:
                 return "Level 47 - Kill enemies";
             case 48:

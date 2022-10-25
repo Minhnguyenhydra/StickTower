@@ -87,7 +87,14 @@ public class GameManager : Singleton<GameManager>
             Player.ins.health_Bar.Set_Hide_Health_Bar();
         }
         #region Chỉ level nhặt Key.... Set_Number_Key_Treasure, Player chơi hết màn mới tính là nhặt đc key
-        if (PlayerPrefs_Manager.Get_Index_Level_Normal() == 3 ||PlayerPrefs_Manager.Get_Index_Level_Normal() == 8 ||PlayerPrefs_Manager.Get_Index_Level_Normal() == 13||PlayerPrefs_Manager.Get_Index_Level_Normal() == 17||PlayerPrefs_Manager.Get_Index_Level_Normal() == 20||PlayerPrefs_Manager.Get_Index_Level_Normal() == 23)
+        if (PlayerPrefs_Manager.Get_Index_Level_Normal() == 3 
+         || PlayerPrefs_Manager.Get_Index_Level_Normal() == 8 
+         || PlayerPrefs_Manager.Get_Index_Level_Normal() == 13
+         || PlayerPrefs_Manager.Get_Index_Level_Normal() == 17
+         || PlayerPrefs_Manager.Get_Index_Level_Normal() == 20
+         || PlayerPrefs_Manager.Get_Index_Level_Normal() == 23
+         || PlayerPrefs_Manager.Get_Index_Level_Normal() == 31
+         || PlayerPrefs_Manager.Get_Index_Level_Normal() == 46)
         {
             PlayerPrefs_Manager.Set_Number_Key_Treasure(PlayerPrefs_Manager.Get_Number_Key_Treasure() + 1);
         }
@@ -160,9 +167,9 @@ public class GameManager : Singleton<GameManager>
 
             //Mở khóa canvas rương nếu level đủ 3 chìa
             int lv = PlayerPrefs_Manager.Get_Index_Level_Normal();
-            if (lv == 13 || lv == 23 || lv == 31 || lv == 46 )
+            if (lv == 3 || lv == 8 || lv == 13 || lv == 17 || lv == 20 || lv == 23 || lv == 31 || lv == 46 )
             {
-                PlayerPrefs_Manager.Set_Number_Key_Treasure(0);
+                //PlayerPrefs_Manager.Set_Number_Key_Treasure(0);
                 UIManager.Ins.OpenUI(UIID.UICShopPrize);
             }
         
