@@ -19,7 +19,7 @@ public class Constant
     public readonly static float Time_Player_Hit_Skill_2 = 2.9f;//0.5
     public readonly static float Time_Player_Hit_Skill_3 = 3.5f;//0.5
     public readonly static float Time_Player_Die_attack = 1f;//0.5
-    public readonly static float Time_Player_Die_die = 1.834f;
+    public readonly static float Time_Player_Die_die = 1f;//1.834f;
     public readonly static float Time_Delay_Win_Reward = 1;
     public readonly static float Time_Delay_move_to_next_house = 1;
     //

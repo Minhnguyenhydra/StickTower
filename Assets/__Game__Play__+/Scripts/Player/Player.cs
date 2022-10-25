@@ -444,9 +444,9 @@ public class Player : MonoBehaviour
         //yield return Cache.GetWFS(Constant.Time_Player_Die_attack - Constant.Time_Player_Show_Blood);
         //
         yield return Cache.GetWFS(Constant.Time_Player_Die_attack - Constant.Time_Player_Show_Blood);
-        //ReSetCharacterState();
-        //SetCharacterState_NoLoop(Action_Die);
-        //yield return Cache.GetWFS(Constant.Time_Player_Die_die);
+        ReSetCharacterState();
+        SetCharacterState_NoLoop(Action_Die);
+        yield return Cache.GetWFS(Constant.Time_Player_Die_die);
         ReSetCharacterState();
         SetCharacterState_Loop(Action_Die_loop);
         yield return Cache.GetWFS(0.1f);
