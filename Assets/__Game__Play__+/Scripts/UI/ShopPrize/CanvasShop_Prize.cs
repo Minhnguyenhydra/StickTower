@@ -66,7 +66,13 @@ public class CanvasShop_Prize : UICanvas
         SoundManager.Ins.PlayFx(FxID.click);
         e_Event_Close.Invoke();
         //UIManager.Ins.OpenUI(UIID.UICMainMenu);
-
+        //Fix UI hero của canvas FreSkin nổi lên ở canvas Prize
+        int lv = PlayerPrefs_Manager.Get_Index_Level_Normal() - 1;//vì đã tăng level ở Manager trước đó
+        //Debug.Log(lv);
+        if (lv == 20)//|| lv == 20
+        {
+            UIManager.Ins.OpenUI(UIID.UICFreeSkin);
+        }
         ((CanvasWinQ)UIManager.Ins.GetUI(UIID.UICWin_Level)).Set_Gold_EFX();
 
         if (lv == 20)//|| lv == 20

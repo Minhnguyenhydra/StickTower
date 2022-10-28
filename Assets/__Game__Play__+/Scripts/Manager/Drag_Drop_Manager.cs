@@ -89,9 +89,7 @@ public class Drag_Drop_Manager : Singleton_Q<Drag_Drop_Manager>
                 Get_World_Point_Z_0_Mose();
                 if (Player.ins != null)
                 {
-                    //Fix: offset vị trí raycast vào giữa người Hero thay vì dưới chân hero
-                    Vector3 vec_Offset = new Vector3(0, Constant.offset_Pos_Y_Raycas_Herro, 0);
-                    Player.ins.tf_Player.position = Vector3.Lerp(Player.ins.tf_Player.position, pos_WorldMousePosition + vec_Offset , Time.deltaTime * Constant.Player_Speed_Follow);
+                    Player.ins.tf_Player.position = Vector3.Lerp(Player.ins.tf_Player.position, pos_WorldMousePosition, Time.deltaTime * Constant.Player_Speed_Follow);
                 }
 
             }
@@ -364,11 +362,6 @@ public class Drag_Drop_Manager : Singleton_Q<Drag_Drop_Manager>
             {
                 Player.ins.Set_Block_Colider_Player();
 
-                    //Fix: lỗi click liên tục vào Player lúc die sẽ bị block nhân vật và sau đó lag đơ luôn ko click vào Player đc nữa do đã disable Colider check raycast
-                    Player.ins.Set_Block_Colider_Player();
-
-                }
-
                 if (Player.ins != null)
                 {
                     Player.ins.enemy_Hitting = _floor.list_Point_In_Floor[_indexPoint - 1].enemy_Attack_This_Point;
@@ -472,7 +465,6 @@ public class Drag_Drop_Manager : Singleton_Q<Drag_Drop_Manager>
 
                 floor_Raycast_Before = floor_Raycast_To;
             }
-
             #endregion
             #region  Set Empty điểm Player đang đứng + Set Floor có thể sụp xuống
             //--- điểm Player đang đứng trên 1 Floor, nhưng Player ko bao h đến đc điểm cuối cùng của 1 Floor, vì điểm đó có lính, Boss hoặc Rương,...
@@ -688,12 +680,9 @@ public class Drag_Drop_Manager : Singleton_Q<Drag_Drop_Manager>
             //Debug.Log(hits[i].collider.gameObject.name);
             if (hits[i].collider != null)
             {
-                
-                //Debug.Log(hits[i].collider.gameObject.name);
                 if (Cache.Get_Colider3D_Player_Script_From_Colider(hits[i].collider) != null)
                 {
                     Player.ins.Set_Scale_Bigger();
-                    
                     isChose_Player = true;
                 }
                 //Floor
@@ -713,7 +702,7 @@ public class Drag_Drop_Manager : Singleton_Q<Drag_Drop_Manager>
     #region Refresh lại vị trí Player đứng trên Floor, để khi kéo Player ra ngoài mà ko trúng Floor nào sẽ quay lại vị trí này
     public void Set_Pos_Old_Player()//set vị trí cũ sau thả chuột
     {
-        //Player.ins.Set_Un_Block_Colider_Player();
+        Player.ins.Set_Un_Block_Colider_Player();
         Player.ins.Set_vi_tri_cu();
     }
     #endregion

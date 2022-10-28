@@ -178,7 +178,7 @@ public class GameManager : Singleton<GameManager>
             {
                 UIManager.Ins.OpenUI(UIID.UICRateUs);
             }
-        if (lv == 10 || lv == 20 || lv == 30)
+        if (lv == 10  || lv == 30)//|| lv == 20
         {
             UIManager.Ins.OpenUI(UIID.UICFreeSkin);
         }
