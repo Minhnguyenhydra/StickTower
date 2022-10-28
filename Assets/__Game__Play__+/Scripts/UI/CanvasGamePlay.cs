@@ -41,12 +41,6 @@ public class CanvasGamePlay : UICanvas
         }
         //hỉ số của Parrent_Castle ở trong list  tương ứng với number_Castle_This_Level TRỪ đi 1
         parrent_Castle_This_Level = grandfather_Castle.list_Parrent_Castle[number_Castle_This_Level - 1];
-        //luôn luôn bật cái đầu tiên trước
-        grandfather_Castle.list_Parrent_Castle[0].gameObject.SetActive(true);
-        //
-
-
-
 
         int level = PlayerPrefs_Manager.Get_Index_Level_Normal();
         if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 1)
@@ -107,7 +101,6 @@ public class CanvasGamePlay : UICanvas
     //Nếu level có nhiều nhà thì sau khi cam lia 1 lượt mới active
     public void Set_Active_Parrent_Castle_This_Level()
     {
-        grandfather_Castle.list_Parrent_Castle[0].gameObject.SetActive(false);
         parrent_Castle_This_Level.gameObject.SetActive(true);
 
         parrent_Castle_This_Level.Set_Chua_Chiem_Duoc();
@@ -130,13 +123,15 @@ public class CanvasGamePlay : UICanvas
     public void Home_Button()
     {
         SoundManager.Ins.PlayFx(FxID.click);
-        UIManager.Ins.OpenUI(UIID.UICMainMenu);
+        GameManager.Ins.GMState = GameManager.GameState.Stoped;
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
         Close();
     }
 
     public void RePlay_Button()
     {
         SoundManager.Ins.PlayFx(FxID.click);
+        GameManager.Ins.GMState = GameManager.GameState.Stoped;
         anim_GamePlay.SetTrigger(Constant.Trigger_GamePlay_Close);
         StartCoroutine(IE_Delay_Replay());
         
@@ -175,6 +170,7 @@ public class CanvasGamePlay : UICanvas
             if (!Player.ins.isDie)
             {
                 SoundManager.Ins.PlayFx(FxID.click);
+                GameManager.Ins.GMState = GameManager.GameState.Stoped;
                 level_curent += 1;
                 anim_GamePlay.SetTrigger(Constant.Trigger_GamePlay_Close);
                 StartCoroutine(IE_Delay_SkipLevel());

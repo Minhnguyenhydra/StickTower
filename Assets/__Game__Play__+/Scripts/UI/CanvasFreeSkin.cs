@@ -53,6 +53,7 @@ public class CanvasFreeSkin : UICanvas
         }
         yield return Cache.GetWFS(Constant.Time_Delay_PigBank_Close);
 
+        
 
         ((CanvasWinQ)UIManager.Ins.GetUI(UIID.UICWin_Level)).Set_Gold_EFX();
 

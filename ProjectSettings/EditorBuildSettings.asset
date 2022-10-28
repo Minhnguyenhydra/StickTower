@@ -75,12 +75,6 @@ EditorBuildSettings:
     path: Assets/__Game__Play__+/Scenes/_____Level/Level_21.unity
     guid: ce07b7140e5a84e458b72499fb82e8da
   - enabled: 1
-    path: Assets/__Game__Play__+/Scenes/_____Level/Challenge_Level_22.unity
-    guid: fe8df4884cac5de45839249d7a084893
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 1
     path: Assets/__Game__Play__+/Scenes/_____Level/Level_22.unity
     guid: f6cd0e84804dddf409068274ea62ed14
   - enabled: 1

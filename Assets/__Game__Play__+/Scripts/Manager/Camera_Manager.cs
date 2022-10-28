@@ -28,8 +28,12 @@ public class Camera_Manager : Singleton<Camera_Manager>
                             
                         }
                     )
-                ); ; ; ; ; ;
+                ); 
         }
+
+        else
+            ((CanvasGamePlay)UIManager.Ins.GetUI(UIID.UICGamePlay)).Set_Active_Parrent_Castle_This_Level();
+
         cam = Camera.main;
         tf_Cam = cam.transform;
     }

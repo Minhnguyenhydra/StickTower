@@ -5,6 +5,7 @@ using Spine;
 using UnityEngine.UI;
 using Spine.Unity;
 using DG.Tweening;
+using System.Linq;
 
 public class Player : MonoBehaviour
 {
@@ -154,6 +155,8 @@ public class Player : MonoBehaviour
     public bool is_Time_Lv26_Ready_To_Fix;
     [Header("------Only use to View Random Skill------")]
     private int index_Skill_Use = 4;
+
+    private Button[] btnsInGame;
     #endregion
 
     // Start is called before the first frame update
@@ -174,11 +177,26 @@ public class Player : MonoBehaviour
         }
         //Set_Pos_Old(tf_Player.position);
         Set_Anim_Idle();
-        
+
         Set_Skin(Constant.Get_Skin_Name_By_Id(PlayerPrefs_Manager.Get_ID_Name_Skin_Wearing()));
         Set_Fix_Pos_Player();
+
+        StartCoroutine(GetButtonsInGame());
     }
-    
+
+    private IEnumerator GetButtonsInGame()
+    {
+        yield return new WaitForEndOfFrame();
+
+        GameObject[] buttons = GameObject.FindGameObjectsWithTag("btn");
+        btnsInGame = new Button[buttons.Length];
+        for (int i = 0; i < buttons.Length; i++)
+        {
+            btnsInGame[i] = buttons[i].GetComponent<Button>();
+        }
+
+    }
+
     public void Init_sfx_char_skill_Player()
     {
         eventData_hit = skeletonAnimation.Skeleton.Data.FindEvent(eventName_hit);
@@ -280,11 +298,11 @@ public class Player : MonoBehaviour
     #region Set nhớ vị trí trước khi Player được thả
     public void Set_Pos_Old(Vector3 _pos_Old)
     {
-        pos_Old_Player = new Vector3(_pos_Old.x, _pos_Old.y, _pos_Old.z);
+        pos_Old_Player = _pos_Old;
     }
     public void Set_vi_tri_cu()//set vị trí cũ sau thả chuột
     {
-      tf_Player.position =  pos_Old_Player ;
+      tf_Player.localPosition =  pos_Old_Player ;
     }
     #endregion
     #region Set Animation
@@ -349,6 +367,9 @@ public class Player : MonoBehaviour
     }
     public void Set_Anim_Die()
     {
+        for (int i = 0; i < btnsInGame.Length; i++)
+            btnsInGame[i].interactable = false;
+
         isDie = true;
         //SoundManager.Ins.Play_Get_Hit_Player();
         Set_Block_Colider_Player();
@@ -357,6 +378,9 @@ public class Player : MonoBehaviour
     }
     public void Set_Anim_Victory()
     {
+        for (int i = 0; i < btnsInGame.Length; i++)
+            btnsInGame[i].interactable = false;
+
         SoundManager.Ins.PlayFx(FxID.yes);
         Set_Block_Colider_Player();
         
@@ -404,7 +428,7 @@ public class Player : MonoBehaviour
     {
         Set_Block_Colider_Player();
         health_Bar.Set_Hide_Health_Bar();
-        SetCharacterState_NoLoop(Action_Attack);
+        //SetCharacterState_NoLoop(Action_Attack);
 
         //Nếu là đánh Boss
         if (isLast_Point_Level)
@@ -412,12 +436,12 @@ public class Player : MonoBehaviour
             GameManager.Ins.Set_Bool_Lose_Boss();
             Set_Config_Boss_Win_End_Level();
         }
-        yield return Cache.GetWFS(Constant.Time_Player_Show_Blood);
+        //yield return Cache.GetWFS(Constant.Time_Player_Show_Blood);
         Set_Show_Blood();
         //ADD: Hit --> Die
         SetCharacterState_NoLoop(Action_Hit);
         SoundManager.Ins.PlayFx(FxID.hit_Player);
-        yield return Cache.GetWFS(Constant.Time_Player_Die_attack - Constant.Time_Player_Show_Blood);
+        //yield return Cache.GetWFS(Constant.Time_Player_Die_attack - Constant.Time_Player_Show_Blood);
         //
         yield return Cache.GetWFS(Constant.Time_Player_Die_attack - Constant.Time_Player_Show_Blood);
         ReSetCharacterState();
@@ -425,6 +449,7 @@ public class Player : MonoBehaviour
         yield return Cache.GetWFS(Constant.Time_Player_Die_die);
         ReSetCharacterState();
         SetCharacterState_Loop(Action_Die_loop);
+        yield return Cache.GetWFS(0.1f);
         GameManager.Ins.Set_Lose_Level(floor_stay);
         //Destroy(this.gameObject);
         //gameObject.SetActive(false);
@@ -1521,7 +1546,7 @@ public class Player : MonoBehaviour
     public void Set_Fix_Pos_Player()
     {
         //TODO: Fix vị trí Player lơ lửng
-        pos_Old_Player = tf_Player.position;
+        pos_Old_Player = tf_Player.localPosition;
     }
 }
 

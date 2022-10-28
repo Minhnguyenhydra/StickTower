@@ -21,9 +21,13 @@ public class CanvasShop_Prize : UICanvas
     private void OnEnable()
     {
         count_Open = 0;
-        intKey = 3;
+        intKey = PlayerPrefs_Manager.Get_Number_Key_Treasure();
+        for (int i = 0; i < intKey; i++)
+            listObj_3_Key_Gold[i].SetActive(true);
+        
         obj_Btn_Home.SetActive(false);
         obj_X3_Key.SetActive(false);
+
         StartCoroutine(IE_Delay_ShowHomeBtn());
         Set_Reload_Gold_Gem_Title();
     }
@@ -38,6 +42,7 @@ public class CanvasShop_Prize : UICanvas
         if (intKey > 0)
         {
             intKey--;
+            PlayerPrefs_Manager.Set_Number_Key_Treasure(intKey);
             listObj_3_Key_Gold[intKey].SetActive(false);
             Set_Reload_Gold_Gem_Title();
 
@@ -61,7 +66,13 @@ public class CanvasShop_Prize : UICanvas
         SoundManager.Ins.PlayFx(FxID.click);
         e_Event_Close.Invoke();
         //UIManager.Ins.OpenUI(UIID.UICMainMenu);
-
+        //Fix UI hero của canvas FreSkin nổi lên ở canvas Prize
+        int lv = PlayerPrefs_Manager.Get_Index_Level_Normal() - 1;//vì đã tăng level ở Manager trước đó
+        //Debug.Log(lv);
+        if (lv == 20)//|| lv == 20
+        {
+            UIManager.Ins.OpenUI(UIID.UICFreeSkin);
+        }
         ((CanvasWinQ)UIManager.Ins.GetUI(UIID.UICWin_Level)).Set_Gold_EFX();
 
         Close();

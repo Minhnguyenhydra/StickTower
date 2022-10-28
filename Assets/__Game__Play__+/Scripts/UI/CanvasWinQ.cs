@@ -122,7 +122,7 @@ public class CanvasWinQ : UICanvas
         txt_Gem_Boot.text = "1";
         StartCoroutine(Set_Delay_Show_No_Thank());
         //
-        Set_Check_Show_Btn();
+        //Set_Check_Show_Btn();
         //Set_Step_By_Step_Gold(PlayerPrefs_Manager.Get_Gold(), PlayerPrefs_Manager.Get_Gold() + Constant.Get_Gold_Reward_By_level(PlayerPrefs_Manager.Get_Index_Level_Normal() - 1), 1);
         //Set_Step_By_Step_Gem(PlayerPrefs_Manager.Get_Gem(), PlayerPrefs_Manager.Get_Gem() + Constant.Get_Gem_By_level(PlayerPrefs_Manager.Get_Index_Level_Normal() - 1), 1);
 

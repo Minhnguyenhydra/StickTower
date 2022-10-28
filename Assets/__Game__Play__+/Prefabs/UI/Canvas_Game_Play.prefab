@@ -1904,7 +1904,7 @@ GameObject:
   - component: {fileID: 8797440987416079939}
   m_Layer: 5
   m_Name: Btn_Ads_Pass_Level
-  m_TagString: Untagged
+  m_TagString: btn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2469,7 +2469,7 @@ GameObject:
   - component: {fileID: 8797440987503021777}
   m_Layer: 5
   m_Name: Btn_Home
-  m_TagString: Untagged
+  m_TagString: btn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2764,7 +2764,7 @@ GameObject:
   - component: {fileID: 8797440987529575526}
   m_Layer: 5
   m_Name: Btn_Sword
-  m_TagString: Untagged
+  m_TagString: btn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7010,7 +7010,7 @@ GameObject:
   - component: {fileID: 8797440988440740124}
   m_Layer: 5
   m_Name: Btn_RePlay
-  m_TagString: Untagged
+  m_TagString: btn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
