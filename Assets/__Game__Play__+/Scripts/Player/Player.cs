@@ -1460,7 +1460,8 @@ public class Player : MonoBehaviour
 
                 //
                 int level = PlayerPrefs_Manager.Get_Index_Level_Normal();
-                if (level != 38 
+                if (level != 10
+                 && level != 38
                  && level != 39
                  && level != 40
                  && level != 42
