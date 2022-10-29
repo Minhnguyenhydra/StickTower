@@ -50,7 +50,16 @@ public class CanvasPayGold_To_Play : UICanvas
     {
         SoundManager.Ins.PlayFx(FxID.click);
 
-        CloseButton();
+        //28-10
+        int _gold_current = PlayerPrefs_Manager.Get_Gold();
+        _gold_current -= 100;
+        if (_gold_current >= 0)
+        {
+            PlayerPrefs_Manager.Set_Gold(_gold_current);
+
+            CloseButton();
+
+        }
 
     }
     //

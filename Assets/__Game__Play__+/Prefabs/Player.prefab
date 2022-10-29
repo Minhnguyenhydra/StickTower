@@ -298,6 +298,7 @@ MonoBehaviour:
   Action_buffdamge: {fileID: 11400000, guid: 10a5f368a26a3294b9eaee865178090a, type: 2}
   Action_Dam: {fileID: 11400000, guid: b103fb7183c073049b0236b2d9b6b276, type: 2}
   isDoneFight_Boss: 0
+  isDie: 0
   isD_Dieing_Fight_Boss: 0
   enemy_Hitting: {fileID: 0}
   is_Block_Raycas: 0
@@ -318,7 +319,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8412493010505819486}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0

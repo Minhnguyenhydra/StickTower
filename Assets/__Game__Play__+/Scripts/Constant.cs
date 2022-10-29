@@ -159,6 +159,7 @@ public class Constant
     //
     public readonly static int SortingOrder_Show = 60;
     public readonly static int SortingOrder_Hide = -60;
+    public readonly static float offset_Pos_Y_Raycas_Herro = -1.5f;//offset điểm Raycast qua Player...để raycast qua giữa người Hero
     //Lưu Player Pref
     public readonly static string Player_Gold = "player_gold";
     public readonly static string Player_Gem = "player_gem";

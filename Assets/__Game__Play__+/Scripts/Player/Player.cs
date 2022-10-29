@@ -1526,6 +1526,7 @@ public class Player : MonoBehaviour
 #region Block Player
     public void Set_Block_Colider_Player()
     {
+        //Debug.Log("====");
         boxCollider_Player.enabled = false;
     }
     public void Set_Un_Block_Colider_Player()

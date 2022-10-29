@@ -30,7 +30,24 @@ public class CanvasGamePlay : UICanvas
         level_curent = PlayerPrefs_Manager.Get_Index_Level_Normal();
         txt_Level.text = Constant.Get_Tile_Game_Play_By_Level(level_curent);
 
-        number_Castle_This_Level = Constant.Get_Type_Castle_By_Level(level_curent);
+
+
+
+        //fix số castal dưới Level
+
+        if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 1 )
+        {
+            number_Castle_This_Level = Constant.Get_Type_Castle_By_Level(level_curent);
+        }
+        else if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 3)
+        {
+            int _level_Challenge = PlayerPrefs_Manager.Get__QLevel_Challenge();
+            number_Castle_This_Level = Constant.Get_Type_Castle_By_Level(_level_Challenge);
+        }
+
+
+
+
         //tắt hết các Castle trước khi bật cái nào đó
         for (int i = 0; i < grandfather_Castle.list_Parrent_Castle.Count; i++)
         {
@@ -172,6 +189,10 @@ public class CanvasGamePlay : UICanvas
                 SoundManager.Ins.PlayFx(FxID.click);
                 GameManager.Ins.GMState = GameManager.GameState.Stoped;
                 level_curent += 1;
+                if (level_curent == 51)
+                {
+                    level_curent = 30;
+                }
                 anim_GamePlay.SetTrigger(Constant.Trigger_GamePlay_Close);
                 StartCoroutine(IE_Delay_SkipLevel());
 
