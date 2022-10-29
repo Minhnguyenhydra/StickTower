@@ -42,11 +42,6 @@ public class Floor : MonoBehaviour//obj gắn Script này có Colider
 #endif
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void Set_Open_Reward()
     {
         parent_3_Chest.Set_Open_3_Chest();

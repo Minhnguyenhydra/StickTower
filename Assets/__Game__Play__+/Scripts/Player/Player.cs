@@ -1459,7 +1459,14 @@ public class Player : MonoBehaviour
 
 
                 //
-                if (PlayerPrefs_Manager.Get_Index_Level_Normal() != 38 && PlayerPrefs_Manager.Get_Index_Level_Normal() != 44 && PlayerPrefs_Manager.Get_Index_Level_Normal() != 47)
+                int level = PlayerPrefs_Manager.Get_Index_Level_Normal();
+                if (level != 38 
+                 && level != 39
+                 && level != 40
+                 && level != 42
+                 && level != 44 
+                 && level != 46 
+                 && level != 47)
                 {
                     Set_Go_To_Point_End_Level(floor_stay.tf_Point_End_Level, Enum_Type_Take_Last_Level.Enemy, floor_stay.list_Point_In_Floor[0].enemy_Attack_This_Point.Get_Health());
                 }
