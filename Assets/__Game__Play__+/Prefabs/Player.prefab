@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 25f796f88ba8a26478e6d7ce73c802d7, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: a5073914432c44643b5f4a56edec3202, type: 2}
   initialSkinName: hero1/weapon_bonus1
   initialFlipX: 0
   initialFlipY: 0
@@ -298,6 +298,7 @@ MonoBehaviour:
   Action_buffdamge: {fileID: 11400000, guid: 10a5f368a26a3294b9eaee865178090a, type: 2}
   Action_Dam: {fileID: 11400000, guid: b103fb7183c073049b0236b2d9b6b276, type: 2}
   isDoneFight_Boss: 0
+  isDie: 0
   isD_Dieing_Fight_Boss: 0
   enemy_Hitting: {fileID: 0}
   is_Block_Raycas: 0
