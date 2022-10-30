@@ -10541,6 +10541,7 @@
 	}
 ],
 "events": {
+	"hit": {},
 	"mp3/sfx_char_skill_1": { "audio": "mp3/sfx_char_skill_1.mp3" },
 	"mp3/sfx_char_skill_2": { "audio": "mp3/sfx_char_skill_2.mp3" },
 	"mp3/sfx_char_skill_3": { "audio": "mp3/sfx_char_skill_3.mp3" },
@@ -10550,7 +10551,8 @@
 	"mp3/sfx_char_skill_7": { "audio": "mp3/sfx_char_skill_7.mp3" },
 	"mp3/sfx_char_skill_8": { "audio": "mp3/sfx_char_skill_8.mp3" },
 	"mp3/sfx_char_skill_9": { "audio": "mp3/sfx_char_skill_9.mp3" },
-	"mp3/sfx_char_skill_10": { "audio": "mp3/sfx_char_skill_10.mp3" }
+	"mp3/sfx_char_skill_10": { "audio": "mp3/sfx_char_skill_10.mp3" },
+	"mp3/sfx_char_skill_11": { "audio": "mp3/sfx_char_skill_11.mp3" }
 },
 "animations": {
 	"Hero1_skill_1": {
