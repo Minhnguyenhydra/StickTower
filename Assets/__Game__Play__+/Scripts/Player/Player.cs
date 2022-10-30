@@ -133,20 +133,20 @@ public class Player : MonoBehaviour
     public AnimationReferenceAsset Action_buffdamge;
     public AnimationReferenceAsset Action_Dam;
     [Header("------Not Need Asign--To view------")]
-     public bool isDoneFight_Boss;
-     public bool isDie;
-     public bool isD_Dieing_Fight_Boss;
-     public Enemy enemy_Hitting;
-     public bool is_Block_Raycas;
-     public Vector3 pos_Old_Player;
-     public bool isCanHold;
-     public bool isHittingBoss;//Đề ko lùi offset Player khi dùng Skill
+    public bool isDoneFight_Boss;
+    public bool isDie;
+    public bool isD_Dieing_Fight_Boss;
+    public Enemy enemy_Hitting;
+    public bool is_Block_Raycas;
+    public Vector3 pos_Old_Player;
+    public bool isCanHold;
+    public bool isHittingBoss;//Đề ko lùi offset Player khi dùng Skill
+                              //
+    public int indext_Point_In_Floor_Stay;
     //
-     public int indext_Point_In_Floor_Stay;
-    //
-     public Health_Bar health_Bar;
-     public bool isLast_Point_Level = false;//điểm cuối cùng Player đứng trên đó đánh Boss hoặc mở rương hoặc giải cứu CC
-     public bool isReach_Last_Point_Level = false;//điểm cuối cùng Player đứng trên đó đánh Boss hoặc mở rương hoặc giải cứu CC
+    public Health_Bar health_Bar;
+    public bool isLast_Point_Level = false;//điểm cuối cùng Player đứng trên đó đánh Boss hoặc mở rương hoặc giải cứu CC
+    public bool isReach_Last_Point_Level = false;//điểm cuối cùng Player đứng trên đó đánh Boss hoặc mở rương hoặc giải cứu CC
     public int index_Castle_current;//chỉ số nhà chiếm được.. thành chiếm được mỗi level
     //chỉ dành cho Floor Reward
     [Tooltip("chỉ Floor Reward mới dùng biến này")]
@@ -242,7 +242,7 @@ public class Player : MonoBehaviour
         }
         else if (eventData_sfx_char_skill_6.Equals(e.Data))
         {
-            SoundManager.Ins.PlayFx(FxID.sfx_char_skill_6); 
+            SoundManager.Ins.PlayFx(FxID.sfx_char_skill_6);
         }
         else if (eventData_sfx_char_skill_7.Equals(e.Data))
         {
@@ -286,7 +286,7 @@ public class Player : MonoBehaviour
     {
         return index_Skill_Use;
     }
-   
+
 
     #region Set Floor mà Player bắt đầu được thả rồi đứng trên đó
     public void Set_Floor_Indext_Point(Floor _floor, int _indext_point)
@@ -302,7 +302,7 @@ public class Player : MonoBehaviour
     }
     public void Set_vi_tri_cu()//set vị trí cũ sau thả chuột
     {
-      tf_Player.localPosition =  pos_Old_Player ;
+        tf_Player.localPosition = pos_Old_Player;
     }
     #endregion
     #region Set Animation
@@ -383,47 +383,47 @@ public class Player : MonoBehaviour
 
         SoundManager.Ins.PlayFx(FxID.yes);
         Set_Block_Colider_Player();
-        
+
         SetCharacterState_Loop(Action_Victory);
         //StartCoroutine(IE_To_Fix_Action_Victory());
 
     }
-//    public IEnumerator IE_To_Fix_Action_Victory()
-//    {
-//        if (index_Skill_Use == 1)
-//        {
-//            yield return Cache.GetWFS(Constant.Time_Player_Hit_Skill_1 - Constant.Time_Player_Die_attack * 2);
-//        }
-//        else if (index_Skill_Use == 2)
-//        {
-//            yield return Cache.GetWFS(Constant.Time_Player_Hit_Skill_2 - Constant.Time_Player_Die_attack * 2);
-//        }
-//        else if (index_Skill_Use == 3)
-//        {
-//            yield return Cache.GetWFS(Constant.Time_Player_Hit_Skill_3 - Constant.Time_Player_Die_attack * 2);
-//        }
-//        else if (index_Skill_Use == 4)
-//        {
+    //    public IEnumerator IE_To_Fix_Action_Victory()
+    //    {
+    //        if (index_Skill_Use == 1)
+    //        {
+    //            yield return Cache.GetWFS(Constant.Time_Player_Hit_Skill_1 - Constant.Time_Player_Die_attack * 2);
+    //        }
+    //        else if (index_Skill_Use == 2)
+    //        {
+    //            yield return Cache.GetWFS(Constant.Time_Player_Hit_Skill_2 - Constant.Time_Player_Die_attack * 2);
+    //        }
+    //        else if (index_Skill_Use == 3)
+    //        {
+    //            yield return Cache.GetWFS(Constant.Time_Player_Hit_Skill_3 - Constant.Time_Player_Die_attack * 2);
+    //        }
+    //        else if (index_Skill_Use == 4)
+    //        {
 
-//        }
-//        else
-//        {
-//            yield return Cache.GetWFS(Constant.Time_Player_Hit_Skill_3 - Constant.Time_Player_Die_attack * 2);
-//        }
-//        ReSetCharacterState();
-//#if UNITY_EDITOR
-//        ///Debug.Log(index_Skill_Use);
-//#endif
-//        SetCharacterState_Loop(Action_Victory);
-//    }
+    //        }
+    //        else
+    //        {
+    //            yield return Cache.GetWFS(Constant.Time_Player_Hit_Skill_3 - Constant.Time_Player_Die_attack * 2);
+    //        }
+    //        ReSetCharacterState();
+    //#if UNITY_EDITOR
+    //        ///Debug.Log(index_Skill_Use);
+    //#endif
+    //        SetCharacterState_Loop(Action_Victory);
+    //    }
     public void Set_Lose()
     {
         Set_Block_Colider_Player();
         ReSetCharacterState();
         SetCharacterState_NoLoop(Action_Lose);
     }
-#endregion
-#region Set IE Delay Action, to die, attack to idle
+    #endregion
+    #region Set IE Delay Action, to die, attack to idle
     IEnumerator Delay_die()
     {
         Set_Block_Colider_Player();
@@ -506,7 +506,7 @@ public class Player : MonoBehaviour
         }
         //
         //yield return Cache.GetWFS(time_Until_End_Skill - Constant.Time_Player_Show_Blood);
-        
+
 
         //
         /////////Set_Check_Reach_Last_Point_Level(indext_Point_In_Floor_Stay,floor_stay);
@@ -514,10 +514,10 @@ public class Player : MonoBehaviour
         {
             Set_Check_Reach_Last_Point_Level();//1
         }
-        
+
     }
-#endregion
-#region Function Random Skill
+    #endregion
+    #region Function Random Skill
     public int Set_Random_Skill_attack(bool _isOpn_Reward = false)
     {
         int ii = UnityEngine.Random.Range(1, 5);
@@ -1289,8 +1289,8 @@ public class Player : MonoBehaviour
         floor_stay.list_Point_In_Floor[0].enemy_Attack_This_Point.Set_Attack();
     }
 
-#endregion
-#region Delay_Win
+    #endregion
+    #region Delay_Win
     //Win ở đây khi nhận rương ...
     IEnumerator Delay_Win()
     {
@@ -1298,8 +1298,8 @@ public class Player : MonoBehaviour
         yield return Cache.GetWFS(time_delay);
         GameManager.Ins.Set_Mai_Xanh_Delay_Win(floor_stay);
     }
-#endregion
-#region Base to set Skin, Anim
+    #endregion
+    #region Base to set Skin, Anim
     public void SetAnimation(AnimationReferenceAsset _anim, bool _loop, float _time_Scale)//Set No loop
     {
         skeletonAnimation.state.SetAnimation(0, _anim, _loop).TimeScale = _time_Scale;
@@ -1325,10 +1325,10 @@ public class Player : MonoBehaviour
     {
         skeletonAnimation.ClearState();
     }
-#endregion
+    #endregion
 
 
-#region Set Scale Player when drag, drop
+    #region Set Scale Player when drag, drop
     public void Set_Scale_Bigger()
     {
         tf_Player.localScale = new Vector3(Constant.Player_Scale_Bigger, Constant.Player_Scale_Bigger, Constant.Player_Scale_Bigger);
@@ -1337,8 +1337,8 @@ public class Player : MonoBehaviour
     {
         tf_Player.localScale = new Vector3(Constant.Player_Scale_Normal, Constant.Player_Scale_Normal, Constant.Player_Scale_Normal);
     }
-#endregion
-#region Set, Get Health
+    #endregion
+    #region Set, Get Health
     public void Set_Add_Health(int _healthAdd)
     {
         health += _healthAdd;
@@ -1355,21 +1355,21 @@ public class Player : MonoBehaviour
         health_Bar.tf_Health_Bar.localPosition = Constant.Player_Local_Pos_Health_Bar;
         health_Bar.Set_Health_Imedetly(health);
     }
-#endregion
-#region chọn cái nhà để cao lên khi đã chiếm đc nhà khác
+    #endregion
+    #region chọn cái nhà để cao lên khi đã chiếm đc nhà khác
     //chọn cái nhà để cao lên khi đã chiếm đc nhà khác
     public void Set_House_To_Up_Top_Player(House_Build _house_Build)
     {
         house_Build_Of_Player = _house_Build;
     }
-#endregion
-#region Set_Show_Blood
+    #endregion
+    #region Set_Show_Blood
     public void Set_Show_Blood()
     {
         GameObject obj = (GameObject)Instantiate(Resources.Load(Constant.Path_Frefab_Blood), tf_Player.position + Constant.Player_offset_Blood, tf_Player.rotation);
     }
-#endregion
-#region tự đến điểm cuối của level
+    #endregion
+    #region tự đến điểm cuối của level
     //Sau khi đánh thắng Enemy còn lại khi đến Boss cuối của 1 Level(Boss cuối, hoặc Công chúa, hoặc hòm,...) thì tự đến điểm cuối đó
     public void Set_Go_To_Point_End_Level(Transform _tf_End_Level, Enum_Type_Take_Last_Level _type_Take_Last_Level, int _health_If_Enemy = 0)
     {
@@ -1419,8 +1419,8 @@ public class Player : MonoBehaviour
             }
         });
     }
-#endregion
-#region Kiểm tra đã đến điểm cuối của 1 Level
+    #endregion
+    #region Kiểm tra đã đến điểm cuối của 1 Level
     //Kiểm tra Floor cuối Level có phần thưởng hay Enemy hay Công chúa để sét các action tiếp theo, mỗi lần thực hiện 1 hành động tại 1 điển của Floor
     public void Set_Check_Reach_Last_Point_Level()
     {
@@ -1432,9 +1432,9 @@ public class Player : MonoBehaviour
                 isLast_Point_Level = true;
                 isReach_Last_Point_Level = true;
 
-                
+
                 //
-                if (PlayerPrefs_Manager.Get_Index_Level_Normal() != 38 && PlayerPrefs_Manager.Get_Index_Level_Normal() != 44&& PlayerPrefs_Manager.Get_Index_Level_Normal() != 47)
+                if (PlayerPrefs_Manager.Get_Index_Level_Normal() != 38 && PlayerPrefs_Manager.Get_Index_Level_Normal() != 44 && PlayerPrefs_Manager.Get_Index_Level_Normal() != 47)
                 {
                     //Set_Go_To_Point_End_Level(floor_stay.tf_Point_End_Level, Enum_Type_Take_Last_Level.Enemy, floor_stay.list_Point_In_Floor[0].enemy_Attack_This_Point.Get_Health());
                 }
@@ -1461,14 +1461,21 @@ public class Player : MonoBehaviour
 
                 //
                 int level = PlayerPrefs_Manager.Get_Index_Level_Normal();
-                if (level != 2
+                if (level != 1
+                 && level != 2
                  && level != 10
+                 && level != 11
+                 && level != 12
+                 && level != 23
+                 && level != 24
+                 && level != 30
+                 && level != 34
                  && level != 38
                  && level != 39
                  && level != 40
                  && level != 42
-                 && level != 44 
-                 && level != 46 
+                 && level != 44
+                 && level != 46
                  && level != 47)
                 {
                     Set_Go_To_Point_End_Level(floor_stay.tf_Point_End_Level, Enum_Type_Take_Last_Level.Enemy, floor_stay.list_Point_In_Floor[0].enemy_Attack_This_Point.Get_Health());
@@ -1486,14 +1493,14 @@ public class Player : MonoBehaviour
             }
         }
     }
-#endregion
-#region Chiếm được 1 nhà
+    #endregion
+    #region Chiếm được 1 nhà
     public void Set_Chiem_Duoc_1_Nha()
     {
         ((CanvasGamePlay)UIManager.Ins.GetUI(UIID.UICGamePlay)).Set_Active_Castle_Each_Time_Chiem_Duoc(index_Castle_current);
     }
-#endregion
-#region Mở rương
+    #endregion
+    #region Mở rương
     //Đi từ điểm đầu đến điểm cuối của 1 Floor
     public void Set_Take_Reward(Floor floor_pos_End)
     {
@@ -1506,12 +1513,13 @@ public class Player : MonoBehaviour
         yield return Cache.GetWFS(Constant.Time_Delay_Run_To_End_Reward);
         //SetCharacterState_Loop(Action_Run);
         SetAnimation(Action_Dam, true, 2f);
-        tf_Player.DOMove(floor_pos_End.list_Point_In_Floor[1].tf_Point_In_Floor.position, Constant.Time_Player_Go_End_OpenReward).OnComplete(() => {
+        tf_Player.DOMove(floor_pos_End.list_Point_In_Floor[1].tf_Point_In_Floor.position, Constant.Time_Player_Go_End_OpenReward).OnComplete(() =>
+        {
             isTakingReward = false;
             floor_pos_End.Set_Open_Reward();
             floor_pos_End.house_Build_Of_This.Set_Check_Next_House_Or_Victory(floor_pos_End);
 
-            
+
 
             //Nhà cuối thì set anim Victory ở điểm cuối cùng
             if (floor_pos_End.house_Build_Of_This.number_Floor_Remain == 1)
@@ -1519,7 +1527,7 @@ public class Player : MonoBehaviour
                 Set_Un_Block_Colider_Player();
                 Set_Anim_Victory();
                 is_Time_Lv26_Ready_To_Fix = true;
-                
+
             }
             else
             {
@@ -1531,8 +1539,8 @@ public class Player : MonoBehaviour
             Set_Un_Block_Colider_Player();
         });
     }
-#endregion
-#region Block Player
+    #endregion
+    #region Block Player
     public void Set_Block_Colider_Player()
     {
         //Debug.Log("====");
@@ -1542,7 +1550,7 @@ public class Player : MonoBehaviour
     {
         boxCollider_Player.enabled = true;
     }
-#endregion
+    #endregion
     public void Delay_Hit_To_Idle()
     {
         StartCoroutine(IE_Delay_Hit_To_Idle());
