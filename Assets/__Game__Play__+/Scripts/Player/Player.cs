@@ -220,51 +220,51 @@ public class Player : MonoBehaviour
         //if (logDebugMessage) Debug.Log("Event fired! " + e.Data.Name);
         //bool eventMatch = string.Equals(e.Data.Name, eventName, System.StringComparison.Ordinal); // Testing recommendation: String compare.
         //bool eventMatch = (eventData == e.Data); // Performance recommendation: Match cached reference instead of string.
-        if (eventData_sfx_char_skill_1 == e.Data)
+        if (eventData_sfx_char_skill_1.Equals(e.Data))
         {
             SoundManager.Ins.PlayFx(FxID.sfx_char_skill_1);
         }
-        else if (eventData_sfx_char_skill_2 == e.Data)
+        else if (eventData_sfx_char_skill_2.Equals(e.Data))
         {
             SoundManager.Ins.PlayFx(FxID.sfx_char_skill_2);
         }
-        else if (eventData_sfx_char_skill_3 == e.Data)
+        else if (eventData_sfx_char_skill_3.Equals(e.Data))
         {
             SoundManager.Ins.PlayFx(FxID.sfx_char_skill_3);
         }
-        else if (eventData_sfx_char_skill_4 == e.Data)
+        else if (eventData_sfx_char_skill_4.Equals(e.Data))
         {
             SoundManager.Ins.PlayFx(FxID.sfx_char_skill_4);
         }
-        else if (eventData_sfx_char_skill_5 == e.Data)
+        else if (eventData_sfx_char_skill_5.Equals(e.Data))
         {
             SoundManager.Ins.PlayFx(FxID.sfx_char_skill_5);
         }
-        else if (eventData_sfx_char_skill_6 == e.Data)
+        else if (eventData_sfx_char_skill_6.Equals(e.Data))
         {
-            SoundManager.Ins.PlayFx(FxID.sfx_char_skill_6);
+            SoundManager.Ins.PlayFx(FxID.sfx_char_skill_6); 
         }
-        else if (eventData_sfx_char_skill_7 == e.Data)
+        else if (eventData_sfx_char_skill_7.Equals(e.Data))
         {
             SoundManager.Ins.PlayFx(FxID.sfx_char_skill_7);
         }
-        else if (eventData_sfx_char_skill_8 == e.Data)
+        else if (eventData_sfx_char_skill_8.Equals(e.Data))
         {
             SoundManager.Ins.PlayFx(FxID.sfx_char_skill_8);
         }
-        else if (eventData_sfx_char_skill_9 == e.Data)
+        else if (eventData_sfx_char_skill_9.Equals(e.Data))
         {
             SoundManager.Ins.PlayFx(FxID.sfx_char_skill_9);
         }
-        else if (eventData_sfx_char_skill_10 == e.Data)
+        else if (eventData_sfx_char_skill_10.Equals(e.Data))
         {
             SoundManager.Ins.PlayFx(FxID.sfx_char_skill_10);
         }
-        else if (eventData_sfx_char_skill_11 == e.Data)
+        else if (eventData_sfx_char_skill_11.Equals(e.Data))
         {
             SoundManager.Ins.PlayFx(FxID.sfx_char_skill_11);
         }
-        else if (eventData_hit == e.Data)
+        else if (eventData_hit.Equals(e.Data))
         {
             Set_Enemy_Hit_By_event();
         }
@@ -1460,7 +1460,16 @@ public class Player : MonoBehaviour
 
 
                 //
-                if (PlayerPrefs_Manager.Get_Index_Level_Normal() != 38 && PlayerPrefs_Manager.Get_Index_Level_Normal() != 44 && PlayerPrefs_Manager.Get_Index_Level_Normal() != 47)
+                int level = PlayerPrefs_Manager.Get_Index_Level_Normal();
+                if (level != 2
+                 && level != 10
+                 && level != 38
+                 && level != 39
+                 && level != 40
+                 && level != 42
+                 && level != 44 
+                 && level != 46 
+                 && level != 47)
                 {
                     Set_Go_To_Point_End_Level(floor_stay.tf_Point_End_Level, Enum_Type_Take_Last_Level.Enemy, floor_stay.list_Point_In_Floor[0].enemy_Attack_This_Point.Get_Health());
                 }

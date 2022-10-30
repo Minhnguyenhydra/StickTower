@@ -362,8 +362,8 @@ public class Drag_Drop_Manager : Singleton_Q<Drag_Drop_Manager>
             //đánh nhau với ENEMY
             if (_floor.list_Point_In_Floor[_indexPoint - 1].enemy_Attack_This_Point != null)
             {
-                if (!_floor.list_Point_In_Floor[_indexPoint - 1].enemy_Attack_This_Point.isDieing)
-                {
+                Player.ins.Set_Block_Colider_Player();
+
                     //Fix: lỗi click liên tục vào Player lúc die sẽ bị block nhân vật và sau đó lag đơ luôn ko click vào Player đc nữa do đã disable Colider check raycast
                     Player.ins.Set_Block_Colider_Player();
 
