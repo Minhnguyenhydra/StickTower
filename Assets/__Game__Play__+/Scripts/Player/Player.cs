@@ -63,13 +63,10 @@ public class Player : MonoBehaviour
     public House_Build house_Build_Of_Player;
     //
     [Header("Animation")]
-
+    public List<AnimationReferenceAsset> lsAnim;
     public AnimationReferenceAsset Action_Attack;
     public AnimationReferenceAsset Action_Die;
     public AnimationReferenceAsset Action_Die_loop;
-    public AnimationReferenceAsset Action_Hit;
-    public AnimationReferenceAsset Action_Idle;
-    public AnimationReferenceAsset Action_Run;
     //
     public AnimationReferenceAsset Action_char_1_Skill_1;
     public AnimationReferenceAsset Action_char_1_Skill_2;
@@ -128,9 +125,16 @@ public class Player : MonoBehaviour
     public AnimationReferenceAsset Action_char_14_Skill_2;
     public AnimationReferenceAsset Action_char_14_Skill_3;
     //
-    public AnimationReferenceAsset Action_Victory;
+    public AnimationReferenceAsset Action_char_15_Skill_1;
+    public AnimationReferenceAsset Action_char_15_Skill_2;
+    public AnimationReferenceAsset Action_char_15_Skill_3;
+    //
+    public AnimationReferenceAsset Action_Hit;
+    public AnimationReferenceAsset Action_Idle;
     public AnimationReferenceAsset Action_Lose;
+    public AnimationReferenceAsset Action_Run;
     public AnimationReferenceAsset Action_buffdamge;
+    public AnimationReferenceAsset Action_Victory;
     public AnimationReferenceAsset Action_Dam;
     [Header("------Not Need Asign--To view------")]
     public bool isDoneFight_Boss;
@@ -162,6 +166,8 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        LoadAnim();
+
         Init_sfx_char_skill_Player();
         //boxCollider_Player = GetComponentInChildren<BoxCollider>();
         isTakingReward = false;
@@ -184,6 +190,66 @@ public class Player : MonoBehaviour
         StartCoroutine(GetButtonsInGame());
     }
 
+    private void LoadAnim()
+    {
+        int index = 0;
+        Action_Attack = lsAnim[index++];
+        Action_Die = lsAnim[index++];
+        Action_Die_loop = lsAnim[index++];
+        Action_char_1_Skill_1 = lsAnim[index++];
+        Action_char_1_Skill_2 = lsAnim[index++];
+        Action_char_1_Skill_3 = lsAnim[index++];
+        Action_char_2_Skill_1 = lsAnim[index++];
+        Action_char_2_Skill_2 = lsAnim[index++];
+        Action_char_2_Skill_3 = lsAnim[index++];
+        Action_char_3_Skill_1 = lsAnim[index++];
+        Action_char_3_Skill_2 = lsAnim[index++];
+        Action_char_3_Skill_3 = lsAnim[index++];
+        Action_char_4_Skill_1 = lsAnim[index++];
+        Action_char_4_Skill_2 = lsAnim[index++];
+        Action_char_4_Skill_3 = lsAnim[index++];
+        Action_char_5_Skill_1 = lsAnim[index++];
+        Action_char_5_Skill_2 = lsAnim[index++];
+        Action_char_5_Skill_3 = lsAnim[index++];
+        Action_char_6_Skill_1 = lsAnim[index++];
+        Action_char_6_Skill_2 = lsAnim[index++];
+        Action_char_6_Skill_3 = lsAnim[index++];
+        Action_char_7_Skill_1 = lsAnim[index++];
+        Action_char_7_Skill_2 = lsAnim[index++];
+        Action_char_7_Skill_3 = lsAnim[index++];
+        Action_char_8_Skill_1 = lsAnim[index++];
+        Action_char_8_Skill_2 = lsAnim[index++];
+        Action_char_8_Skill_3 = lsAnim[index++];
+        Action_char_9_Skill_1 = lsAnim[index++];
+        Action_char_9_Skill_2 = lsAnim[index++];
+        Action_char_9_Skill_3 = lsAnim[index++];
+        Action_char_10_Skill_1 = lsAnim[index++];
+        Action_char_10_Skill_2 = lsAnim[index++];
+        Action_char_10_Skill_3 = lsAnim[index++];
+        Action_char_11_Skill_1 = lsAnim[index++];
+        Action_char_11_Skill_2 = lsAnim[index++];
+        Action_char_11_Skill_3 = lsAnim[index++];
+        Action_char_12_Skill_1 = lsAnim[index++];
+        Action_char_12_Skill_2 = lsAnim[index++];
+        Action_char_12_Skill_3 = lsAnim[index++];
+        Action_char_13_Skill_1 = lsAnim[index++];
+        Action_char_13_Skill_2 = lsAnim[index++];
+        Action_char_13_Skill_3 = lsAnim[index++];
+        Action_char_14_Skill_1 = lsAnim[index++];
+        Action_char_14_Skill_2 = lsAnim[index++];
+        Action_char_14_Skill_3 = lsAnim[index++];
+        //Action_char_15_Skill_1 = lsAnim[index++];
+        //Action_char_15_Skill_2 = lsAnim[index++];
+        //Action_char_15_Skill_3 = lsAnim[index++];
+        Action_Hit = lsAnim[index++];
+        Action_Idle = lsAnim[index++];
+        Action_Lose = lsAnim[index++];
+        Action_Run = lsAnim[index++];
+        Action_buffdamge = lsAnim[index++];
+        Action_Victory = lsAnim[index++];
+        Action_Dam = lsAnim[index++];
+    }
+
     private IEnumerator GetButtonsInGame()
     {
         yield return new WaitForEndOfFrame();
@@ -200,7 +266,7 @@ public class Player : MonoBehaviour
     public void Init_sfx_char_skill_Player()
     {
         eventData_hit = skeletonAnimation.Skeleton.Data.FindEvent(eventName_hit);
-
+        
         eventData_sfx_char_skill_1 = skeletonAnimation.Skeleton.Data.FindEvent(eventName_sfx_char_skill_1);
         eventData_sfx_char_skill_2 = skeletonAnimation.Skeleton.Data.FindEvent(eventName_sfx_char_skill_2);
         eventData_sfx_char_skill_3 = skeletonAnimation.Skeleton.Data.FindEvent(eventName_sfx_char_skill_3);
@@ -212,6 +278,7 @@ public class Player : MonoBehaviour
         eventData_sfx_char_skill_9 = skeletonAnimation.Skeleton.Data.FindEvent(eventName_sfx_char_skill_9);
         eventData_sfx_char_skill_10 = skeletonAnimation.Skeleton.Data.FindEvent(eventName_sfx_char_skill_10);
         eventData_sfx_char_skill_11 = skeletonAnimation.Skeleton.Data.FindEvent(eventName_sfx_char_skill_11);
+        
         skeletonAnimation.AnimationState.Event += HandleAnimationStateEvent;
         skeletonAnimation.Initialize(false);
     }
@@ -220,52 +287,65 @@ public class Player : MonoBehaviour
         //if (logDebugMessage) Debug.Log("Event fired! " + e.Data.Name);
         //bool eventMatch = string.Equals(e.Data.Name, eventName, System.StringComparison.Ordinal); // Testing recommendation: String compare.
         //bool eventMatch = (eventData == e.Data); // Performance recommendation: Match cached reference instead of string.
+        Debug.Log("===");
         if (eventData_sfx_char_skill_1.Equals(e.Data))
         {
+            Debug.Log("Play " + e.Data);
             SoundManager.Ins.PlayFx(FxID.sfx_char_skill_1);
         }
         else if (eventData_sfx_char_skill_2.Equals(e.Data))
         {
+            Debug.Log("Play " + e.Data);
             SoundManager.Ins.PlayFx(FxID.sfx_char_skill_2);
         }
         else if (eventData_sfx_char_skill_3.Equals(e.Data))
         {
+            Debug.Log("Play " + e.Data);
             SoundManager.Ins.PlayFx(FxID.sfx_char_skill_3);
         }
         else if (eventData_sfx_char_skill_4.Equals(e.Data))
         {
+            Debug.Log("Play " + e.Data);
             SoundManager.Ins.PlayFx(FxID.sfx_char_skill_4);
         }
         else if (eventData_sfx_char_skill_5.Equals(e.Data))
         {
+            Debug.Log("Play " + e.Data);
             SoundManager.Ins.PlayFx(FxID.sfx_char_skill_5);
         }
         else if (eventData_sfx_char_skill_6.Equals(e.Data))
         {
+            Debug.Log("Play " + e.Data);
             SoundManager.Ins.PlayFx(FxID.sfx_char_skill_6);
         }
         else if (eventData_sfx_char_skill_7.Equals(e.Data))
         {
+            Debug.Log("Play " + e.Data);
             SoundManager.Ins.PlayFx(FxID.sfx_char_skill_7);
         }
         else if (eventData_sfx_char_skill_8.Equals(e.Data))
         {
+            Debug.Log("Play " + e.Data);
             SoundManager.Ins.PlayFx(FxID.sfx_char_skill_8);
         }
         else if (eventData_sfx_char_skill_9.Equals(e.Data))
         {
+            Debug.Log("Play " + e.Data);
             SoundManager.Ins.PlayFx(FxID.sfx_char_skill_9);
         }
         else if (eventData_sfx_char_skill_10.Equals(e.Data))
         {
+            Debug.Log("Play " + e.Data);
             SoundManager.Ins.PlayFx(FxID.sfx_char_skill_10);
         }
         else if (eventData_sfx_char_skill_11.Equals(e.Data))
         {
+            Debug.Log("Play " + e.Data);
             SoundManager.Ins.PlayFx(FxID.sfx_char_skill_11);
         }
         else if (eventData_hit.Equals(e.Data))
         {
+            Debug.Log("Play " + e.Data);
             Set_Enemy_Hit_By_event();
         }
     }
@@ -1247,7 +1327,7 @@ public class Player : MonoBehaviour
         }
 
 
-        else //if (id_Skin_Wearing == 13)
+        else if (id_Skin_Wearing == 13)
         {
             if (ii == 1)
             {
@@ -1272,6 +1352,32 @@ public class Player : MonoBehaviour
                 SoundManager.Ins.PlayFx(FxID.attack_GamePlay);
             }
         }
+
+        //else
+        //{
+        //    if (ii == 1)
+        //    {
+        //        SetCharacterState_NoLoop(Action_char_15_Skill_1);
+        //        index_Skill_Use = 141;
+        //    }
+        //    else if (ii == 2)
+        //    {
+        //        SetCharacterState_NoLoop(Action_char_15_Skill_2);
+        //        index_Skill_Use = 142;
+        //    }
+        //    else if (ii == 3)
+        //    {
+        //        SetCharacterState_NoLoop(Action_char_15_Skill_3);
+        //        index_Skill_Use = 143;
+        //    }
+
+        //    else// (ii == 4)
+        //    {
+        //        SetCharacterState_NoLoop(Action_Attack);
+        //        index_Skill_Use = 0;
+        //        SoundManager.Ins.PlayFx(FxID.attack_GamePlay);
+        //    }
+        //}
 
         //Debug.Log(id_Skin_Wearing);
         return index_Skill_Use;

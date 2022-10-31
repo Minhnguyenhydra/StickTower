@@ -229,7 +229,10 @@ public class Constant
                 return "hero13/weapon_nomal";
             case 13:
                 return "hero14/weapon_nomal";
+            case 14:
+                return "hero15/weapon_nomal";
             default:
+                Debug.Log("K co Skin " + _ID_Skin);
                 return "hero1/weapon_nomal";
         }
 
@@ -391,7 +394,10 @@ public class Constant
                 return "hero13/weapon_bonus" + _ID_Sword.ToString();
             case 13:
                 return "hero14/weapon_bonus" + _ID_Sword.ToString();
+            case 14:
+                return "hero15/weapon_bonus" + _ID_Sword.ToString();
             default:
+                Debug.Log("K co weapon " + _ID_Sword);
                 return "hero1/weapon_bonus" + _ID_Sword.ToString();
         }
 
