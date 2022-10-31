@@ -873,10 +873,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7672426205492867041, guid: 864a9c778ee1eac4aaa9a949977a5e77, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8135697557329248841, guid: 864a9c778ee1eac4aaa9a949977a5e77, type: 3}
       propertyPath: m_Name
       value: ==Obj==Canvas_BG
@@ -925,10 +921,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8135697557635040067, guid: 864a9c778ee1eac4aaa9a949977a5e77, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 3521460}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 864a9c778ee1eac4aaa9a949977a5e77, type: 3}
 --- !u!1 &506972597
@@ -2268,6 +2260,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1562280007}
     m_Modifications:
+    - target: {fileID: 1756666437435519404, guid: 4e95699e4953f1b41a51635cca3ba9c3, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206860770849607846, guid: 4e95699e4953f1b41a51635cca3ba9c3, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8206860771373263218, guid: 4e95699e4953f1b41a51635cca3ba9c3, type: 3}
       propertyPath: m_Name
       value: CanvasLose
