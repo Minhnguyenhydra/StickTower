@@ -163,6 +163,14 @@ public class Player : MonoBehaviour
     private Button[] btnsInGame;
     #endregion
 
+    private void Awake()
+    {
+        if (ins == null)
+        {
+            ins = this;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -177,10 +185,7 @@ public class Player : MonoBehaviour
         Set_Spawn_Health_Bar();
         isCanHold = true;
         tf_Player = transform;
-        if (ins == null)
-        {
-            ins = this;
-        }
+        
         //Set_Pos_Old(tf_Player.position);
         Set_Anim_Idle();
 
