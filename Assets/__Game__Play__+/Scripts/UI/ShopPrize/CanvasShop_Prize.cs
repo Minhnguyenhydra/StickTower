@@ -21,7 +21,7 @@ public class CanvasShop_Prize : UICanvas
     private void OnEnable()
     {
         count_Open = 0;
-        intKey = PlayerPrefs_Manager.Get_Number_Key_Treasure();
+        intKey = Mathf.Clamp(PlayerPrefs_Manager.Get_Number_Key_Treasure(), 0, 3);
         for (int i = 0; i < intKey; i++)
             listObj_3_Key_Gold[i].SetActive(true);
         
