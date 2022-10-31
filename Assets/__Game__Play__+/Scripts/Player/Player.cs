@@ -243,9 +243,9 @@ public class Player : MonoBehaviour
         Action_char_14_Skill_1 = lsAnim[index++];
         Action_char_14_Skill_2 = lsAnim[index++];
         Action_char_14_Skill_3 = lsAnim[index++];
-        //Action_char_15_Skill_1 = lsAnim[index++];
-        //Action_char_15_Skill_2 = lsAnim[index++];
-        //Action_char_15_Skill_3 = lsAnim[index++];
+        Action_char_15_Skill_1 = lsAnim[index++];
+        Action_char_15_Skill_2 = lsAnim[index++];
+        Action_char_15_Skill_3 = lsAnim[index++];
         Action_Hit = lsAnim[index++];
         Action_Idle = lsAnim[index++];
         Action_Lose = lsAnim[index++];
@@ -289,69 +289,13 @@ public class Player : MonoBehaviour
     }
     private void HandleAnimationStateEvent(TrackEntry trackEntry, Spine.Event e)
     {
-        //if (logDebugMessage) Debug.Log("Event fired! " + e.Data.Name);
-        //bool eventMatch = string.Equals(e.Data.Name, eventName, System.StringComparison.Ordinal); // Testing recommendation: String compare.
-        //bool eventMatch = (eventData == e.Data); // Performance recommendation: Match cached reference instead of string.
-        Debug.Log("===");
-        if (eventData_sfx_char_skill_1.Equals(e.Data))
-        {
-            Debug.Log("Play " + e.Data);
-            SoundManager.Ins.PlayFx(FxID.sfx_char_skill_1);
-        }
-        else if (eventData_sfx_char_skill_2.Equals(e.Data))
-        {
-            Debug.Log("Play " + e.Data);
-            SoundManager.Ins.PlayFx(FxID.sfx_char_skill_2);
-        }
-        else if (eventData_sfx_char_skill_3.Equals(e.Data))
-        {
-            Debug.Log("Play " + e.Data);
-            SoundManager.Ins.PlayFx(FxID.sfx_char_skill_3);
-        }
-        else if (eventData_sfx_char_skill_4.Equals(e.Data))
-        {
-            Debug.Log("Play " + e.Data);
-            SoundManager.Ins.PlayFx(FxID.sfx_char_skill_4);
-        }
-        else if (eventData_sfx_char_skill_5.Equals(e.Data))
-        {
-            Debug.Log("Play " + e.Data);
-            SoundManager.Ins.PlayFx(FxID.sfx_char_skill_5);
-        }
-        else if (eventData_sfx_char_skill_6.Equals(e.Data))
-        {
-            Debug.Log("Play " + e.Data);
-            SoundManager.Ins.PlayFx(FxID.sfx_char_skill_6);
-        }
-        else if (eventData_sfx_char_skill_7.Equals(e.Data))
-        {
-            Debug.Log("Play " + e.Data);
-            SoundManager.Ins.PlayFx(FxID.sfx_char_skill_7);
-        }
-        else if (eventData_sfx_char_skill_8.Equals(e.Data))
-        {
-            Debug.Log("Play " + e.Data);
-            SoundManager.Ins.PlayFx(FxID.sfx_char_skill_8);
-        }
-        else if (eventData_sfx_char_skill_9.Equals(e.Data))
-        {
-            Debug.Log("Play " + e.Data);
-            SoundManager.Ins.PlayFx(FxID.sfx_char_skill_9);
-        }
-        else if (eventData_sfx_char_skill_10.Equals(e.Data))
-        {
-            Debug.Log("Play " + e.Data);
-            SoundManager.Ins.PlayFx(FxID.sfx_char_skill_10);
-        }
-        else if (eventData_sfx_char_skill_11.Equals(e.Data))
-        {
-            Debug.Log("Play " + e.Data);
-            SoundManager.Ins.PlayFx(FxID.sfx_char_skill_11);
-        }
-        else if (eventData_hit.Equals(e.Data))
-        {
-            Debug.Log("Play " + e.Data);
+        if (eventData_hit.Equals(e.Data))
             Set_Enemy_Hit_By_event();
+
+        else
+        {
+            string soundName = e.Data.Name.Replace("mp3/","");
+            SoundManager.Ins.PlayFxWithName(soundName);
         }
     }
 
@@ -1358,31 +1302,31 @@ public class Player : MonoBehaviour
             }
         }
 
-        //else
-        //{
-        //    if (ii == 1)
-        //    {
-        //        SetCharacterState_NoLoop(Action_char_15_Skill_1);
-        //        index_Skill_Use = 141;
-        //    }
-        //    else if (ii == 2)
-        //    {
-        //        SetCharacterState_NoLoop(Action_char_15_Skill_2);
-        //        index_Skill_Use = 142;
-        //    }
-        //    else if (ii == 3)
-        //    {
-        //        SetCharacterState_NoLoop(Action_char_15_Skill_3);
-        //        index_Skill_Use = 143;
-        //    }
+        else
+        {
+            if (ii == 1)
+            {
+                SetCharacterState_NoLoop(Action_char_15_Skill_1);
+                index_Skill_Use = 141;
+            }
+            else if (ii == 2)
+            {
+                SetCharacterState_NoLoop(Action_char_15_Skill_2);
+                index_Skill_Use = 142;
+            }
+            else if (ii == 3)
+            {
+                SetCharacterState_NoLoop(Action_char_15_Skill_3);
+                index_Skill_Use = 143;
+            }
 
-        //    else// (ii == 4)
-        //    {
-        //        SetCharacterState_NoLoop(Action_Attack);
-        //        index_Skill_Use = 0;
-        //        SoundManager.Ins.PlayFx(FxID.attack_GamePlay);
-        //    }
-        //}
+            else// (ii == 4)
+            {
+                SetCharacterState_NoLoop(Action_Attack);
+                index_Skill_Use = 0;
+                SoundManager.Ins.PlayFx(FxID.attack_GamePlay);
+            }
+        }
 
         //Debug.Log(id_Skin_Wearing);
         return index_Skill_Use;

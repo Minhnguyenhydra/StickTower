@@ -209,7 +209,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2272971405983033665}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13, y: 57, z: 0}
+  m_LocalPosition: {x: 24, y: -0.2, z: 0}
   m_LocalScale: {x: 90, y: 90, z: 90}
   m_Children: []
   m_Father: {fileID: 4356437556182892223}
@@ -242,10 +242,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d472d809672eb034d93f2a2da00ae587, type: 2}
-  - {fileID: 2100000, guid: c938fbc9e596b6c468ac4e59b1cc67ef, type: 2}
-  - {fileID: 2100000, guid: d472d809672eb034d93f2a2da00ae587, type: 2}
-  - {fileID: 2100000, guid: c938fbc9e596b6c468ac4e59b1cc67ef, type: 2}
+  - {fileID: 2100000, guid: 46caecbd7b01a7644ab3c42ad2708989, type: 2}
+  - {fileID: 2100000, guid: 90b2b0b638889174194ec3cd7c45e2cb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -279,7 +277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 25f796f88ba8a26478e6d7ce73c802d7, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: a5073914432c44643b5f4a56edec3202, type: 2}
   initialSkinName: hero1/weapon_nomal
   initialFlipX: 0
   initialFlipY: 0
@@ -301,7 +299,7 @@ MonoBehaviour:
     materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
-  _animationName: skill_buff_dmg
+  _animationName: idle
   loop: 1
   timeScale: 1
 --- !u!1 &4356437555162577535
@@ -1285,7 +1283,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4356437555688435434
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3208,7 +3206,7 @@ RectTransform:
   m_GameObject: {fileID: 4356437556627231907}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.90000004, y: 0.90000004, z: 0.90000004}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4356437555688435434}
   - {fileID: 4356437556866223651}
@@ -3225,8 +3223,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.5048828, y: 0.97680664}
-  m_SizeDelta: {x: 123.30005, y: 215.6001}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4356437556627231912
 CanvasRenderer:
@@ -3621,15 +3619,15 @@ RectTransform:
   m_GameObject: {fileID: 4356437556866223650}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1, y: 1.2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4356437556627231916}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000000037253, y: 39}
-  m_SizeDelta: {x: 1440, y: 1920}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4356437556866223661
 CanvasRenderer:
@@ -3659,7 +3657,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 547aaabe95e61234da27e9cf1ae36f0c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 52ed00be994dca9458983aad40572bcd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3668,7 +3666,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 15
 --- !u!1 &4356437556873954728
 GameObject:
   m_ObjectHideFlags: 0

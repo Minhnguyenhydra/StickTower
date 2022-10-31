@@ -140,6 +140,23 @@ public class SoundManager : Singleton<SoundManager>
             //Debug.Log(ID);
         }
     }
+
+    public void PlayFxWithName(string soundName)
+    {
+        if (userData.fxIsOn && isLoaded)
+        {
+            for (int i = 0; i < fxAus.Length; i++)
+            {
+                if (fxAus[i].name.Equals(soundName))
+                {
+                    fxSource.PlayOneShot(fxAus[i]);
+                    return;
+                }
+            }
+
+        }
+    }
+
     public void Play_FX_Hit_Enemy_Random()
     {
         int ii = Random.Range(1, 5);

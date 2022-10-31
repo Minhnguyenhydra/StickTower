@@ -62,8 +62,11 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 46caecbd7b01a7644ab3c42ad2708989, type: 2}
   - {fileID: 2100000, guid: 90b2b0b638889174194ec3cd7c45e2cb, type: 2}
+  - {fileID: 2100000, guid: 46caecbd7b01a7644ab3c42ad2708989, type: 2}
+  - {fileID: 2100000, guid: f30a55a4127c4634bb430846f1b7b0d5, type: 2}
+  - {fileID: 2100000, guid: 46caecbd7b01a7644ab3c42ad2708989, type: 2}
+  - {fileID: 2100000, guid: f30a55a4127c4634bb430846f1b7b0d5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -98,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonDataAsset: {fileID: 11400000, guid: a5073914432c44643b5f4a56edec3202, type: 2}
-  initialSkinName: hero1/weapon_bonus1
+  initialSkinName: hero14/weapon_nomal
   initialFlipX: 0
   initialFlipY: 0
   updateWhenInvisible: 3
@@ -120,7 +123,7 @@ MonoBehaviour:
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: 
-  loop: 1
+  loop: 0
   timeScale: 1
 --- !u!65 &1185867302309388883
 BoxCollider:
@@ -237,19 +240,72 @@ MonoBehaviour:
   eventName_sfx_char_skill_8: mp3/sfx_char_skill_8
   eventName_sfx_char_skill_9: mp3/sfx_char_skill_9
   eventName_sfx_char_skill_10: mp3/sfx_char_skill_10
-  eventName_sfx_char_skill_11: mp3/sfx_char_skill_11
+  eventName_sfx_char_skill_11: mp3/sfx_char_skill_10
   logDebugMessage: 0
   tf_Player: {fileID: 8412493010505819487}
   tf_Point_Sword_ADs_Go: {fileID: 7007173840668305086}
   boxCollider_Player: {fileID: 1185867302309388883}
   health: 30
   house_Build_Of_Player: {fileID: 0}
+  lsAnim:
+  - {fileID: 11400000, guid: 5181c41deb4fb484b8f5f5144ee12269, type: 2}
+  - {fileID: 11400000, guid: 583921dd01ced2240a858f96b74935d1, type: 2}
+  - {fileID: 11400000, guid: 6d5ba7a29b21d0a43b097b8e9bf650ab, type: 2}
+  - {fileID: 11400000, guid: debcceb626bc3f04dbbc990399bc829e, type: 2}
+  - {fileID: 11400000, guid: 2147aa6098f110a4385b930234fec3cb, type: 2}
+  - {fileID: 11400000, guid: b397d849963b37a4b8bd83bb8b20d16e, type: 2}
+  - {fileID: 11400000, guid: ee6d45c579e7fce49a363d81c723d0d4, type: 2}
+  - {fileID: 11400000, guid: 041686577e994ae47b4be7a9d7d34c14, type: 2}
+  - {fileID: 11400000, guid: 18d4ff8dcdc17a34bb4660d78ac92c38, type: 2}
+  - {fileID: 11400000, guid: 81a896b75d94a8140aa4d3a7cd54076f, type: 2}
+  - {fileID: 11400000, guid: 5711e221cccc462428c718b8ab50cf0d, type: 2}
+  - {fileID: 11400000, guid: 265d36cb839cbdf4d97f8dee1f754f41, type: 2}
+  - {fileID: 11400000, guid: 431cd58159fc5d04c91261ec135d9f01, type: 2}
+  - {fileID: 11400000, guid: c3069453f4026f0429fdbe12606be34b, type: 2}
+  - {fileID: 11400000, guid: 8b36c21c4e5f2d34f99db4eb74d0bfe3, type: 2}
+  - {fileID: 11400000, guid: c521f8f63dd2e3e428c0b1b0330a4852, type: 2}
+  - {fileID: 11400000, guid: 123b0d213abe42f4da451111d0741786, type: 2}
+  - {fileID: 11400000, guid: 483cc4db3b589b14392f2097507e426f, type: 2}
+  - {fileID: 11400000, guid: 8b5c322414181ad49b2d30d9a6908460, type: 2}
+  - {fileID: 11400000, guid: 2266aff7604a76742a625bec16243f74, type: 2}
+  - {fileID: 11400000, guid: ef858f13fb74eb74292e1781bf4535e6, type: 2}
+  - {fileID: 11400000, guid: e25f12959ba9515409926649d01a4a2a, type: 2}
+  - {fileID: 11400000, guid: 3b9056d04d0a0a14b9f107f7ab67ed89, type: 2}
+  - {fileID: 11400000, guid: 7c64e3e9189e96c4383664b17cff8783, type: 2}
+  - {fileID: 11400000, guid: cc46d25aa4ebf9f43be97114190553f1, type: 2}
+  - {fileID: 11400000, guid: b00292444c3777e44aaec647d52913cf, type: 2}
+  - {fileID: 11400000, guid: 0b98dcc4542df3044b625b6a87bc27b0, type: 2}
+  - {fileID: 11400000, guid: 019bca5edb84125448b93100d917da6c, type: 2}
+  - {fileID: 11400000, guid: 28d28707b9998c140862c229d531cefc, type: 2}
+  - {fileID: 11400000, guid: 8675647905be79c4aa0958ca9ba819db, type: 2}
+  - {fileID: 11400000, guid: df7e7b75a249b6247ba6761ea7f78a70, type: 2}
+  - {fileID: 11400000, guid: 4ebc032aa254f3844aac2ca27d1981f0, type: 2}
+  - {fileID: 11400000, guid: 8ccbcb0d75e20fc449c4c01e900dd7f4, type: 2}
+  - {fileID: 11400000, guid: 3e73ff2925175f14c93c366487854964, type: 2}
+  - {fileID: 11400000, guid: 43f6d41fb02a1ef4f9dea7f81d7b4cee, type: 2}
+  - {fileID: 11400000, guid: d4f22565657ec624ba21f61a601a80a7, type: 2}
+  - {fileID: 11400000, guid: becf1ecfce9395c45860830f1b214453, type: 2}
+  - {fileID: 11400000, guid: 31a4e724417b6de4e80638aa041844c3, type: 2}
+  - {fileID: 11400000, guid: 57bb7183bb0c6964fa433a96687c0797, type: 2}
+  - {fileID: 11400000, guid: 538b3b76d8d231347b25db2880a758b7, type: 2}
+  - {fileID: 11400000, guid: ee9dd6314683b7047a4c0a30d32ca2eb, type: 2}
+  - {fileID: 11400000, guid: a63bb10af8958ba428a6b7d13470e792, type: 2}
+  - {fileID: 11400000, guid: 6bba42be49815344eacf184130156dde, type: 2}
+  - {fileID: 11400000, guid: 53a254512edfe6b4789270b618906cef, type: 2}
+  - {fileID: 11400000, guid: 189570a157cfdb7429c90f61cc344628, type: 2}
+  - {fileID: 11400000, guid: de77784077f949347b9bcc7bb16930ce, type: 2}
+  - {fileID: 11400000, guid: 174f462a4367e9c4bad6157bd1cac2e5, type: 2}
+  - {fileID: 11400000, guid: 86edaa46b2b1ea744988c1ab4b506c5a, type: 2}
+  - {fileID: 11400000, guid: 98d3e0e36e2bf194c81e4b36b9fdd3da, type: 2}
+  - {fileID: 11400000, guid: 11d2dca825422ab4cb22a684f3d5655b, type: 2}
+  - {fileID: 11400000, guid: 35a7dd12344a70947ada8be2048bf3ac, type: 2}
+  - {fileID: 11400000, guid: 3d8416a9620aa1c4a898cc89236ead31, type: 2}
+  - {fileID: 11400000, guid: 9adae68aa96552c439d032f7573bd648, type: 2}
+  - {fileID: 11400000, guid: 992440427a1ea9c47b45834adc8e7e24, type: 2}
+  - {fileID: 11400000, guid: 650f8b8fbe9fab34b9d80759f1fae4af, type: 2}
   Action_Attack: {fileID: 11400000, guid: e60a09aea43bd744493abe98535a515e, type: 2}
   Action_Die: {fileID: 11400000, guid: e02e8fbfd2e678c4f90f32adbada9818, type: 2}
   Action_Die_loop: {fileID: 11400000, guid: 5e6a030bb6db2bc4280d73a9dbb3863e, type: 2}
-  Action_Hit: {fileID: 11400000, guid: 33168852016ef02428c7d8816bc2b8b3, type: 2}
-  Action_Idle: {fileID: 11400000, guid: 34c72f840e0230245b5cb30331578439, type: 2}
-  Action_Run: {fileID: 11400000, guid: eff4055d6513d8745b8533042093bab8, type: 2}
   Action_char_1_Skill_1: {fileID: 11400000, guid: 66d2d631c1ccdf44db86444897b75f85, type: 2}
   Action_char_1_Skill_2: {fileID: 11400000, guid: 27090924fbec2a441a4392133352970c, type: 2}
   Action_char_1_Skill_3: {fileID: 11400000, guid: a3ab4447fd9df624c98b8b53b92234e0, type: 2}
@@ -292,9 +348,15 @@ MonoBehaviour:
   Action_char_14_Skill_1: {fileID: 11400000, guid: fada75872850e894682ed19310d8eb99, type: 2}
   Action_char_14_Skill_2: {fileID: 11400000, guid: bbd7cec5cfc4a47408a78452de451609, type: 2}
   Action_char_14_Skill_3: {fileID: 11400000, guid: 48db05f772633314a8b6a9c6765d4915, type: 2}
-  Action_Victory: {fileID: 11400000, guid: a7af8f5d9ec95304db8ddb43cd374e8b, type: 2}
+  Action_char_15_Skill_1: {fileID: 0}
+  Action_char_15_Skill_2: {fileID: 0}
+  Action_char_15_Skill_3: {fileID: 0}
+  Action_Hit: {fileID: 11400000, guid: 33168852016ef02428c7d8816bc2b8b3, type: 2}
+  Action_Idle: {fileID: 11400000, guid: 34c72f840e0230245b5cb30331578439, type: 2}
   Action_Lose: {fileID: 11400000, guid: b2ab4042f4841f34480ca27e5ee7fd7a, type: 2}
+  Action_Run: {fileID: 11400000, guid: eff4055d6513d8745b8533042093bab8, type: 2}
   Action_buffdamge: {fileID: 11400000, guid: 10a5f368a26a3294b9eaee865178090a, type: 2}
+  Action_Victory: {fileID: 11400000, guid: a7af8f5d9ec95304db8ddb43cd374e8b, type: 2}
   Action_Dam: {fileID: 11400000, guid: b103fb7183c073049b0236b2d9b6b276, type: 2}
   isDoneFight_Boss: 0
   isDie: 0

@@ -1017,9 +1017,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 319874e9345f32b458fbee077bb5b0c8, type: 2}
-  - {fileID: 2100000, guid: 380e1e1bd251f28439deb27dc493dc0f, type: 2}
-  - {fileID: 2100000, guid: 319874e9345f32b458fbee077bb5b0c8, type: 2}
+  - {fileID: 2100000, guid: 46caecbd7b01a7644ab3c42ad2708989, type: 2}
+  - {fileID: 2100000, guid: 90b2b0b638889174194ec3cd7c45e2cb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1053,7 +1052,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 25f796f88ba8a26478e6d7ce73c802d7, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: a5073914432c44643b5f4a56edec3202, type: 2}
   initialSkinName: hero2/weapon_bonus1
   initialFlipX: 0
   initialFlipY: 0
@@ -1674,7 +1673,6 @@ GameObject:
   - component: {fileID: 8343629655301455764}
   - component: {fileID: 8343629655301455771}
   - component: {fileID: 8343629655301455770}
-  - component: {fileID: 7427596415476652541}
   m_Layer: 5
   m_Name: CanvasWin
   m_TagString: Untagged
@@ -1804,41 +1802,6 @@ MonoBehaviour:
   rect_Icon_Living: {fileID: 0}
   multiX: 0
   goldCollected: 0
---- !u!114 &7427596415476652541
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8343629655301455765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f46ee005634a77545956a56104963e36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _screne_Size_current: 0
-  _screne_Size_last: 0
-  rect_Table_Level: {fileID: 8343629656746788232}
-  rect_Title_YouWin: {fileID: 326756613684668958}
-  rect_Roll_bar: {fileID: 8343629656259580583}
-  rect_Claim_ADs: {fileID: 8343629656678907130}
-  rect_Claim_no_ADs: {fileID: 8343629655296130997}
-  rect_NoThank: {fileID: 8343629655493801286}
-  rect_Gold_Gem_Boot: {fileID: 3971907168234526568}
-  vec_rect_Table_Level_720: {x: 0, y: 0, z: 0}
-  vec_rect_Title_YouWin_720: {x: 0, y: 0, z: 0}
-  vec_rect_Roll_bar_720: {x: 0, y: 0, z: 0}
-  vec_rect_Claim_ADs_720: {x: 0, y: 0, z: 0}
-  vec_rect_Claim_no_ADs_720: {x: 0, y: 0, z: 0}
-  vec_rect_NoThank_720: {x: 0, y: 0, z: 0}
-  vec_rect_Gold_Gem_Boot_720: {x: 0, y: 0, z: 0}
-  vec_rect_Table_Level_1024: {x: 0, y: 0, z: 0}
-  vec_rect_Title_YouWin_1024: {x: 0, y: 0, z: 0}
-  vec_rect_Roll_bar_1024: {x: 0, y: 0, z: 0}
-  vec_rect_Claim_ADs_1024: {x: 0, y: 0, z: 0}
-  vec_rect_Claim_no_ADs_1024: {x: 0, y: 0, z: 0}
-  vec_rect_NoThank_1024: {x: 0, y: 0, z: 0}
-  vec_rect_Gold_Gem_Boot_1024: {x: 0, y: 0, z: 0}
 --- !u!1 &8343629655343988443
 GameObject:
   m_ObjectHideFlags: 0

@@ -36,18 +36,18 @@ public class UnityAds : MonoBehaviour
     public async void Init()
     {
         #region Init Banner Ads
-        try
-        {
-            Debug.Log("Banner Initializing...");
-            await UnityServices.InitializeAsync(GetGameId());
-            Debug.Log("Banner Initialized!");
+        //try
+        //{
+        //    Debug.Log("Banner Initializing...");
+        //    await UnityServices.InitializeAsync(GetGameId());
+        //    Debug.Log("Banner Initialized!");
 
-            Banner_InitializationComplete();
-        }
-        catch (Exception e)
-        {
-            Banner_InitializationFailed(e);
-        }
+        //    Banner_InitializationComplete();
+        //}
+        //catch (Exception e)
+        //{
+        //    Banner_InitializationFailed(e);
+        //}
         #endregion
 
         #region Init Reward Ads
@@ -81,7 +81,7 @@ public class UnityAds : MonoBehaviour
 
     public void OnDestroy()
     {
-        m_BannerAd.Dispose();
+        m_BannerAd?.Dispose();
         m_RewardedAd?.Dispose();
         m_InterstitialAd?.Dispose();
     }
