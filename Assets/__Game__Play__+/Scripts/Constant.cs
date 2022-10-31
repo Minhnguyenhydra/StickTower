@@ -69,6 +69,15 @@ public class Constant
     public readonly static Vector3 Enemy_Local_Pos_Health_Bar_Boar = new Vector3(0, 2.5f, 0);
     public readonly static Vector3 Enemy_offset_Blood = new Vector3(0, 1.3f, 0);
     public readonly static int Gold_Max_Pink_Bank = 2000;
+
+    //Level challege
+    public readonly static int LEVEL_1 = 22;
+    public readonly static int LEVEL_2 = 43;
+    public readonly static int LEVEL_3 = 53;
+    public readonly static int LEVEL_4 = 63;
+    public readonly static int LEVEL_5 = 73;
+    public readonly static int LEVEL_6 = 103;
+
     #endregion
     #region Buff Skill
     public readonly static float BuffSkill_1 = 1f;

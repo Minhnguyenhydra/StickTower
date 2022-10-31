@@ -69,9 +69,22 @@ public class CanvasChallenge : UICanvas
         
         SoundManager.Ins.PlayFx(FxID.click);
         PlayerPrefs_Manager.Set_Gold(PlayerPrefs_Manager.Get_Gold() - 100);
-        PlayerPrefs_Manager.Set_Replay_Level(22);
+
+        int level = GetChallegeLevel();
+        PlayerPrefs_Manager.Set_Replay_Level(level);
         Set_Btn_On(Enum_Type_Btn_Challenge.Replay);
     }
+
+    private int GetChallegeLevel()
+    {
+        int level = challengeControll.ii == 0 ? Constant.LEVEL_1 :
+                    challengeControll.ii == 1 ? Constant.LEVEL_2 :
+                    challengeControll.ii == 2 ? Constant.LEVEL_3 :
+                    challengeControll.ii == 3 ? Constant.LEVEL_4 :
+                    challengeControll.ii == 4 ? Constant.LEVEL_5 : Constant.LEVEL_6; 
+        return level;
+    }
+
     public void Set_Btn_On(Enum_Type_Btn_Challenge ee)
     {
         if (ee == Enum_Type_Btn_Challenge.No_Reach_Level)
