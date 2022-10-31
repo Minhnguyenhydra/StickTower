@@ -2622,17 +2622,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57ec1ac1a5af06b4eb2f68f0bc56c6a0, type: 3}
---- !u!114 &701775095 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 89433592585594366, guid: 57ec1ac1a5af06b4eb2f68f0bc56c6a0, type: 3}
-  m_PrefabInstance: {fileID: 701775094}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab12c16ebd3f35f49830877710cafb0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &703358447
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3857,6 +3846,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 394060274}
     - target: {fileID: 4645105685314787640, guid: 8a1faec4b324df34ead02bbc422f6b49, type: 3}
+      propertyPath: listUICanvas_MrQuan_Custom.Array.size
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 4645105685314787640, guid: 8a1faec4b324df34ead02bbc422f6b49, type: 3}
       propertyPath: listUICanvas_MrQuan_Custom.Array.data[0]
       value: 
       objectReference: {fileID: 2133552074}
@@ -3875,63 +3868,63 @@ PrefabInstance:
     - target: {fileID: 4645105685314787640, guid: 8a1faec4b324df34ead02bbc422f6b49, type: 3}
       propertyPath: listUICanvas_MrQuan_Custom.Array.data[4]
       value: 
-      objectReference: {fileID: 701775095}
+      objectReference: {fileID: 1178723191}
     - target: {fileID: 4645105685314787640, guid: 8a1faec4b324df34ead02bbc422f6b49, type: 3}
       propertyPath: listUICanvas_MrQuan_Custom.Array.data[5]
       value: 
-      objectReference: {fileID: 1178723191}
+      objectReference: {fileID: 361690640}
     - target: {fileID: 4645105685314787640, guid: 8a1faec4b324df34ead02bbc422f6b49, type: 3}
       propertyPath: listUICanvas_MrQuan_Custom.Array.data[6]
       value: 
-      objectReference: {fileID: 361690640}
+      objectReference: {fileID: 1356014785}
     - target: {fileID: 4645105685314787640, guid: 8a1faec4b324df34ead02bbc422f6b49, type: 3}
       propertyPath: listUICanvas_MrQuan_Custom.Array.data[7]
       value: 
-      objectReference: {fileID: 1356014785}
+      objectReference: {fileID: 360480390}
     - target: {fileID: 4645105685314787640, guid: 8a1faec4b324df34ead02bbc422f6b49, type: 3}
       propertyPath: listUICanvas_MrQuan_Custom.Array.data[8]
       value: 
-      objectReference: {fileID: 360480390}
+      objectReference: {fileID: 1863360303}
     - target: {fileID: 4645105685314787640, guid: 8a1faec4b324df34ead02bbc422f6b49, type: 3}
       propertyPath: listUICanvas_MrQuan_Custom.Array.data[9]
       value: 
-      objectReference: {fileID: 1863360303}
+      objectReference: {fileID: 502732642}
     - target: {fileID: 4645105685314787640, guid: 8a1faec4b324df34ead02bbc422f6b49, type: 3}
       propertyPath: listUICanvas_MrQuan_Custom.Array.data[10]
       value: 
-      objectReference: {fileID: 502732642}
+      objectReference: {fileID: 1128271398}
     - target: {fileID: 4645105685314787640, guid: 8a1faec4b324df34ead02bbc422f6b49, type: 3}
       propertyPath: listUICanvas_MrQuan_Custom.Array.data[11]
       value: 
-      objectReference: {fileID: 1128271398}
+      objectReference: {fileID: 1381893895}
     - target: {fileID: 4645105685314787640, guid: 8a1faec4b324df34ead02bbc422f6b49, type: 3}
       propertyPath: listUICanvas_MrQuan_Custom.Array.data[12]
       value: 
-      objectReference: {fileID: 1381893895}
+      objectReference: {fileID: 741243222}
     - target: {fileID: 4645105685314787640, guid: 8a1faec4b324df34ead02bbc422f6b49, type: 3}
       propertyPath: listUICanvas_MrQuan_Custom.Array.data[13]
       value: 
-      objectReference: {fileID: 741243222}
+      objectReference: {fileID: 1135770541}
     - target: {fileID: 4645105685314787640, guid: 8a1faec4b324df34ead02bbc422f6b49, type: 3}
       propertyPath: listUICanvas_MrQuan_Custom.Array.data[14]
       value: 
-      objectReference: {fileID: 1135770541}
+      objectReference: {fileID: 1186766613}
     - target: {fileID: 4645105685314787640, guid: 8a1faec4b324df34ead02bbc422f6b49, type: 3}
       propertyPath: listUICanvas_MrQuan_Custom.Array.data[15]
       value: 
-      objectReference: {fileID: 1186766613}
+      objectReference: {fileID: 131122788}
     - target: {fileID: 4645105685314787640, guid: 8a1faec4b324df34ead02bbc422f6b49, type: 3}
       propertyPath: listUICanvas_MrQuan_Custom.Array.data[16]
       value: 
-      objectReference: {fileID: 131122788}
+      objectReference: {fileID: 520160870}
     - target: {fileID: 4645105685314787640, guid: 8a1faec4b324df34ead02bbc422f6b49, type: 3}
       propertyPath: listUICanvas_MrQuan_Custom.Array.data[17]
       value: 
-      objectReference: {fileID: 520160870}
+      objectReference: {fileID: 1864734926}
     - target: {fileID: 4645105685314787640, guid: 8a1faec4b324df34ead02bbc422f6b49, type: 3}
       propertyPath: listUICanvas_MrQuan_Custom.Array.data[18]
       value: 
-      objectReference: {fileID: 1864734926}
+      objectReference: {fileID: 306930497}
     - target: {fileID: 4645105685314787640, guid: 8a1faec4b324df34ead02bbc422f6b49, type: 3}
       propertyPath: listUICanvas_MrQuan_Custom.Array.data[19]
       value: 
@@ -8322,6 +8315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBoss_auto_Asign: {fileID: 0}
+  GMState: 0
 --- !u!1 &1989891923
 GameObject:
   m_ObjectHideFlags: 0
