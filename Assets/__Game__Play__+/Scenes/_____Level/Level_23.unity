@@ -722,7 +722,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3084026206248775594, guid: fca6fa56ba3fe9d4bb164811d1aaf58e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -343
+      value: -343.00003
       objectReference: {fileID: 0}
     - target: {fileID: 3084026206248775594, guid: fca6fa56ba3fe9d4bb164811d1aaf58e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -765,6 +765,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 517393662}
     m_Modifications:
+    - target: {fileID: 1418943601510538662, guid: bc77f4b5e1601404c863289b32d48fc1, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4356437555208703584, guid: bc77f4b5e1601404c863289b32d48fc1, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -1687,6 +1691,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas_Game_Play
       objectReference: {fileID: 0}
+    - target: {fileID: 8797440987499217867, guid: 35e5dd44d7b6ffc4bbf96a8d8c1d2c97, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8797440987499217869, guid: 35e5dd44d7b6ffc4bbf96a8d8c1d2c97, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1771,6 +1779,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8797440987541422034, guid: 35e5dd44d7b6ffc4bbf96a8d8c1d2c97, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35e5dd44d7b6ffc4bbf96a8d8c1d2c97, type: 3}
 --- !u!114 &476268169 stripped
@@ -1795,6 +1807,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 3521460}
+    - target: {fileID: 129171450320422709, guid: afd437ca0e3e00240b233cec10110c71, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 129171450320422712, guid: afd437ca0e3e00240b233cec10110c71, type: 3}
       propertyPath: m_Name
       value: Canvas_main_Parent
@@ -2086,7 +2102,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 558937839}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.28, y: 12.92, z: 0}
+  m_LocalPosition: {x: 0.09, y: 15.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2100835530}
@@ -6912,6 +6928,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bonus Level
       objectReference: {fileID: 0}
+    - target: {fileID: 8896464291589357396, guid: 8d9e201e93035e34fbf2dc0bf3804c9e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8896464291589357397, guid: 8d9e201e93035e34fbf2dc0bf3804c9e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -7286,6 +7306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBoss_auto_Asign: {fileID: 0}
+  GMState: 0
 --- !u!1 &1922767396
 GameObject:
   m_ObjectHideFlags: 0
@@ -7354,6 +7375,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1745067272}
     m_Modifications:
+    - target: {fileID: 4397468731127861350, guid: ff7f7be29037ced46bdf382d03de54a2, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4397468731256697646, guid: ff7f7be29037ced46bdf382d03de54a2, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4397468731378548772, guid: ff7f7be29037ced46bdf382d03de54a2, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4397468731536290069, guid: ff7f7be29037ced46bdf382d03de54a2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4397468731567090282, guid: ff7f7be29037ced46bdf382d03de54a2, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4397468732401425552, guid: ff7f7be29037ced46bdf382d03de54a2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -7441,6 +7482,10 @@ PrefabInstance:
     - target: {fileID: 4397468732401425555, guid: ff7f7be29037ced46bdf382d03de54a2, type: 3}
       propertyPath: m_Name
       value: Pos__Gold_Gem_Piggy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4397468732401425555, guid: ff7f7be29037ced46bdf382d03de54a2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff7f7be29037ced46bdf382d03de54a2, type: 3}
