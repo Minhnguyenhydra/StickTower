@@ -141,13 +141,11 @@ public class Enemy : MonoBehaviour
         //Delay player dùng hết Skill.......
         #region  Get_Index_Skill Player đang dùng
         //Đã set Player Attack trước rồi mới set action cho enemy
-        int index_Skill = Player.ins.Get_Index_Skil_Using_Attack();
-
-        float time_Until_End_Skill = Constant.Get_Time_Skill(index_Skill);
+        float skillDuration = Player.ins.Get_Index_Skil_Using_Attack();
 
         float time_action_Hit = Constant.Get_Time_action_Hit_Enemy(isBig_Enemy);
 
-        yield return Cache.GetWFS(time_Until_End_Skill - time_action_Hit - _time_show_blood);
+        yield return Cache.GetWFS(skillDuration - time_action_Hit - _time_show_blood);
 
 
 
@@ -164,6 +162,11 @@ public class Enemy : MonoBehaviour
         //bật anim enemy die........
         SetCharacterState_NoLoop(Action_Die);
         SoundManager.Ins.Play_FX_Hit_Enemy_Random();
+
+        //If level is zero need enable tut 2
+        if (PlayerPrefs_Manager.Get_Index_Level_Normal() == 0)
+            Tut_0_Game_Play.Ins.Set_Tut_0_2();
+
         float time_action_Die = Constant.Get_Time_action_Die_Enemy(isBig_Enemy);
         yield return Cache.GetWFS(time_action_Die);
 
@@ -203,8 +206,7 @@ public class Enemy : MonoBehaviour
             Destroy(this.gameObject);
 
         }
-            //gameObject.SetActive(false);
-        
+        //gameObject.SetActive(false);
     }
     IEnumerator Delay_AttackTo_Idle()
     {
