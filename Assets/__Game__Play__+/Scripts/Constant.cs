@@ -484,7 +484,7 @@ public class Constant
             case 21:
                 return "Level 21 - Save ally";
             case 22:
-                return "Level 22 - Find treasure";
+                return "Level 22 - Kill enemies";
             case 23:
                 return "Level 23 - Find treasure";
             case 24:
