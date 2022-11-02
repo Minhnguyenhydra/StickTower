@@ -1,0 +1,55 @@
+
+win lose.png
+size: 1108,688
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Arrow
+  rotate: false
+  xy: 865, 127
+  size: 131, 206
+  orig: 131, 206
+  offset: 0, 0
+  index: -1
+Banner_Lose
+  rotate: false
+  xy: 2, 335
+  size: 1002, 349
+  orig: 1002, 349
+  offset: 0, 0
+  index: -1
+Flag_lose
+  rotate: false
+  xy: 371, 78
+  size: 284, 255
+  orig: 284, 255
+  offset: 0, 0
+  index: -1
+Flag_lose_2
+  rotate: true
+  xy: 657, 175
+  size: 158, 206
+  orig: 158, 206
+  offset: 0, 0
+  index: -1
+Skull
+  rotate: true
+  xy: 657, 2
+  size: 171, 177
+  orig: 171, 177
+  offset: 0, 0
+  index: -1
+Swood _Lose
+  rotate: false
+  xy: 2, 3
+  size: 367, 330
+  orig: 367, 330
+  offset: 0, 0
+  index: -1
+you lose
+  rotate: true
+  xy: 1006, 99
+  size: 585, 97
+  orig: 585, 97
+  offset: 0, 0
+  index: -1

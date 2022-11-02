@@ -1,0 +1,90 @@
+
+win lose.png
+size: 3668,356
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Banner_win
+  rotate: false
+  xy: 2, 4
+  size: 1011, 349
+  orig: 1011, 349
+  offset: 0, 0
+  index: -1
+Crown
+  rotate: false
+  xy: 3431, 11
+  size: 117, 86
+  orig: 117, 86
+  offset: 0, 0
+  index: -1
+Flag_win_1
+  rotate: true
+  xy: 1864, 40
+  size: 313, 369
+  orig: 313, 369
+  offset: 0, 0
+  index: -1
+STAR LIGHT
+  rotate: true
+  xy: 2700, 95
+  size: 258, 256
+  orig: 258, 256
+  offset: 0, 0
+  index: -1
+Sheld
+  rotate: false
+  xy: 2958, 107
+  size: 230, 246
+  orig: 230, 246
+  offset: 0, 0
+  index: -1
+Star
+  rotate: false
+  xy: 1015, 191
+  size: 847, 162
+  orig: 847, 162
+  offset: 0, 0
+  index: -1
+Star_shadow
+  rotate: false
+  xy: 1015, 53
+  size: 847, 136
+  orig: 847, 136
+  offset: 0, 0
+  index: -1
+Swood_shadow
+  rotate: true
+  xy: 3431, 99
+  size: 254, 233
+  orig: 254, 233
+  offset: 0, 0
+  index: -1
+Swood_win
+  rotate: true
+  xy: 3191, 89
+  size: 264, 238
+  orig: 264, 238
+  offset: 0, 0
+  index: -1
+Trumpet_1
+  rotate: true
+  xy: 2235, 18
+  size: 335, 231
+  orig: 335, 231
+  offset: 0, 0
+  index: -1
+Trumpet_2
+  rotate: true
+  xy: 2468, 18
+  size: 335, 230
+  orig: 335, 230
+  offset: 0, 0
+  index: -1
+you win
+  rotate: false
+  xy: 2700, 2
+  size: 489, 91
+  orig: 489, 91
+  offset: 0, 0
+  index: -1
