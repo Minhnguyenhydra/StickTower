@@ -276,9 +276,9 @@ public class CanvasFight_Boss : UICanvas
 
 
                     isAttacking = true;
-                    int index_Skill = Player.ins.Set_Random_Skill_attack_BOSS();
+                    Player.ins.Random_Skill_attack_BOSS();
                     //Debug.Log(index_Skill);
-                    time_Count_Downt_attack = Constant.Get_Time_Skill(index_Skill);
+                    time_Count_Downt_attack = Player.ins.Get_Index_Skil_Using_Attack();
                     //if (index_Skill == 1)
                     //{
                     //}
