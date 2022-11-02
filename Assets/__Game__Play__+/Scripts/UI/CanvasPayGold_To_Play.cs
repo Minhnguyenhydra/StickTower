@@ -13,29 +13,24 @@ public class CanvasPayGold_To_Play : UICanvas
     public GameObject obj_RewardArea;//Khối viết chữ gold, gem nhận được.. có level có.. có level ko, đây đang gộp lại
     public Animator anim;
 
-    private void Awake()
-    {
-        
-    }
-    private void Start()
-    {
-        
-    }
+    private int[] rewards = new int[] {100, 1};
+
     private void OnEnable()
     {
         int level = PlayerPrefs_Manager.Get_Index_Level_Normal();
         //0:Gold .... 1 Gem
-        txtGoldReward.text = Constant.Get_Reward_Gold_Gem_By_Pay_Gold(level)[0].ToString();
-        txtGemReward.text = Constant.Get_Reward_Gold_Gem_By_Pay_Gold(level)[1].ToString();
+        rewards = Constant.Get_Reward_Gold_Gem_By_Pay_Gold(level);
+        txtGoldReward.text = rewards[0].ToString();
+        txtGemReward.text = rewards[1].ToString();
         if (level == 14)
         {
             txtPAY_100_GOLD.text = "Watch advertisement\nto play this level";
         }
         else if (level == 22)
         {
-            txtPAY_100_GOLD.text = "Pay 100 gold to play\nthis level";
+            txtPAY_100_GOLD.text = $"Pay {rewards[0]} gold to play\nthis level";
         }
-        else if (level == 30 || level == 26|| level == 16|| level == 14)
+        else if (level == 30 || level == 26 || level == 16 || level == 14)
         {
             txtPAY_100_GOLD.text = "Watch advertisement\nto play this level";
         }
@@ -44,7 +39,7 @@ public class CanvasPayGold_To_Play : UICanvas
             obj_RewardArea.SetActive(false);
         }
     }
-    
+
     //
     public void PlayButton()
     {
@@ -52,15 +47,9 @@ public class CanvasPayGold_To_Play : UICanvas
 
         //28-10
         int _gold_current = PlayerPrefs_Manager.Get_Gold();
-        _gold_current -= 100;
-        if (_gold_current >= 0)
-        {
-            PlayerPrefs_Manager.Set_Gold(_gold_current);
-
-            CloseButton();
-
-        }
-
+        _gold_current = Mathf.Clamp(_gold_current - rewards[0], 0, int.MaxValue);
+        PlayerPrefs_Manager.Set_Gold(_gold_current);
+        CloseButton();
     }
     //
     public void NextLevelButton()
@@ -85,7 +74,7 @@ public class CanvasPayGold_To_Play : UICanvas
     public void Test_Reset_Level()
     {
         PlayerPrefs_Manager.Set_Index_Level_Normal(7);
-        
+
 
     }
 }

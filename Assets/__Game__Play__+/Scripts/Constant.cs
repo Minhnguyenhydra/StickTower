@@ -411,29 +411,13 @@ public class Constant
         }
 
     }
-    public static List<int> Get_Reward_Gold_Gem_By_Pay_Gold(int level)
+    public static int[] Get_Reward_Gold_Gem_By_Pay_Gold(int level)
     {
-        List<int> li = new List<int>();
-        
-        if (level == 14 || level == 30)
-        {
-            li.Add(100);//0: gold
-            li.Add(1);//1 gem
-            return li;
-        }
-        else if (level == 22)
-        {
-            li.Add(200);//0: gold
-            li.Add(1);//1 gem
-            return li;
-        }
-        else
-        {
-            li.Add(100);//0: gold
-            li.Add(1);//1 gem
-            return li;
-        }
+        if (level == 22)
+            return new int[] { 200, 1 };
 
+        else
+            return new int[] { 100, 1 };
     }
     public static string Get_Tile_Game_Play_By_Level(int _level)
     {
