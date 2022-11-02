@@ -52,19 +52,21 @@ MonoBehaviour:
   health: 12
   isBig_Enemy: 0
   skeletonAnimation: {fileID: 4190951811409365762}
-  Action_Idle: {fileID: 11400000, guid: 95fd53bafd02a4746ae05a69d4e5450a, type: 2}
-  Action_Attack: {fileID: 11400000, guid: 6d2ba6cf2a413814b997d9786ed90712, type: 2}
-  Action_Run: {fileID: 11400000, guid: cd2d37465e998de41992fceab834d7fb, type: 2}
-  Action_Takedamge: {fileID: 11400000, guid: 2b03d78a32d0fe448909e19f14916add, type: 2}
-  Action_Die: {fileID: 11400000, guid: dd0859f22167379448ce4ac1f42396f4, type: 2}
-  Action_Victory: {fileID: 11400000, guid: 21450f55790b46043a04f0ded001a665, type: 2}
+  Action_Idle: {fileID: 11400000, guid: 0c04d43c0c1e41044b013e04d6e21c03, type: 2}
+  Action_Attack: {fileID: 11400000, guid: 8dcb515215ed0a944aa0fe2b513d44c6, type: 2}
+  Action_Run: {fileID: 11400000, guid: c0481c64ab26d3a4390e7069cb1cc735, type: 2}
+  Action_Takedamge: {fileID: 11400000, guid: 45780d733fd198045ba83323177fbc64, type: 2}
+  Action_Die: {fileID: 11400000, guid: 46e569098722e1f4e939bd263875e531, type: 2}
+  Action_Victory: {fileID: 11400000, guid: f783b8f1b6a0ec3419f617bb32d3e4b2, type: 2}
   Action_Lose: {fileID: 0}
   key_Floor_To_Open_Lock_Floor: {fileID: 0}
   floor_This: {fileID: 0}
   tf_Enemy: {fileID: 0}
   isDieing: 0
+  isDieing_Fight_Boss: 0
   isFist_config: 0
   health_Bar: {fileID: 0}
+  isFist_time_Die: 0
   index_Hit_Player: 0
 --- !u!1 &4059003679739256008
 GameObject:
@@ -126,7 +128,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7673ecdc86e9fe846a903fc0f80c2f79, type: 2}
+  - {fileID: 2100000, guid: 5c8aca137f1bc8e49b747daef761e9c6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -160,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: b2360bacd76bdd74c83b9c4cf07a6789, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: 1924eeeddf523854ea6c77cb31f5daba, type: 2}
   initialSkinName: skeleton2
   initialFlipX: 0
   initialFlipY: 0

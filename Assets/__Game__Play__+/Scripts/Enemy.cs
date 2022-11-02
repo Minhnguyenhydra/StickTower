@@ -47,6 +47,7 @@ public class Enemy : MonoBehaviour
         isFist_config = false;
         tf_Enemy = transform;
         //health = Constant.GetHealt_By_Type();
+        RegisterHandleAnimEvent();
         Set_Spawn_Health_Bar();
         //
         //Phải gắn Enemy vào Point trước
@@ -56,6 +57,17 @@ public class Enemy : MonoBehaviour
             GetComponentInParent<Point_In_Floor>().Set_Not_Empty();
         }
         Set_Idle();
+    }
+
+    private void RegisterHandleAnimEvent()
+    {
+        skeletonAnimation.AnimationState.Event += HandleAnimationStateEvent;
+        skeletonAnimation.Initialize(false);
+    }
+
+    private void HandleAnimationStateEvent(TrackEntry trackEntry, Spine.Event e)
+    {
+        
     }
 
     // Update is called once per frame
@@ -212,7 +224,7 @@ public class Enemy : MonoBehaviour
     {
 
         SetCharacterState_NoLoop(Action_Attack);
-        yield return Cache.GetWFS(Constant.Time_Player_Die_attack);
+        yield return Cache.GetWFS(Action_Attack.Animation.Duration);
         ReSetCharacterState();
         SetCharacterState_Loop(Action_Idle);
     }

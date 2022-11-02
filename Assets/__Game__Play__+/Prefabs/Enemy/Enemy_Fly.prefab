@@ -57,8 +57,8 @@ MonoBehaviour:
   Action_Run: {fileID: 11400000, guid: da2bd36688f592b4596915f371ca8cd8, type: 2}
   Action_Takedamge: {fileID: 11400000, guid: efca83904fd2f9b41b6e4f83ace0bf99, type: 2}
   Action_Die: {fileID: 11400000, guid: 71ebbf2ade86a22439f22973b72e2c88, type: 2}
-  Action_Victory: {fileID: 11400000, guid: 7fadcec050b3aa34c886d45eca67ed66, type: 2}
-  Action_Lose: {fileID: 11400000, guid: 71ebbf2ade86a22439f22973b72e2c88, type: 2}
+  Action_Victory: {fileID: 0}
+  Action_Lose: {fileID: 0}
   key_Floor_To_Open_Lock_Floor: {fileID: 0}
   floor_This: {fileID: 0}
   tf_Enemy: {fileID: 0}
@@ -66,6 +66,7 @@ MonoBehaviour:
   isDieing_Fight_Boss: 0
   isFist_config: 0
   health_Bar: {fileID: 0}
+  isFist_time_Die: 0
   index_Hit_Player: 0
 --- !u!1 &3634176433654435896
 GameObject:
@@ -127,7 +128,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 633fa27e2043a5b48a9e07e2cbd6053f, type: 2}
+  - {fileID: 2100000, guid: 6f601a71ec5d9db48a70c297be383f6f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -161,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 9560a23d8ca147941a9f280575a5e840, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: af333bf85cf1cce44b8b3b6c841e51f6, type: 2}
   initialSkinName: 
   initialFlipX: 0
   initialFlipY: 0

@@ -451,7 +451,11 @@ public class Player : MonoBehaviour
             GameManager.Ins.Set_Bool_Lose_Boss();
             Set_Config_Boss_Win_End_Level();
         }
-        //yield return Cache.GetWFS(Constant.Time_Player_Show_Blood);
+
+        // Just wait 50% duration anim attack with Big Enemy, 60% with Normal Enemy
+        float animDuration = enemy_Hitting.isBig_Enemy ? enemy_Hitting.Action_Attack.Animation.Duration * 0.5f
+                                                       : enemy_Hitting.Action_Attack.Animation.Duration * 0.6f;
+        yield return Cache.GetWFS(animDuration); 
         Set_Show_Blood();
         //ADD: Hit --> Die
         SetCharacterState_NoLoop(Action_Hit);
