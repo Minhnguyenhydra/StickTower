@@ -55,8 +55,9 @@ public class CanvasArea : UICanvas
         Init_Area.Ins.OnInit();
 
         //
-        UIManager.Ins.OpenUI(UIID.UICMainMenu);
+        //UIManager.Ins.OpenUI(UIID.UICMainMenu);
         Close();
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
     public void ReLoad_UI_Gold()
     {

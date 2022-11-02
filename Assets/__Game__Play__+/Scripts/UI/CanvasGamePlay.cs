@@ -141,8 +141,8 @@ public class CanvasGamePlay : UICanvas
     {
         SoundManager.Ins.PlayFx(FxID.click);
         GameManager.Ins.GMState = GameManager.GameState.Stoped;
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
         Close();
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
 
     public void RePlay_Button()
