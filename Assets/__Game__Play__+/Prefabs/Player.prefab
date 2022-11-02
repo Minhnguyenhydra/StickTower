@@ -302,7 +302,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3d8416a9620aa1c4a898cc89236ead31, type: 2}
   - {fileID: 11400000, guid: 9adae68aa96552c439d032f7573bd648, type: 2}
   - {fileID: 11400000, guid: 992440427a1ea9c47b45834adc8e7e24, type: 2}
-  - {fileID: 11400000, guid: 650f8b8fbe9fab34b9d80759f1fae4af, type: 2}
+  - {fileID: 11400000, guid: 303b8f218f0a6c54ab6e36a8e7265f11, type: 2}
   Action_Attack: {fileID: 11400000, guid: e60a09aea43bd744493abe98535a515e, type: 2}
   Action_Die: {fileID: 11400000, guid: e02e8fbfd2e678c4f90f32adbada9818, type: 2}
   Action_Die_loop: {fileID: 11400000, guid: 5e6a030bb6db2bc4280d73a9dbb3863e, type: 2}
