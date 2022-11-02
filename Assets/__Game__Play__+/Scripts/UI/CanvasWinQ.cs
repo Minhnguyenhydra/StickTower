@@ -24,17 +24,14 @@ public class CanvasWinQ : UICanvas
     private float range = 350f;
     //private float wallXTime;
     public Text reward_ADsTxt;
-    public Text reward_No_ADsTxt;
     public Text claimTxt;
     public Text gem_all;
     //
     public GameObject obj_Btn_No_Thank;
     public GameObject obj_Image_Claim_ADs;
-    public GameObject obj_Image_Claim_No_ADs;
     //
     public GameObject obj_Image_BG_ADs_Xanh;
     public GameObject obj_Image_BG_ADs__Xam;
-    public GameObject obj_Image_BG_No_ADs__Xam;
     public bool isFist_Click;
     public Transform tf_Spawn_Fire_Work;
     #region Gold_Gem
@@ -85,7 +82,6 @@ public class CanvasWinQ : UICanvas
         multiX = GetXRewardCount();
         //rewardTxt.text = ((int)((int)(gemCollected * wallXTime) * multiX)).ToString();
         reward_ADsTxt.text = ((int)((int)(goldCollected) * multiX)).ToString();
-        reward_No_ADsTxt.text = ((int)((int)(goldCollected) * multiX)).ToString();
     }
     public void Set_Init()
     {
@@ -104,17 +100,15 @@ public class CanvasWinQ : UICanvas
         }
 
 
-        if (level < 2)
-        {
-            obj_Image_Claim_ADs.SetActive(false);
-            obj_Image_Claim_No_ADs.SetActive(true);
-        }
-        else
-        {
-            //EfxManager.ins.Set_Gold_Fly_Pig_OK();
-            obj_Image_Claim_ADs.SetActive(true);
-            obj_Image_Claim_No_ADs.SetActive(false);
-        }
+        //if (level < 2)
+        //{
+        //    obj_Image_Claim_ADs.SetActive(false);
+        //}
+        //else
+        //{
+        //    //EfxManager.ins.Set_Gold_Fly_Pig_OK();
+        //    obj_Image_Claim_ADs.SetActive(true);
+        //}
         //UNDONE:  LOAD........ gold của Player hiện lên canvas
         //UNDONE: Set............ gemCollected
         goldCollected = Constant.Get_Gold_Reward_By_level(PlayerPrefs_Manager.Get_Index_Level_Normal());
@@ -422,7 +416,6 @@ public class CanvasWinQ : UICanvas
         if (!isFist_Click)
         {
             isFist_Click = true;
-            obj_Image_BG_No_ADs__Xam.SetActive(true);
             isStop = true;
             StartCoroutine(Delay_Increa_Gem());
             Set_Fade_And_Close();
