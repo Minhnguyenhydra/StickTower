@@ -162,6 +162,11 @@ public class Constant
     public readonly static string Trigger_Tut_0_3 = "tut_03";
     public readonly static string Trigger_Tut_0_1 = "tut_01";
     public readonly static string Trigger_Tut_0_2 = "tut_02";
+    public readonly static string AnimLevel1_0 = "animLevel1_0";
+    public readonly static string AnimLevel1_1 = "animLevel1_1";
+    public readonly static string AnimLevel1_2 = "animLevel1_2";
+    public readonly static string AnimLevel1_4 = "animLevel1_4";
+
 
 
     public readonly static string Trigger_Fade_In = "Fade_In_Trigger";

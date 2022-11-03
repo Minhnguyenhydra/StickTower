@@ -487,7 +487,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3084026206248775594, guid: fca6fa56ba3fe9d4bb164811d1aaf58e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -343
+      value: -343.00003
       objectReference: {fileID: 0}
     - target: {fileID: 3084026206248775594, guid: fca6fa56ba3fe9d4bb164811d1aaf58e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1278,7 +1278,7 @@ GameObject:
   m_Component:
   - component: {fileID: 394749986}
   - component: {fileID: 394749985}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: i_hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2011,6 +2011,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1754757052}
     m_Modifications:
+    - target: {fileID: 4397468731019066039, guid: ff7f7be29037ced46bdf382d03de54a2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -149
+      objectReference: {fileID: 0}
     - target: {fileID: 4397468732401425552, guid: ff7f7be29037ced46bdf382d03de54a2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2351,7 +2355,7 @@ GameObject:
   - component: {fileID: 679002666}
   - component: {fileID: 679002667}
   - component: {fileID: 679002668}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Hand__TUT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2404,10 +2408,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc0b354701c1a4846ba4906f4254e7d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
-  enum_anim_0: 0
-  index: 0
-  isfff: 0
+  anim: {fileID: 679002667}
+  objHand: {fileID: 394749984}
 --- !u!1 &683261952
 GameObject:
   m_ObjectHideFlags: 0
@@ -3040,6 +3042,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8343629656259580583, guid: ce14ef297ed9253408f622e8690ce469, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 456.1001
+      objectReference: {fileID: 0}
     - target: {fileID: 8343629656283110556, guid: ce14ef297ed9253408f622e8690ce469, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -3124,6 +3130,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1952542156}
+    - target: {fileID: 8343629657060541600, guid: ce14ef297ed9253408f622e8690ce469, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -75.00003
+      objectReference: {fileID: 0}
     - target: {fileID: 8343629657099967576, guid: ce14ef297ed9253408f622e8690ce469, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -8794,6 +8804,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 834755256260989821, guid: 2f664489d5848234f8d20d2db2519ceb, type: 3}
+      propertyPath: m_SortingOrder
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 1711099909743542881, guid: 2f664489d5848234f8d20d2db2519ceb, type: 3}
       propertyPath: m_Mesh
       value: 

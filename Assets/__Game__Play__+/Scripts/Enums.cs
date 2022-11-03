@@ -40,7 +40,7 @@ public enum Enum_Type_Take_Last_Level { Enemy, Princess, Reward }
 public enum Enum_State_Attack_Boos { Not_Reach, Win, Lose }
 public enum Enum_State_Item_Skin { Not_Have, Have_No_Wear, Have_Wearing }
 public enum Enum_Type_Btn_Challenge { No_Reach_Level, Buy, Replay }
-public enum Enum_Anim_0 { anim_01, anim_02, anim_03 }
+public enum Enum_Anim_0 { anim_01, anim_02, anim_03, animLevel1_0, animLevel1_1, animLevel1_2, animLevel1_4 }
 
 
 /*

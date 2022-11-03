@@ -175,9 +175,9 @@ public class Enemy : MonoBehaviour
         SetCharacterState_NoLoop(Action_Die);
         SoundManager.Ins.Play_FX_Hit_Enemy_Random();
 
-        //If level is zero need enable tut 2
-        if (PlayerPrefs_Manager.Get_Index_Level_Normal() == 0)
-            Tut_0_Game_Play.Ins.Set_Tut_0_2();
+        //If level is zero or one need enable tut
+        if (PlayerPrefs_Manager.Get_Index_Level_Normal() == 0 || PlayerPrefs_Manager.Get_Index_Level_Normal() == 1)
+            Tut_0_Game_Play.Ins.Set_Tut();
 
         float time_action_Die = Constant.Get_Time_action_Die_Enemy(isBig_Enemy);
         yield return Cache.GetWFS(time_action_Die);
