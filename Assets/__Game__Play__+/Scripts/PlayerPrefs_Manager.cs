@@ -15,35 +15,13 @@ public class PlayerPrefs_Manager
         return PlayerPrefs.GetInt(Constant.PigBank_Gold, 0);
     }
     #endregion
+
     #region Level Challenge
     public static void Set_Replay_Level(int _level)
     {
         string _key = "Lv_Challenge" + _level.ToString();
         PlayerPrefs.SetInt(_key, 1);
-        if (_level == 22)
-        {
-            
-        }
-        else if (_level == 43)
-        {
 
-        }
-        else if (_level == 53)
-        {
-
-        }
-        else if (_level == 63)
-        {
-
-        }
-        else if (_level == 73)
-        {
-
-        }
-        else if (_level == 103)
-        {
-
-        }
     }
     public static int Get_Replay_Level(int _level)
     {
@@ -51,6 +29,7 @@ public class PlayerPrefs_Manager
         return PlayerPrefs.GetInt(_key, 0);
     }
     #endregion
+
     #region  
     public static void Set_Index_Skill_Reach(int _i)
     {
@@ -62,6 +41,7 @@ public class PlayerPrefs_Manager
         return PlayerPrefs.GetInt(Constant.string_Index_Skill_Reach, 1);
     }
     #endregion
+
     #region Gem,Gold
     public static int Get_Gold()
     {
@@ -84,6 +64,7 @@ public class PlayerPrefs_Manager
         PlayerPrefs.SetInt(Constant.Player_Gem, _gem);
     }
     #endregion
+
     #region Level
     public static int Get_Index_Level_Normal()
     {
@@ -117,6 +98,7 @@ public class PlayerPrefs_Manager
         PlayerPrefs.SetInt(Constant.Player_IndexLevel_Area, _level);
     }
     #endregion
+
     #region Setting sound, music, vibra
     public static void SetSetting_Sound(int _On_Sound)
     {
@@ -143,6 +125,7 @@ public class PlayerPrefs_Manager
         return PlayerPrefs.GetInt(Constant.Setting_vibra, 1);
     }
     #endregion
+
     #region Shop Skin
     //0: chưa mua,   1 : mua nhưng chưa mặc,    10: đang mặc
     public static Enum_State_Item_Skin Get_Enum_State_Item_Skin(int _ID_Skin)
@@ -170,6 +153,10 @@ public class PlayerPrefs_Manager
     {
         PlayerPrefs.SetInt(_ID_Skin.ToString(), 1);
     }
+    public static void SetHasNotSkin(int _ID_Skin)
+    {
+        PlayerPrefs.SetInt(_ID_Skin.ToString(), 0);
+    }
     public static void Set_First_Time_Open_Canvas_Skin()
     {
         if (PlayerPrefs.GetInt(Constant.Canvas_Skin_First_Time_Open, 0) == 0)
@@ -194,7 +181,29 @@ public class PlayerPrefs_Manager
     {
         return PlayerPrefs.GetInt(Constant.Canvas_Skin_Name_Wearing, 0);
     }
+
+    public static void SavePreSkin(int idSkin)
+    {
+        PlayerPrefs.SetInt("PreSkin", idSkin);
+    }
+
+    public static int GetPreSkin()
+    {
+        return PlayerPrefs.GetInt("PreSkin");
+    }
+
+    public static void SetExpireSkin(int idSkin, int expire)
+    {
+        PlayerPrefs.SetInt(idSkin.ToString(), expire);
+    }
+
+    public static int GetExpireSkin(int idSkin)
+    {
+        return PlayerPrefs.GetInt(idSkin.ToString(), 0);
+    }
+
     #endregion
+
     #region Game Play
     public static void Set_Number_Key_Treasure(int _number)
     {
@@ -223,6 +232,7 @@ public class PlayerPrefs_Manager
     }
 
     #endregion
+
     #region Challenge
     public static void Set_QLevel_Challenge(int _QLevel_Challenge)
     {
@@ -233,150 +243,10 @@ public class PlayerPrefs_Manager
         return PlayerPrefs.GetInt(Constant.String_Level_Challenge, 22);
     }
     #endregion
-    #region
 
-    #endregion
-    #region
-
-    #endregion
-    #region
-
-    #endregion
-    #region
-
-    #endregion
-    #region
-
-    #endregion
-    #region
-
-    #endregion
-    #region
-
-    #endregion
-    #region
-
-    #endregion
-    #region
-
-    #endregion
-    #region
-
-    #endregion
-    #region
-
-    #endregion
 
 
 
 
 
 }
-/*
-  order in layer
-Floor: 20
-Player: 100
-Enemy: 50
-Stroke: 60
-Firework: 200
-Blood: 200
-
-
-
- */
-
-
-
-
-
-
-/*
-  ammo_box_01
-ammo_box_02
-ammo_box_03
-apartment_damaged_02_b
-barracks_01_a
-barracks_01_b
-barrel_01
-barrel_03
-dirt_box_02
-Map_01
-Map_02
-Map_03
-Map_04
-Map_05
-palm_01
-palm_02
-Plane
-power_pole
-rock_brown_01
-rubble_02
-sandbags_01
-wall_damaged_01
-wall_damaged_02
-wall_damaged_03
-
-//Hệ số Gold By Dmg
-    public static long GetFactor(long _level)
-    {
-        switch (_level)//TODO: dùng String này truy cập Resource nhận Prefabs
-        {
-            case 1:
-                return 1;
-            case 2:
-                return 1;
-            case 3:
-                return 8;
-            case 4:
-                return 8;
-            case 5:
-                return 8;
-            case 6:
-                return 16;
-            case 7:
-                return 16;
-            case 8:
-                return 32;
-            case 9:
-                return 32;
-            case 10:
-                return 32;
-            case 11:
-                return 64;
-            case 12:
-                return 64;
-            default:
-                return 1;
-        }
-
-    }
-
-
-
-
-public static int GetHealt_By_Type(TypeEnemy _type_enemy)
-    {
-        switch (_type_enemy)//TODO: dùng String này truy cập Resource nhận Prefabs
-        {
-            case TypeEnemy.Type1:
-                return 10;
-            case TypeEnemy.Type2:
-                return 20;
-            case TypeEnemy.Type3:
-                return 20;
-            default:
-                return 10;
-        }
-
-    }
-
-click player
-    nhận First_Floor
-        bật sáng các Floor enemy khác
-            di chuyển chuột đến Floor Enemy khác bật xanh Inside các Floor đó
-            di chuyển chuột đến Floor Enemy khác bật xanh Inside các Floor đó
-
-
-                Debug.Log(floor_Light_First_Chose);
-Debug.Log("d");
- */

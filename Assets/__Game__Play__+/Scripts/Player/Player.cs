@@ -166,9 +166,7 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         if (ins == null)
-        {
             ins = this;
-        }
     }
 
     // Start is called before the first frame update
@@ -177,19 +175,21 @@ public class Player : MonoBehaviour
         LoadAnim();
 
         Init_sfx_char_skill_Player();
-        //boxCollider_Player = GetComponentInChildren<BoxCollider>();
+
         isTakingReward = false;
-        //
+
         index_Castle_current = 0;
-        //health = Data_Manager.Ins.health_Character_SO.health_Player;
+
         Set_Spawn_Health_Bar();
         isCanHold = true;
         tf_Player = transform;
         
-        //Set_Pos_Old(tf_Player.position);
         Set_Anim_Idle();
 
+        if (CheckExpireSkin())
+            ChangeSkinWhenExpired();
         Set_Skin(Constant.Get_Skin_Name_By_Id(PlayerPrefs_Manager.Get_ID_Name_Skin_Wearing()));
+
         Set_Fix_Pos_Player();
 
         StartCoroutine(GetButtonsInGame());
@@ -273,6 +273,31 @@ public class Player : MonoBehaviour
         skeletonAnimation.AnimationState.Event += HandleAnimationStateEvent;
         skeletonAnimation.Initialize(false);
     }
+
+    private bool CheckExpireSkin()
+    {
+        int level = PlayerPrefs_Manager.Get_Index_Level_Normal();
+        int curIdSkin = PlayerPrefs_Manager.Get_ID_Name_Skin_Wearing();
+        int expireSkin = PlayerPrefs_Manager.GetExpireSkin(curIdSkin);
+
+        if (expireSkin == 0)
+            return false;
+
+        if (level == expireSkin)
+            return true;
+
+        return false;
+    }
+
+    public void ChangeSkinWhenExpired()
+    {
+        int curSkin = PlayerPrefs_Manager.Get_ID_Name_Skin_Wearing();
+        PlayerPrefs_Manager.SetHasNotSkin(curSkin);
+
+        int preSkin = PlayerPrefs_Manager.GetPreSkin();
+        PlayerPrefs_Manager.Set_ID_Name_Skin_Wearing(preSkin);
+    }
+
     private void HandleAnimationStateEvent(TrackEntry trackEntry, Spine.Event e)
     {
         if (e.Data.Name.Equals("hit"))

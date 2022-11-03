@@ -1728,7 +1728,7 @@ MonoBehaviour:
   obj_Image_BG_ADs_Xanh: {fileID: 8343629655779895240}
   obj_Image_BG_ADs__Xam: {fileID: 8343629656593815328}
   isFist_Click: 0
-  tf_Spawn_Fire_Work: {fileID: 0}
+  tf_Spawn_Fire_Work: {fileID: 7310374171114182186}
   txt_Gold: {fileID: 8343629655288362654}
   txt_Gem: {fileID: 8343629655649002750}
   txt_Level: {fileID: 8343629656681850077}

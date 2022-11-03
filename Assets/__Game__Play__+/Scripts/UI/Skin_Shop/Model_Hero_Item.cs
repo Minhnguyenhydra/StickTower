@@ -71,6 +71,10 @@ public class Model_Hero_Item : MonoBehaviour
     public void Try_Button()
     {
         Change_Hero();
+
+        int idSkin = PlayerPrefs_Manager.Get_ID_Name_Skin_Wearing();
+        int expire = PlayerPrefs_Manager.Get_Index_Level_Normal() + Constant.expireSkin;
+        PlayerPrefs_Manager.SetExpireSkin(idSkin, expire);
     }
     
     public void Can_Click_If_Have_Button()
@@ -93,7 +97,7 @@ public class Model_Hero_Item : MonoBehaviour
         int _ID_old_Skin = PlayerPrefs_Manager.Get_ID_Name_Skin_Wearing();
         PlayerPrefs_Manager.Set_Have_No_Wear_Skin(_ID_old_Skin);
         PlayerPrefs_Manager.Set_Have_No_Wear_Skin(0);// Fix cái Skin đầu tiên ko thay đổi
-
+        SetPreSkin(_ID_old_Skin);
         //
         ((CanvasSkin_Boot)UIManager.Ins.GetUI(UIID.UICSkin_Boot)).Set_No_Wear_One_Item(_ID_old_Skin);
         ((CanvasSkin_Boot)UIManager.Ins.GetUI(UIID.UICSkin_Boot)).Set_No_Wear_One_Item(0);
@@ -106,6 +110,12 @@ public class Model_Hero_Item : MonoBehaviour
         /////Debug.Log(PlayerPrefs_Manager.Get_ID_Name_Skin_Wearing());
         Set_Wearing();
     }
+
+    private void SetPreSkin(int idSkin)
+    {
+        PlayerPrefs_Manager.SavePreSkin(idSkin);
+    }
+
     public void Set_Wearing()
     {
         Set_Deactive_All_Btn();
