@@ -10,7 +10,6 @@ public class CanvasShop_Prize : UICanvas
     public Text txt_Gold;
     public Text txt_Gem;
     #endregion
-    public GameObject obj_Btn_Home;
     public GameObject obj_X3_Key;
     public GameObject Group_All_Key;
     public int intKey;
@@ -25,10 +24,8 @@ public class CanvasShop_Prize : UICanvas
         for (int i = 0; i < intKey; i++)
             listObj_3_Key_Gold[i].SetActive(true);
         
-        obj_Btn_Home.SetActive(false);
         obj_X3_Key.SetActive(false);
 
-        StartCoroutine(IE_Delay_ShowHomeBtn());
         Set_Reload_Gold_Gem_Title();
     }
     public void Set_Reload_Gold_Gem_Title()
@@ -56,11 +53,7 @@ public class CanvasShop_Prize : UICanvas
             }
         }
     }
-    IEnumerator IE_Delay_ShowHomeBtn()
-    {
-        yield return Cache.GetWFS(3);
-        obj_Btn_Home.SetActive(true);
-    }
+
     public void Homebutton()
     {
         SoundManager.Ins.PlayFx(FxID.click);
