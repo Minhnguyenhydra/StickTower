@@ -35,11 +35,17 @@ public class CanvasFreeSkin : UICanvas
     public void GetButton()
     {
         SoundManager.Ins.PlayFx(FxID.click);
+
+        AdsManager.Instance.WatchRewardedAds(TakeFreeSkin);
+    }
+
+    private void TakeFreeSkin()
+    {
         isGet = true;
         Change_Hero();
         CloseButton();
-
     }
+
     public void CloseButton()
     {
         SoundManager.Ins.PlayFx(FxID.click);

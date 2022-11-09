@@ -30,6 +30,8 @@ public class Model_Hero_Item : MonoBehaviour
     [Header("-------------Phải kéo thả vào---------------")]
     public Transform tf_Spawn_Fire_Work;
 
+    private int numberWatchedAds;
+
     private void OnEnable()
     {
         PlayerPrefs_Manager.Set_First_Time_Open_Canvas_Skin();
@@ -40,7 +42,7 @@ public class Model_Hero_Item : MonoBehaviour
     #region Button
     public void WatchADs_Button()
     {
-        
+
         Change_Hero();
     }
     public void Gold_Button()
@@ -58,7 +60,7 @@ public class Model_Hero_Item : MonoBehaviour
     public void Gem_Button()
     {
         int new_gem = PlayerPrefs_Manager.Get_Gem() - skin_Item_SO.gem;
-        
+
         if (new_gem >= 0)
         {
             PlayerPrefs_Manager.Set_Gem(new_gem);
@@ -70,13 +72,27 @@ public class Model_Hero_Item : MonoBehaviour
     }
     public void Try_Button()
     {
+        AdsManager.Instance.WatchRewardedAds(TrySkin);
+    }
+
+    private void TrySkin()
+    {
+        numberWatchedAds++;
+        if (numberWatchedAds < skin_Item_SO.numberAdsNeed)
+        {
+            Debug.Log("numberWatchedAds " + numberWatchedAds);
+            return;
+        }
+
+        numberWatchedAds = 0;
+
         Change_Hero();
 
         int idSkin = PlayerPrefs_Manager.Get_ID_Name_Skin_Wearing();
         int expire = PlayerPrefs_Manager.Get_Index_Level_Normal() + Constant.expireSkin;
         PlayerPrefs_Manager.SetExpireSkin(idSkin, expire);
     }
-    
+
     public void Can_Click_If_Have_Button()
     {
 
@@ -86,7 +102,7 @@ public class Model_Hero_Item : MonoBehaviour
             Change_Hero();
         }
     }
-    
+
     #endregion
 
 
@@ -128,10 +144,10 @@ public class Model_Hero_Item : MonoBehaviour
     }
     public void Get_State_Skin()
     {
-        
+
         _enum_State_Item_Skin = PlayerPrefs_Manager.Get_Enum_State_Item_Skin(skin_Item_SO.iD);
         //Debug.Log(PlayerPrefs_Manager.Get_ID_Name_Skin_Wearing());
-        
+
     }
     public void Check_Init()
     {
@@ -207,7 +223,7 @@ public class Model_Hero_Item : MonoBehaviour
                 obj_Btn_Gold_Parrent.SetActive(true);
                 if (skin_Item_SO.gold < PlayerPrefs_Manager.Get_Gold())
                 {
-                    
+
                     obj_Btn_Enough_Gold.SetActive(true);
                 }
                 else
@@ -222,7 +238,7 @@ public class Model_Hero_Item : MonoBehaviour
                 obj_Btn_Gem_Parrent.SetActive(true);
                 if (skin_Item_SO.gold < PlayerPrefs_Manager.Get_Gem())
                 {
-                    
+
                     obj_Btn_Enough_Gem.SetActive(true);
                 }
                 else
@@ -252,5 +268,5 @@ public class Model_Hero_Item : MonoBehaviour
         obj_Btn_Unlock.SetActive(false);
         obj_Btn_WatchADs.SetActive(false);
     }
-    
+
 }

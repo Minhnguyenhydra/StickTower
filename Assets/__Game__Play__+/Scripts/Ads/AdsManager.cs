@@ -1,27 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static AppLovinAds;
 
 public class AdsManager : MonoBehaviour
 {
+    public static AdsManager Instance;
+
+
     [SerializeField]
-    private UnityAds unityAds;
-   
+    private AppLovinAds applovin;
+
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(Instance);
+        }
+    }
+
     void Start()
     {
-        unityAds.Init();
-
-        DontDestroyOnLoad(this);
+        applovin.Init();
     }
 
-    private void OnDisable()
+    public void WatchRewardedAds(CallBackAds cbAds)
     {
-        unityAds.OnDestroy();
+        applovin.ShowRewardedAds(cbAds);
     }
 
-    public void WatchAds()
+    public void WatchInterstitialAds(CallBackAds cbAds)
     {
-        unityAds.ShowRewarded();
+        applovin.ShowInterstitialAds(cbAds);
     }
 
 }

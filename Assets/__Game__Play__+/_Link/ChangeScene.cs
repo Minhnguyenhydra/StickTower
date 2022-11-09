@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class ChangeScene : Singleton<ChangeScene>
 {
+    private static ChangeScene Instance;
+
     public GameObject animFade;
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
     public void Fade()

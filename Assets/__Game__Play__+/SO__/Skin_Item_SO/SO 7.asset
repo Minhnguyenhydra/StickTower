@@ -17,4 +17,5 @@ MonoBehaviour:
   gem: 25
   level_UnLock: 0
   watch_ADs: 1
+  numberAdsNeed: 1
   Enum_State_Item_Skin: 0

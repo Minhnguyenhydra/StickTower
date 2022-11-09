@@ -50,6 +50,8 @@ public enum FxID
 
 public class SoundManager : Singleton<SoundManager>
 {
+    private static SoundManager Instance;
+
     [SerializeField] UserData userData;
 
     private AudioSource soundSource;
@@ -63,7 +65,11 @@ public class SoundManager : Singleton<SoundManager>
 
     public void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
 
         soundSource = gameObject.AddComponent<AudioSource>();
         soundSource.loop = true;

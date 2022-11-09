@@ -187,18 +187,24 @@ public class CanvasGamePlay : UICanvas
             if (!Player.ins.isDie)
             {
                 SoundManager.Ins.PlayFx(FxID.click);
-                GameManager.Ins.GMState = GameManager.GameState.Stoped;
-                level_curent += 1;
-                if (level_curent == 51)
-                {
-                    level_curent = 30;
-                }
-                anim_GamePlay.SetTrigger(Constant.Trigger_GamePlay_Close);
-                StartCoroutine(IE_Delay_SkipLevel());
 
+                AdsManager.Instance.WatchInterstitialAds(SkipLevel);
             }
         }
     }
+
+    private void SkipLevel()
+    {
+        GameManager.Ins.GMState = GameManager.GameState.Stoped;
+        level_curent += 1;
+        if (level_curent == 51)
+        {
+            level_curent = 30;
+        }
+        anim_GamePlay.SetTrigger(Constant.Trigger_GamePlay_Close);
+        StartCoroutine(IE_Delay_SkipLevel());
+    }
+
     IEnumerator IE_Delay_SkipLevel()
     {
         UIManager.Ins.OpenUI(UIID.UICFade);
@@ -213,13 +219,16 @@ public class CanvasGamePlay : UICanvas
 
     public void ADs_Take_Sword_Button()
     {
+        AdsManager.Instance.WatchRewardedAds(TakeSword);
+    }
+
+    private void TakeSword()
+    {
         if (Sword_Ads_TopLeft.Ins != null)
         {
             Sword_Ads_TopLeft.Ins.Set_Go_To_Herro(int_Damge);
             obj_Btn_ADs_Sword.SetActive(false);
         }
     }
-
-
 
 }

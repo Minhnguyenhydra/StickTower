@@ -19,10 +19,9 @@ public class CanvasArea : UICanvas
     public bool isOnFight_Once;//chỉ được ấn Fight 1 lần mỗi level
     public RectTransform rect_Boot_Of_Canvas;//chỉ được ấn Fight 1 lần mỗi level
 
-    private void Start()
-    {
-        
-    }
+    private int numberWatchedAds;
+    private int orderHero;
+
 
     private void OnEnable()
     {
@@ -42,7 +41,7 @@ public class CanvasArea : UICanvas
     }
     public void SetOrigin_Boot_Canvas()
     {
-        rect_Boot_Of_Canvas.anchoredPosition = new Vector3(0, -26.36f,0);
+        rect_Boot_Of_Canvas.anchoredPosition = new Vector3(0, -26.36f, 0);
     }
 
 
@@ -70,7 +69,7 @@ public class CanvasArea : UICanvas
         //anim_GamePlay.SetTrigger(Constant.Trigger_GamePlay_Close);
         //StartCoroutine(IE_Delay_Replay());
 
-        Init_Area.Ins.userData.SetIntData(UserData.Key_LevelArena,ref Init_Area.Ins.userData.levelArena, Init_Area.Ins.userData.levelArena);
+        Init_Area.Ins.userData.SetIntData(UserData.Key_LevelArena, ref Init_Area.Ins.userData.levelArena, Init_Area.Ins.userData.levelArena);
 
         Init_Area.Ins.OnInit();
         SoundManager.Ins.PlayFx(FxID.click);
@@ -87,12 +86,12 @@ public class CanvasArea : UICanvas
             Init_Area.Ins.Fighting();
         }
     }
-    
+
     public void SetResetFight()
     {
         isOnFight_Once = false;
     }
-    
+
     public void SetSave_Gold()
     {
         PlayerPrefs_Manager.Set_Gold(gold_In_Level);
@@ -104,6 +103,16 @@ public class CanvasArea : UICanvas
         //TODO: them phan check tien du hay chua
         if (index == 0)
         {
+            if (gold_In_Level >= 50)
+            {
+                gold_In_Level -= 50;
+                BoughtHero(index);
+                ReLoad_UI_Gold();
+            }
+        }
+
+        if (index == 1)
+        {
             if (gold_In_Level >= 100)
             {
                 gold_In_Level -= 100;
@@ -111,58 +120,57 @@ public class CanvasArea : UICanvas
                 ReLoad_UI_Gold();
             }
         }
-        
-        if (index == 1)
-        {
-            if (gold_In_Level >= 200)
-            {
-                gold_In_Level -= 200;
-                BoughtHero(index);
-                ReLoad_UI_Gold();
-            }
-        }
-        
+
         if (index == 2)
         {
-            if (gold_In_Level >= 500)
+            if (gold_In_Level >= 150)
             {
-                gold_In_Level -= 500;
+                gold_In_Level -= 150;
                 BoughtHero(index);
                 ReLoad_UI_Gold();
             }
         }
-        
+
         if (index == 3)
         {
-            if (gold_In_Level >= 1500)
+            if (gem_In_Level >= 4)
             {
-                gold_In_Level -= 1500;
+                gem_In_Level -= 4;
                 BoughtHero(index);
                 ReLoad_UI_Gold();
             }
         }
-        
+
         if (index == 4)
         {
-            if (gold_In_Level >= 5000 && gem_In_Level >= 5)
+            if (gem_In_Level >= 12)
             {
-                gold_In_Level -= 5000;
-                gem_In_Level -= 5;
+                gem_In_Level -= 12;
                 BoughtHero(index);
                 ReLoad_UI_Gold();
             }
         }
-        
+
     }
-    
+
     public void WatchAds(int index)
     {
-
         SoundManager.Ins.PlayFx(FxID.click);
-        //TODO: them phan check tien du hay chua
-        BoughtHero(index);
+        orderHero = index;
+
+        AdsManager.Instance.WatchRewardedAds(BuyHero);
     }
-    
+
+    private void BuyHero()
+    {
+        numberWatchedAds++;
+        if (orderHero == 4 && numberWatchedAds < 2)
+            return;
+
+        numberWatchedAds = 0;
+        BoughtHero(orderHero);
+    }
+
     public void BoughtHero(int index)
     {
         int level = userData.GetDataState(UserData.Keys_HeroLevelArena, index, 0);

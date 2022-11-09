@@ -45,13 +45,17 @@ public class CanvasPayGold_To_Play : UICanvas
     {
         SoundManager.Ins.PlayFx(FxID.click);
 
-        //28-10
+        AdsManager.Instance.WatchRewardedAds(PayToPlay);
+    }
+
+    private void PayToPlay()
+    {
         int _gold_current = PlayerPrefs_Manager.Get_Gold();
         _gold_current = Mathf.Clamp(_gold_current - rewards[0], 0, int.MaxValue);
         PlayerPrefs_Manager.Set_Gold(_gold_current);
         CloseButton();
     }
-    //
+
     public void NextLevelButton()
     {
         SoundManager.Ins.PlayFx(FxID.click);

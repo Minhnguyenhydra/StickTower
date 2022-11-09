@@ -16,5 +16,6 @@ MonoBehaviour:
   gold: 5000
   gem: 0
   level_UnLock: 0
-  watch_ADs: 1
+  watch_ADs: 0
+  numberAdsNeed: 0
   Enum_State_Item_Skin: 0

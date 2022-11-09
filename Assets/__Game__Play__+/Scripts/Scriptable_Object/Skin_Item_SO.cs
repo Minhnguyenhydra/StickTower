@@ -8,6 +8,7 @@ public class Skin_Item_SO : ScriptableObject
     public int gem;
     public int level_UnLock;
     public bool watch_ADs;
+    public int numberAdsNeed;
     public Enum_State_Item_Skin Enum_State_Item_Skin;
 }
 /*

@@ -387,6 +387,12 @@ public class CanvasWinQ : UICanvas
     public void Set_ADs_To_Stop_Random()
     {
         SoundManager.Ins.PlayFx(FxID.click);
+
+        AdsManager.Instance.WatchRewardedAds(TakeRandomGold);
+    }
+
+    private void TakeRandomGold()
+    {
         if (!isFist_Click)
         {
             isFist_Click = true;
@@ -403,13 +409,14 @@ public class CanvasWinQ : UICanvas
         int level = PlayerPrefs_Manager.Get_Index_Level_Normal() - 1;//trước khi vào đây đã tăng level ở Gamanager rồi
         if (level == 0)
         {
-            if (obj_Hand_Tut_Lv_0!= null)
+            if (obj_Hand_Tut_Lv_0 != null)
             {
                 obj_Hand_Tut_Lv_0.SetActive(false);
 
             }
         }
     }
+
     public void Set_Claim_To_Stop_Random_No_ADs()
     {
         SoundManager.Ins.PlayFx(FxID.click);

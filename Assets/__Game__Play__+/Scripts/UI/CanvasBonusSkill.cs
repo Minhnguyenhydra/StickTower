@@ -36,28 +36,37 @@ public class CanvasBonusSkill : UICanvas
     public void Sword_Button1()
     {
         SoundManager.Ins.PlayFx(FxID.click);
+        AdsManager.Instance.WatchRewardedAds(TakeLeftSword);
+    }
+   
+    private void TakeLeftSword()
+    {
         string name_Skin = Constant.Get_Skin_Name_By_Id_Sword(indexLeftSword);
         Player.ins.Set_Skin(name_Skin);
         Player.ins.health_Bar.Set_Step_By_Step_Health(Player.ins.health, Player.ins.health + 2, 1);// +2 damge
         Player.ins.Set_Add_Health(2);//X2 damge
-                                          //bật anim ở Hero nhận đc dame
+                                     //bật anim ở Hero nhận đc dame
         Player.ins.Set_Anim_TakeSword();
         StartCoroutine(IE_DelayClose());
     }
-    //
     
     public void Sword_Button2()
     {
         SoundManager.Ins.PlayFx(FxID.click);
+        AdsManager.Instance.WatchRewardedAds(TakeRightSword);
+    }
+    
+
+    private void TakeRightSword()
+    {
         string name_Skin = Constant.Get_Skin_Name_By_Id_Sword(indexRightSword);
         Player.ins.Set_Skin(name_Skin);
         Player.ins.health_Bar.Set_Step_By_Step_Health(Player.ins.health, Player.ins.health + 2, 1);// +2 damge
         Player.ins.Set_Add_Health(2);//X2 damge
-                                          //bật anim ở Hero nhận đc dame
+                                     //bật anim ở Hero nhận đc dame
         Player.ins.Set_Anim_TakeSword();
         StartCoroutine(IE_DelayClose());
     }
-    //
     
     
     public void No_Thank_Button()
