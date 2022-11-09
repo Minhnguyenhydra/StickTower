@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: SO 3
   m_EditorClassIdentifier: 
   iD: 3
-  gold: 0
-  gem: 10
+  gold: 500
+  gem: 0
   level_UnLock: 0
   watch_ADs: 0
   numberAdsNeed: 0

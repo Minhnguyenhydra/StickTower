@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iD: 8
   gold: 0
-  gem: 30
+  gem: 13
   level_UnLock: 0
   watch_ADs: 1
   numberAdsNeed: 1

@@ -10,7 +10,6 @@ public class Model_Hero_Item : MonoBehaviour
     [Header("-------------NoHave---------------")]
     public GameObject obj_NoHave;
     public GameObject obj_Btn_Unlock;
-    public GameObject obj_Btn_WatchADs;
 
     public GameObject obj_Btn_Gold_Parrent;
     public GameObject obj_Btn_Enough_Gold;
@@ -40,11 +39,7 @@ public class Model_Hero_Item : MonoBehaviour
     }
 
     #region Button
-    public void WatchADs_Button()
-    {
 
-        Change_Hero();
-    }
     public void Gold_Button()
     {
         int new_gold = PlayerPrefs_Manager.Get_Gold() - skin_Item_SO.gold;
@@ -172,7 +167,7 @@ public class Model_Hero_Item : MonoBehaviour
                 {
                     if (skin_Item_SO.gold == 0 && skin_Item_SO.gem == 0)
                     {
-                        obj_Btn_WatchADs.SetActive(true);
+                        
 
                     }
                 }
@@ -266,7 +261,6 @@ public class Model_Hero_Item : MonoBehaviour
         obj_Btn_Not_Enough_Gold.SetActive(false);
         obj_Btn_Try.SetActive(false);
         obj_Btn_Unlock.SetActive(false);
-        obj_Btn_WatchADs.SetActive(false);
     }
 
 }

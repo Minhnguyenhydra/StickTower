@@ -13,7 +13,9 @@ public class Model_Hero_Main_Top : MonoBehaviour
     [Header("Animation")]
     public SkeletonAnimation skeletonAnimation;
     public AnimationReferenceAsset Action_Victory;
+    public AnimationReferenceAsset IdleAnim;
 
+    private Coroutine corIdleAnim;
     #endregion
     // Start is called before the first frame update
     void Start()
@@ -43,7 +45,19 @@ public class Model_Hero_Main_Top : MonoBehaviour
         Set_Skin(_str_Skin_Name);
         ReSetCharacterState();
         SetCharacterState_NoLoop(Action_Victory);
+
+        if (corIdleAnim != null)
+            StopCoroutine(corIdleAnim);
+
+        corIdleAnim = StartCoroutine(SwitchToIdleAnim());
     }
+
+    private IEnumerator SwitchToIdleAnim()
+    {
+        yield return new WaitForSeconds(Action_Victory.Animation.Duration);
+        SetCharacterState_Loop(IdleAnim);
+    }
+
     #region Base to set Skin, Anim
     public void SetAnimation(AnimationReferenceAsset _anim, bool _loop, float _time_Scale)//Set No loop
     {

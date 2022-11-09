@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SO 12
   m_EditorClassIdentifier: 
   iD: 12
-  gold: 10000
+  gold: 0
   gem: 0
   level_UnLock: 0
   watch_ADs: 1

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using DG.Tweening;
+using TMPro;
 //Do nếu để cùng Canvas tổng thì Canvas Pig sẽ có oder layer bằng với Canvas tổng, mà Skeleton muốn gắn lên Canvas tổng phải có Oder layer cao hơn, do đó các Skeleton ko liên quan sẽ bị nổi lên ở Canvas Pink Bank này, do đó phải gắn canvas Pig Bank này ở canvas riêng có chỉ số Oder cao hơn
 public class CanvasBonusSkill : UICanvas
 {
@@ -13,10 +13,17 @@ public class CanvasBonusSkill : UICanvas
     [SerializeField]
     private Image btnLeftSword;
     [SerializeField]
+    private TextMeshProUGUI txtLeftSword;
+    [SerializeField]
     private Image btnRightSword;
+    [SerializeField]
+    private TextMeshProUGUI txtRightSword;
 
     private int indexLeftSword;
     private int indexRightSword;
+    private int leftBonus;
+    private int rightBonus;
+
 
     private void Start()
     {
@@ -25,6 +32,12 @@ public class CanvasBonusSkill : UICanvas
 
         indexRightSword = indexLeftSword + 1 > lsSprite.Count - 1 ? 1 : indexLeftSword + 1;
         btnRightSword.sprite = lsSprite[indexRightSword];
+
+        leftBonus = Random.Range(1, 4) * 5;
+        txtLeftSword.text = leftBonus.ToString();
+
+        rightBonus = Random.Range(1, 4) * 5;
+        txtRightSword.text = rightBonus.ToString();
     }
 
 
@@ -43,9 +56,9 @@ public class CanvasBonusSkill : UICanvas
     {
         string name_Skin = Constant.Get_Skin_Name_By_Id_Sword(indexLeftSword);
         Player.ins.Set_Skin(name_Skin);
-        Player.ins.health_Bar.Set_Step_By_Step_Health(Player.ins.health, Player.ins.health + 2, 1);// +2 damge
-        Player.ins.Set_Add_Health(2);//X2 damge
-                                     //bật anim ở Hero nhận đc dame
+        Player.ins.health_Bar.Set_Step_By_Step_Health(Player.ins.health, Player.ins.health + leftBonus, 1);
+        Player.ins.Set_Add_Health(leftBonus);
+
         Player.ins.Set_Anim_TakeSword();
         StartCoroutine(IE_DelayClose());
     }
@@ -61,9 +74,9 @@ public class CanvasBonusSkill : UICanvas
     {
         string name_Skin = Constant.Get_Skin_Name_By_Id_Sword(indexRightSword);
         Player.ins.Set_Skin(name_Skin);
-        Player.ins.health_Bar.Set_Step_By_Step_Health(Player.ins.health, Player.ins.health + 2, 1);// +2 damge
-        Player.ins.Set_Add_Health(2);//X2 damge
-                                     //bật anim ở Hero nhận đc dame
+        Player.ins.health_Bar.Set_Step_By_Step_Health(Player.ins.health, Player.ins.health + rightBonus, 1);
+        Player.ins.Set_Add_Health(rightBonus);
+                             
         Player.ins.Set_Anim_TakeSword();
         StartCoroutine(IE_DelayClose());
     }
