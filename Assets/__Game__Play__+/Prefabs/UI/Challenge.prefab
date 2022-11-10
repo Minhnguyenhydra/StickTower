@@ -1701,7 +1701,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: UNLOCK LEVEL 22
+  m_Text: UNLOCK LEVEL 11
 --- !u!1 &3368080417930926706
 GameObject:
   m_ObjectHideFlags: 0
@@ -3487,7 +3487,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 3368080419493626411}
   m_Direction: 1
   m_Value: 0.4999999
-  m_Size: 0.17309354
+  m_Size: 0.17309356
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6670,8 +6670,8 @@ MonoBehaviour:
   list_Gold: c8000000f40100005802000020030000e8030000d0070000
   list_Gem: 010000000100000001000000010000000100000001000000
   list_unlock_level:
-  - UNLOCK LEVEL 22
-  - UNLOCK LEVEL 43
+  - UNLOCK LEVEL 11
+  - UNLOCK LEVEL 17
   - UNLOCK LEVEL 53
   - UNLOCK LEVEL 63
   - UNLOCK LEVEL 73

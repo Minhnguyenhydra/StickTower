@@ -63,7 +63,7 @@ public class ChallengeControll : MonoBehaviour
         
         if (ii == 0)
         {
-            if (level >= 22 )
+            if (level >= 11 )
             {
                 bool isReplay = (1 == PlayerPrefs_Manager.Get_Replay_Level(22));
                 if (!isReplay)
@@ -83,7 +83,7 @@ public class ChallengeControll : MonoBehaviour
         }
         if (ii == 1)
         {
-            if (level >= 43 )
+            if (level >= 17 )
             {
                 bool isReplay = (1 == PlayerPrefs_Manager.Get_Replay_Level(43));
                 if (!isReplay)
