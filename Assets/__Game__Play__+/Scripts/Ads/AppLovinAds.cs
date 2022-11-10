@@ -186,6 +186,7 @@ public class AppLovinAds : MonoBehaviour
 
         AppOpenAdManager.ResumeFromAds = false;
         callBackAds?.Invoke();
+        callBackAds = null;
         Debug.Log("Interstitial Ad Hidden");
 
     }
@@ -283,6 +284,7 @@ public class AppLovinAds : MonoBehaviour
     {
         // The rewarded ad displayed and the user should receive the reward.
         callBackAds?.Invoke();
+        callBackAds = null;
         Debug.Log("Rewarded Ad ReceivedReward");
     }
 
