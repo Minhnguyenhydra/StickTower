@@ -21,19 +21,18 @@ public class AdsManager : MonoBehaviour
         }
     }
 
-    void Start()
-    {
-        applovin.Init();
-    }
-
     public void WatchRewardedAds(CallBackAds cbAds)
     {
+        Debug.Log("Clicked Rewarded Ads");
         applovin.ShowRewardedAds(cbAds);
+        Debug.Log("Rewarded Ads Displayed");
     }
 
     public void WatchInterstitialAds(CallBackAds cbAds)
     {
+        Debug.Log("Clicked Interstitial Ads");
         applovin.ShowInterstitialAds(cbAds);
+        Debug.Log("Interstitial Ads Displayed");
     }
 
 }

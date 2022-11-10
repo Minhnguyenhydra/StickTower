@@ -135,7 +135,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f9fadac6d6ea1040b411e7b687c1002, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NumberWatchedAds: 0
   applovin: {fileID: 1620098512877750020}
 --- !u!1001 &1620098514130651171
 PrefabInstance:

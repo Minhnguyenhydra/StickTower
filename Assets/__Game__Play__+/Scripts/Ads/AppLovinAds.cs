@@ -5,25 +5,43 @@ using UnityEngine;
 
 public class AppLovinAds : MonoBehaviour
 {
+    private const string MaxSdkKey = "7PspscCcbGd6ohttmPcZTwGmZCihCW-Jwr7nSJN2a_9Mg0ERPs0tmGdKTK1gs__nr6XHQvK0vTNaTb1uR1mCIN";
+
     [SerializeField]
     private string bannerAdUnitId = "a36b1af08986430c"; // Retrieve the ID from your account
 
     public delegate void CallBackAds();
     private CallBackAds callBackAds;
+    private Coroutine corShowBanner;
 
-
-    private void Awake()
+    private void Start()
     {
+        MaxSdkCallbacks.OnSdkInitializedEvent += sdkConfiguration =>
+        {
+            // AppLovin SDK is initialized, configure and start loading ads.
+            Debug.Log("MAX SDK Initialized");
+
+            InitializeBannerAds();
+            InitializeInterstitialAds();
+            InitializeRewardedAds();
+
+            //// Initialize Adjust SDK
+            //AdjustConfig adjustConfig = new AdjustConfig("YourAppToken", AdjustEnvironment.Sandbox);
+            //Adjust.start(adjustConfig);
+        };
+
+        MaxSdk.SetSdkKey(MaxSdkKey);
+        MaxSdk.SetTestDeviceAdvertisingIdentifiers(new string[] { "2010f6b6-0585-4646-b7b4-e6291e3ea12b", "c23c7f01-c1c5-4c46-ae67-44b77b961672" });
         MaxSdk.InitializeSdk();
+        ShowBannerAfter10S();
     }
 
-    public void Init()
+    public void ShowBannerAfter10S()
     {
-        InitializeBannerAds();
-        InitializeInterstitialAds();
-        InitializeRewardedAds();
+        if (corShowBanner != null)
+            StopCoroutine(corShowBanner);
 
-        StartCoroutine(ShowBannerAd());
+        corShowBanner = StartCoroutine(ShowBannerAd());
     }
 
     #region Ads Banner
@@ -48,7 +66,7 @@ public class AppLovinAds : MonoBehaviour
 
     private IEnumerator ShowBannerAd()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(10f);
         MaxSdk.ShowBanner(bannerAdUnitId);
     }
 
@@ -97,13 +115,17 @@ public class AppLovinAds : MonoBehaviour
         MaxSdkCallbacks.Interstitial.OnAdClickedEvent += OnInterstitialClickedEvent;
         MaxSdkCallbacks.Interstitial.OnAdHiddenEvent += OnInterstitialHiddenEvent;
         MaxSdkCallbacks.Interstitial.OnAdDisplayFailedEvent += OnInterstitialAdFailedToDisplayEvent;
+        //MaxSdkCallbacks.Interstitial.OnAdRevenuePaidEvent += OnInterstitialRevenuePaidEvent;
 
         // Load the first interstitial
         LoadInterstitial();
     }
 
+    
+
     private void LoadInterstitial()
     {
+        Debug.Log("Interstitial Loading...");
         MaxSdk.LoadInterstitial(adUnitId);
     }
 
@@ -114,6 +136,7 @@ public class AppLovinAds : MonoBehaviour
             AppOpenAdManager.ResumeFromAds = true;
             callBackAds = cbAds;
 
+            Debug.Log("Interstitial Showing...");
             MaxSdk.ShowInterstitial(adUnitId);
         }
     }
@@ -166,6 +189,10 @@ public class AppLovinAds : MonoBehaviour
         Debug.Log("Interstitial Ad Hidden");
 
     }
+    private void OnInterstitialRevenuePaidEvent(string arg1, MaxSdkBase.AdInfo arg2)
+    {
+        Debug.Log("Interstitial Revenue Paid");
+    }
     #endregion
 
     #region Ads Rewarded
@@ -191,6 +218,7 @@ public class AppLovinAds : MonoBehaviour
 
     private void LoadRewardedAd()
     {
+        Debug.Log("Rewarded Loading...");
         MaxSdk.LoadRewardedAd(adUnitRewardedId);
     }
 
@@ -200,6 +228,7 @@ public class AppLovinAds : MonoBehaviour
         {
             callBackAds = cbAds;
             AppOpenAdManager.ResumeFromAds = true;
+            Debug.Log("Rewarded Showing...");
             MaxSdk.ShowRewardedAd(adUnitRewardedId);
         }
     }

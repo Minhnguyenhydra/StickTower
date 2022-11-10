@@ -90,11 +90,11 @@ public class AppOpenAdManager
             ad = appOpenAd;
             tierIndex = 1;
             loadTime = DateTime.UtcNow;
-            if (!showFirstOpen && ConfigOpenApp)
-            {
-                ShowAdIfAvailable();
-                showFirstOpen = true;
-            }
+            //if (!showFirstOpen && ConfigOpenApp)
+            //{
+            //    ShowAdIfAvailable();
+            //    showFirstOpen = true;
+            //}
         }));
     }
 
