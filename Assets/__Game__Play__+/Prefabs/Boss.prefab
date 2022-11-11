@@ -60,9 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5923325ba14e9904b9032de675c60ac0, type: 2}
-  - {fileID: 2100000, guid: 466dc0fdfc74b4c45884a64db4936fc7, type: 2}
-  - {fileID: 2100000, guid: 5923325ba14e9904b9032de675c60ac0, type: 2}
+  - {fileID: 2100000, guid: 870be849f10da74469046026f0ada961, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -173,17 +171,19 @@ MonoBehaviour:
   health: 0
   isBig_Enemy: 0
   skeletonAnimation: {fileID: 3923977618111258804}
-  Action_Idle: {fileID: 11400000, guid: 776552455d93608439342579b7002d95, type: 2}
-  Action_Attack: {fileID: 11400000, guid: 5c1b662cc1b806047b1f701af09b5375, type: 2}
-  Action_Run: {fileID: 11400000, guid: 1f87bf13db7fcae4f882a19a2e912a55, type: 2}
-  Action_Takedamge: {fileID: 11400000, guid: 730ce376f48800d4fbdd68d27fc7c870, type: 2}
-  Action_Die: {fileID: 11400000, guid: dbc3e10dbdfcaa64da988c3904ba5ce2, type: 2}
-  Action_Victory: {fileID: 11400000, guid: 18a8322bed5441e49b18b65f8a4fb079, type: 2}
-  Action_Lose: {fileID: 11400000, guid: 18a8322bed5441e49b18b65f8a4fb079, type: 2}
+  Action_Idle: {fileID: 11400000, guid: 423a0c9834e6f294ba438a8a13497dfe, type: 2}
+  Action_Attack: {fileID: 11400000, guid: d69606cb2019b8b4b883de25678a72b7, type: 2}
+  Action_Run: {fileID: 11400000, guid: 51bffce08c3ec8c4dbb563c9d3040c1a, type: 2}
+  Action_Takedamge: {fileID: 11400000, guid: 7f4d850cf9cb46e429a98f721edb5350, type: 2}
+  Action_Die: {fileID: 11400000, guid: 26492f229d4b4044baf8cb964d37a59b, type: 2}
+  Action_Victory: {fileID: 11400000, guid: 31fefbc1a85b81f4986a63eb0b8df8b8, type: 2}
+  Action_Lose: {fileID: 11400000, guid: 14ac53d1fec720b4797d500df0c5c980, type: 2}
   key_Floor_To_Open_Lock_Floor: {fileID: 0}
   floor_This: {fileID: 0}
   tf_Enemy: {fileID: 0}
   isDieing: 0
+  isDieing_Fight_Boss: 0
   isFist_config: 0
   health_Bar: {fileID: 0}
+  isFist_time_Die: 0
   index_Hit_Player: 0

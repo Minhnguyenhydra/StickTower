@@ -3100,14 +3100,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 948551793418359929}
     m_Modifications:
-    - target: {fileID: 2541146033343429528, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
-      propertyPath: number_Gold_Reward
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 2541146033343429528, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
-      propertyPath: gold_Gem_Reward_Fly
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2541146033343429529, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3194,11 +3186,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2541146033343429530, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
       propertyPath: m_Name
-      value: Tresua
-      objectReference: {fileID: 0}
-    - target: {fileID: 2541146034423900143, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
-      propertyPath: m_Mesh
-      value: 
+      value: Treasure
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
@@ -3214,14 +3202,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 948551793675112230}
     m_Modifications:
-    - target: {fileID: 2541146033343429528, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
-      propertyPath: number_Gold_Reward
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 2541146033343429528, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
-      propertyPath: gold_Gem_Reward_Fly
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2541146033343429529, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3308,11 +3288,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2541146033343429530, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
       propertyPath: m_Name
-      value: Tresua
-      objectReference: {fileID: 0}
-    - target: {fileID: 2541146034423900143, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
-      propertyPath: m_Mesh
-      value: 
+      value: Treasure
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
@@ -3328,14 +3304,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 948551794605664199}
     m_Modifications:
-    - target: {fileID: 2541146033343429528, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
-      propertyPath: number_Gold_Reward
-      value: 400
-      objectReference: {fileID: 0}
-    - target: {fileID: 2541146033343429528, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
-      propertyPath: gold_Gem_Reward_Fly
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2541146033343429529, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3422,11 +3390,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2541146033343429530, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
       propertyPath: m_Name
-      value: Tresua
-      objectReference: {fileID: 0}
-    - target: {fileID: 2541146034423900143, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
-      propertyPath: m_Mesh
-      value: 
+      value: Treasure
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
@@ -3442,14 +3406,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 948551795000472703}
     m_Modifications:
-    - target: {fileID: 2541146033343429528, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
-      propertyPath: number_Gem_Reward
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2541146033343429528, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
-      propertyPath: gold_Gem_Reward_Fly
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2541146033343429529, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3536,23 +3492,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2541146033343429530, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
       propertyPath: m_Name
-      value: Tresua
-      objectReference: {fileID: 0}
-    - target: {fileID: 2541146034423900143, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4699510870886486208, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4699510870886486208, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6754940914720249118, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
-      propertyPath: m_Color.a
-      value: 1
+      value: Treasure
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
@@ -3568,14 +3508,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 948551794898518278}
     m_Modifications:
-    - target: {fileID: 2541146033343429528, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
-      propertyPath: number_Gold_Reward
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 2541146033343429528, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
-      propertyPath: gold_Gem_Reward_Fly
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2541146033343429529, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3662,11 +3594,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2541146033343429530, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
       propertyPath: m_Name
-      value: Tresua
-      objectReference: {fileID: 0}
-    - target: {fileID: 2541146034423900143, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
-      propertyPath: m_Mesh
-      value: 
+      value: Treasure
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
@@ -3682,14 +3610,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 948551794447170935}
     m_Modifications:
-    - target: {fileID: 2541146033343429528, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
-      propertyPath: number_Gem_Reward
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2541146033343429528, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
-      propertyPath: gold_Gem_Reward_Fly
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2541146033343429529, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3776,11 +3696,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2541146033343429530, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
       propertyPath: m_Name
-      value: Tresua
-      objectReference: {fileID: 0}
-    - target: {fileID: 2541146034423900143, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
-      propertyPath: m_Mesh
-      value: 
+      value: Treasure
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
@@ -3796,14 +3712,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 948551794350755011}
     m_Modifications:
-    - target: {fileID: 2541146033343429528, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
-      propertyPath: number_Gem_Reward
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2541146033343429528, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
-      propertyPath: gold_Gem_Reward_Fly
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2541146033343429529, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3890,11 +3798,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2541146033343429530, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
       propertyPath: m_Name
-      value: Tresua
-      objectReference: {fileID: 0}
-    - target: {fileID: 2541146034423900143, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
-      propertyPath: m_Mesh
-      value: 
+      value: Treasure
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
@@ -3910,14 +3814,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 948551794707843979}
     m_Modifications:
-    - target: {fileID: 2541146033343429528, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
-      propertyPath: number_Gold_Reward
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 2541146033343429528, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
-      propertyPath: gold_Gem_Reward_Fly
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2541146033343429529, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4004,11 +3900,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2541146033343429530, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
       propertyPath: m_Name
-      value: Tresua
-      objectReference: {fileID: 0}
-    - target: {fileID: 2541146034423900143, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
-      propertyPath: m_Mesh
-      value: 
+      value: Treasure
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
@@ -4024,14 +3916,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 948551794681699600}
     m_Modifications:
-    - target: {fileID: 2541146033343429528, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
-      propertyPath: number_Gold_Reward
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 2541146033343429528, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
-      propertyPath: gold_Gem_Reward_Fly
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2541146033343429529, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4118,11 +4002,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2541146033343429530, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
       propertyPath: m_Name
-      value: Tresua
-      objectReference: {fileID: 0}
-    - target: {fileID: 2541146034423900143, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}
-      propertyPath: m_Mesh
-      value: 
+      value: Treasure
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ccac61ca11ac1c41ad10f935c51d4db, type: 3}

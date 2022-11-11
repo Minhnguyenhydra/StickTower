@@ -835,8 +835,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonAnimation: {fileID: 3469284485315297660}
-  Action_Victory: {fileID: 11400000, guid: 65825ec84ff0a50499e0dc53b2ecd82a, type: 2}
-  IdleAnim: {fileID: 11400000, guid: 700ad03389c8db04dbfdde7400a39428, type: 2}
+  Action_Victory: {fileID: 11400000, guid: 992440427a1ea9c47b45834adc8e7e24, type: 2}
+  IdleAnim: {fileID: 11400000, guid: 11d2dca825422ab4cb22a684f3d5655b, type: 2}
 --- !u!1 &89433592384989358
 GameObject:
   m_ObjectHideFlags: 0
