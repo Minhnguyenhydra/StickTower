@@ -1,3 +1,4 @@
+#if WatchADs
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,6 +17,7 @@ public class AppLovinAds : MonoBehaviour
 
     private void Start()
     {
+
         MaxSdkCallbacks.OnSdkInitializedEvent += sdkConfiguration =>
         {
             // AppLovin SDK is initialized, configure and start loading ads.
@@ -44,7 +46,7 @@ public class AppLovinAds : MonoBehaviour
         corShowBanner = StartCoroutine(ShowBannerAd());
     }
 
-    #region Ads Banner
+#region Ads Banner
     public void InitializeBannerAds()
     {
         // Banners are automatically sized to 320×50 on phones and 728×90 on tablets
@@ -99,9 +101,9 @@ public class AppLovinAds : MonoBehaviour
     {
 
     }
-    #endregion
+#endregion
 
-    #region Ads Interstitials
+#region Ads Interstitials
     [SerializeField]
     private string adUnitId = "158fc1f844c580a1";
     int retryAttempt;
@@ -193,9 +195,9 @@ public class AppLovinAds : MonoBehaviour
     {
         Debug.Log("Interstitial Revenue Paid");
     }
-    #endregion
+#endregion
 
-    #region Ads Rewarded
+#region Ads Rewarded
     [SerializeField]
     private string adUnitRewardedId = "8152195bceed477e";
     int retryAttempt_Rewarded;
@@ -290,7 +292,8 @@ public class AppLovinAds : MonoBehaviour
     {
         // Ad revenue paid. Use this callback to track user revenue.
     }
-    #endregion
+#endregion
 
 
 }
+#endif

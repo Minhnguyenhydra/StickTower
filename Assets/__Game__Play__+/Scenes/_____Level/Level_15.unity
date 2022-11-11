@@ -2820,6 +2820,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvasWin
       objectReference: {fileID: 0}
+    - target: {fileID: 8343629657060541600, guid: ce14ef297ed9253408f622e8690ce469, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -74.99997
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce14ef297ed9253408f622e8690ce469, type: 3}
 --- !u!224 &839909319 stripped
@@ -3623,6 +3627,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 1307083927815842413, guid: 33bf6e504c444d44cbda1f878c00fa76, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1765391275474086670, guid: 33bf6e504c444d44cbda1f878c00fa76, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
@@ -4400,6 +4408,79 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &1392758654
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 672819045}
+    m_Modifications:
+    - target: {fileID: 1557999325014904262, guid: f1033d645cee1bc42909826018aca19a, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686143363021209744, guid: f1033d645cee1bc42909826018aca19a, type: 3}
+      propertyPath: m_Name
+      value: BossRainbow_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686143363021209744, guid: f1033d645cee1bc42909826018aca19a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686143363021209745, guid: f1033d645cee1bc42909826018aca19a, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686143363021209745, guid: f1033d645cee1bc42909826018aca19a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686143363021209745, guid: f1033d645cee1bc42909826018aca19a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686143363021209745, guid: f1033d645cee1bc42909826018aca19a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686143363021209745, guid: f1033d645cee1bc42909826018aca19a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686143363021209745, guid: f1033d645cee1bc42909826018aca19a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686143363021209745, guid: f1033d645cee1bc42909826018aca19a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686143363021209745, guid: f1033d645cee1bc42909826018aca19a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686143363021209745, guid: f1033d645cee1bc42909826018aca19a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686143363021209745, guid: f1033d645cee1bc42909826018aca19a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686143363021209745, guid: f1033d645cee1bc42909826018aca19a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686143363021209750, guid: f1033d645cee1bc42909826018aca19a, type: 3}
+      propertyPath: health
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686143363021209750, guid: f1033d645cee1bc42909826018aca19a, type: 3}
+      propertyPath: isBoss_UNTIL
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f1033d645cee1bc42909826018aca19a, type: 3}
 --- !u!1 &1399827721
 GameObject:
   m_ObjectHideFlags: 0

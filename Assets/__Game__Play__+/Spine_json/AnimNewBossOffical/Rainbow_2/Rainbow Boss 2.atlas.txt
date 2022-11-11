@@ -1,0 +1,188 @@
+
+Rainbow Boss 2.png
+size: 2852,408
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Arm_1 L
+  rotate: false
+  xy: 2227, 105
+  size: 116, 44
+  orig: 116, 44
+  offset: 0, 0
+  index: -1
+Arm_1_R
+  rotate: true
+  xy: 2790, 220
+  size: 113, 59
+  orig: 113, 59
+  offset: 0, 0
+  index: -1
+Arm_2 L
+  rotate: false
+  xy: 2651, 305
+  size: 91, 100
+  orig: 91, 100
+  offset: 0, 0
+  index: -1
+Arm_2_R
+  rotate: false
+  xy: 2696, 67
+  size: 79, 108
+  orig: 79, 108
+  offset: 0, 0
+  index: -1
+Arm_3_L
+  rotate: true
+  xy: 2443, 16
+  size: 150, 126
+  orig: 150, 126
+  offset: 0, 0
+  index: -1
+Arm_3_R
+  rotate: true
+  xy: 2571, 23
+  size: 143, 123
+  orig: 143, 123
+  offset: 0, 0
+  index: -1
+Body
+  rotate: true
+  xy: 2179, 26
+  size: 76, 152
+  orig: 76, 152
+  offset: 0, 0
+  index: -1
+Head_1
+  rotate: true
+  xy: 2009, 104
+  size: 301, 216
+  orig: 301, 216
+  offset: 0, 0
+  index: -1
+Head_2
+  rotate: false
+  xy: 2227, 151
+  size: 214, 254
+  orig: 214, 254
+  offset: 0, 0
+  index: -1
+Leg_1_L
+  rotate: false
+  xy: 2744, 335
+  size: 103, 70
+  orig: 103, 70
+  offset: 0, 0
+  index: -1
+Leg_1_R
+  rotate: false
+  xy: 2777, 74
+  size: 73, 101
+  orig: 73, 101
+  offset: 0, 0
+  index: -1
+Leg_2_L
+  rotate: true
+  xy: 2696, 6
+  size: 59, 124
+  orig: 59, 124
+  offset: 0, 0
+  index: -1
+Leg_2_R
+  rotate: false
+  xy: 2333, 5
+  size: 108, 98
+  orig: 108, 98
+  offset: 0, 0
+  index: -1
+Leg_3_L
+  rotate: true
+  xy: 2722, 177
+  size: 126, 66
+  orig: 126, 66
+  offset: 0, 0
+  index: -1
+Leg_3_R
+  rotate: true
+  xy: 2651, 177
+  size: 126, 69
+  orig: 126, 69
+  offset: 0, 0
+  index: -1
+Neck
+  rotate: false
+  xy: 2443, 168
+  size: 206, 237
+  orig: 206, 237
+  offset: 0, 0
+  index: -1
+Tail
+  rotate: false
+  xy: 2009, 2
+  size: 168, 100
+  orig: 168, 100
+  offset: 0, 0
+  index: -1
+vfx/Sparks 028 Shot Impact Explosion Up_00000
+  rotate: true
+  xy: 2, 5
+  size: 400, 221
+  orig: 400, 221
+  offset: 0, 0
+  index: -1
+vfx/Sparks 028 Shot Impact Explosion Up_00001
+  rotate: true
+  xy: 225, 5
+  size: 400, 221
+  orig: 400, 221
+  offset: 0, 0
+  index: -1
+vfx/Sparks 028 Shot Impact Explosion Up_00002
+  rotate: true
+  xy: 448, 5
+  size: 400, 221
+  orig: 400, 221
+  offset: 0, 0
+  index: -1
+vfx/Sparks 028 Shot Impact Explosion Up_00003
+  rotate: true
+  xy: 671, 5
+  size: 400, 221
+  orig: 400, 221
+  offset: 0, 0
+  index: -1
+vfx/Sparks 028 Shot Impact Explosion Up_00004
+  rotate: true
+  xy: 894, 5
+  size: 400, 221
+  orig: 400, 221
+  offset: 0, 0
+  index: -1
+vfx/Sparks 028 Shot Impact Explosion Up_00005
+  rotate: true
+  xy: 1117, 5
+  size: 400, 221
+  orig: 400, 221
+  offset: 0, 0
+  index: -1
+vfx/Sparks 028 Shot Impact Explosion Up_00006
+  rotate: true
+  xy: 1340, 5
+  size: 400, 221
+  orig: 400, 221
+  offset: 0, 0
+  index: -1
+vfx/Sparks 028 Shot Impact Explosion Up_00007
+  rotate: true
+  xy: 1563, 5
+  size: 400, 221
+  orig: 400, 221
+  offset: 0, 0
+  index: -1
+vfx/Sparks 028 Shot Impact Explosion Up_00008
+  rotate: true
+  xy: 1786, 5
+  size: 400, 221
+  orig: 400, 221
+  offset: 0, 0
+  index: -1

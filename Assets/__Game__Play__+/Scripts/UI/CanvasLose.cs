@@ -107,12 +107,20 @@ public class CanvasLose : UICanvas
     public void Set_Ads_To_Pass_Level()
     {
         SoundManager.Ins.PlayFx(FxID.click);
+#if WatchADs
+        AdsManager.Instance.WatchInterstitialAds(SkipLevel);  
+#else
+        SkipLevel();
+#endif
+    }
+
+    private void SkipLevel()
+    {
         if (!isFist_Click)
         {
             isFist_Click = true;
             Set_Fade_And_ADs_Close();
         }
-            
     }
     public void Set_No_Thank()
     {
@@ -165,8 +173,8 @@ public class CanvasLose : UICanvas
     IEnumerator IE_Delay_Fade_ADs_Close()
     {
         int lv = PlayerPrefs_Manager.Get_Index_Level_Normal();
-        // tăng level lên 1
-        PlayerPrefs_Manager.Set_Index_Level_Normal(lv + 1);
+        lv = Mathf.Min(lv + 1, 50);
+        PlayerPrefs_Manager.Set_Index_Level_Normal(lv);
         yield return Cache.GetWFS(Constant.Time_Fade);
         UIManager.Ins.OpenUI(UIID.UICFade);
         ((CanvasFade)UIManager.Ins.GetUI(UIID.UICFade)).Set_Fade_Out();

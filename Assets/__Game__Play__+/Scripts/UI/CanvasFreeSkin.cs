@@ -36,7 +36,11 @@ public class CanvasFreeSkin : UICanvas
     {
         SoundManager.Ins.PlayFx(FxID.click);
 
+#if WatchADs
         AdsManager.Instance.WatchRewardedAds(TakeFreeSkin);
+#else
+        TakeFreeSkin();
+#endif
     }
 
     private void TakeFreeSkin()
@@ -73,7 +77,7 @@ public class CanvasFreeSkin : UICanvas
         ((CanvasWinQ)UIManager.Ins.GetUI(UIID.UICWin_Level)).Set_Skin(trSkin);
         PlayerPrefs_Manager.Set_ID_Name_Skin_Wearing(idSkin);
     }
-    #region Base to set Skin, Anim
+#region Base to set Skin, Anim
     public void SetAnimation(AnimationReferenceAsset _anim, bool _loop, float _time_Scale)//Set No loop
     {
         skeletonAnimation.state.SetAnimation(0, _anim, _loop).TimeScale = _time_Scale;
@@ -99,5 +103,5 @@ public class CanvasFreeSkin : UICanvas
     {
         skeletonAnimation.ClearState();
     }
-    #endregion
+#endregion
 }

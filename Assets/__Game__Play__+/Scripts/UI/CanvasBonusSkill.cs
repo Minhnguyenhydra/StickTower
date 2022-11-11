@@ -49,7 +49,11 @@ public class CanvasBonusSkill : UICanvas
     public void Sword_Button1()
     {
         SoundManager.Ins.PlayFx(FxID.click);
+#if WatchADs
         AdsManager.Instance.WatchRewardedAds(TakeLeftSword);
+#else
+        TakeLeftSword();
+#endif
     }
    
     private void TakeLeftSword()
@@ -66,7 +70,12 @@ public class CanvasBonusSkill : UICanvas
     public void Sword_Button2()
     {
         SoundManager.Ins.PlayFx(FxID.click);
+#if WatchADs
         AdsManager.Instance.WatchRewardedAds(TakeRightSword);
+#else
+        TakeRightSword();
+#endif
+
     }
     
 

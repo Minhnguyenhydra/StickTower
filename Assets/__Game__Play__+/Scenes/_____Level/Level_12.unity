@@ -210,6 +210,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 1307083927815842413, guid: 33bf6e504c444d44cbda1f878c00fa76, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1765391275474086670, guid: 33bf6e504c444d44cbda1f878c00fa76, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
@@ -789,6 +793,75 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4645105685314787641, guid: 8a1faec4b324df34ead02bbc422f6b49, type: 3}
   m_PrefabInstance: {fileID: 234560795}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &249910651
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 672819045}
+    m_Modifications:
+    - target: {fileID: 1557999325014904262, guid: f1033d645cee1bc42909826018aca19a, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686143363021209744, guid: f1033d645cee1bc42909826018aca19a, type: 3}
+      propertyPath: m_Name
+      value: BossRainbow_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686143363021209745, guid: f1033d645cee1bc42909826018aca19a, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686143363021209745, guid: f1033d645cee1bc42909826018aca19a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686143363021209745, guid: f1033d645cee1bc42909826018aca19a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686143363021209745, guid: f1033d645cee1bc42909826018aca19a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686143363021209745, guid: f1033d645cee1bc42909826018aca19a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686143363021209745, guid: f1033d645cee1bc42909826018aca19a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686143363021209745, guid: f1033d645cee1bc42909826018aca19a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686143363021209745, guid: f1033d645cee1bc42909826018aca19a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686143363021209745, guid: f1033d645cee1bc42909826018aca19a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686143363021209745, guid: f1033d645cee1bc42909826018aca19a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686143363021209745, guid: f1033d645cee1bc42909826018aca19a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686143363021209750, guid: f1033d645cee1bc42909826018aca19a, type: 3}
+      propertyPath: health
+      value: 313
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686143363021209750, guid: f1033d645cee1bc42909826018aca19a, type: 3}
+      propertyPath: isBoss_UNTIL
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f1033d645cee1bc42909826018aca19a, type: 3}
 --- !u!1001 &283181132
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2884,7 +2957,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3084026206248775594, guid: fca6fa56ba3fe9d4bb164811d1aaf58e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -343
+      value: -343.00003
       objectReference: {fileID: 0}
     - target: {fileID: 3084026206248775594, guid: fca6fa56ba3fe9d4bb164811d1aaf58e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3912,6 +3985,10 @@ PrefabInstance:
     - target: {fileID: 8343629655301455765, guid: ce14ef297ed9253408f622e8690ce469, type: 3}
       propertyPath: m_Name
       value: CanvasWin
+      objectReference: {fileID: 0}
+    - target: {fileID: 8343629657060541600, guid: ce14ef297ed9253408f622e8690ce469, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -74.99997
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce14ef297ed9253408f622e8690ce469, type: 3}
@@ -6275,6 +6352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBoss_auto_Asign: {fileID: 0}
+  GMState: 0
 --- !u!1 &1989891923
 GameObject:
   m_ObjectHideFlags: 0

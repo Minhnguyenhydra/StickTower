@@ -187,8 +187,11 @@ public class CanvasGamePlay : UICanvas
             if (!Player.ins.isDie)
             {
                 SoundManager.Ins.PlayFx(FxID.click);
-
+#if WatchADs
                 AdsManager.Instance.WatchInterstitialAds(SkipLevel);
+#else
+                SkipLevel();
+#endif
             }
         }
     }
@@ -219,7 +222,11 @@ public class CanvasGamePlay : UICanvas
 
     public void ADs_Take_Sword_Button()
     {
+#if WatchADs
         AdsManager.Instance.WatchRewardedAds(TakeSword);
+#else
+        TakeSword();
+#endif
     }
 
     private void TakeSword()

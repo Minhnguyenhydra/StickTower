@@ -388,7 +388,11 @@ public class CanvasWinQ : UICanvas
     {
         SoundManager.Ins.PlayFx(FxID.click);
 
+#if WatchADs
         AdsManager.Instance.WatchRewardedAds(TakeRandomGold);
+#else
+        TakeRandomGold();
+#endif
     }
 
     private void TakeRandomGold()
@@ -541,7 +545,7 @@ public class CanvasWinQ : UICanvas
 
 
 
-    #region Get Icon prefabs
+#region Get Icon prefabs
     IEnumerator IE_Scale_iceon_before()
     {
         yield return Cache.GetWFS(1f);
@@ -770,6 +774,6 @@ public class CanvasWinQ : UICanvas
                 return 0;
         }
     }
-    #endregion
+#endregion
 
 }

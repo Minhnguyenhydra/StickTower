@@ -1,3 +1,4 @@
+#if WatchADs
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,16 +24,13 @@ public class AdsManager : MonoBehaviour
 
     public void WatchRewardedAds(CallBackAds cbAds)
     {
-        Debug.Log("Clicked Rewarded Ads");
         applovin.ShowRewardedAds(cbAds);
-        Debug.Log("Rewarded Ads Displayed");
     }
 
     public void WatchInterstitialAds(CallBackAds cbAds)
     {
-        Debug.Log("Clicked Interstitial Ads");
         applovin.ShowInterstitialAds(cbAds);
-        Debug.Log("Interstitial Ads Displayed");
     }
 
 }
+#endif

@@ -1293,7 +1293,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 39e5ab8b810d09249a621221b18ecc06, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ceb1d5f713c8cbc42a1d909123355a57, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2117,7 +2117,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 39e5ab8b810d09249a621221b18ecc06, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ceb1d5f713c8cbc42a1d909123355a57, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2764,7 +2764,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 39e5ab8b810d09249a621221b18ecc06, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ceb1d5f713c8cbc42a1d909123355a57, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4672,7 +4672,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 879815431862554446}
-  - {fileID: 879815431525687111}
+  - {fileID: 879815432073866156}
   - {fileID: 879815432177679131}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -4807,7 +4807,6 @@ MonoBehaviour:
   skin_Item_SO: {fileID: 11400000, guid: cbc3267826881e44a8efe39e36175cdf, type: 2}
   obj_NoHave: {fileID: 879815430950269929}
   obj_Btn_Unlock: {fileID: 879815431860045795}
-  obj_Btn_WatchADs: {fileID: 0}
   obj_Btn_Gold_Parrent: {fileID: 879815432357458847}
   obj_Btn_Enough_Gold: {fileID: 879815431898671898}
   obj_Btn_Not_Enough_Gold: {fileID: 879815432131377745}
@@ -4967,7 +4966,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 39e5ab8b810d09249a621221b18ecc06, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ceb1d5f713c8cbc42a1d909123355a57, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6789,7 +6788,6 @@ MonoBehaviour:
   skin_Item_SO: {fileID: 11400000, guid: 8cc8a61f9f17db54288895d5165fc26c, type: 2}
   obj_NoHave: {fileID: 879815431524037941}
   obj_Btn_Unlock: {fileID: 879815431459282048}
-  obj_Btn_WatchADs: {fileID: 0}
   obj_Btn_Gold_Parrent: {fileID: 879815432527988278}
   obj_Btn_Enough_Gold: {fileID: 879815431166691585}
   obj_Btn_Not_Enough_Gold: {fileID: 879815432516358416}
@@ -7020,7 +7018,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 39e5ab8b810d09249a621221b18ecc06, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ceb1d5f713c8cbc42a1d909123355a57, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7725,10 +7723,10 @@ RectTransform:
   m_Father: {fileID: 879815432073866156}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -560.6801, y: 302}
-  m_SizeDelta: {x: 1098.42, y: 1442}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -0.00024414062}
+  m_SizeDelta: {x: -0.00012207, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &879815431364027760
 CanvasRenderer:
@@ -8150,7 +8148,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 39e5ab8b810d09249a621221b18ecc06, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ceb1d5f713c8cbc42a1d909123355a57, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9558,96 +9556,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &879815431525687108
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 879815431525687111}
-  - component: {fileID: 879815431525687160}
-  - component: {fileID: 879815431525687161}
-  - component: {fileID: 879815431525687110}
-  m_Layer: 5
-  m_Name: Main
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &879815431525687111
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 879815431525687108}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 879815432073866156}
-  m_Father: {fileID: 879815431031773174}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -480}
-  m_SizeDelta: {x: 1028.1, y: 960}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &879815431525687160
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 879815431525687108}
-  m_CullTransparentMesh: 1
---- !u!114 &879815431525687161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 879815431525687108}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a10d4f6cd5d7d1840a547917aa5eed3a, type: 3}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!114 &879815431525687110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 879815431525687108}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShowMaskGraphic: 1
 --- !u!1 &879815431533696049
 GameObject:
   m_ObjectHideFlags: 0
@@ -10524,7 +10432,6 @@ MonoBehaviour:
   skin_Item_SO: {fileID: 11400000, guid: a0f984845a517a34ca604b1de6926aa6, type: 2}
   obj_NoHave: {fileID: 879815431631857323}
   obj_Btn_Unlock: {fileID: 879815430960349390}
-  obj_Btn_WatchADs: {fileID: 0}
   obj_Btn_Gold_Parrent: {fileID: 879815431560802170}
   obj_Btn_Enough_Gold: {fileID: 879815432701019927}
   obj_Btn_Not_Enough_Gold: {fileID: 879815431001405318}
@@ -12473,7 +12380,6 @@ MonoBehaviour:
   skin_Item_SO: {fileID: 11400000, guid: 82327971bf2a5fc4b9143d1dc235b990, type: 2}
   obj_NoHave: {fileID: 879815432252555862}
   obj_Btn_Unlock: {fileID: 879815432246248224}
-  obj_Btn_WatchADs: {fileID: 0}
   obj_Btn_Gold_Parrent: {fileID: 879815430967622039}
   obj_Btn_Enough_Gold: {fileID: 879815431437675875}
   obj_Btn_Not_Enough_Gold: {fileID: 879815432073315575}
@@ -12554,7 +12460,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 39e5ab8b810d09249a621221b18ecc06, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ceb1d5f713c8cbc42a1d909123355a57, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13234,7 +13140,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 39e5ab8b810d09249a621221b18ecc06, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ceb1d5f713c8cbc42a1d909123355a57, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13539,14 +13445,14 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 879815431364027775}
-  m_Father: {fileID: 879815431525687111}
-  m_RootOrder: 0
+  m_Father: {fileID: 879815431031773174}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -538.44}
-  m_SizeDelta: {x: 964.2, y: 962.63}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -960}
+  m_SizeDelta: {x: 0, y: -960}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &879815432073866145
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13783,7 +13689,6 @@ MonoBehaviour:
   skin_Item_SO: {fileID: 11400000, guid: 9d4c0c9bd9a512842b7b01251299954d, type: 2}
   obj_NoHave: {fileID: 879815432021370322}
   obj_Btn_Unlock: {fileID: 879815431227739540}
-  obj_Btn_WatchADs: {fileID: 0}
   obj_Btn_Gold_Parrent: {fileID: 879815431309519945}
   obj_Btn_Enough_Gold: {fileID: 879815432539277581}
   obj_Btn_Not_Enough_Gold: {fileID: 879815432469273481}
@@ -14090,10 +13995,10 @@ RectTransform:
   m_Father: {fileID: 879815431364027775}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 5.4798584, y: 2948}
+  m_SizeDelta: {x: 23.900024, y: 1355.4358}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &879815432144267686
 MonoBehaviour:
@@ -14108,15 +14013,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 11
+    m_Left: 0
     m_Right: 0
-    m_Top: 60
+    m_Top: 35
     m_Bottom: 200
-  m_ChildAlignment: 0
+  m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 364.3, y: 513.6}
-  m_Spacing: {x: 0, y: 30}
+  m_Spacing: {x: 0, y: 50}
   m_Constraint: 1
   m_ConstraintCount: 3
 --- !u!114 &879815432144267687
@@ -14131,8 +14036,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalFit: 1
-  m_VerticalFit: 1
+  m_HorizontalFit: 0
+  m_VerticalFit: 2
 --- !u!1 &879815432144284314
 GameObject:
   m_ObjectHideFlags: 0
@@ -14969,7 +14874,6 @@ MonoBehaviour:
   skin_Item_SO: {fileID: 11400000, guid: 8b23e3da204265f4a9fe0571e93a8e47, type: 2}
   obj_NoHave: {fileID: 879815431967744038}
   obj_Btn_Unlock: {fileID: 879815430629421421}
-  obj_Btn_WatchADs: {fileID: 0}
   obj_Btn_Gold_Parrent: {fileID: 879815431375942445}
   obj_Btn_Enough_Gold: {fileID: 879815432689088008}
   obj_Btn_Not_Enough_Gold: {fileID: 879815430824906306}
@@ -15675,7 +15579,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 39e5ab8b810d09249a621221b18ecc06, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ceb1d5f713c8cbc42a1d909123355a57, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -19008,7 +18912,6 @@ MonoBehaviour:
   skin_Item_SO: {fileID: 11400000, guid: df66d7a2744125445bd6e60a92884f99, type: 2}
   obj_NoHave: {fileID: 879815432704597820}
   obj_Btn_Unlock: {fileID: 879815431191889891}
-  obj_Btn_WatchADs: {fileID: 0}
   obj_Btn_Gold_Parrent: {fileID: 879815431278862043}
   obj_Btn_Enough_Gold: {fileID: 879815432116441930}
   obj_Btn_Not_Enough_Gold: {fileID: 879815432533651642}
@@ -19798,7 +19701,6 @@ MonoBehaviour:
   skin_Item_SO: {fileID: 11400000, guid: a26b34669e70ff742a64621637b193c2, type: 2}
   obj_NoHave: {fileID: 879815431369865481}
   obj_Btn_Unlock: {fileID: 879815430681281924}
-  obj_Btn_WatchADs: {fileID: 0}
   obj_Btn_Gold_Parrent: {fileID: 879815432141458036}
   obj_Btn_Enough_Gold: {fileID: 879815431564167710}
   obj_Btn_Not_Enough_Gold: {fileID: 879815432040492490}
@@ -20787,7 +20689,6 @@ MonoBehaviour:
   skin_Item_SO: {fileID: 11400000, guid: 29cdb82ed12b0d24aaf27e1813dd7567, type: 2}
   obj_NoHave: {fileID: 2921995425493123908}
   obj_Btn_Unlock: {fileID: 3488827889177050187}
-  obj_Btn_WatchADs: {fileID: 0}
   obj_Btn_Gold_Parrent: {fileID: 5423275527238640499}
   obj_Btn_Enough_Gold: {fileID: 4909407796887509070}
   obj_Btn_Not_Enough_Gold: {fileID: 206674540277403957}
@@ -21454,7 +21355,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 39e5ab8b810d09249a621221b18ecc06, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ceb1d5f713c8cbc42a1d909123355a57, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -22129,7 +22030,6 @@ MonoBehaviour:
   skin_Item_SO: {fileID: 11400000, guid: 5b4b54215442c564ea21823af831a729, type: 2}
   obj_NoHave: {fileID: 1197998306298358243}
   obj_Btn_Unlock: {fileID: 7052475177536980888}
-  obj_Btn_WatchADs: {fileID: 0}
   obj_Btn_Gold_Parrent: {fileID: 6803126513574241511}
   obj_Btn_Enough_Gold: {fileID: 2859169445988321155}
   obj_Btn_Not_Enough_Gold: {fileID: 7385482761113125892}
@@ -23456,7 +23356,6 @@ MonoBehaviour:
   skin_Item_SO: {fileID: 11400000, guid: 213c86206a4e11940b14e950ee8b1cc7, type: 2}
   obj_NoHave: {fileID: 8659464627141582803}
   obj_Btn_Unlock: {fileID: 2209991513104279900}
-  obj_Btn_WatchADs: {fileID: 0}
   obj_Btn_Gold_Parrent: {fileID: 6844392596373403206}
   obj_Btn_Enough_Gold: {fileID: 9192113631043873968}
   obj_Btn_Not_Enough_Gold: {fileID: 8632884631756858924}
@@ -23640,7 +23539,6 @@ MonoBehaviour:
   skin_Item_SO: {fileID: 11400000, guid: a6ff25e65e1e6174d8d33e5660b08cad, type: 2}
   obj_NoHave: {fileID: 7070808336953839449}
   obj_Btn_Unlock: {fileID: 2134313992107793496}
-  obj_Btn_WatchADs: {fileID: 0}
   obj_Btn_Gold_Parrent: {fileID: 5543956963402054952}
   obj_Btn_Enough_Gold: {fileID: 3579649587029475765}
   obj_Btn_Not_Enough_Gold: {fileID: 6567713733795109414}
@@ -24527,7 +24425,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 39e5ab8b810d09249a621221b18ecc06, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ceb1d5f713c8cbc42a1d909123355a57, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -25553,7 +25451,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 39e5ab8b810d09249a621221b18ecc06, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ceb1d5f713c8cbc42a1d909123355a57, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -28981,7 +28879,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 39e5ab8b810d09249a621221b18ecc06, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ceb1d5f713c8cbc42a1d909123355a57, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -30090,7 +29988,6 @@ MonoBehaviour:
   skin_Item_SO: {fileID: 11400000, guid: 4aa7acbda6d2adb4bb2550d0688d08df, type: 2}
   obj_NoHave: {fileID: 5851977273647870058}
   obj_Btn_Unlock: {fileID: 4893978791946017399}
-  obj_Btn_WatchADs: {fileID: 0}
   obj_Btn_Gold_Parrent: {fileID: 6001771083073550427}
   obj_Btn_Enough_Gold: {fileID: 4919024292386621834}
   obj_Btn_Not_Enough_Gold: {fileID: 5467616957199238176}
@@ -30325,7 +30222,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 39e5ab8b810d09249a621221b18ecc06, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ceb1d5f713c8cbc42a1d909123355a57, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -32404,7 +32301,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 39e5ab8b810d09249a621221b18ecc06, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ceb1d5f713c8cbc42a1d909123355a57, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -32602,7 +32499,6 @@ MonoBehaviour:
   skin_Item_SO: {fileID: 11400000, guid: 9e8837370cbccc44ebc4c431cb237d46, type: 2}
   obj_NoHave: {fileID: 1694891192375404833}
   obj_Btn_Unlock: {fileID: 8137005406009472983}
-  obj_Btn_WatchADs: {fileID: 0}
   obj_Btn_Gold_Parrent: {fileID: 2243801045894754081}
   obj_Btn_Enough_Gold: {fileID: 5306163886017746973}
   obj_Btn_Not_Enough_Gold: {fileID: 8928662590393765610}
@@ -33726,7 +33622,6 @@ MonoBehaviour:
   skin_Item_SO: {fileID: 11400000, guid: 8c03e6097475b354fb74fe4a05bc42fa, type: 2}
   obj_NoHave: {fileID: 8710789679238620943}
   obj_Btn_Unlock: {fileID: 1681686667603723199}
-  obj_Btn_WatchADs: {fileID: 0}
   obj_Btn_Gold_Parrent: {fileID: 7622967608255483433}
   obj_Btn_Enough_Gold: {fileID: 7982452715820411342}
   obj_Btn_Not_Enough_Gold: {fileID: 1816873639126695995}

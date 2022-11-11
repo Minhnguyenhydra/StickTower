@@ -21,6 +21,7 @@ public class CanvasArea : UICanvas
 
     private int numberWatchedAds;
     private int orderHero;
+    private bool isComeBack;
 
 
     private void OnEnable()
@@ -39,6 +40,15 @@ public class CanvasArea : UICanvas
     {
         rect_Boot_Of_Canvas.DOAnchorPosY(-2000, 1);
     }
+
+    private void MoveBootCanvasComeBack()
+    {
+        rect_Boot_Of_Canvas.DOAnchorPosY(-26.36f, 1).OnComplete(() =>
+        {
+            isComeBack = false;
+        });
+    }
+
     public void SetOrigin_Boot_Canvas()
     {
         rect_Boot_Of_Canvas.anchoredPosition = new Vector3(0, -26.36f, 0);
@@ -68,11 +78,15 @@ public class CanvasArea : UICanvas
     {
         //anim_GamePlay.SetTrigger(Constant.Trigger_GamePlay_Close);
         //StartCoroutine(IE_Delay_Replay());
+        if (isComeBack)
+            return;
 
         Init_Area.Ins.userData.SetIntData(UserData.Key_LevelArena, ref Init_Area.Ins.userData.levelArena, Init_Area.Ins.userData.levelArena);
 
         Init_Area.Ins.OnInit();
         SoundManager.Ins.PlayFx(FxID.click);
+        isComeBack = true;
+        MoveBootCanvasComeBack();
     }
 
     public void Fight_Button()
@@ -157,8 +171,11 @@ public class CanvasArea : UICanvas
     {
         SoundManager.Ins.PlayFx(FxID.click);
         orderHero = index;
-
+# if WatchADs
         AdsManager.Instance.WatchRewardedAds(BuyHero);
+#else
+        BuyHero();
+#endif
     }
 
     private void BuyHero()

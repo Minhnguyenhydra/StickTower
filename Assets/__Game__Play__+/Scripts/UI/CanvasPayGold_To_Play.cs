@@ -45,7 +45,11 @@ public class CanvasPayGold_To_Play : UICanvas
     {
         SoundManager.Ins.PlayFx(FxID.click);
 
+#if WatchADs
         AdsManager.Instance.WatchRewardedAds(PayToPlay);
+#else
+        PayToPlay();
+#endif
     }
 
     private void PayToPlay()

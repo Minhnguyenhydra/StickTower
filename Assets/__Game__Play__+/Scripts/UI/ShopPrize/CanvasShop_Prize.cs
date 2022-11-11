@@ -78,7 +78,11 @@ public class CanvasShop_Prize : UICanvas
     }
     public void ADsTake_3_Key_button()
     {
+#if WatchADs
         AdsManager.Instance.WatchRewardedAds(OpenThreeKeys);
+#else
+        OpenThreeKeys();
+#endif
     }
 
     private void OpenThreeKeys()

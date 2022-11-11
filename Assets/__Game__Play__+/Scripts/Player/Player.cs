@@ -186,8 +186,9 @@ public class Player : MonoBehaviour
         
         Set_Anim_Idle();
 
-        if (CheckExpireSkin())
-            ChangeSkinWhenExpired();
+        //if (CheckExpireSkin())
+        //    ChangeSkinWhenExpired();
+
         Set_Skin(Constant.Get_Skin_Name_By_Id(PlayerPrefs_Manager.Get_ID_Name_Skin_Wearing()));
 
         Set_Fix_Pos_Player();
@@ -478,7 +479,7 @@ public class Player : MonoBehaviour
         }
 
         // Just wait 50% duration anim attack with Big Enemy, 60% with Normal Enemy
-        float animDuration = enemy_Hitting.isBig_Enemy ? enemy_Hitting.Action_Attack.Animation.Duration * 0.5f
+        float animDuration = enemy_Hitting.isBig_Enemy ? enemy_Hitting.Action_Attack.Animation.Duration * 0.45f
                                                        : enemy_Hitting.Action_Attack.Animation.Duration * 0.6f;
         yield return Cache.GetWFS(animDuration); 
         Set_Show_Blood();
