@@ -3,25 +3,21 @@ using GoogleMobileAds.Api;
 
 public class AppOpenAdLauncher : Singleton<AppOpenAdLauncher>
 {
+    private static AppOpenAdLauncher Instance;
 
-    private bool isAwake;
     protected void Awake()
     {
-        //base.Awake();
+        if (Instance != null)
+            return;
+
+        Instance = this;
 
         MobileAds.Initialize(status => { AppOpenAdManager.Instance.LoadAd(); });
-        isAwake = true;
     }
 
 
     private void OnApplicationPause(bool pause)
     {
-        if (isAwake == true)
-        {
-            isAwake = false;
-            return;
-        }
-
         if (!pause && AppOpenAdManager.ConfigResumeApp && !AppOpenAdManager.ResumeFromAds)
         {
             AppOpenAdManager.Instance.ShowAdIfAvailable();

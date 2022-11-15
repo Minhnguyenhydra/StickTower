@@ -36,8 +36,8 @@ public class CanvasBonusSkill : UICanvas
         leftBonus = Random.Range(1, 4) * 5;
         txtLeftSword.text = leftBonus.ToString();
 
-        rightBonus = Random.Range(1, 4) * 5;
-        txtRightSword.text = rightBonus.ToString();
+        rightBonus = Random.Range(2, 4);
+        txtRightSword.text = "x" + rightBonus;
     }
 
 
@@ -49,7 +49,11 @@ public class CanvasBonusSkill : UICanvas
     public void Sword_Button1()
     {
         SoundManager.Ins.PlayFx(FxID.click);
+#if WatchADs
         AdsManager.Instance.WatchRewardedAds(TakeLeftSword);
+#else
+        TakeLeftSword();
+#endif
     }
    
     private void TakeLeftSword()
@@ -66,7 +70,12 @@ public class CanvasBonusSkill : UICanvas
     public void Sword_Button2()
     {
         SoundManager.Ins.PlayFx(FxID.click);
+#if WatchADs
         AdsManager.Instance.WatchRewardedAds(TakeRightSword);
+#else
+        TakeRightSword();
+#endif
+
     }
     
 
@@ -74,8 +83,8 @@ public class CanvasBonusSkill : UICanvas
     {
         string name_Skin = Constant.Get_Skin_Name_By_Id_Sword(indexRightSword);
         Player.ins.Set_Skin(name_Skin);
-        Player.ins.health_Bar.Set_Step_By_Step_Health(Player.ins.health, Player.ins.health + rightBonus, 1);
-        Player.ins.Set_Add_Health(rightBonus);
+        Player.ins.health_Bar.Set_Step_By_Step_Health(Player.ins.health, Player.ins.health * rightBonus, 1);
+        Player.ins.Set_Add_Health(Player.ins.health * (rightBonus - 1));
                              
         Player.ins.Set_Anim_TakeSword();
         StartCoroutine(IE_DelayClose());

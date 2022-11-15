@@ -67,7 +67,11 @@ public class Model_Hero_Item : MonoBehaviour
     }
     public void Try_Button()
     {
+#if WatchADs
         AdsManager.Instance.WatchRewardedAds(TrySkin);
+#else
+        TrySkin();
+#endif
     }
 
     private void TrySkin()
@@ -75,17 +79,17 @@ public class Model_Hero_Item : MonoBehaviour
         numberWatchedAds++;
         if (numberWatchedAds < skin_Item_SO.numberAdsNeed)
         {
-            Debug.Log("numberWatchedAds " + numberWatchedAds);
             return;
         }
 
         numberWatchedAds = 0;
 
         Change_Hero();
-
-        int idSkin = PlayerPrefs_Manager.Get_ID_Name_Skin_Wearing();
-        int expire = PlayerPrefs_Manager.Get_Index_Level_Normal() + Constant.expireSkin;
-        PlayerPrefs_Manager.SetExpireSkin(idSkin, expire);
+        GameManager.Ins.Set_Spawn_FireWord(tf_Spawn_Fire_Work);
+        ////Try Skin
+        //int idSkin = PlayerPrefs_Manager.Get_ID_Name_Skin_Wearing();
+        //int expire = PlayerPrefs_Manager.Get_Index_Level_Normal() + Constant.expireSkin;
+        //PlayerPrefs_Manager.SetExpireSkin(idSkin, expire);
     }
 
     public void Can_Click_If_Have_Button()
@@ -98,7 +102,7 @@ public class Model_Hero_Item : MonoBehaviour
         }
     }
 
-    #endregion
+#endregion
 
 
     public void Change_Hero()
@@ -108,8 +112,10 @@ public class Model_Hero_Item : MonoBehaviour
         int _ID_old_Skin = PlayerPrefs_Manager.Get_ID_Name_Skin_Wearing();
         PlayerPrefs_Manager.Set_Have_No_Wear_Skin(_ID_old_Skin);
         PlayerPrefs_Manager.Set_Have_No_Wear_Skin(0);// Fix cái Skin đầu tiên ko thay đổi
-        SetPreSkin(_ID_old_Skin);
-        //
+
+        ////Try Skin
+        //SetPreSkin(_ID_old_Skin);
+        
         ((CanvasSkin_Boot)UIManager.Ins.GetUI(UIID.UICSkin_Boot)).Set_No_Wear_One_Item(_ID_old_Skin);
         ((CanvasSkin_Boot)UIManager.Ins.GetUI(UIID.UICSkin_Boot)).Set_No_Wear_One_Item(0);
         //
@@ -150,6 +156,7 @@ public class Model_Hero_Item : MonoBehaviour
         Set_Deactive_All_Btn();
         if (_enum_State_Item_Skin == Enum_State_Item_Skin.Have_Wearing)
         {
+            ((CanvasSkin_Boot)UIManager.Ins.GetUI(UIID.UICSkin_Boot)).Set_No_Wear_One_Item(0);
             obj_Have_Wearing.SetActive(true);
         }
         else if (_enum_State_Item_Skin == Enum_State_Item_Skin.Have_No_Wear)

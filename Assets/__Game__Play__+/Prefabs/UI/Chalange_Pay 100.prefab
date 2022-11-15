@@ -807,9 +807,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1.21
-  m_Text: 'PAY 100 GOLD TO PLAY
+  m_Text: 'Watch advertisement
 
-    THIS LEVEL?'
+    to play this level'
 --- !u!1 &972764566830627244
 GameObject:
   m_ObjectHideFlags: 0

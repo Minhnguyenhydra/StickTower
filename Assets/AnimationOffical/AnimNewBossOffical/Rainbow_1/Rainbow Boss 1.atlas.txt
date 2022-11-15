@@ -1,0 +1,125 @@
+
+Rainbow Boss 1.png
+size: 900,1108
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Arm_L_1
+  rotate: false
+  xy: 766, 192
+  size: 124, 212
+  orig: 124, 212
+  offset: 0, 0
+  index: -1
+Arm_L_2
+  rotate: false
+  xy: 616, 656
+  size: 175, 192
+  orig: 175, 192
+  offset: 0, 0
+  index: -1
+Arm_R_1
+  rotate: false
+  xy: 592, 210
+  size: 172, 194
+  orig: 172, 194
+  offset: 0, 0
+  index: -1
+Arm_R_2
+  rotate: true
+  xy: 431, 63
+  size: 139, 209
+  orig: 139, 209
+  offset: 0, 0
+  index: -1
+Body
+  rotate: false
+  xy: 2, 765
+  size: 248, 341
+  orig: 248, 341
+  offset: 0, 0
+  index: -1
+Head
+  rotate: true
+  xy: 592, 406
+  size: 248, 306
+  orig: 248, 306
+  offset: 0, 0
+  index: -1
+Leg_L_1
+  rotate: true
+  xy: 228, 54
+  size: 148, 201
+  orig: 148, 201
+  offset: 0, 0
+  index: -1
+Leg_L_2
+  rotate: false
+  xy: 761, 29
+  size: 104, 161
+  orig: 104, 161
+  offset: 0, 0
+  index: -1
+Leg_R_1
+  rotate: false
+  xy: 642, 2
+  size: 117, 206
+  orig: 117, 206
+  offset: 0, 0
+  index: -1
+Leg_R_2
+  rotate: false
+  xy: 793, 687
+  size: 104, 161
+  orig: 104, 161
+  offset: 0, 0
+  index: -1
+vfx/at_slash
+  rotate: false
+  xy: 616, 850
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+vfx/boom_1 (1)
+  rotate: true
+  xy: 2, 401
+  size: 362, 224
+  orig: 362, 224
+  offset: 0, 0
+  index: -1
+vfx/boom_1 (2)
+  rotate: false
+  xy: 252, 882
+  size: 362, 224
+  orig: 362, 224
+  offset: 0, 0
+  index: -1
+vfx/boom_1 (3)
+  rotate: true
+  xy: 2, 37
+  size: 362, 224
+  orig: 362, 224
+  offset: 0, 0
+  index: -1
+vfx/boom_1 (4)
+  rotate: false
+  xy: 252, 656
+  size: 362, 224
+  orig: 362, 224
+  offset: 0, 0
+  index: -1
+vfx/boom_1 (5)
+  rotate: false
+  xy: 228, 430
+  size: 362, 224
+  orig: 362, 224
+  offset: 0, 0
+  index: -1
+vfx/boom_1 (6)
+  rotate: false
+  xy: 228, 204
+  size: 362, 224
+  orig: 362, 224
+  offset: 0, 0
+  index: -1

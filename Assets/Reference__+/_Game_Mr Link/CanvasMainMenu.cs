@@ -121,14 +121,25 @@ public class CanvasMainMenu : UICanvas
     public void AreaButton()
     {
         SoundManager.Ins.PlayFx(FxID.click);
-        //UNDONE...
-        //Load Scene Area
+
         PlayerPrefs.SetInt(UserData.Key_1GamPlay_Or_2Area_Or_3Challenge, 2);
-        Scene_Manager_Q.Load_Scene("Ar_Level_0");
-        //Set_Fade_And_Close();
+        StartCoroutine(LoadScene("Ar_Level_0"));
+    }
+
+    private IEnumerator LoadScene(string sceneName)
+    {
+        UIManager.Ins.OpenUI(UIID.UICFade);
+        ((CanvasFade)UIManager.Ins.GetUI(UIID.UICFade)).Set_Fade_Out();
+
+        AsyncOperation homeScene = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
+        while (!homeScene.isDone)
+        {
+            yield return null;
+        }
+        Close();
     }
     #endregion
-    
+
 
     #region Gold_Pink_bank
     public void PigBankButton()

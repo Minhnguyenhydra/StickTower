@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class CanvasSkin_Top : UICanvas
 {
@@ -15,10 +16,19 @@ public class CanvasSkin_Top : UICanvas
     public void Homebutton()
     {
         SoundManager.Ins.PlayFx(FxID.click);
-        UIManager.Ins.OpenUI(UIID.UICMainMenu);
-        UIManager.Ins.CloseUI(UIID.UICSkin_Boot);
-        Close();
 
+        StartCoroutine(LoadHomeScene());
+    }
+    private IEnumerator LoadHomeScene()
+    {
+        UIManager.Ins.OpenUI(UIID.UICFade);
+        ((CanvasFade)UIManager.Ins.GetUI(UIID.UICFade)).Set_Fade_Out();
+
+        AsyncOperation homeScene = SceneManager.LoadSceneAsync(0, LoadSceneMode.Single);
+        while (!homeScene.isDone)
+        {
+            yield return null;
+        }
     }
     public void Set_Refresh_Gold_Gem()
     {
