@@ -71,12 +71,56 @@ public class CanvasLose : UICanvas
     public void Homebutton()
     {
         SoundManager.Ins.PlayFx(FxID.click);
-        UIManager.Ins.OpenUI(UIID.UICMainMenu);
-        UIManager.Ins.CloseUI(UIID.UICSkin_Boot);
-        Close();
+        StartCoroutine(LoadScene("Loading"));
+    }
+    private IEnumerator LoadScene(string sceneName)
+    {
+        UIManager.Ins.OpenUI(UIID.UICFade);
+        ((CanvasFade)UIManager.Ins.GetUI(UIID.UICFade)).Set_Fade_Out();
 
+        AsyncOperation homeScene = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
+        while (!homeScene.isDone)
+        {
+            yield return null;
+        }
     }
     #endregion
+
+    #region Area
+    public void AreaButton()
+    {
+        SoundManager.Ins.PlayFx(FxID.click);
+        PlayerPrefs.SetInt(UserData.Key_1GamPlay_Or_2Area_Or_3Challenge, 2);
+        StartCoroutine(LoadScene("Ar_Level_0"));
+    }
+    #endregion
+
+    #region Challenge
+    public void ChallengeButton()
+    {
+        SoundManager.Ins.PlayFx(FxID.click);
+        UIManager.Ins.OpenUI(UIID.UICChallenge);
+    }
+    #endregion
+
+    #region Skin
+    public void SkinButton()
+    {
+        SoundManager.Ins.PlayFx(FxID.click);
+        UIManager.Ins.OpenUI(UIID.UICSkin_Top);
+        UIManager.Ins.OpenUI(UIID.UICSkin_Boot);
+        Close();
+    }
+    #endregion
+
+    #region Gold_Pink_bank
+    public void PigBankButton()
+    {
+        SoundManager.Ins.PlayFx(FxID.click);
+        UIManager.Ins.OpenUI(UIID.UICPigBank);
+    }
+    #endregion
+
     #region Base to set Skin, Anim
     public void SetAnimation(AnimationReferenceAsset _anim, bool _loop, float _time_Scale)//Set No loop
     {
@@ -125,12 +169,27 @@ public class CanvasLose : UICanvas
     public void Set_No_Thank()
     {
         SoundManager.Ins.PlayFx(FxID.click);
+
+#if WatchADs
+
+        if (PlayerPrefs_Manager.Get_Index_Level_Normal() >= 4)
+            AdsManager.Instance.WatchInterstitialAds(NoThanksClicked);
+        else
+            NoThanksClicked();
+#else
+        NoThanksClicked();
+#endif
+    }
+
+    private void NoThanksClicked()
+    {
         if (!isFist_Click)
         {
             isFist_Click = true;
             Set_Fade_And_NoThank_Close();
         }
     }
+
     public void Set_Fade_And_NoThank_Close()
     {
         StartCoroutine(IE_Delay_Fade_NoThanks_Close());

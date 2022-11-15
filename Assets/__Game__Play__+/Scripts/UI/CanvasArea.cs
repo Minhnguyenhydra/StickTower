@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class CanvasArea : UICanvas
 {
@@ -65,8 +66,18 @@ public class CanvasArea : UICanvas
 
         //
         //UIManager.Ins.OpenUI(UIID.UICMainMenu);
-        Close();
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        StartCoroutine(LoadHomeScene());
+    }
+    private IEnumerator LoadHomeScene()
+    {
+        UIManager.Ins.OpenUI(UIID.UICFade);
+        ((CanvasFade)UIManager.Ins.GetUI(UIID.UICFade)).Set_Fade_Out();
+
+        AsyncOperation homeScene = SceneManager.LoadSceneAsync(0, LoadSceneMode.Single);
+        while (!homeScene.isDone)
+        {
+            yield return null;
+        }
     }
     public void ReLoad_UI_Gold()
     {

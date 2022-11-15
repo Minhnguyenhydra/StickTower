@@ -183,7 +183,7 @@ public class Player : MonoBehaviour
         Set_Spawn_Health_Bar();
         isCanHold = true;
         tf_Player = transform;
-        
+
         Set_Anim_Idle();
 
         //if (CheckExpireSkin())
@@ -478,10 +478,14 @@ public class Player : MonoBehaviour
             Set_Config_Boss_Win_End_Level();
         }
 
-        // Just wait 50% duration anim attack with Big Enemy, 60% with Normal Enemy
-        float animDuration = enemy_Hitting.isBig_Enemy ? enemy_Hitting.Action_Attack.Animation.Duration * 0.45f
+        // Just wait 45% duration anim attack with Big Enemy, 60% with Normal Enemy
+        if (enemy_Hitting != null)
+        {
+            float animDuration = enemy_Hitting.isBig_Enemy ? enemy_Hitting.Action_Attack.Animation.Duration * 0.45f
                                                        : enemy_Hitting.Action_Attack.Animation.Duration * 0.6f;
-        yield return Cache.GetWFS(animDuration); 
+            yield return Cache.GetWFS(animDuration);
+        }
+
         Set_Show_Blood();
         //ADD: Hit --> Die
         SetCharacterState_NoLoop(Action_Hit);
@@ -926,7 +930,7 @@ public class Player : MonoBehaviour
                 SoundManager.Ins.PlayFx(FxID.attack_GamePlay);
             }
         }
-        else 
+        else
         {
             if (ii == 1)
             {

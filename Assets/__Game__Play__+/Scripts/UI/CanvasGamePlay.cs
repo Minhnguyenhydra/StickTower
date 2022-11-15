@@ -70,8 +70,8 @@ public class CanvasGamePlay : UICanvas
             }
 
         }
-        int_Damge = Random.Range(5, 11);
-        txt_Damge.SetText(int_Damge.ToString("N0"));
+        int_Damge = Random.Range(2, 4);
+        txt_Damge.text = "x" + int_Damge;
 
         if (level %5 == 0 && level > 4)
         {
@@ -233,7 +233,7 @@ public class CanvasGamePlay : UICanvas
     {
         if (Sword_Ads_TopLeft.Ins != null)
         {
-            Sword_Ads_TopLeft.Ins.Set_Go_To_Herro(int_Damge);
+            Sword_Ads_TopLeft.Ins.Set_Go_To_Herro(Player.ins.health * (int_Damge - 1));
             obj_Btn_ADs_Sword.SetActive(false);
         }
     }

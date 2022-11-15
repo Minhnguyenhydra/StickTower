@@ -4674,6 +4674,7 @@ RectTransform:
   - {fileID: 879815431862554446}
   - {fileID: 879815432073866156}
   - {fileID: 879815432177679131}
+  - {fileID: 7711900280523436068}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4789,7 +4790,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 921.75, y: -860.39996}
+  m_AnchoredPosition: {x: 916.25, y: -855.39996}
   m_SizeDelta: {x: 364.3, y: 513.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &879815431033327720
@@ -4819,7 +4820,7 @@ MonoBehaviour:
   txt_Unlock_Level: {fileID: 879815432372922437}
   obj_Have_No_Wear: {fileID: 879815432344869046}
   obj_Have_Wearing: {fileID: 879815431215720733}
-  tf_Spawn_Fire_Work: {fileID: 0}
+  tf_Spawn_Fire_Work: {fileID: 7711900280523436068}
 --- !u!1 &879815431042519863
 GameObject:
   m_ObjectHideFlags: 0
@@ -6770,7 +6771,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 193.15, y: -860.39996}
+  m_AnchoredPosition: {x: 187.65, y: -855.39996}
   m_SizeDelta: {x: 364.3, y: 513.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &879815431258187172
@@ -6800,7 +6801,7 @@ MonoBehaviour:
   txt_Unlock_Level: {fileID: 879815431448693663}
   obj_Have_No_Wear: {fileID: 879815431282821837}
   obj_Have_Wearing: {fileID: 879815431437860736}
-  tf_Spawn_Fire_Work: {fileID: 0}
+  tf_Spawn_Fire_Work: {fileID: 7711900280523436068}
 --- !u!1 &879815431260821080
 GameObject:
   m_ObjectHideFlags: 0
@@ -10414,7 +10415,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 193.15, y: -1404}
+  m_AnchoredPosition: {x: 187.65, y: -1419}
   m_SizeDelta: {x: 364.3, y: 513.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &879815431675004707
@@ -10444,7 +10445,7 @@ MonoBehaviour:
   txt_Unlock_Level: {fileID: 879815431657328369}
   obj_Have_No_Wear: {fileID: 879815431922602189}
   obj_Have_Wearing: {fileID: 879815430659960586}
-  tf_Spawn_Fire_Work: {fileID: 0}
+  tf_Spawn_Fire_Work: {fileID: 7711900280523436068}
 --- !u!1 &879815431691541624
 GameObject:
   m_ObjectHideFlags: 0
@@ -12362,7 +12363,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 557.44995, y: -860.39996}
+  m_AnchoredPosition: {x: 551.94995, y: -855.39996}
   m_SizeDelta: {x: 364.3, y: 513.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &879815431926394745
@@ -12392,7 +12393,7 @@ MonoBehaviour:
   txt_Unlock_Level: {fileID: 879815431829892629}
   obj_Have_No_Wear: {fileID: 879815432172235974}
   obj_Have_Wearing: {fileID: 879815431366490846}
-  tf_Spawn_Fire_Work: {fileID: 0}
+  tf_Spawn_Fire_Work: {fileID: 7711900280523436068}
 --- !u!1 &879815431940987656
 GameObject:
   m_ObjectHideFlags: 0
@@ -13671,7 +13672,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 921.75, y: -316.8}
+  m_AnchoredPosition: {x: 916.25, y: -291.8}
   m_SizeDelta: {x: 364.3, y: 513.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &879815432101192573
@@ -13701,7 +13702,7 @@ MonoBehaviour:
   txt_Unlock_Level: {fileID: 879815431877131544}
   obj_Have_No_Wear: {fileID: 879815431478799846}
   obj_Have_Wearing: {fileID: 879815430947137622}
-  tf_Spawn_Fire_Work: {fileID: 0}
+  tf_Spawn_Fire_Work: {fileID: 7711900280523436068}
 --- !u!1 &879815432116441930
 GameObject:
   m_ObjectHideFlags: 0
@@ -13998,7 +13999,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 23.900024, y: 1355.4358}
+  m_SizeDelta: {x: 23.900024, y: 1561.5259}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &879815432144267686
 MonoBehaviour:
@@ -14856,7 +14857,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 557.44995, y: -316.8}
+  m_AnchoredPosition: {x: 551.94995, y: -291.8}
   m_SizeDelta: {x: 364.3, y: 513.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &879815432224436296
@@ -14886,7 +14887,7 @@ MonoBehaviour:
   txt_Unlock_Level: {fileID: 879815431877131544}
   obj_Have_No_Wear: {fileID: 879815431856031864}
   obj_Have_Wearing: {fileID: 879815430855545831}
-  tf_Spawn_Fire_Work: {fileID: 0}
+  tf_Spawn_Fire_Work: {fileID: 7711900280523436068}
 --- !u!1 &879815432232280821
 GameObject:
   m_ObjectHideFlags: 0
@@ -18894,7 +18895,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 193.15, y: -316.8}
+  m_AnchoredPosition: {x: 187.65, y: -291.8}
   m_SizeDelta: {x: 364.3, y: 513.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &879815432613306251
@@ -18924,7 +18925,7 @@ MonoBehaviour:
   txt_Unlock_Level: {fileID: 879815431117547242}
   obj_Have_No_Wear: {fileID: 879815431202244322}
   obj_Have_Wearing: {fileID: 879815431697337057}
-  tf_Spawn_Fire_Work: {fileID: 0}
+  tf_Spawn_Fire_Work: {fileID: 7711900280523436068}
 --- !u!1 &879815432628041519
 GameObject:
   m_ObjectHideFlags: 0
@@ -19683,7 +19684,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 557.44995, y: -1404}
+  m_AnchoredPosition: {x: 551.94995, y: -1419}
   m_SizeDelta: {x: 364.3, y: 513.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &879815432702853240
@@ -19713,7 +19714,7 @@ MonoBehaviour:
   txt_Unlock_Level: {fileID: 879815431903642647}
   obj_Have_No_Wear: {fileID: 879815431573694685}
   obj_Have_Wearing: {fileID: 879815432733711034}
-  tf_Spawn_Fire_Work: {fileID: 0}
+  tf_Spawn_Fire_Work: {fileID: 7711900280523436068}
 --- !u!1 &879815432704597820
 GameObject:
   m_ObjectHideFlags: 0
@@ -20671,7 +20672,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 921.75, y: -1947.5999}
+  m_AnchoredPosition: {x: 916.25, y: -1982.5999}
   m_SizeDelta: {x: 364.3, y: 513.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7447591865183506859
@@ -20701,7 +20702,7 @@ MonoBehaviour:
   txt_Unlock_Level: {fileID: 7958593480607407393}
   obj_Have_No_Wear: {fileID: 4797160850392504075}
   obj_Have_Wearing: {fileID: 4100837250308562589}
-  tf_Spawn_Fire_Work: {fileID: 0}
+  tf_Spawn_Fire_Work: {fileID: 7711900280523436068}
 --- !u!1 &1525077273134083860
 GameObject:
   m_ObjectHideFlags: 0
@@ -22012,7 +22013,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 193.15, y: -1947.5999}
+  m_AnchoredPosition: {x: 187.65, y: -1982.5999}
   m_SizeDelta: {x: 364.3, y: 513.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &98355805354687688
@@ -22042,7 +22043,7 @@ MonoBehaviour:
   txt_Unlock_Level: {fileID: 1050268180916921788}
   obj_Have_No_Wear: {fileID: 6085068902969549498}
   obj_Have_Wearing: {fileID: 4566828093824489624}
-  tf_Spawn_Fire_Work: {fileID: 0}
+  tf_Spawn_Fire_Work: {fileID: 7711900280523436068}
 --- !u!1 &2110440040881499998
 GameObject:
   m_ObjectHideFlags: 0
@@ -23338,7 +23339,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 921.75, y: -2491.2}
+  m_AnchoredPosition: {x: 916.25, y: -2546.2}
   m_SizeDelta: {x: 364.3, y: 513.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2762231338110853700
@@ -23368,7 +23369,7 @@ MonoBehaviour:
   txt_Unlock_Level: {fileID: 1583164516030531121}
   obj_Have_No_Wear: {fileID: 6188106421917007958}
   obj_Have_Wearing: {fileID: 3740971491184422666}
-  tf_Spawn_Fire_Work: {fileID: 0}
+  tf_Spawn_Fire_Work: {fileID: 7711900280523436068}
 --- !u!1 &2677688511496288193
 GameObject:
   m_ObjectHideFlags: 0
@@ -23521,7 +23522,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 557.44995, y: -2491.2}
+  m_AnchoredPosition: {x: 551.94995, y: -2546.2}
   m_SizeDelta: {x: 364.3, y: 513.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &28104061856266253
@@ -23551,7 +23552,7 @@ MonoBehaviour:
   txt_Unlock_Level: {fileID: 5653696339586064321}
   obj_Have_No_Wear: {fileID: 6687621628162847906}
   obj_Have_Wearing: {fileID: 2565837315261423128}
-  tf_Spawn_Fire_Work: {fileID: 0}
+  tf_Spawn_Fire_Work: {fileID: 7711900280523436068}
 --- !u!1 &2851287431734165884
 GameObject:
   m_ObjectHideFlags: 0
@@ -25384,6 +25385,41 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &4201361267785206603
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7711900280523436068}
+  m_Layer: 5
+  m_Name: PosFirework
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7711900280523436068
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4201361267785206603}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 879815431031773174}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 450}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4401375302611460290
 GameObject:
   m_ObjectHideFlags: 0
@@ -29970,7 +30006,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 921.75, y: -1404}
+  m_AnchoredPosition: {x: 916.25, y: -1419}
   m_SizeDelta: {x: 364.3, y: 513.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4924890159398379528
@@ -30000,7 +30036,7 @@ MonoBehaviour:
   txt_Unlock_Level: {fileID: 7979933147259441066}
   obj_Have_No_Wear: {fileID: 1818524861270746057}
   obj_Have_Wearing: {fileID: 2707392197025851725}
-  tf_Spawn_Fire_Work: {fileID: 0}
+  tf_Spawn_Fire_Work: {fileID: 7711900280523436068}
 --- !u!1 &6221233478635932012
 GameObject:
   m_ObjectHideFlags: 0
@@ -32481,7 +32517,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 557.44995, y: -1947.5999}
+  m_AnchoredPosition: {x: 551.94995, y: -1982.5999}
   m_SizeDelta: {x: 364.3, y: 513.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7383983176477541984
@@ -32511,7 +32547,7 @@ MonoBehaviour:
   txt_Unlock_Level: {fileID: 147278971868696085}
   obj_Have_No_Wear: {fileID: 5029248056361332880}
   obj_Have_Wearing: {fileID: 7709894047145053684}
-  tf_Spawn_Fire_Work: {fileID: 0}
+  tf_Spawn_Fire_Work: {fileID: 7711900280523436068}
 --- !u!1 &7385482761113125892
 GameObject:
   m_ObjectHideFlags: 0
@@ -33604,7 +33640,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 193.15, y: -2491.2}
+  m_AnchoredPosition: {x: 187.65, y: -2546.2}
   m_SizeDelta: {x: 364.3, y: 513.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5518810958622241638
@@ -33634,7 +33670,7 @@ MonoBehaviour:
   txt_Unlock_Level: {fileID: 5104512356241025223}
   obj_Have_No_Wear: {fileID: 7690026423702322727}
   obj_Have_Wearing: {fileID: 1255874198280546587}
-  tf_Spawn_Fire_Work: {fileID: 0}
+  tf_Spawn_Fire_Work: {fileID: 7711900280523436068}
 --- !u!1 &7982452715820411342
 GameObject:
   m_ObjectHideFlags: 0

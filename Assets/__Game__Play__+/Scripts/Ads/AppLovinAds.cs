@@ -3,9 +3,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AppLovinAds : MonoBehaviour
 {
+    private static AppLovinAds Instance;
     private const string MaxSdkKey = "7PspscCcbGd6ohttmPcZTwGmZCihCW-Jwr7nSJN2a_9Mg0ERPs0tmGdKTK1gs__nr6XHQvK0vTNaTb1uR1mCIN";
 
     [SerializeField]
@@ -17,11 +19,18 @@ public class AppLovinAds : MonoBehaviour
 
     private void Start()
     {
+        if (Instance != null)
+            return;
+
+        Instance = this;
 
         MaxSdkCallbacks.OnSdkInitializedEvent += sdkConfiguration =>
         {
             // AppLovin SDK is initialized, configure and start loading ads.
             Debug.Log("MAX SDK Initialized");
+            MaxSdkCallbacks.AppOpen.OnAdHiddenEvent += OnAppOpenDismissedEvent;
+
+            StartCoroutine(AppOpenManager.Instance.ShowAtStart());
 
             InitializeBannerAds();
             InitializeInterstitialAds();
@@ -33,7 +42,7 @@ public class AppLovinAds : MonoBehaviour
         };
 
         MaxSdk.SetSdkKey(MaxSdkKey);
-        MaxSdk.SetTestDeviceAdvertisingIdentifiers(new string[] { "2010f6b6-0585-4646-b7b4-e6291e3ea12b", "c23c7f01-c1c5-4c46-ae67-44b77b961672" });
+        //MaxSdk.SetTestDeviceAdvertisingIdentifiers(new string[] { "2010f6b6-0585-4646-b7b4-e6291e3ea12b", "c23c7f01-c1c5-4c46-ae67-44b77b961672" });
         MaxSdk.InitializeSdk();
         ShowBannerAfter10S();
     }
@@ -46,7 +55,23 @@ public class AppLovinAds : MonoBehaviour
         corShowBanner = StartCoroutine(ShowBannerAd());
     }
 
-#region Ads Banner
+    #region AOA
+    
+    public void OnAppOpenDismissedEvent(string adUnitId, MaxSdkBase.AdInfo adInfo)
+    {
+        MaxSdk.LoadAppOpenAd(adUnitId);
+    }
+
+    private void OnApplicationPause(bool pauseStatus)
+    {
+        if (!pauseStatus && !AppOpenManager.ResumeFromAds)
+        {
+            AppOpenManager.Instance.ShowAdIfReady();
+        }
+    }
+    #endregion
+
+    #region Ads Banner
     public void InitializeBannerAds()
     {
         // Banners are automatically sized to 320×50 on phones and 728×90 on tablets
@@ -68,7 +93,7 @@ public class AppLovinAds : MonoBehaviour
 
     private IEnumerator ShowBannerAd()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(7f);
         MaxSdk.ShowBanner(bannerAdUnitId);
     }
 
@@ -135,7 +160,7 @@ public class AppLovinAds : MonoBehaviour
     {
         if (MaxSdk.IsInterstitialReady(adUnitId))
         {
-            AppOpenAdManager.ResumeFromAds = true;
+            AppOpenManager.ResumeFromAds = true;
             callBackAds = cbAds;
 
             Debug.Log("Interstitial Showing...");
@@ -186,8 +211,9 @@ public class AppLovinAds : MonoBehaviour
         // Interstitial ad is hidden. Pre-load the next ad.
         LoadInterstitial();
 
-        AppOpenAdManager.ResumeFromAds = false;
+        AppOpenManager.ResumeFromAds = false;
         callBackAds?.Invoke();
+        callBackAds = null;
         Debug.Log("Interstitial Ad Hidden");
 
     }
@@ -229,7 +255,7 @@ public class AppLovinAds : MonoBehaviour
         if (MaxSdk.IsRewardedAdReady(adUnitRewardedId))
         {
             callBackAds = cbAds;
-            AppOpenAdManager.ResumeFromAds = true;
+            AppOpenManager.ResumeFromAds = true;
             Debug.Log("Rewarded Showing...");
             MaxSdk.ShowRewardedAd(adUnitRewardedId);
         }
@@ -277,14 +303,16 @@ public class AppLovinAds : MonoBehaviour
     {
         // Rewarded ad is hidden. Pre-load the next ad
         LoadRewardedAd();
-        AppOpenAdManager.ResumeFromAds = false;
+        AppOpenManager.ResumeFromAds = false;
         Debug.Log("Rewarded Ad Hidden");
+        
     }
 
     private void OnRewardedAdReceivedRewardEvent(string adUnitId, MaxSdk.Reward reward, MaxSdkBase.AdInfo adInfo)
     {
         // The rewarded ad displayed and the user should receive the reward.
         callBackAds?.Invoke();
+        callBackAds = null;
         Debug.Log("Rewarded Ad ReceivedReward");
     }
 
@@ -292,6 +320,10 @@ public class AppLovinAds : MonoBehaviour
     {
         // Ad revenue paid. Use this callback to track user revenue.
     }
+
+
+
+
 #endregion
 
 

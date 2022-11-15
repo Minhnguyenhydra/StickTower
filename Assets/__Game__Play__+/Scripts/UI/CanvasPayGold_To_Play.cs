@@ -22,22 +22,8 @@ public class CanvasPayGold_To_Play : UICanvas
         rewards = Constant.Get_Reward_Gold_Gem_By_Pay_Gold(level);
         txtGoldReward.text = rewards[0].ToString();
         txtGemReward.text = rewards[1].ToString();
-        if (level == 14)
-        {
-            txtPAY_100_GOLD.text = "Watch advertisement\nto play this level";
-        }
-        else if (level == 22)
-        {
-            txtPAY_100_GOLD.text = $"Pay {rewards[0]} gold to play\nthis level";
-        }
-        else if (level == 30 || level == 26 || level == 16 || level == 14)
-        {
-            txtPAY_100_GOLD.text = "Watch advertisement\nto play this level";
-        }
-        if (level == 26)
-        {
-            obj_RewardArea.SetActive(false);
-        }
+
+        obj_RewardArea.SetActive(false);
     }
 
     //
@@ -46,9 +32,9 @@ public class CanvasPayGold_To_Play : UICanvas
         SoundManager.Ins.PlayFx(FxID.click);
 
 #if WatchADs
-        AdsManager.Instance.WatchRewardedAds(PayToPlay);
+        AdsManager.Instance.WatchRewardedAds(CloseButton);
 #else
-        PayToPlay();
+        CloseButton();
 #endif
     }
 

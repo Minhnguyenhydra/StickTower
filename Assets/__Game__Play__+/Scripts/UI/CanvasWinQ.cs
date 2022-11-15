@@ -8,8 +8,8 @@ using Spine.Unity;
 public class CanvasWinQ : UICanvas
 {
     #region Show each level enough
-    public GameObject obj_PigBank;
-    public GameObject obj_Arena;
+    //public GameObject obj_PigBank;
+    //public GameObject obj_Arena;
     public GameObject obj_Hand_Tut_Lv_0;
     #endregion
 
@@ -145,7 +145,7 @@ public class CanvasWinQ : UICanvas
             PlayerPrefs_Manager.Set_Pink_Bank_Gold(PlayerPrefs_Manager.Get_Pink_Bank_Gold() + 100);
         }
         //
-        Set_Init_Gold_Pink_bank();
+        //Set_Init_Gold_Pink_bank();
         Set_Init_Gold_Gem_Title();
         UIManager.Ins.OpenUI(UIID.UICFade);
         ((CanvasFade)UIManager.Ins.GetUI(UIID.UICFade)).Set_Fade_In();
@@ -222,25 +222,25 @@ public class CanvasWinQ : UICanvas
         }
     }
 
-    public void Set_Check_Show_Btn()
-    {
-        if (PlayerPrefs_Manager.Get_Index_Level_Normal() > 1)
-        {
-            obj_Arena.SetActive(true);
-        }
-        else
-        {
-            obj_Arena.SetActive(false);
-        }
-        if (PlayerPrefs_Manager.Get_Index_Level_Normal() > 2)
-        {
-            obj_PigBank.SetActive(true);
-        }
-        else
-        {
-            obj_PigBank.SetActive(false);
-        }
-    }
+    //public void Set_Check_Show_Btn()
+    //{
+    //    if (PlayerPrefs_Manager.Get_Index_Level_Normal() > 1)
+    //    {
+    //        obj_Arena.SetActive(true);
+    //    }
+    //    else
+    //    {
+    //        obj_Arena.SetActive(false);
+    //    }
+    //    if (PlayerPrefs_Manager.Get_Index_Level_Normal() > 2)
+    //    {
+    //        obj_PigBank.SetActive(true);
+    //    }
+    //    else
+    //    {
+    //        obj_PigBank.SetActive(false);
+    //    }
+    //}
     #region Base to set Skin, Anim
     public void SetAnimation(AnimationReferenceAsset _anim, bool _loop, float _time_Scale)//Set No loop
     {
@@ -301,20 +301,16 @@ public class CanvasWinQ : UICanvas
     public void AreaButton()
     {
         SoundManager.Ins.PlayFx(FxID.click);
-        //UNDONE...
-        //Load Scene Area
+
         PlayerPrefs.SetInt(UserData.Key_1GamPlay_Or_2Area_Or_3Challenge, 2);
-        Scene_Manager_Q.Load_Scene("Ar_Level_0");
-        //Set_Fade_And_Close();
-        Close();
+        StartCoroutine(LoadScene("Ar_Level_0"));
     }
     #endregion
     #region Challenge
     public void ChallengeButton()
     {
         SoundManager.Ins.PlayFx(FxID.click);
-        //UNDONE...
-        Close();
+        UIManager.Ins.OpenUI(UIID.UICChallenge);
     }
     #endregion
     #region Skin
@@ -330,10 +326,19 @@ public class CanvasWinQ : UICanvas
     public void Homebutton()
     {
         SoundManager.Ins.PlayFx(FxID.click);
-        UIManager.Ins.OpenUI(UIID.UICMainMenu);
-        UIManager.Ins.CloseUI(UIID.UICSkin_Boot);
-        Close();
 
+        StartCoroutine(LoadScene("Loading"));
+    }
+    private IEnumerator LoadScene(string sceneName)
+    {
+        UIManager.Ins.OpenUI(UIID.UICFade);
+        ((CanvasFade)UIManager.Ins.GetUI(UIID.UICFade)).Set_Fade_Out();
+
+        AsyncOperation homeScene = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
+        while (!homeScene.isDone)
+        {
+            yield return null;
+        }
     }
     #endregion
     #region Gold_Pink_bank
@@ -424,6 +429,16 @@ public class CanvasWinQ : UICanvas
     public void Set_Claim_To_Stop_Random_No_ADs()
     {
         SoundManager.Ins.PlayFx(FxID.click);
+
+#if WatchADs
+        AdsManager.Instance.WatchRewardedAds(GetGoldRandom);
+#else
+        GetGoldRandom();
+#endif
+    }
+
+    private void GetGoldRandom()
+    {
         if (!isFist_Click)
         {
             isFist_Click = true;
@@ -432,6 +447,7 @@ public class CanvasWinQ : UICanvas
             Set_Fade_And_Close();
         }
     }
+
     public void Set_Fade_And_Close()
     {
         StartCoroutine(IE_Delay_Fade_ADs_Close());
@@ -470,12 +486,25 @@ public class CanvasWinQ : UICanvas
     public void Set_No_Thank()
     {
         SoundManager.Ins.PlayFx(FxID.click);
+
+#if WatchADs
+         if (PlayerPrefs_Manager.Get_Index_Level_Normal() >= 4)
+            AdsManager.Instance.WatchInterstitialAds(NoThanksClicked);
+        else
+            NoThanksClicked();
+#else
+        NoThanksClicked();
+#endif
+    }
+
+    private void NoThanksClicked()
+    {
         if (!isFist_Click)
         {
             isFist_Click = true;
             isStop = true;
             //StartCoroutine(Delay_Increa_Gem());
-            
+
 
             if (PlayerPrefs.GetInt(UserData.Key_1GamPlay_Or_2Area_Or_3Challenge) == 1 || PlayerPrefs.GetInt(UserData.Key_1GamPlay_Or_2Area_Or_3Challenge) == 3)
             {

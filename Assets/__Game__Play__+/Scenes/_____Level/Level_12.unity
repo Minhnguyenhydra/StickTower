@@ -2293,6 +2293,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1450116894}
     m_Modifications:
+    - target: {fileID: 2423633135757617066, guid: 54332ff47c7609f4bbfcf2b2486cfacb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7920156533953682666, guid: 54332ff47c7609f4bbfcf2b2486cfacb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 10110a38157b9fc40a70351b4366f14f, type: 3}
+    - target: {fileID: 7920156533953682666, guid: 54332ff47c7609f4bbfcf2b2486cfacb, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7920156534539090500, guid: 54332ff47c7609f4bbfcf2b2486cfacb, type: 3}
       propertyPath: idBoss
       value: 3
@@ -2387,6 +2399,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7920156534539090505, guid: 54332ff47c7609f4bbfcf2b2486cfacb, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9121463685466029788, guid: 54332ff47c7609f4bbfcf2b2486cfacb, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
