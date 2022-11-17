@@ -62,6 +62,35 @@
           ]
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:513600389921:android:8ba8181b6a0c36eb323460",
+        "android_client_info": {
+          "package_name": "com.war.stick.tower.ga"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "513600389921-egnpdqb7vjqem3b4jl6qg2o4vr0ddna5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMfUh48RxTsmDZj7ft-jDUijqWXC5DV4Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "513600389921-egnpdqb7vjqem3b4jl6qg2o4vr0ddna5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
     }
   ],
   "configuration_version": "1"

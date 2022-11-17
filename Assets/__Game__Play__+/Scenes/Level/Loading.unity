@@ -1161,6 +1161,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1620098512877750020, guid: 8671c01417529034e88c423e30369491, type: 3}
+      propertyPath: adUnitId
+      value: ef999f7b2c2a7cd9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620098512877750020, guid: 8671c01417529034e88c423e30369491, type: 3}
+      propertyPath: bannerAdUnitId
+      value: e83ab8261ba21078
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620098512877750020, guid: 8671c01417529034e88c423e30369491, type: 3}
+      propertyPath: adUnitRewardedId
+      value: 8b3302feb4d03f81
+      objectReference: {fileID: 0}
     - target: {fileID: 1620098514433172060, guid: 8671c01417529034e88c423e30369491, type: 3}
       propertyPath: m_Name
       value: AdsManager

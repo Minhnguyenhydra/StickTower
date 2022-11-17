@@ -161,4 +161,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/__Game__Play__+/Scenes/Level/Level_50.unity
     guid: 481cd7aa2c9959d419edd2179e308579
+  - enabled: 1
+    path: Assets/__Game__Play__+/Scenes/Area/Ar_Level_0.unity
+    guid: 1bee13fa732a49c489004dde52b4ebf9
   m_configObjects: {}

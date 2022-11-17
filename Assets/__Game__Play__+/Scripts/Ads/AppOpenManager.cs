@@ -7,7 +7,7 @@ public class AppOpenManager : MonoBehaviour
 {
     public static AppOpenManager Instance;
     public static bool ResumeFromAds = false;
-    private const string AppOpenAdUnitId = "89f77459501f3b6d";
+    private const string AppOpenAdUnitId = "969c7707cd170d45";
 
     private void Awake()
     {

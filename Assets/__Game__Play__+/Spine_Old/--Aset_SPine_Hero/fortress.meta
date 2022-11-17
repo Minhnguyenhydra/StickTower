@@ -1,8 +1,5 @@
 fileFormatVersion: 2
-guid: 531d860cac61f47d19e32f526470ae43
-labels:
-- al_max
-- al_max_export_path-MaxSdk/Mediation/IronSource/Editor
+guid: 1b609a2a71744de4186e724ecb8c0f5e
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

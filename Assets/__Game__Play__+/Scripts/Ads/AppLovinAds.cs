@@ -30,7 +30,7 @@ public class AppLovinAds : MonoBehaviour
             Debug.Log("MAX SDK Initialized");
             MaxSdkCallbacks.AppOpen.OnAdHiddenEvent += OnAppOpenDismissedEvent;
 
-            StartCoroutine(AppOpenManager.Instance.ShowAtStart());
+            //StartCoroutine(AppOpenManager.Instance.ShowAtStart());
 
             InitializeBannerAds();
             InitializeInterstitialAds();
