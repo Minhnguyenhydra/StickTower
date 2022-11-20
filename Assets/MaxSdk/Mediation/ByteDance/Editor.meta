@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: 9be3f57ed2dca41bba145ba6c3096d61
+guid: ef8467ffb0e4447b79a8804884a7520a
 labels:
 - al_max
-- al_max_export_path-MaxSdk/Mediation/Facebook
+- al_max_export_path-MaxSdk/Mediation/ByteDance/Editor
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
