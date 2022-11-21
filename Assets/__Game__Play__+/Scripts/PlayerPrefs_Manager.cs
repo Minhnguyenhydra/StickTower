@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -62,6 +63,54 @@ public class PlayerPrefs_Manager
     public static void Set_Gem(int _gem)
     {
         PlayerPrefs.SetInt(Constant.Player_Gem, _gem);
+    }
+    #endregion
+
+    #region Quest
+    public static void SetDay(DayOfWeek day, int value)
+    {
+        PlayerPrefs.SetInt(day.ToString(), value);
+        SetLastDay(day);
+    }
+
+    private static void SetLastDay(DayOfWeek day)
+    {
+        PlayerPrefs.SetInt("LastDay", (int)day);
+    }
+
+    public static int GetLastDay()
+    {
+        int intDay = PlayerPrefs.GetInt("LastDay", 0);
+        return intDay;
+    }
+
+    public static int GetDay(DayOfWeek day)
+    {
+        return PlayerPrefs.GetInt(day.ToString(), 0);
+    }
+
+    public static void SetQuest(string questId, int value)
+    {
+        PlayerPrefs.SetInt(questId, value);
+    }
+
+    public static int GetQuest(string questId)
+    {
+        return PlayerPrefs.GetInt(questId, 0);
+    }
+
+    public static void SetClaimed(string questId, bool value)
+    {
+        if (value)
+            SetQuest(questId, 0);
+
+        PlayerPrefs.SetInt(questId + "bool", value == true ? 1 : 0);
+    }
+
+    public static bool GetClaimed(string questId)
+    {
+        float value = PlayerPrefs.GetInt(questId + "bool", 0);
+        return value == 1 ? true : false;
     }
     #endregion
 

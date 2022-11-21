@@ -13,6 +13,7 @@ public class CanvasLose : UICanvas
     bool isFist_Click;
     [Header("Animation")]
     public SkeletonAnimation skeletonAnimation;
+    public GameObject objQuest;
     //
     #region Gold_Gem,level
     public Text txt_Gold;//gold ở bank đầy
@@ -137,6 +138,12 @@ public class CanvasLose : UICanvas
     }
     #endregion
 
+    public void QuestClicked()
+    {
+        SoundManager.Ins.PlayFx(FxID.click);
+        objQuest.SetActive(true);
+    }
+
     #region Base to set Skin, Anim
     public void SetAnimation(AnimationReferenceAsset _anim, bool _loop, float _time_Scale)//Set No loop
     {
@@ -240,8 +247,7 @@ public class CanvasLose : UICanvas
         }
         else if (PlayerPrefs.GetInt(UserData.Key_1GamPlay_Or_2Area_Or_3Challenge) == 3)
         {
-            int indexLevel = PlayerPrefs_Manager.Get__QLevel_Challenge();
-            Scene_Manager_Q.Load_Scene(Constant.StringChallengeLevel + indexLevel.ToString());
+            Scene_Manager_Q.Load_Scene("Loading");
         }
         //SceneManager.LoadScene(Constant.StringLevel + indexLevel.ToString(), LoadSceneMode.Single);
     }
@@ -268,8 +274,7 @@ public class CanvasLose : UICanvas
         }
         else if (PlayerPrefs.GetInt(UserData.Key_1GamPlay_Or_2Area_Or_3Challenge) == 3)
         {
-            int indexLevel = PlayerPrefs_Manager.Get_Index_Level_Normal();
-            Scene_Manager_Q.Load_Scene(Constant.StringLevel + indexLevel.ToString());
+            Scene_Manager_Q.Load_Scene("Loading");
         }
         //SceneManager.LoadScene(Constant.StringLevel + indexLevel.ToString(), LoadSceneMode.Single);
     }

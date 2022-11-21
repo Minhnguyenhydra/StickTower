@@ -227,6 +227,8 @@ public class CanvasGamePlay : UICanvas
         }
         anim_GamePlay.SetTrigger(Constant.Trigger_GamePlay_Close);
         StartCoroutine(IE_Delay_SkipLevel());
+
+        PlayerPrefs_Manager.SetQuest(Constant.Quest + (int)QuestManager.QuestID.Quest08, 0);
     }
 
     IEnumerator IE_Delay_SkipLevel()

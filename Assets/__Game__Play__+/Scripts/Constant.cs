@@ -71,12 +71,12 @@ public class Constant
     public readonly static int Gold_Max_Pink_Bank = 2000;
 
     //Level challege
-    public readonly static int LEVEL_1 = 22;
-    public readonly static int LEVEL_2 = 43;
-    public readonly static int LEVEL_3 = 53;
-    public readonly static int LEVEL_4 = 63;
-    public readonly static int LEVEL_5 = 73;
-    public readonly static int LEVEL_6 = 103;
+    public readonly static int LEVEL_1 = 11;
+    public readonly static int LEVEL_2 = 17;
+    public readonly static int LEVEL_3 = 25;
+    public readonly static int LEVEL_4 = 33;
+    public readonly static int LEVEL_5 = 40;
+    public readonly static int LEVEL_6 = 47;
 
     public const int expireSkin = 3;
 
@@ -193,6 +193,7 @@ public class Constant
     public readonly static string String_Number_Key_Treasure = "NumBerKeyHave";
     public readonly static string String_Number_Star_Rate = "NumberStar_Rate";
     public readonly static string String_Level_Challenge = "QLevel_Challenge";
+    public readonly static string Quest = "quest";
     
     public static int Get_Gold_Bonus_By_Level(int _level)
     {

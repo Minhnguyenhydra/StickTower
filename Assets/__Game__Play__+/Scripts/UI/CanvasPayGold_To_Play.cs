@@ -29,9 +29,8 @@ public class CanvasPayGold_To_Play : UICanvas
     //
     public void PlayButton()
     {
-      //  Debug.LogError(PlayerPrefs_Manager.Get_Index_Level_Normal());
+        GameManager.Ins.isChallengeMode = true;
         SoundManager.Ins.PlayFx(FxID.click);
-
 #if WatchADs
         AdsManager.Instance.WatchRewardedAds(CloseButton, "video_play_level_" + PlayerPrefs_Manager.Get_Index_Level_Normal().ToString());
 #else

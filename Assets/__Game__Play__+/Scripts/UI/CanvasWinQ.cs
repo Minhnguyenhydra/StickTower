@@ -60,6 +60,8 @@ public class CanvasWinQ : UICanvas
     public RectTransform rect_Icon_Living;
     public int multiX;
     public int goldCollected;
+    public GameObject objQuest;
+    public bool isArenaMode;
     //
 
     private void OnEnable()
@@ -71,9 +73,19 @@ public class CanvasWinQ : UICanvas
         else if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 3)
         {
             EventController.WIN_LEVEL_EVENT_CHALLENGE(PlayerPrefs_Manager.Get__QLevel_Challenge());
+            this.PostEvent(QuestManager.QuestID.Quest06, 1);
         }
 
         Set_Init();
+
+
+        if (isArenaMode)
+        {
+            this.PostEvent(QuestManager.QuestID.Quest07, 1);
+            return;
+        }
+
+        this.PostEvent(QuestManager.QuestID.Quest08, 1);
     }
     // Start is called before the first frame update
     void Start()
@@ -362,6 +374,12 @@ public class CanvasWinQ : UICanvas
         SoundManager.Ins.PlayFx(FxID.click);
         UIManager.Ins.OpenUI(UIID.UICPigBank);
     }
+    public void QuestClicked()
+    {
+        SoundManager.Ins.PlayFx(FxID.click);
+        objQuest.SetActive(true);
+    }
+
     public void Set_Init_Gold_Pink_bank()
     {
         int gold_Pink_bank = PlayerPrefs_Manager.Get_Pink_Bank_Gold();
@@ -490,11 +508,7 @@ public class CanvasWinQ : UICanvas
         }
         else if (PlayerPrefs.GetInt(UserData.Key_1GamPlay_Or_2Area_Or_3Challenge) == 3)
         {
-            int indexLevel = PlayerPrefs_Manager.Get__QLevel_Challenge();
-            if (indexLevel <= 6)
-                Scene_Manager_Q.Load_Scene(Constant.StringChallengeLevel + indexLevel.ToString());
-            else
-                Scene_Manager_Q.Load_Scene("Loading");
+            Scene_Manager_Q.Load_Scene("Loading");
         }
 
         //SceneManager.LoadScene(Constant.StringLevel + indexLevel.ToString(), LoadSceneMode.Single);
@@ -532,11 +546,7 @@ public class CanvasWinQ : UICanvas
             }
             else if (PlayerPrefs.GetInt(UserData.Key_1GamPlay_Or_2Area_Or_3Challenge) == 3)
             {
-                int indexLevel = PlayerPrefs_Manager.Get__QLevel_Challenge();
-                if (indexLevel <= 6)
-                    Scene_Manager_Q.Load_Scene(Constant.StringChallengeLevel + indexLevel.ToString());
-                else
-                    Scene_Manager_Q.Load_Scene("Loading");
+                Scene_Manager_Q.Load_Scene("Loading");
             }
             else if (PlayerPrefs.GetInt(UserData.Key_1GamPlay_Or_2Area_Or_3Challenge) == 2)
             {

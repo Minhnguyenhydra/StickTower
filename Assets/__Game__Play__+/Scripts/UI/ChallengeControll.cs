@@ -43,7 +43,7 @@ public class ChallengeControll : MonoBehaviour
         max_Slot = 6;
         
     }
-    private void Start()
+    private void OnEnable()
     {
         if (ins != null)
         {
@@ -52,7 +52,7 @@ public class ChallengeControll : MonoBehaviour
         ii = 0;
         level = PlayerPrefs_Manager.Get_Index_Level_Normal();
         canvasChallenge = (CanvasChallenge)UIManager.Ins.GetUI(UIID.UICChallenge);
-        //Check_Active_Btn();
+        Check_Active_Btn();
     }
 
     public void Check_Active_Btn()
@@ -60,18 +60,19 @@ public class ChallengeControll : MonoBehaviour
         
         if (ii == 0)
         {
-            if (level >= 11 )
+            if (level >= Constant.LEVEL_1)
             {
-                bool isReplay = (1 == PlayerPrefs_Manager.Get_Replay_Level(22));
-                if (!isReplay)
-                {
-                    canvasChallenge.Set_Btn_On(Enum_Type_Btn_Challenge.Buy);
-                }
-                else
-                {
-                    canvasChallenge.Set_Btn_On(Enum_Type_Btn_Challenge.Replay);
+                //bool isReplay = (1 == PlayerPrefs_Manager.Get_Replay_Level(11));
+                //if (!isReplay)
+                //{
+                //    canvasChallenge.Set_Btn_On(Enum_Type_Btn_Challenge.Buy);
+                //}
+                //else
+                //{
+                //    canvasChallenge.Set_Btn_On(Enum_Type_Btn_Challenge.Replay);
 
-                }
+                //}
+                canvasChallenge.Set_Btn_On(Enum_Type_Btn_Challenge.Replay);
             }
             else
             {
@@ -80,18 +81,9 @@ public class ChallengeControll : MonoBehaviour
         }
         if (ii == 1)
         {
-            if (level >= 17 )
+            if (level >= Constant.LEVEL_2)
             {
-                bool isReplay = (1 == PlayerPrefs_Manager.Get_Replay_Level(43));
-                if (!isReplay)
-                {
-                    canvasChallenge.Set_Btn_On(Enum_Type_Btn_Challenge.Buy);
-                }
-                else
-                {
-                    canvasChallenge.Set_Btn_On(Enum_Type_Btn_Challenge.Replay);
-
-                }
+                canvasChallenge.Set_Btn_On(Enum_Type_Btn_Challenge.Replay);
             }
             else
             {
@@ -100,18 +92,9 @@ public class ChallengeControll : MonoBehaviour
         }
         if (ii == 2)
         {
-            if (level >= 53 )
+            if (level >= Constant.LEVEL_3)
             {
-                bool isReplay = (1 == PlayerPrefs_Manager.Get_Replay_Level(53));
-                if (!isReplay)
-                {
-                    canvasChallenge.Set_Btn_On(Enum_Type_Btn_Challenge.Buy);
-                }
-                else
-                {
-                    canvasChallenge.Set_Btn_On(Enum_Type_Btn_Challenge.Replay);
-
-                }
+                canvasChallenge.Set_Btn_On(Enum_Type_Btn_Challenge.Replay);
             }
             else
             {
@@ -120,18 +103,9 @@ public class ChallengeControll : MonoBehaviour
         }
         if (ii == 3)
         {
-            if (level >= 63 )
+            if (level >= Constant.LEVEL_4)
             {
-                bool isReplay = (1 == PlayerPrefs_Manager.Get_Replay_Level(63));
-                if (!isReplay)
-                {
-                    canvasChallenge.Set_Btn_On(Enum_Type_Btn_Challenge.Buy);
-                }
-                else
-                {
-                    canvasChallenge.Set_Btn_On(Enum_Type_Btn_Challenge.Replay);
-
-                }
+                canvasChallenge.Set_Btn_On(Enum_Type_Btn_Challenge.Replay);
             }
             else
             {
@@ -140,18 +114,9 @@ public class ChallengeControll : MonoBehaviour
         }
         if (ii == 4)
         {
-            if (level >= 73 )
+            if (level >= Constant.LEVEL_5)
             {
-                bool isReplay = (1 == PlayerPrefs_Manager.Get_Replay_Level(73));
-                if (!isReplay)
-                {
-                    canvasChallenge.Set_Btn_On(Enum_Type_Btn_Challenge.Buy);
-                }
-                else
-                {
-                    canvasChallenge.Set_Btn_On(Enum_Type_Btn_Challenge.Replay);
-
-                }
+                canvasChallenge.Set_Btn_On(Enum_Type_Btn_Challenge.Replay);
             }
             else
             {
@@ -160,18 +125,9 @@ public class ChallengeControll : MonoBehaviour
         }
         if (ii == 5)
         {
-            if (level >= 103 )
+            if (level >= Constant.LEVEL_6)
             {
-                bool isReplay = (1 == PlayerPrefs_Manager.Get_Replay_Level(103));
-                if (!isReplay)
-                {
-                    canvasChallenge.Set_Btn_On(Enum_Type_Btn_Challenge.Buy);
-                }
-                else
-                {
-                    canvasChallenge.Set_Btn_On(Enum_Type_Btn_Challenge.Replay);
-
-                }
+                canvasChallenge.Set_Btn_On(Enum_Type_Btn_Challenge.Replay);
             }
             else
             {
@@ -282,7 +238,7 @@ public class ChallengeControll : MonoBehaviour
             rightBtn.SetActive(true);
             leftBtn.SetActive(true);
         }
-        //Check_Active_Btn();
+        Check_Active_Btn();
     }
 
     public void OpenShopEndCheckTab(int tabIdx)

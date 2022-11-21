@@ -25,10 +25,12 @@ public class CanvasMainMenu : UICanvas
     //
     [Header("Animation")]
     public SkeletonAnimation skeletonAnimation;
+    public GameObject objQuest;
+
     private void OnEnable()
     {
         SoundManager.Ins.PlaySound(SoundID.menu);
-        Set_Init_Gold_Pink_bank();
+       // Set_Init_Gold_Pink_bank();
         Set_Reload_Gold_Gem_Title();
         isFist_Click = false;
         UIManager.Ins.OpenUI(UIID.UICFade);
@@ -68,6 +70,12 @@ public class CanvasMainMenu : UICanvas
     }
 
     #endregion
+    public void QuestButton()
+    {
+        SoundManager.Ins.PlayFx(FxID.click);
+        objQuest.SetActive(true);
+    }
+
     #region Button Setting
     public void SettingButton()
     {

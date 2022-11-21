@@ -47,6 +47,7 @@ public class Item_Shop_Prize : MonoBehaviour
     {
         if (canvasShop_Prize.intKey > 0)
         {
+            this.PostEvent(QuestManager.QuestID.Quest12, 1);
             StartCoroutine(Delay_Increa_Gem());
            // gold_Gem_Reward_Fly.Set_Fly();
             SetCharacterState_NoLoop(Action_Open);

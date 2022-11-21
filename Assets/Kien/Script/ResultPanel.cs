@@ -11,7 +11,11 @@ public class ResultPanel : PopUpProperties
         //  DataParam.currentLevel++;
         // Application.LoadLevel(Application.loadedLevelName);
         SoundManager.Ins.PlayFx(FxID.click);
+#if WatchADs
         AdsManager.Instance.WatchInterstitialAds(LoadScene);
+#else
+        LoadScene();
+#endif
         Debug.LogError("======= load next level");
     }
     void LoadScene()

@@ -22,12 +22,25 @@ public class CanvasChallenge : UICanvas
     public void Play_Button()
     {
         SoundManager.Ins.PlayFx(FxID.click);
+
+#if WatchADs
+        AdsManager.Instance.WatchRewardedAds(PlayChallenge, "");
+#else
+        PlayChallenge();
+#endif
+
+    }
+
+    private void PlayChallenge()
+    {
+        GameManager.Ins.isChallengeMode = true;
         PlayerPrefs_Manager.Set_Key_1GamPlay_Or_2Area_Or_3Challenge(3);
 
         PlayerPrefs_Manager.Set_QLevel_Challenge(challengeControll.ii + 1);
         string challengeName = "Challenge_Level_" + (challengeControll.ii + 1);
         Scene_Manager_Q.Load_Scene(challengeName);
     }
+
     public void Buy_Btn()
     {
         
