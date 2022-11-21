@@ -10,6 +10,7 @@ public class Init_Area : Singleton<Init_Area>
 
     public PlayerArena player;
     public EnemyArena enemy;
+    public bool isArenaMode;
     //Quan add
     public int count_time_attack = 0;//1 2 3 4
     private void Awake()

@@ -10,6 +10,8 @@ yield return new WaitUntil(() => isDone);
 public class GameManager : Singleton<GameManager>
 {
     public static bool isStarted;
+    public bool isChallengeMode;
+    public int lastLevel;
     public enum GameState
     {
         Playing,
@@ -98,6 +100,9 @@ public class GameManager : Singleton<GameManager>
          || PlayerPrefs_Manager.Get_Index_Level_Normal() == 46)
         {
             PlayerPrefs_Manager.Set_Number_Key_Treasure(PlayerPrefs_Manager.Get_Number_Key_Treasure() + 1);
+            int numberKeys = PlayerPrefs_Manager.Get_Number_Key_Treasure() + 1;
+            PlayerPrefs_Manager.Set_Number_Key_Treasure(numberKeys);
+            this.PostEvent(QuestManager.QuestID.Quest01, 1);
         }
         #endregion
 

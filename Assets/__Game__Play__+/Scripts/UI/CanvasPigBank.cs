@@ -66,8 +66,8 @@ public class CanvasPigBank : UICanvas
             PlayerPrefs_Manager.Set_Pink_Bank_Gold(gold_In_bank);
             //UNDONE: Close Canvas ..thoát ra màn chính..anim nổ hũ, vàng bay lên và lợn biến mất ..còn khung tròn
             ((CanvasMainMenu)UIManager.Ins.GetUI(UIID.UICMainMenu)).Set_Reload_Gold_Gem_Title();
-            ((CanvasMainMenu)UIManager.Ins.GetUI(UIID.UICMainMenu)).Set_Off_Full_Pink_bank();
-            ((CanvasMainMenu)UIManager.Ins.GetUI(UIID.UICMainMenu)).Set_Init_Gold_Pink_bank();
+            //((CanvasMainMenu)UIManager.Ins.GetUI(UIID.UICMainMenu)).Set_Off_Full_Pink_bank();
+            //((CanvasMainMenu)UIManager.Ins.GetUI(UIID.UICMainMenu)).Set_Init_Gold_Pink_bank();
             Close();
         }
     }

@@ -216,7 +216,13 @@ public class Enemy : MonoBehaviour
         else
         {
             Destroy(this.gameObject);
+            if (!GameManager.Ins.isChallengeMode)
+            {
+                this.PostEvent(QuestManager.QuestID.Quest05, 1);
+            }
 
+            if (isBig_Enemy)
+                this.PostEvent(QuestManager.QuestID.Quest03, 1);
         }
         //gameObject.SetActive(false);
     }
@@ -726,6 +732,7 @@ public class Enemy : MonoBehaviour
             isDieing_Fight_Boss = true;
             health_Bar.Set_Hide_Health_Bar();
             ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Anim_Red_R();
+            this.PostEvent(QuestManager.QuestID.Quest03, 1);
         }
         Cache.GetWFS(0.5f);
         if (index_Hit_Player == 5)

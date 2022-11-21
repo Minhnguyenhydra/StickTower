@@ -13,6 +13,7 @@ public class CanvasLose : UICanvas
     bool isFist_Click;
     [Header("Animation")]
     public SkeletonAnimation skeletonAnimation;
+    public GameObject objQuest;
     //
     #region Gold_Gem,level
     public Text txt_Gold;//gold ở bank đầy
@@ -120,6 +121,12 @@ public class CanvasLose : UICanvas
         UIManager.Ins.OpenUI(UIID.UICPigBank);
     }
     #endregion
+
+    public void QuestClicked()
+    {
+        SoundManager.Ins.PlayFx(FxID.click);
+        objQuest.SetActive(true);
+    }
 
     #region Base to set Skin, Anim
     public void SetAnimation(AnimationReferenceAsset _anim, bool _loop, float _time_Scale)//Set No loop

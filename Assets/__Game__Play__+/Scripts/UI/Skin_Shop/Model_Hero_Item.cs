@@ -50,6 +50,7 @@ public class Model_Hero_Item : MonoBehaviour
             Change_Hero();
             GameManager.Ins.Set_Spawn_FireWord(tf_Spawn_Fire_Work);
 
+            this.PostEvent(QuestManager.QuestID.Quest09, 1);
         }
     }
     public void Gem_Button()
@@ -63,6 +64,7 @@ public class Model_Hero_Item : MonoBehaviour
             Change_Hero();
             GameManager.Ins.Set_Spawn_FireWord(tf_Spawn_Fire_Work);
 
+            this.PostEvent(QuestManager.QuestID.Quest09, 1);
         }
     }
     public void Try_Button()
@@ -86,10 +88,8 @@ public class Model_Hero_Item : MonoBehaviour
 
         Change_Hero();
         GameManager.Ins.Set_Spawn_FireWord(tf_Spawn_Fire_Work);
-        ////Try Skin
-        //int idSkin = PlayerPrefs_Manager.Get_ID_Name_Skin_Wearing();
-        //int expire = PlayerPrefs_Manager.Get_Index_Level_Normal() + Constant.expireSkin;
-        //PlayerPrefs_Manager.SetExpireSkin(idSkin, expire);
+
+        this.PostEvent(QuestManager.QuestID.Quest09, 1);
     }
 
     public void Can_Click_If_Have_Button()

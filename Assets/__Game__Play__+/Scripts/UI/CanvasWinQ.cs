@@ -60,11 +60,24 @@ public class CanvasWinQ : UICanvas
     public RectTransform rect_Icon_Living;
     public int multiX;
     public int goldCollected;
+    public GameObject objQuest;
+    public bool isArenaMode;
     //
 
     private void OnEnable()
     {
         Set_Init();
+
+        if (GameManager.Ins.isChallengeMode)
+            this.PostEvent(QuestManager.QuestID.Quest06, 1);
+
+        else if (isArenaMode)
+        {
+            this.PostEvent(QuestManager.QuestID.Quest07, 1);
+            return;
+        }
+
+        this.PostEvent(QuestManager.QuestID.Quest08, 1);
     }
     // Start is called before the first frame update
     void Start()
@@ -347,6 +360,12 @@ public class CanvasWinQ : UICanvas
         SoundManager.Ins.PlayFx(FxID.click);
         UIManager.Ins.OpenUI(UIID.UICPigBank);
     }
+    public void QuestClicked()
+    {
+        SoundManager.Ins.PlayFx(FxID.click);
+        objQuest.SetActive(true);
+    }
+
     public void Set_Init_Gold_Pink_bank()
     {
         int gold_Pink_bank = PlayerPrefs_Manager.Get_Pink_Bank_Gold();

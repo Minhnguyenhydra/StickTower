@@ -33,7 +33,7 @@
     <file>Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-auth-unity/10.0.1/firebase-auth-unity-10.0.1.pom</file>
   </files>
   <settings>
-    <setting name="androidAbis" value="arm64-v8a,armeabi-v7a" />
+    <setting name="androidAbis" value="armeabi-v7a" />
     <setting name="bundleId" value="com.war.stick.tower.ga" />
     <setting name="explodeAars" value="True" />
     <setting name="gradleBuildEnabled" value="True" />

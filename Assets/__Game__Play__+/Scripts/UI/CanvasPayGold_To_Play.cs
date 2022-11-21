@@ -29,8 +29,8 @@ public class CanvasPayGold_To_Play : UICanvas
     //
     public void PlayButton()
     {
+        GameManager.Ins.isChallengeMode = true;
         SoundManager.Ins.PlayFx(FxID.click);
-
 #if WatchADs
         AdsManager.Instance.WatchRewardedAds(CloseButton);
 #else

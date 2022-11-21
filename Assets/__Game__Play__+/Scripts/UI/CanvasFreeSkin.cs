@@ -48,6 +48,8 @@ public class CanvasFreeSkin : UICanvas
         isGet = true;
         Change_Hero();
         CloseButton();
+
+        this.PostEvent(QuestManager.QuestID.Quest09, 1);
     }
 
     public void CloseButton()

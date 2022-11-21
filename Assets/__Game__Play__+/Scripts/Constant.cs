@@ -192,6 +192,7 @@ public class Constant
     public readonly static string String_Number_Key_Treasure = "NumBerKeyHave";
     public readonly static string String_Number_Star_Rate = "NumberStar_Rate";
     public readonly static string String_Level_Challenge = "QLevel_Challenge";
+    public readonly static string Quest = "quest";
     
     public static int Get_Gold_Bonus_By_Level(int _level)
     {

@@ -1100,7 +1100,7 @@ public class Player : MonoBehaviour
                 if (floor_stay.list_Point_In_Floor[0].princess_Attack_This_Point != null)
                 {
                     floor_stay.list_Point_In_Floor[0].princess_Attack_This_Point.Set_Victory();
-
+                    this.PostEvent(QuestManager.QuestID.Quest02, 1);
                 }
                 GameManager.Ins.Set_Mai_Xanh_Delay_Win(floor_stay);
                 //StartCoroutine(Delay_Win());

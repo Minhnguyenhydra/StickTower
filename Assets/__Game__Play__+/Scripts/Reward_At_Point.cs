@@ -48,6 +48,7 @@ public class Reward_At_Point : MonoBehaviour
     {
         yield return Cache.GetWFS(0.25f);
         gold_Reward_Fly.Set_Fly();
+        this.PostEvent(QuestManager.QuestID.Quest04, 1);
     }
     public void Set_Idle()
     {
