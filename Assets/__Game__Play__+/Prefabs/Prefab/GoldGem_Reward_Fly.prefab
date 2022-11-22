@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5042aae5c1270734198a3addcb67ba25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tf_Gold_Reward_Fly: {fileID: 3872683194224903364}
+  rect_Gold_Reward_Fly: {fileID: 0}
   txtnumber_Gold_Gem_Reward: {fileID: 7637049982669656903}
   objImg_Gold: {fileID: 5096638868393350008}
   objImg_Gem: {fileID: 5096638869009215033}
@@ -220,6 +220,7 @@ GameObject:
   - component: {fileID: 7637049982669656902}
   - component: {fileID: 7637049982669656904}
   - component: {fileID: 7637049982669656903}
+  - component: {fileID: 2074946495259128263}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -275,7 +276,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8a56ff6a3bb2fd44fb25cb7efde15cda, type: 3}
+    m_Font: {fileID: 12800000, guid: 183123595d554204fa690a1569d7417f, type: 3}
     m_FontSize: 139
     m_FontStyle: 0
     m_BestFit: 0
@@ -288,3 +289,18 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: +100
+--- !u!114 &2074946495259128263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7637049982669656901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0.23539972, b: 1, a: 1}
+  m_EffectDistance: {x: 6, y: -6}
+  m_UseGraphicAlpha: 1
