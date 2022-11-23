@@ -553,7 +553,12 @@ public class CanvasWinQ : UICanvas
     }
     public void Set_Step_By_Step_Gold(int _score, int target, float transitionTime)
     {
-        Tween t = DOTween.To(() => _score, x => _score = x, target, transitionTime).OnUpdate(() => txt_Gold.text = _score.ToString("N0"));
+        Tween t = DOTween.To(() => _score, x => _score = x, target, transitionTime).OnUpdate(
+            () =>
+            {
+                txt_Gold.text = _score.ToString("N0");
+                PlayerPrefs_Manager.Set_Gold(_score);
+            });
     }
 
 
