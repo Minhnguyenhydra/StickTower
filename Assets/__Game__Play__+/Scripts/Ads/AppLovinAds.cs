@@ -29,8 +29,8 @@ public class AppLovinAds : MonoBehaviour
             // AppLovin SDK is initialized, configure and start loading ads.
             Debug.Log("MAX SDK Initialized");
             MaxSdkCallbacks.AppOpen.OnAdHiddenEvent += OnAppOpenDismissedEvent;
-
-            //StartCoroutine(AppOpenManager.Instance.ShowAtStart());
+            AppOpenManager.Instance.LoadAOA();
+            StartCoroutine(AppOpenManager.Instance.ShowAtStart());
 
             InitializeBannerAds();
             InitializeInterstitialAds();

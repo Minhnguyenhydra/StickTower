@@ -15,6 +15,11 @@ public class AppOpenManager : MonoBehaviour
             Instance = this;
     }
 
+    public void LoadAOA()
+    {
+        MaxSdk.LoadAppOpenAd(AppOpenAdUnitId);
+    }
+
     public void ShowAdIfReady()
     {
         if (MaxSdk.IsAppOpenAdReady(AppOpenAdUnitId))
@@ -35,7 +40,6 @@ public class AppOpenManager : MonoBehaviour
         }
         else
         {
-            MaxSdk.LoadAppOpenAd(AppOpenAdUnitId);
             while (!MaxSdk.IsAppOpenAdReady(AppOpenAdUnitId))
             {
                 yield return null;
