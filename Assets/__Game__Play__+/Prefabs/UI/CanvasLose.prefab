@@ -3083,11 +3083,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 691355931311690338, guid: 2386d0b884261504681e1e06a881bdb9, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 210.68
+      value: 205.63
       objectReference: {fileID: 0}
     - target: {fileID: 691355931311690338, guid: 2386d0b884261504681e1e06a881bdb9, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 239.45
+      value: 241.27
       objectReference: {fileID: 0}
     - target: {fileID: 691355931311690338, guid: 2386d0b884261504681e1e06a881bdb9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3119,11 +3119,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 691355931311690338, guid: 2386d0b884261504681e1e06a881bdb9, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -378.63
+      value: 391
       objectReference: {fileID: 0}
     - target: {fileID: 691355931311690338, guid: 2386d0b884261504681e1e06a881bdb9, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -277
+      value: 214.45
       objectReference: {fileID: 0}
     - target: {fileID: 691355931311690338, guid: 2386d0b884261504681e1e06a881bdb9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3158,6 +3158,10 @@ PrefabInstance:
     - target: {fileID: 6921504807629383052, guid: d1fabe2f38999954ba64ac61768d69d0, type: 3}
       propertyPath: m_Name
       value: PigiBank
+      objectReference: {fileID: 0}
+    - target: {fileID: 6921504807629383052, guid: d1fabe2f38999954ba64ac61768d69d0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6921504807629383055, guid: d1fabe2f38999954ba64ac61768d69d0, type: 3}
       propertyPath: m_Pivot.x
