@@ -182,6 +182,7 @@ public class Constant
     public readonly static string Player_IndexLevel_Normal = "player_IndexLevel";
     public readonly static string Player_IndexLevel_Area = "Area_IndexLevel";
     public readonly static string StringLevel = "Level_";
+    public readonly static string StringChallengeLevel = "Challenge_Level_";
     public readonly static string PigBank_Gold = "PigBankGold";
     public readonly static string Setting_Sound = "setting_sound";
     public readonly static string Setting_Music = "setting_music";

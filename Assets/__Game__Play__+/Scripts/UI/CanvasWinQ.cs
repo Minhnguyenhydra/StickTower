@@ -490,9 +490,8 @@ public class CanvasWinQ : UICanvas
         }
         else if (PlayerPrefs.GetInt(UserData.Key_1GamPlay_Or_2Area_Or_3Challenge) == 3)
         {
-            UIManager.Ins.OpenUI(UIID.UICMainMenu);
-            UIManager.Ins.OpenUI(UIID.UICChallenge);
-
+            int indexLevel = PlayerPrefs_Manager.Get__QLevel_Challenge();
+            Scene_Manager_Q.Load_Scene(Constant.StringChallengeLevel + indexLevel.ToString());
         }
 
         //SceneManager.LoadScene(Constant.StringLevel + indexLevel.ToString(), LoadSceneMode.Single);
@@ -523,10 +522,15 @@ public class CanvasWinQ : UICanvas
             //StartCoroutine(Delay_Increa_Gem());
 
 
-            if (PlayerPrefs.GetInt(UserData.Key_1GamPlay_Or_2Area_Or_3Challenge) == 1 || PlayerPrefs.GetInt(UserData.Key_1GamPlay_Or_2Area_Or_3Challenge) == 3)
+            if (PlayerPrefs.GetInt(UserData.Key_1GamPlay_Or_2Area_Or_3Challenge) == 1)
             {
                 int indexLevel = PlayerPrefs_Manager.Get_Index_Level_Normal();
                 Scene_Manager_Q.Load_Scene(Constant.StringLevel + indexLevel.ToString());
+            }
+            else if (PlayerPrefs.GetInt(UserData.Key_1GamPlay_Or_2Area_Or_3Challenge) == 3)
+            {
+                int indexLevel = PlayerPrefs_Manager.Get__QLevel_Challenge();
+                Scene_Manager_Q.Load_Scene(Constant.StringChallengeLevel + indexLevel.ToString());
             }
             else if (PlayerPrefs.GetInt(UserData.Key_1GamPlay_Or_2Area_Or_3Challenge) == 2)
             {

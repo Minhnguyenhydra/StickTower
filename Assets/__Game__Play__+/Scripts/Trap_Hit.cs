@@ -65,7 +65,10 @@ public class Trap_Hit : MonoBehaviour
     #region Base to set Skin, Anim
     public void SetAnimation(AnimationReferenceAsset _anim, bool _loop, float _time_Scale)//Set No loop
     {
-        skeletonAnimation.state.SetAnimation(0, _anim, _loop).TimeScale = _time_Scale;
+        if (skeletonAnimation)
+            skeletonAnimation.state.SetAnimation(0, _anim, _loop).TimeScale = _time_Scale;
+
+        gameObject.SetActive(false);
     }
     //TODO: đổi skin
     public void Set_Skin(string _str_Skin)

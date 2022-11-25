@@ -29,7 +29,7 @@ public class GameManager : Singleton<GameManager>
 
     public GameState GMState;
 
-    
+
     protected void Awake()
     {
         //base.Awake();
@@ -50,9 +50,9 @@ public class GameManager : Singleton<GameManager>
 
         //ChangeState(GameState.MainMenu);
 
-         //TOTEST
+        //TOTEST
         //UIManager.Ins.OpenUI(UIID.UICMainMenu);
-        
+
     }
 
     //public static void ChangeState(GameState state)
@@ -77,7 +77,7 @@ public class GameManager : Singleton<GameManager>
         //SoundManager.Ins.PlaySound(SoundID.menu);
         //corShowCanvasWin = StartCoroutine(Set_Delay_Show_Canvas_Win());
     }
-    
+
     public void Set_Mai_Xanh_Delay_Win(Floor _floor)
     {
         if (GMState == GameState.Stoped)
@@ -88,8 +88,8 @@ public class GameManager : Singleton<GameManager>
             Player.ins.health_Bar.Set_Hide_Health_Bar();
         }
         #region Chỉ level nhặt Key.... Set_Number_Key_Treasure, Player chơi hết màn mới tính là nhặt đc key
-        if (PlayerPrefs_Manager.Get_Index_Level_Normal() == 3 
-         || PlayerPrefs_Manager.Get_Index_Level_Normal() == 8 
+        if (PlayerPrefs_Manager.Get_Index_Level_Normal() == 3
+         || PlayerPrefs_Manager.Get_Index_Level_Normal() == 8
          || PlayerPrefs_Manager.Get_Index_Level_Normal() == 13
          || PlayerPrefs_Manager.Get_Index_Level_Normal() == 17
          || PlayerPrefs_Manager.Get_Index_Level_Normal() == 20
@@ -148,7 +148,7 @@ public class GameManager : Singleton<GameManager>
     }
     public Enum_State_Attack_Boos Get_Bool_Win_Boss()
     {
-       return state_Attack_Boos;
+        return state_Attack_Boos;
     }
     //
     IEnumerator Set_Delay_Show_Canvas_Win()
@@ -164,31 +164,39 @@ public class GameManager : Singleton<GameManager>
 
 
 
-            UIManager.Ins.OpenUI(UIID.UICWin_Level);
+        UIManager.Ins.OpenUI(UIID.UICWin_Level);
 
-            //Mở khóa canvas rương nếu level đủ 3 chìa
-            int lv = PlayerPrefs_Manager.Get_Index_Level_Normal();
-            if (lv == 3 || lv == 8 || lv == 13 || lv == 17 || lv == 20 || lv == 23 || lv == 31 || lv == 46 )
-            {
-                //PlayerPrefs_Manager.Set_Number_Key_Treasure(0);
-                UIManager.Ins.OpenUI(UIID.UICShopPrize);
-            }
-        
-            if (lv == 6)
-            {
-                UIManager.Ins.OpenUI(UIID.UICRateUs);
-            }
-        if (lv == 10  || lv == 30)//|| lv == 20
+        //Mở khóa canvas rương nếu level đủ 3 chìa
+        int lv = PlayerPrefs_Manager.Get_Index_Level_Normal();
+        if (lv == 3 || lv == 8 || lv == 13 || lv == 17 || lv == 20 || lv == 23 || lv == 31 || lv == 46)
+        {
+            //PlayerPrefs_Manager.Set_Number_Key_Treasure(0);
+            UIManager.Ins.OpenUI(UIID.UICShopPrize);
+        }
+
+        if (lv == 6)
+        {
+            UIManager.Ins.OpenUI(UIID.UICRateUs);
+        }
+        if (lv == 10 || lv == 30)//|| lv == 20
         {
             UIManager.Ins.OpenUI(UIID.UICFreeSkin);
         }
-        // tăng level lên 1
-        PlayerPrefs_Manager.Set_Index_Level_Normal(lv + 1);
-            //Fight Boos
-            UIManager.Ins.OpenUI(UIID.UICFight_Boss);
-            UIManager.Ins.CloseUI(UIID.UICFight_Boss);
-            //
-        
+
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.name.Contains("Challenge"))
+        {
+            int level = PlayerPrefs_Manager.Get__QLevel_Challenge();
+            PlayerPrefs_Manager.Set_QLevel_Challenge(level + 1);
+        }
+        else
+            PlayerPrefs_Manager.Set_Index_Level_Normal(lv + 1);
+
+        //Fight Boos
+        UIManager.Ins.OpenUI(UIID.UICFight_Boss);
+        UIManager.Ins.CloseUI(UIID.UICFight_Boss);
+        //
+
 
     }
     //
@@ -201,7 +209,7 @@ public class GameManager : Singleton<GameManager>
         else
         {
             float time_change = Constant.Time_Delay_Fade_Win - 2;
-            time_change = Mathf.Clamp(time_change, 0.5f,10);
+            time_change = Mathf.Clamp(time_change, 0.5f, 10);
             yield return Cache.GetWFS(time_change);//TODO: Fix màn rewward thua hiển thị chậm ở Challenge
         }
 
@@ -220,7 +228,7 @@ public class GameManager : Singleton<GameManager>
             UIManager.Ins.CloseUI(UIID.UICFight_Boss);
         }
         //
-       
+
     }
 
     //TOTEST
@@ -237,16 +245,16 @@ public class GameManager : Singleton<GameManager>
         PlayerPrefs_Manager.Set_Index_Level_Normal(0);
         PlayerPrefs_Manager.Set_Gem(0);
         PlayerPrefs_Manager.Set_Gold(0);
-        
+
     }
     [ContextMenu("TEST_RESETsss_LEVEL_0")]
     public void Testdd_Reset_Leveaal()
     {
-        
+
         PlayerPrefs_Manager.Set_Pink_Bank_Gold(2000);
-        
+
     }
-    
+
 }
 /*
 
