@@ -19,7 +19,7 @@ public class CanvasGamePlay : UICanvas
     public TextMeshProUGUI txt_Damge;
     private void Start()
     {
-        
+        Debug.LogError("============= gamplay");
     }
     private void OnEnable()
     {
@@ -38,11 +38,13 @@ public class CanvasGamePlay : UICanvas
         if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 1 )
         {
             number_Castle_This_Level = Constant.Get_Type_Castle_By_Level(level_curent);
+            EventController.PLAY_LEVEL_EVENT(level_curent);
         }
         else if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 3)
         {
             int _level_Challenge = PlayerPrefs_Manager.Get__QLevel_Challenge();
             number_Castle_This_Level = Constant.Get_Type_Castle_By_Level(_level_Challenge);
+            EventController.PLAY_LEVEL_EVENT_CHALLANGE(_level_Challenge);
         }
 
 
@@ -143,6 +145,8 @@ public class CanvasGamePlay : UICanvas
         GameManager.Ins.GMState = GameManager.GameState.Stoped;
         Close();
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+
+        EventController.GAME_PLAY("icon_home");
     }
 
     public void RePlay_Button()
@@ -151,7 +155,9 @@ public class CanvasGamePlay : UICanvas
         GameManager.Ins.GMState = GameManager.GameState.Stoped;
         anim_GamePlay.SetTrigger(Constant.Trigger_GamePlay_Close);
         StartCoroutine(IE_Delay_Replay());
-        
+
+        EventController.GAME_PLAY("icon_replay_level");
+
     }
     IEnumerator IE_Delay_Replay()
     {
@@ -188,11 +194,14 @@ public class CanvasGamePlay : UICanvas
             {
                 SoundManager.Ins.PlayFx(FxID.click);
 #if WatchADs
-                AdsManager.Instance.WatchInterstitialAds(SkipLevel);
+                AdsManager.Instance.WatchRewardedAds(SkipLevel,"video_show_skip_ingameplay");
 #else
                 SkipLevel();
 #endif
+
+                EventController.GAME_PLAY("icon_skip_level");
             }
+
         }
     }
 
@@ -223,10 +232,11 @@ public class CanvasGamePlay : UICanvas
     public void ADs_Take_Sword_Button()
     {
 #if WatchADs
-        AdsManager.Instance.WatchRewardedAds(TakeSword);
+        AdsManager.Instance.WatchRewardedAds(TakeSword,"video_show_takesword_ingameplay");
 #else
         TakeSword();
 #endif
+        EventController.GAME_PLAY("icon_bonusDamge_1_click");
     }
 
     private void TakeSword()

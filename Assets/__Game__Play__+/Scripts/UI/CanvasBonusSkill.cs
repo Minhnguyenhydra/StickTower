@@ -50,10 +50,11 @@ public class CanvasBonusSkill : UICanvas
     {
         SoundManager.Ins.PlayFx(FxID.click);
 #if WatchADs
-        AdsManager.Instance.WatchRewardedAds(TakeLeftSword);
+        AdsManager.Instance.WatchRewardedAds(TakeLeftSword, "video_unlock_bonus_damge_btn1");
 #else
         TakeLeftSword();
 #endif
+        EventController.GAME_PLAY("popup_bonusDamge_2_click");
     }
    
     private void TakeLeftSword()
@@ -71,11 +72,11 @@ public class CanvasBonusSkill : UICanvas
     {
         SoundManager.Ins.PlayFx(FxID.click);
 #if WatchADs
-        AdsManager.Instance.WatchRewardedAds(TakeRightSword);
+        AdsManager.Instance.WatchRewardedAds(TakeRightSword, "video_unlock_bonus_damge_btn1");
 #else
         TakeRightSword();
 #endif
-
+        EventController.GAME_PLAY("popup_bonusDamge_2_click");
     }
     
 
@@ -96,6 +97,8 @@ public class CanvasBonusSkill : UICanvas
         SoundManager.Ins.PlayFx(FxID.click);
         
         StartCoroutine(IE_DelayClose());
+
+        EventController.GAME_PLAY("nothank_click_bonusskill");
     }
     IEnumerator IE_DelayClose()
     {

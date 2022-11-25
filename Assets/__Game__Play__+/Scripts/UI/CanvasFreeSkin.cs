@@ -8,7 +8,7 @@ using Spine.Unity;
 //Do nếu để cùng Canvas tổng thì Canvas Pig sẽ có oder layer bằng với Canvas tổng, mà Skeleton muốn gắn lên Canvas tổng phải có Oder layer cao hơn, do đó các Skeleton ko liên quan sẽ bị nổi lên ở Canvas Pink Bank này, do đó phải gắn canvas Pig Bank này ở canvas riêng có chỉ số Oder cao hơn
 public class CanvasFreeSkin : UICanvas
 {
-    public int idSkin; 
+    public int idSkin;
     public GameObject obj_Btn_Get;
     public bool isGet;
     public Transform tf_Spawn_Fire_Work;
@@ -21,23 +21,23 @@ public class CanvasFreeSkin : UICanvas
     }
     private void Start()
     {
-        
+
     }
     private void OnEnable()
     {
         idSkin = Constant.Get_Id_Skin_Free_By_Level(PlayerPrefs_Manager.Get_Index_Level_Normal());
-        
+
         string nameSkin = Constant.Get_Skin_Name_By_Id(idSkin);
         Set_Skin(nameSkin);
     }
-    
+
     //
     public void GetButton()
     {
         SoundManager.Ins.PlayFx(FxID.click);
 
 #if WatchADs
-        AdsManager.Instance.WatchRewardedAds(TakeFreeSkin);
+        AdsManager.Instance.WatchRewardedAds(TakeFreeSkin, "video_show_freeskin");
 #else
         TakeFreeSkin();
 #endif
@@ -63,7 +63,7 @@ public class CanvasFreeSkin : UICanvas
         }
         yield return Cache.GetWFS(Constant.Time_Delay_PigBank_Close);
 
-        
+
 
         ((CanvasWinQ)UIManager.Ins.GetUI(UIID.UICWin_Level)).Set_Gold_EFX();
 
@@ -77,7 +77,7 @@ public class CanvasFreeSkin : UICanvas
         ((CanvasWinQ)UIManager.Ins.GetUI(UIID.UICWin_Level)).Set_Skin(trSkin);
         PlayerPrefs_Manager.Set_ID_Name_Skin_Wearing(idSkin);
     }
-#region Base to set Skin, Anim
+    #region Base to set Skin, Anim
     public void SetAnimation(AnimationReferenceAsset _anim, bool _loop, float _time_Scale)//Set No loop
     {
         skeletonAnimation.state.SetAnimation(0, _anim, _loop).TimeScale = _time_Scale;
@@ -103,5 +103,5 @@ public class CanvasFreeSkin : UICanvas
     {
         skeletonAnimation.ClearState();
     }
-#endregion
+    #endregion
 }

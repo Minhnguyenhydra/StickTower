@@ -191,3 +191,6 @@ Assets/Plugins/IngameDebugConsole/WebGL/IngameDebugConsole.jslib
 Assets/Plugins/IngameDebugConsole/WebGL/IngameDebugConsole.jslib.meta
 KeyStore/Pass.txt
 KeyStore/StickHeroTower.keystore
+Assets/Firebase/Plugins/x86_64/FirebaseCppRemoteConfig.so
+Assets/Firebase/Plugins/x86_64/FirebaseCppRemoteConfig.dll
+Assets/Firebase/Plugins/x86_64/FirebaseCppRemoteConfig.bundle

@@ -21,6 +21,16 @@ public class CanvasLose : UICanvas
     #endregion
     private void OnEnable()
     {
+
+        if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 1)
+        {
+            EventController.LOSE_LEVEL_EVENT(PlayerPrefs_Manager.Get_Index_Level_Normal());
+        }
+        else if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 3)
+        {
+            EventController.LOSE_LEVEL_EVENT_CHALLENGE(PlayerPrefs_Manager.Get__QLevel_Challenge());
+        }
+
         SoundManager.Ins.PlayFx(FxID.lose);
         Set_Init_Gold_Gem_Level_Title();
     }
@@ -72,6 +82,7 @@ public class CanvasLose : UICanvas
     {
         SoundManager.Ins.PlayFx(FxID.click);
         StartCoroutine(LoadScene("Loading"));
+        EventController.GAME_PLAY("icon_home");
     }
     private IEnumerator LoadScene(string sceneName)
     {
@@ -92,6 +103,8 @@ public class CanvasLose : UICanvas
         SoundManager.Ins.PlayFx(FxID.click);
         PlayerPrefs.SetInt(UserData.Key_1GamPlay_Or_2Area_Or_3Challenge, 2);
         StartCoroutine(LoadScene("Ar_Level_0"));
+
+        EventController.GAME_PLAY("icon_arena_click");
     }
     #endregion
 
@@ -100,6 +113,8 @@ public class CanvasLose : UICanvas
     {
         SoundManager.Ins.PlayFx(FxID.click);
         UIManager.Ins.OpenUI(UIID.UICChallenge);
+
+        EventController.GAME_PLAY("icon_challange_click");
     }
     #endregion
 
@@ -110,6 +125,7 @@ public class CanvasLose : UICanvas
         UIManager.Ins.OpenUI(UIID.UICSkin_Top);
         UIManager.Ins.OpenUI(UIID.UICSkin_Boot);
         Close();
+        EventController.GAME_PLAY("icon_shop_click");
     }
     #endregion
 
@@ -152,7 +168,7 @@ public class CanvasLose : UICanvas
     {
         SoundManager.Ins.PlayFx(FxID.click);
 #if WatchADs
-        AdsManager.Instance.WatchInterstitialAds(SkipLevel);  
+        AdsManager.Instance.WatchRewardedAds(SkipLevel,"video_show_skip_lose");  
 #else
         SkipLevel();
 #endif
@@ -179,6 +195,7 @@ public class CanvasLose : UICanvas
 #else
         NoThanksClicked();
 #endif
+        EventController.GAME_PLAY("nothank_click_lose");
     }
 
     private void NoThanksClicked()

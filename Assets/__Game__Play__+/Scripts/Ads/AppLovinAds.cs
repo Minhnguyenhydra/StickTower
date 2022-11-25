@@ -29,6 +29,7 @@ public class AppLovinAds : MonoBehaviour
             // AppLovin SDK is initialized, configure and start loading ads.
             Debug.Log("MAX SDK Initialized");
             MaxSdkCallbacks.AppOpen.OnAdHiddenEvent += OnAppOpenDismissedEvent;
+            MaxSdkCallbacks.AppOpen.OnAdDisplayedEvent += OnAppOpenDisplayed;
             AppOpenManager.Instance.LoadAOA();
             StartCoroutine(AppOpenManager.Instance.ShowAtStart());
 
@@ -45,6 +46,11 @@ public class AppLovinAds : MonoBehaviour
         //MaxSdk.SetTestDeviceAdvertisingIdentifiers(new string[] { "2010f6b6-0585-4646-b7b4-e6291e3ea12b", "c23c7f01-c1c5-4c46-ae67-44b77b961672" });
         MaxSdk.InitializeSdk();
         ShowBannerAfter10S();
+    }
+
+    private void OnAppOpenDisplayed(string arg1, MaxSdkBase.AdInfo arg2)
+    {
+        EventController.SUM_AOA_ALL_GAME();
     }
 
     public void ShowBannerAfter10S()
@@ -192,6 +198,7 @@ public class AppLovinAds : MonoBehaviour
     private void OnInterstitialDisplayedEvent(string adUnitId, MaxSdkBase.AdInfo adInfo) 
     {
         Debug.Log("Interstitial Ad Displayed");
+        EventController.SUM_INTER_ALL_GAME();
     }
 
     private void OnInterstitialAdFailedToDisplayEvent(string adUnitId, MaxSdkBase.ErrorInfo errorInfo, MaxSdkBase.AdInfo adInfo)
@@ -249,12 +256,13 @@ public class AppLovinAds : MonoBehaviour
         Debug.Log("Rewarded Loading...");
         MaxSdk.LoadRewardedAd(adUnitRewardedId);
     }
-
-    public void ShowRewardedAds(CallBackAds cbAds)
+    string nameVideo;
+    public void ShowRewardedAds(CallBackAds cbAds,string _nameVideo)
     {
         if (MaxSdk.IsRewardedAdReady(adUnitRewardedId))
         {
             callBackAds = cbAds;
+            nameVideo = _nameVideo;
             AppOpenManager.ResumeFromAds = true;
             Debug.Log("Rewarded Showing...");
             MaxSdk.ShowRewardedAd(adUnitRewardedId);
@@ -285,6 +293,7 @@ public class AppLovinAds : MonoBehaviour
     private void OnRewardedAdDisplayedEvent(string adUnitId, MaxSdkBase.AdInfo adInfo) 
     {
         Debug.Log("Rewarded Ad Displayed");
+        EventController.SUM_VIDEO_SHOW_NAME(nameVideo);
     }
 
     private void OnRewardedAdFailedToDisplayEvent(string adUnitId, MaxSdkBase.ErrorInfo errorInfo, MaxSdkBase.AdInfo adInfo)

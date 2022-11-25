@@ -36,6 +36,8 @@ public class CanvasArea : UICanvas
         txt_Coin.text = gold_In_Level.ToString();
         txt_gem.text = gem_In_Level.ToString();
         SetOrigin_Boot_Canvas();
+
+        EventController.ARENA_EVENT_ARENA((level_curent + 1).ToString());
     }
     public void Set_Downt_Boot_Canvas()
     {
@@ -125,6 +127,7 @@ public class CanvasArea : UICanvas
     public void BuyHeroButton(int index)
     {
         SoundManager.Ins.PlayFx(FxID.click);
+        EventController.ARENA_EVENT_CARD(index);
         //TODO: them phan check tien du hay chua
         if (index == 0)
         {
@@ -183,7 +186,7 @@ public class CanvasArea : UICanvas
         SoundManager.Ins.PlayFx(FxID.click);
         orderHero = index;
 # if WatchADs
-        AdsManager.Instance.WatchRewardedAds(BuyHero);
+        AdsManager.Instance.WatchRewardedAds(BuyHero,"video_show_arena_buy_hero_" + index.ToString());
 #else
         BuyHero();
 #endif

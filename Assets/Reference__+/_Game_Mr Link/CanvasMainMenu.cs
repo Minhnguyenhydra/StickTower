@@ -58,6 +58,8 @@ public class CanvasMainMenu : UICanvas
         SoundManager.Ins.PlayFx(FxID.click);
         anim_Home.SetTrigger(Constant.Trigger_HomeOut);
         UIManager.Ins.OpenUI(UIID.UICChallenge);
+
+        EventController.MAIN_CLICK("icon_challange_click");
     }
     
     public void Set_Anim_In()
@@ -71,6 +73,8 @@ public class CanvasMainMenu : UICanvas
     {
         SoundManager.Ins.PlayFx(FxID.click);
         UIManager.Ins.OpenUI(UIID.UICSetting);
+
+        EventController.MAIN_CLICK("main_setting_click");
     }
     #endregion
     #region Button Play
@@ -85,6 +89,8 @@ public class CanvasMainMenu : UICanvas
             isFist_Click = true;
             PlayerPrefs.SetInt(UserData.Key_1GamPlay_Or_2Area_Or_3Challenge, 1);
             StartCoroutine(IE_Delay_Fade_Start_Close());
+
+            EventController.MAIN_CLICK("main_taptoplay_click");
         }
     }
 
@@ -114,6 +120,8 @@ public class CanvasMainMenu : UICanvas
         UIManager.Ins.OpenUI(UIID.UICSkin_Top);
         UIManager.Ins.OpenUI(UIID.UICSkin_Boot);
         Close();
+
+        EventController.MAIN_CLICK("icon_shop_click");
     }
     #endregion
 
@@ -124,6 +132,8 @@ public class CanvasMainMenu : UICanvas
 
         PlayerPrefs.SetInt(UserData.Key_1GamPlay_Or_2Area_Or_3Challenge, 2);
         StartCoroutine(LoadScene("Ar_Level_0"));
+
+        EventController.MAIN_CLICK("icon_arena_click");
     }
 
     private IEnumerator LoadScene(string sceneName)

@@ -64,6 +64,15 @@ public class CanvasWinQ : UICanvas
 
     private void OnEnable()
     {
+        if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 1)
+        {
+            EventController.WIN_LEVEL_EVENT(PlayerPrefs_Manager.Get_Index_Level_Normal());
+        }
+        else if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 3)
+        {
+            EventController.WIN_LEVEL_EVENT_CHALLENGE(PlayerPrefs_Manager.Get__QLevel_Challenge());
+        }
+
         Set_Init();
     }
     // Start is called before the first frame update
@@ -304,6 +313,8 @@ public class CanvasWinQ : UICanvas
 
         PlayerPrefs.SetInt(UserData.Key_1GamPlay_Or_2Area_Or_3Challenge, 2);
         StartCoroutine(LoadScene("Ar_Level_0"));
+
+        EventController.GAME_PLAY("icon_arena_click");
     }
     #endregion
     #region Challenge
@@ -311,6 +322,8 @@ public class CanvasWinQ : UICanvas
     {
         SoundManager.Ins.PlayFx(FxID.click);
         UIManager.Ins.OpenUI(UIID.UICChallenge);
+
+        EventController.GAME_PLAY("icon_challange_click");
     }
     #endregion
     #region Skin
@@ -320,6 +333,7 @@ public class CanvasWinQ : UICanvas
         UIManager.Ins.OpenUI(UIID.UICSkin_Top);
         UIManager.Ins.OpenUI(UIID.UICSkin_Boot);
         Close();
+        EventController.GAME_PLAY("icon_shop_click");
     }
     #endregion
     #region Home
@@ -328,6 +342,7 @@ public class CanvasWinQ : UICanvas
         SoundManager.Ins.PlayFx(FxID.click);
 
         StartCoroutine(LoadScene("Loading"));
+        EventController.GAME_PLAY("icon_home");
     }
     private IEnumerator LoadScene(string sceneName)
     {
@@ -394,7 +409,7 @@ public class CanvasWinQ : UICanvas
         SoundManager.Ins.PlayFx(FxID.click);
 
 #if WatchADs
-        AdsManager.Instance.WatchRewardedAds(TakeRandomGold);
+        AdsManager.Instance.WatchRewardedAds(TakeRandomGold, "video_get_xGold_screenWin");
 #else
         TakeRandomGold();
 #endif
@@ -431,7 +446,7 @@ public class CanvasWinQ : UICanvas
         SoundManager.Ins.PlayFx(FxID.click);
 
 #if WatchADs
-        AdsManager.Instance.WatchRewardedAds(GetGoldRandom);
+        AdsManager.Instance.WatchRewardedAds(GetGoldRandom,"video_get_randomGold_screenWin");
 #else
         GetGoldRandom();
 #endif
@@ -495,6 +510,8 @@ public class CanvasWinQ : UICanvas
 #else
         NoThanksClicked();
 #endif
+
+        EventController.GAME_PLAY("nothank_click_win");
     }
 
     private void NoThanksClicked()

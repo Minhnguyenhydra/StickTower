@@ -11,12 +11,13 @@ public class PopUpWatchAds : PopUpProperties
     void Reward()
     {
         DataParam.canDelete = true;
-        gameObject.SetActive(false);
+        CloseMe();
     }    
     public void BtnNext()
     {
         DataParam.currentLevel++;
         GameController.instance.levelController.PlayAnimWin();
+        CloseMe();
 
         //Application.LoadLevel(Application.loadedLevelName);
         //Debug.LogError("======= load next level");

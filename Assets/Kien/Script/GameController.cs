@@ -23,9 +23,9 @@ public class GameController : MonoBehaviour
     {
         instance = this;
     }
-    public void ShowPopUpWin()
+    public void ShowPopUpResult()
     {
-        pathPopUp = "PopUp/ResultPanl";
+        pathPopUp = "PopUp/ResultPanel";
         resultPanel = Instantiate(Resources.Load<ResultPanel>(pathPopUp));
         resultPanel.SetRect(canvasParent);
         resultPanel.OpenMe();

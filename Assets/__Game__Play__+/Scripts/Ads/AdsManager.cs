@@ -22,9 +22,9 @@ public class AdsManager : MonoBehaviour
         }
     }
 
-    public void WatchRewardedAds(CallBackAds cbAds)
+    public void WatchRewardedAds(CallBackAds cbAds,string _nameVideo)
     {
-        applovin.ShowRewardedAds(cbAds);
+        applovin.ShowRewardedAds(cbAds, _nameVideo);
     }
 
     public void WatchInterstitialAds(CallBackAds cbAds)

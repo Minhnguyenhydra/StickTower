@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
+using UnityEngine.EventSystems;
 
 public enum SoundID
 {//kéo đúng thứ tự ở List Audio tương ứng với List Enum này
@@ -145,6 +145,11 @@ public class SoundManager : Singleton<SoundManager>
 
             //Debug.Log(ID);
         }
+        if(ID == FxID.click)
+        {
+            if (EventSystem.current.currentSelectedGameObject != null)
+                EventController.FLOW_FIRST_OPEN("flow_click_button_" + EventSystem.current.currentSelectedGameObject.name);
+        }    
     }
 
     public void PlayFxWithName(string soundName)

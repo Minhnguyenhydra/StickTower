@@ -97,6 +97,7 @@ public class PaintController : MonoBehaviour
 
             if (inside && currentPaint == this)
             {
+                
                 UpdateTexture(pos);
                 isDelete = true;
                 return;

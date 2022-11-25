@@ -68,7 +68,7 @@ public class Model_Hero_Item : MonoBehaviour
     public void Try_Button()
     {
 #if WatchADs
-        AdsManager.Instance.WatchRewardedAds(TrySkin);
+        AdsManager.Instance.WatchRewardedAds(TrySkin,"video_show_try_skin");
 #else
         TrySkin();
 #endif
@@ -126,6 +126,8 @@ public class Model_Hero_Item : MonoBehaviour
         PlayerPrefs_Manager.Set_ID_Name_Skin_Wearing(skin_Item_SO.iD);
         /////Debug.Log(PlayerPrefs_Manager.Get_ID_Name_Skin_Wearing());
         Set_Wearing();
+
+        EventController.SHOP_EVENT(skin_Item_SO.iD);
     }
 
     private void SetPreSkin(int idSkin)

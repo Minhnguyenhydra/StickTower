@@ -24,6 +24,8 @@ public class FirebaseController : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
+
+
     private void Init()
     {
         FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task =>

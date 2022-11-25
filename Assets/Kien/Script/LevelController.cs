@@ -74,7 +74,7 @@ public class LevelController : MonoBehaviour, IDragHandler, IEndDragHandler
     public void PlayAnimWin()
     {
         animVisibleInsideMask.AnimationState.SetAnimation(0, "win", true);
-        GameController.instance.ShowPopUpWin();
+        GameController.instance.ShowPopUpResult();
     }
 
     public void Win()
