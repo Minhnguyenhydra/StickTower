@@ -164,4 +164,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/__Game__Play__+/Scenes/Area/Ar_Level_0.unity
     guid: 1bee13fa732a49c489004dde52b4ebf9
+  - enabled: 1
+    path: Assets/Kien/Scene/DeleteScene.unity
+    guid: 4ad6b6a803cbfe54584e2049a1231592
   m_configObjects: {}

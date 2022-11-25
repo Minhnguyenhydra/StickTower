@@ -2,11 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-namespace Kien
+public class DataParam
 {
-    public class DataParam
+    static WaitForSeconds waitDeleteCheck = new WaitForSeconds(2f);
+    public static bool canDelete = false;
+    public static int currentLevel = 0;
+    public static WaitForSeconds WAITDELETECHECK
     {
-
+        get
+        {
+            return waitDeleteCheck;
+        }
     }
 }
+
