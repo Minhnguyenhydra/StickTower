@@ -930,6 +930,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debug: 1
+  saveDelete:
+    infoSaveDelete: []
+  deleteData: {fileID: 11400000, guid: db6b8d0bc70f95a4d91d06288d007caa, type: 2}
   devAndroid: 
   devkeyIos: 
   urlLevelAndroid: 
@@ -1504,6 +1507,10 @@ PrefabInstance:
     - target: {fileID: 879815431258187173, guid: 1dfafaafba2e9a040a7f4ea9dd8b25c2, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 879815431364027775, guid: 1dfafaafba2e9a040a7f4ea9dd8b25c2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.00048828125
       objectReference: {fileID: 0}
     - target: {fileID: 879815431675004704, guid: 1dfafaafba2e9a040a7f4ea9dd8b25c2, type: 3}
       propertyPath: m_AnchorMax.y
