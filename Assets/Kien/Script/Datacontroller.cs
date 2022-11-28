@@ -8,16 +8,26 @@ using System.Threading;
 using System.Globalization;
 using System;
 using static SaveData;
+using static SaveDelete;
 
 
 //[System.Serializable]
 public class SaveData
 {
-
-
-    public int session;
+    public int session, day = 0, week = 1;
     public DateTime oldDay = System.DateTime.Now;
-
+    public SaveDelete saveDelete = new SaveDelete();
+}
+[System.Serializable]
+public class SaveDelete
+{
+    public List<InfoSaveDelete> infoSaveDelete = new List<InfoSaveDelete>();
+    [System.Serializable]
+    public class InfoSaveDelete
+    {
+        public List<bool> takeSprite = new List<bool>();
+        public bool unlock;
+    }
 }
 [System.Serializable]
 public class SaveMoreGame
@@ -43,6 +53,8 @@ public class Datacontroller : MonoBehaviour
 {
     public bool debug;
     public SaveData saveData;
+
+    public DeleteData deleteData;
     public static Datacontroller instance;
     string urlMoreGame;
     string urlLevel;
@@ -51,11 +63,15 @@ public class Datacontroller : MonoBehaviour
     public string urlLevelAndroid, urlLevelIOS;
     public string appIDIos;
 
+    public void TakePartDelete(int indexSource,int indexPart)
+    {
+       saveData.saveDelete.infoSaveDelete[indexSource].takeSprite[indexPart] = true;
+    }    
     private void Awake()
     {
         if (instance == null)
         {
-          //  Application.targetFrameRate = 300;
+            //  Application.targetFrameRate = 300;
             Debug.unityLogger.logEnabled = debug;
             //    Input.multiTouchEnabled = false;
             CultureInfo ci = new CultureInfo("en-us");
@@ -84,6 +100,13 @@ public class Datacontroller : MonoBehaviour
     }
     UnityWebRequest wwwLevel;
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            Application.LoadLevel("DeleteScene");
+        }    
+    }
 
 
     void ReadPlayer(string value)
@@ -95,35 +118,52 @@ public class Datacontroller : MonoBehaviour
         {
             saveData = JsonMapper.ToObject<SaveData>(strDataLoadPref);
         }
-
     }
 
     void LoadData(string value)
     {
         saveData = new SaveData();
+        saveData.saveDelete = new SaveDelete();
         ReadPlayer(value);
+
     }
     void LoadAllData()
     {
         LoadData(PlayerPrefs.GetString(DataParam.SAVEDATA));
         //  LoadSaveMoreGame(PlayerPrefs.GetString(DataParam.SAVEMOREGAME));
-
-        if (saveData.session == 0)
-        {
-            saveData.oldDay = System.DateTime.Today;
-        }
-
         saveData.session++;
+
+
+    }
+    void CreateDataBegin()
+    {
+
+        for(int i = saveData.saveDelete.infoSaveDelete.Count; i < deleteData.infoDelete.Length; i ++)
+        {
+            InfoSaveDelete _infoDelete = new InfoSaveDelete();
+            if(i <= 1)
+            {
+                _infoDelete.unlock = true;
+            }
+            for(int j = 0; j < deleteData.infoDelete[i].resourceSprite.sp.Length ; j ++)
+            {
+                bool takeSprite = new bool();
+                _infoDelete.takeSprite.Add(takeSprite);
+            }
+            saveData.saveDelete.infoSaveDelete.Add(_infoDelete);
+        }    
     }
 
     void Start()
     {
 
+        CreateDataBegin();
+
         //Debug.LogError("=======" + urlMoreGame);
         //WWW www = new WWW(urlMoreGame);
 
         //StartCoroutine(WaitForRequest(www));
-      //  StartCoroutine(WaitForRequestLevel(wwwLevel));
+        //  StartCoroutine(WaitForRequestLevel(wwwLevel));
         //  LoadSaveMoreGame(PlayerPrefs.GetString(DataParam.SAVEMOREGAME));
 
     }
@@ -163,7 +203,7 @@ public class Datacontroller : MonoBehaviour
         }
         else
         {
-          //  DataParam.wwwLevel = www.downloadHandler.text;
+            //  DataParam.wwwLevel = www.downloadHandler.text;
             Debug.LogError("=====WWW Level!: " + www.downloadHandler.text);
         }
 

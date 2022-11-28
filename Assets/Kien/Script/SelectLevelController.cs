@@ -26,6 +26,14 @@ public class SelectLevelController : PopUpProperties
             bouderSelectLevels[i].Display();
         }
     }
+    public void BtnBack()
+    {
+        Application.LoadLevel("Loading");
+    }   
+    public void BtnClose()
+    {
+        base.CloseMe();
+    }    
     public void Load()
     {
         bouderSelectLevels.Clear();

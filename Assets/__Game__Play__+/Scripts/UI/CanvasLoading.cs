@@ -17,10 +17,32 @@ public class CanvasLoading : UICanvas
         }
 
         imgProgress.DOFillAmount(1, Constant.Time_Loading)
-            .SetEase(Ease.InOutQuad).OnComplete(()=>
+            .SetEase(Ease.InOutQuad).OnComplete(() =>
                 {
                     Close();
                     UIManager.Ins.OpenUI(UIID.UICMainMenu);
+
+                    Debug.LogError(Datacontroller.instance.saveData.day);
+                    if (Datacontroller.instance.saveData.session == 1)
+                    {
+                        EventController.PLAY_EVENT_DAY(Datacontroller.instance.saveData.day);
+                        Datacontroller.instance.saveData.oldDay = System.DateTime.Today;
+                    }
+                    else
+                    {
+                        if (System.DateTime.Today != Datacontroller.instance.saveData.oldDay)
+                        {
+                            Datacontroller.instance.saveData.day++;
+                            EventController.PLAY_EVENT_DAY(Datacontroller.instance.saveData.day);
+                            Datacontroller.instance.saveData.oldDay = System.DateTime.Today;
+                            if (Datacontroller.instance.saveData.day == 6)
+                            {
+                                EventController.PLAY_EVENT_WEEK(Datacontroller.instance.saveData.week);
+                                Datacontroller.instance.saveData.week++;
+                                Datacontroller.instance.saveData.day = 0;
+                            }          
+                        }
+                    }
                 }
             );
 
