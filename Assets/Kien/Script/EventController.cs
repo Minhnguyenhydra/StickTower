@@ -183,8 +183,8 @@ public class EventController : MonoBehaviour
                 nameTempParam = "";
             }
 
-            Parameter param = new Parameter("play_level_para", "play_level_" + nameTempParam + value/* + "_" + age*/);
-            Firebase.Analytics.FirebaseAnalytics.LogEvent("play_level_event", param);
+           // Parameter param = new Parameter("play_level_para", "play_level_" + nameTempParam + value);
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("play_level_event_" + nameTempParam + value/*, param*/);
         }
     }
     public static void PLAY_LEVEL_EVENT_CHALLANGE(int value)
@@ -204,8 +204,8 @@ public class EventController : MonoBehaviour
                 nameTempParam = "";
             }
 
-            Parameter param = new Parameter("play_level_para", "play_challange_" + nameTempParam + value/* + "_" + age*/);
-            Firebase.Analytics.FirebaseAnalytics.LogEvent("play_level_event", param);
+         //   Parameter param = new Parameter("play_level_para", "play_challange_" + nameTempParam + value/* + "_" + age*/);
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("play_level_event_challenge_" + nameTempParam + value/*, param*/);
         }
     }
     public static void PLAY_EVENT_DAY(int value)
@@ -214,8 +214,8 @@ public class EventController : MonoBehaviour
         {
             //if (value < 8)
             //{
-                Parameter param = new Parameter("play_day_para", "play_day_" + value);
-                Firebase.Analytics.FirebaseAnalytics.LogEvent("Play_event", param);
+             //   Parameter param = new Parameter("play_day_para", "play_day_" + value);
+                Firebase.Analytics.FirebaseAnalytics.LogEvent("Play_event_day_" + value/*, param*/);
            // }
         }
         Debug.LogError("==== day:" + value);
@@ -226,8 +226,8 @@ public class EventController : MonoBehaviour
         {
             //if (value < 15)
             //{
-                Parameter param = new Parameter("play_week_para", "play_week_" + value);
-                Firebase.Analytics.FirebaseAnalytics.LogEvent("Play_event", param);
+             //   Parameter param = new Parameter("play_week_para", "play_week_" + value);
+                Firebase.Analytics.FirebaseAnalytics.LogEvent("Play_event_week_" + value/*, param*/);
            // }
         }
         Debug.LogError("==== week:" + value);
@@ -248,8 +248,8 @@ public class EventController : MonoBehaviour
             {
                 nameTempParam = "";
             }
-            Parameter param = new Parameter("win_level_para", "win_level_" + nameTempParam + value /*+ "_" + age*/);
-            Firebase.Analytics.FirebaseAnalytics.LogEvent("win_level_event", param);
+         //   Parameter param = new Parameter("win_level_para", "win_level_" + nameTempParam + value /*+ "_" + age*/);
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("win_level_event_" + nameTempParam + value/*, param*/);
         }
       //  AF_LEVEL_ACHIEVED();
     }
@@ -269,8 +269,8 @@ public class EventController : MonoBehaviour
             {
                 nameTempParam = "";
             }
-            Parameter param = new Parameter("win_level_para", "win_challange_" + nameTempParam + value /*+ "_" + age*/);
-            Firebase.Analytics.FirebaseAnalytics.LogEvent("win_level_event", param);
+          //  Parameter param = new Parameter("win_level_para", "win_challange_" + nameTempParam + value /*+ "_" + age*/);
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("win_level_event_challenge_" + nameTempParam + value/*, param*/);
         }
         //  AF_LEVEL_ACHIEVED();
     }
@@ -292,8 +292,8 @@ public class EventController : MonoBehaviour
                 nameTempParam = "";
             }
 
-            Parameter param = new Parameter("lose_level_para", "lose_level_" + nameTempParam + value /*+ "_" + age*/);
-            Firebase.Analytics.FirebaseAnalytics.LogEvent("lose_level_event", param);
+       //     Parameter param = new Parameter("lose_level_para", "lose_level_" + nameTempParam + value /*+ "_" + age*/);
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("lose_level_event_" + nameTempParam + value/*, param*/);
         }
     }
     public static void LOSE_LEVEL_EVENT_CHALLENGE(int value)
@@ -313,8 +313,8 @@ public class EventController : MonoBehaviour
                 nameTempParam = "";
             }
 
-            Parameter param = new Parameter("lose_level_para", "lose_challange_" + nameTempParam + value /*+ "_" + age*/);
-            Firebase.Analytics.FirebaseAnalytics.LogEvent("lose_level_event", param);
+         //   Parameter param = new Parameter("lose_level_para", "lose_challange_" + nameTempParam + value /*+ "_" + age*/);
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("lose_level_event_challenge_" + nameTempParam + value/*, param*/);
         }
     }
 

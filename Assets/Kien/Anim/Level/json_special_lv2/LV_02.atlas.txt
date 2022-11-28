@@ -1,0 +1,153 @@
+
+LV_02.png
+size: 2560,1124
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ao khoac 3
+  rotate: true
+  xy: 2094, 14
+  size: 185, 197
+  orig: 185, 197
+  offset: 0, 0
+  index: -1
+ao thun
+  rotate: false
+  xy: 1202, 148
+  size: 391, 393
+  orig: 391, 393
+  offset: 0, 0
+  index: -1
+aokhoac1
+  rotate: true
+  xy: 1542, 584
+  size: 260, 542
+  orig: 260, 542
+  offset: 0, 0
+  index: -1
+aokhoac2
+  rotate: true
+  xy: 1542, 846
+  size: 276, 624
+  orig: 276, 624
+  offset: 0, 0
+  index: -1
+bap taytr
+  rotate: false
+  xy: 1921, 119
+  size: 171, 283
+  orig: 171, 283
+  offset: 0, 0
+  index: -1
+bg
+  rotate: true
+  xy: 2, 42
+  size: 1080, 1198
+  orig: 1080, 1198
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 1202, 543
+  size: 338, 579
+  orig: 338, 579
+  offset: 0, 0
+  index: -1
+chan ph
+  rotate: true
+  xy: 2086, 480
+  size: 172, 318
+  orig: 172, 318
+  offset: 0, 0
+  index: -1
+chan trai
+  rotate: true
+  xy: 1202, 12
+  size: 134, 286
+  orig: 134, 286
+  offset: 0, 0
+  index: -1
+dau
+  rotate: true
+  xy: 2317, 30
+  size: 202, 226
+  orig: 202, 226
+  offset: 0, 0
+  index: -1
+longmay
+  rotate: false
+  xy: 2, 17
+  size: 159, 23
+  orig: 159, 23
+  offset: 0, 0
+  index: -1
+mat trai
+  rotate: true
+  xy: 1966, 433
+  size: 149, 47
+  orig: 149, 47
+  offset: 0, 0
+  index: -1
+matnham
+  rotate: true
+  xy: 2523, 979
+  size: 143, 35
+  orig: 143, 35
+  offset: 0, 0
+  index: -1
+mieng
+  rotate: true
+  xy: 1542, 543
+  size: 39, 24
+  orig: 39, 24
+  offset: 0, 0
+  index: -1
+pk
+  rotate: false
+  xy: 2168, 808
+  size: 353, 314
+  orig: 353, 314
+  offset: 0, 0
+  index: -1
+quan short
+  rotate: false
+  xy: 1595, 2
+  size: 291, 194
+  orig: 291, 194
+  offset: 0, 0
+  index: -1
+tay ph
+  rotate: true
+  xy: 2086, 654
+  size: 152, 360
+  orig: 152, 360
+  offset: 0, 0
+  index: -1
+tay tr
+  rotate: true
+  xy: 1595, 198
+  size: 204, 324
+  orig: 204, 324
+  offset: 0, 0
+  index: -1
+toc
+  rotate: false
+  xy: 1595, 404
+  size: 369, 178
+  orig: 369, 178
+  offset: 0, 0
+  index: -1
+toc mai
+  rotate: false
+  xy: 2094, 201
+  size: 221, 277
+  orig: 221, 277
+  offset: 0, 0
+  index: -1
+toc sau
+  rotate: false
+  xy: 2317, 234
+  size: 235, 244
+  orig: 235, 244
+  offset: 0, 0
+  index: -1

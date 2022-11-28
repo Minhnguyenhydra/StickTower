@@ -152,7 +152,7 @@ Transform:
   m_Children:
   - {fileID: 1986564026}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &36434290
 PrefabInstance:
@@ -296,7 +296,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &497946890
 GameObject:
@@ -310,6 +310,7 @@ GameObject:
   - component: {fileID: 497946893}
   - component: {fileID: 497946892}
   - component: {fileID: 497946891}
+  - component: {fileID: 497946895}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -351,7 +352,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1080, y: 1920}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0.5
+  m_MatchWidthOrHeight: 0.24957985
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -366,8 +367,8 @@ Canvas:
   m_GameObject: {fileID: 497946890}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1449013870}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -397,6 +398,55 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &497946895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497946890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1bfd24bf80a3164397276bd347fbf10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Aspect: 1.3319328
+  GizmosUpdate: 1
+  IsInvert: 1
+  changeCamSize: 0
+  CurCamSize: 15
+  Resolutions:
+  - Name: Fold 2 5G Tablet
+    Aspect: 0.5
+    CamSize: 0
+    PerspectiveSize: 60
+    Scaler: 0
+  - Name: Ipad
+    Aspect: 2.5
+    CamSize: 0
+    PerspectiveSize: 60
+    Scaler: 0.6
+  - Name: Iphone 7
+    Aspect: 1.7777778
+    CamSize: 0
+    PerspectiveSize: 60
+    Scaler: 0
+  - Name: Iphone XS Max
+    Aspect: 2.1662223
+    CamSize: 0
+    PerspectiveSize: 60
+    Scaler: 0
+  - Name: Redmi
+    Aspect: 2.2222223
+    CamSize: 0
+    PerspectiveSize: 60
+    Scaler: 0
+  - Name: Fold2 5G Phone
+    Aspect: 2.76875
+    CamSize: 0
+    PerspectiveSize: 60
+    Scaler: 0
+  _cam: {fileID: 1449013870}
 --- !u!1 &796173465
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,7 +477,7 @@ Transform:
   - {fileID: 36434291}
   - {fileID: 973271091}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &973271090
 PrefabInstance:
@@ -507,6 +557,126 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4973469075793816, guid: 211df3921ba166e4d97f049834dc5490, type: 3}
   m_PrefabInstance: {fileID: 973271090}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1309920259
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5118076745211551587, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
+      propertyPath: m_Name
+      value: Loading
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118076745211551587, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118076745211551588, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
+      propertyPath: scenes
+      value: Loading
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118076745211551591, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1449013870}
+    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
+--- !u!114 &1309920260 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5118076745211551588, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
+  m_PrefabInstance: {fileID: 1309920259}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a8d9fa2114085845a09930500f1cfa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1449013868
 GameObject:
   m_ObjectHideFlags: 0
@@ -561,7 +731,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7
+  orthographic size: 9.6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -603,7 +773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d267b193f65b4594ba5be9f25c97a3d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ratio: 4
+  ratio: 5.65
 --- !u!1 &1464012424
 GameObject:
   m_ObjectHideFlags: 0
@@ -636,7 +806,9 @@ MonoBehaviour:
   eraser: {fileID: 9005382}
   levelController: {fileID: 0}
   canvasParent: {fileID: 497946894}
+  canvasParent1: {fileID: 1909904079}
   effectWin: {fileID: 796173465}
+  loading: {fileID: 1309920260}
 --- !u!4 &1464012426
 Transform:
   m_ObjectHideFlags: 0
@@ -649,7 +821,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1786798944
 GameObject:
@@ -744,6 +916,155 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1909904078
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1909904079}
+  - component: {fileID: 1909904083}
+  - component: {fileID: 1909904082}
+  - component: {fileID: 1909904081}
+  - component: {fileID: 1909904080}
+  m_Layer: 5
+  m_Name: Canvas (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1909904079
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909904078}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &1909904080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909904078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1bfd24bf80a3164397276bd347fbf10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Aspect: 1.3319328
+  GizmosUpdate: 1
+  IsInvert: 1
+  changeCamSize: 0
+  CurCamSize: 15
+  Resolutions:
+  - Name: Fold 2 5G Tablet
+    Aspect: 0.5
+    CamSize: 0
+    PerspectiveSize: 60
+    Scaler: 0
+  - Name: Ipad
+    Aspect: 2.5
+    CamSize: 0
+    PerspectiveSize: 60
+    Scaler: 0.6
+  - Name: Iphone 7
+    Aspect: 1.7777778
+    CamSize: 0
+    PerspectiveSize: 60
+    Scaler: 0
+  - Name: Iphone XS Max
+    Aspect: 2.1662223
+    CamSize: 0
+    PerspectiveSize: 60
+    Scaler: 0
+  - Name: Redmi
+    Aspect: 2.2222223
+    CamSize: 0
+    PerspectiveSize: 60
+    Scaler: 0
+  - Name: Fold2 5G Phone
+    Aspect: 2.76875
+    CamSize: 0
+    PerspectiveSize: 60
+    Scaler: 0
+  _cam: {fileID: 1449013870}
+--- !u!114 &1909904081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909904078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1909904082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909904078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 1080, y: 1920}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0.24957985
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &1909904083
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909904078}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 1
+  m_Camera: {fileID: 1449013870}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 5
+  m_TargetDisplay: 0
 --- !u!1 &1986564025
 GameObject:
   m_ObjectHideFlags: 0

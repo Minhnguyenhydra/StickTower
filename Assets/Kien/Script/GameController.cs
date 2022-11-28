@@ -13,12 +13,18 @@ public class GameController : MonoBehaviour
     string pathLevel = "LevelDelete/Level";
     string pathPopUp = "PopUp/";
     PopUpWatchAds popUpWatchAds;
-    SelectLevelController selectLevelController;
+    public SelectLevelController selectLevelController;
     ResultPanel resultPanel;
     [SerializeField]
-    Transform canvasParent;
+    Transform canvasParent,canvasParent1;
     [SerializeField]
     GameObject effectWin;
+    [SerializeField]
+    LoadingPanel loading;
+    public void BackToLoading()
+    {
+        loading.OpenMe();
+    }    
     private void Awake()
     {
         instance = this;
@@ -27,7 +33,7 @@ public class GameController : MonoBehaviour
     {
         pathPopUp = "PopUp/ResultPanel";
         resultPanel = Instantiate(Resources.Load<ResultPanel>(pathPopUp));
-        resultPanel.SetRect(canvasParent);
+        resultPanel.SetRect(canvasParent1);
         resultPanel.OpenMe();
         effectWin.SetActive(true);
     }
@@ -37,6 +43,7 @@ public class GameController : MonoBehaviour
         selectLevelController = Instantiate(Resources.Load<SelectLevelController>(pathPopUp));
         selectLevelController.SetRect(canvasParent);
         selectLevelController.OpenMe();
+        selectLevelController.Display();
     }
     private void Start()
     {
@@ -49,8 +56,9 @@ public class GameController : MonoBehaviour
         {
             pathPopUp = "PopUp/PopUpWatchAds";
             popUpWatchAds = Instantiate(Resources.Load<PopUpWatchAds>(pathPopUp));
-            popUpWatchAds.SetRect(canvasParent);
+            popUpWatchAds.SetRect(canvasParent1);
             popUpWatchAds.OpenMe();
+
         }
         else
         {
@@ -60,12 +68,13 @@ public class GameController : MonoBehaviour
     }
     public void LoadLevel()
     {
-        pathLevel += (DataParam.currentLevel + 1);
+        pathLevel = "LevelDelete/Level" + (DataParam.currentLevel + 1);
         Debug.LogError(pathLevel);
         level = Resources.Load<LevelController>(pathLevel);
         if (level != null)
         {
             levelController = Instantiate(level);
+         //   levelController.DisplayLockOrUnlock();
         }
         else
         {

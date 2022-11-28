@@ -100,7 +100,11 @@ public class AppLovinAds : MonoBehaviour
     private IEnumerator ShowBannerAd()
     {
         yield return new WaitForSeconds(7f);
+#if UNITY_EDITOR
+#else
         MaxSdk.ShowBanner(bannerAdUnitId);
+#endif
+
     }
 
     private void OnBannerAdLoadedEvent(string adUnitId, MaxSdkBase.AdInfo adInfo) 

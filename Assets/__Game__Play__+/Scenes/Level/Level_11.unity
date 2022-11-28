@@ -3496,6 +3496,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8797440987503021614, guid: 35e5dd44d7b6ffc4bbf96a8d8c1d2c97, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 117
+      objectReference: {fileID: 0}
+    - target: {fileID: 8797440987529575527, guid: 35e5dd44d7b6ffc4bbf96a8d8c1d2c97, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 116.64014
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35e5dd44d7b6ffc4bbf96a8d8c1d2c97, type: 3}
 --- !u!114 &795424774 stripped
@@ -6981,6 +6989,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBoss_auto_Asign: {fileID: 0}
+  GMState: 0
 --- !u!1001 &1923820472
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7075,6 +7084,10 @@ PrefabInstance:
     - target: {fileID: 8343629655301455765, guid: ce14ef297ed9253408f622e8690ce469, type: 3}
       propertyPath: m_Name
       value: CanvasWin
+      objectReference: {fileID: 0}
+    - target: {fileID: 8343629657060541600, guid: ce14ef297ed9253408f622e8690ce469, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -74.99997
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce14ef297ed9253408f622e8690ce469, type: 3}

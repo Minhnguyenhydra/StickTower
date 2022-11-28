@@ -9,6 +9,8 @@ public class DataParam
     public static int currentLevel = 0;
     public static float timeDelayShowAds;
     public static string SAVEDATA = "kiensavedata";
+    public static string SAVEDELETEDATA = "kiensavedeletedata";
+    public static bool begin;
     public static WaitForSeconds WAITDELETECHECK
     {
         get

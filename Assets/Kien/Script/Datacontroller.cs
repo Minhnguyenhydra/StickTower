@@ -8,16 +8,27 @@ using System.Threading;
 using System.Globalization;
 using System;
 using static SaveData;
+using static SaveDelete;
 
 
-//[System.Serializable]
+[System.Serializable]
 public class SaveData
 {
-
-
     public int session, day = 0, week = 1;
     public DateTime oldDay = System.DateTime.Now;
-
+    public SaveDelete saveDelete = new SaveDelete();
+}
+[System.Serializable]
+public class SaveDelete
+{
+    public List<InfoSaveDelete> infoSaveDelete = new List<InfoSaveDelete>();
+    [System.Serializable]
+    public class InfoSaveDelete
+    {
+        public List<bool> takeSprite = new List<bool>();
+        public bool unlock;
+        public int currentStep = 0;
+    }
 }
 [System.Serializable]
 public class SaveMoreGame
@@ -43,6 +54,8 @@ public class Datacontroller : MonoBehaviour
 {
     public bool debug;
     public SaveData saveData;
+
+    public DeleteData deleteData;
     public static Datacontroller instance;
     string urlMoreGame;
     string urlLevel;
@@ -50,7 +63,26 @@ public class Datacontroller : MonoBehaviour
     public string devAndroid, devkeyIos;
     public string urlLevelAndroid, urlLevelIOS;
     public string appIDIos;
-
+    [SerializeField]
+    LoadingPanel loadingPanel;
+    //string pathPopUp;
+    //void ShowSelectLevelPanel()
+    //{
+    //    if (loadingPanel == null)
+    //    {
+    //        pathPopUp = "PopUp/Loading";
+    //        loadingPanel = Instantiate(Resources.Load<LoadingPanel>(pathPopUp));
+    //        loadingPanel.OpenMe();
+    //    }
+    //    else
+    //    {
+    //        loadingPanel.OpenMe();
+    //    }    
+    //}
+    public void TakePartDelete(int indexSource, int indexPart)
+    {
+        saveData.saveDelete.infoSaveDelete[indexSource].takeSprite[indexPart] = true;
+    }
     private void Awake()
     {
         if (instance == null)
@@ -70,20 +102,27 @@ public class Datacontroller : MonoBehaviour
             DestroyImmediate(gameObject);
         }
 
-#if UNITY_IOS
-       // urlMoreGame = urlIos;
-        urlLevel = urlLevelIOS;
-#else
-        //  urlMoreGame = urlAdroid;
-        urlLevel = urlLevelAndroid;
-#endif
+        //#if UNITY_IOS
+        //       // urlMoreGame = urlIos;
+        //        urlLevel = urlLevelIOS;
+        //#else
+        //        //  urlMoreGame = urlAdroid;
+        //        urlLevel = urlLevelAndroid;
+        //#endif
 
-        wwwLevel = UnityWebRequest.Get(urlLevel);
+        //        wwwLevel = UnityWebRequest.Get(urlLevel);
 
-
+        Debug.LogError("============== zo day phai ko");
     }
     UnityWebRequest wwwLevel;
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            loadingPanel.OpenMe();
+        }
+    }
 
 
     void ReadPlayer(string value)
@@ -95,23 +134,46 @@ public class Datacontroller : MonoBehaviour
         {
             saveData = JsonMapper.ToObject<SaveData>(strDataLoadPref);
         }
-
     }
 
     void LoadData(string value)
     {
         saveData = new SaveData();
+        saveData.saveDelete = new SaveDelete();
         ReadPlayer(value);
+
     }
     void LoadAllData()
     {
         LoadData(PlayerPrefs.GetString(DataParam.SAVEDATA));
         //  LoadSaveMoreGame(PlayerPrefs.GetString(DataParam.SAVEMOREGAME));
         saveData.session++;
+
+
+    }
+    void CreateDataBegin()
+    {
+        Debug.LogError(saveData + ":" + saveData.saveDelete);
+        for (int i = saveData.saveDelete.infoSaveDelete.Count; i < deleteData.infoDelete.Length; i++)
+        {
+            InfoSaveDelete _infoDelete = new InfoSaveDelete();
+            if (i <= 1)
+            {
+                _infoDelete.unlock = true;
+            }
+            for (int j = 0; j < deleteData.infoDelete[i].resourceSprite.sp.Length; j++)
+            {
+                bool takeSprite = new bool();
+                _infoDelete.takeSprite.Add(takeSprite);
+            }
+            saveData.saveDelete.infoSaveDelete.Add(_infoDelete);
+        }
     }
 
     void Start()
     {
+
+        CreateDataBegin();
 
         //Debug.LogError("=======" + urlMoreGame);
         //WWW www = new WWW(urlMoreGame);
