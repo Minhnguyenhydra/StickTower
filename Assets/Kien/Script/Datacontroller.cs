@@ -15,7 +15,7 @@ public class SaveData
 {
 
 
-    public int session;
+    public int session, day = 0, week = 1;
     public DateTime oldDay = System.DateTime.Now;
 
 }
@@ -55,7 +55,7 @@ public class Datacontroller : MonoBehaviour
     {
         if (instance == null)
         {
-          //  Application.targetFrameRate = 300;
+            //  Application.targetFrameRate = 300;
             Debug.unityLogger.logEnabled = debug;
             //    Input.multiTouchEnabled = false;
             CultureInfo ci = new CultureInfo("en-us");
@@ -107,12 +107,6 @@ public class Datacontroller : MonoBehaviour
     {
         LoadData(PlayerPrefs.GetString(DataParam.SAVEDATA));
         //  LoadSaveMoreGame(PlayerPrefs.GetString(DataParam.SAVEMOREGAME));
-
-        if (saveData.session == 0)
-        {
-            saveData.oldDay = System.DateTime.Today;
-        }
-
         saveData.session++;
     }
 
@@ -123,7 +117,7 @@ public class Datacontroller : MonoBehaviour
         //WWW www = new WWW(urlMoreGame);
 
         //StartCoroutine(WaitForRequest(www));
-      //  StartCoroutine(WaitForRequestLevel(wwwLevel));
+        //  StartCoroutine(WaitForRequestLevel(wwwLevel));
         //  LoadSaveMoreGame(PlayerPrefs.GetString(DataParam.SAVEMOREGAME));
 
     }
@@ -163,7 +157,7 @@ public class Datacontroller : MonoBehaviour
         }
         else
         {
-          //  DataParam.wwwLevel = www.downloadHandler.text;
+            //  DataParam.wwwLevel = www.downloadHandler.text;
             Debug.LogError("=====WWW Level!: " + www.downloadHandler.text);
         }
 

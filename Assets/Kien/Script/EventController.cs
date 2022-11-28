@@ -212,17 +212,25 @@ public class EventController : MonoBehaviour
     {
         if (fireBaseInitDone)
         {
-            Parameter param = new Parameter("play_day_para", "play_day_" + value);
-            Firebase.Analytics.FirebaseAnalytics.LogEvent("Play_event", param);
+            //if (value < 8)
+            //{
+                Parameter param = new Parameter("play_day_para", "play_day_" + value);
+                Firebase.Analytics.FirebaseAnalytics.LogEvent("Play_event", param);
+           // }
         }
+        Debug.LogError("==== day:" + value);
     }
     public static void PLAY_EVENT_WEEK(int value)
     {
         if (fireBaseInitDone)
         {
-            Parameter param = new Parameter("play_week_para", "play_week_" + value);
-            Firebase.Analytics.FirebaseAnalytics.LogEvent("Play_event", param);
+            //if (value < 15)
+            //{
+                Parameter param = new Parameter("play_week_para", "play_week_" + value);
+                Firebase.Analytics.FirebaseAnalytics.LogEvent("Play_event", param);
+           // }
         }
+        Debug.LogError("==== week:" + value);
     }
     public static void WIN_LEVEL_EVENT(int value)
     {
