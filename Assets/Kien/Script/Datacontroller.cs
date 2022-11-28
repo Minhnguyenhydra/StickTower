@@ -11,7 +11,7 @@ using static SaveData;
 using static SaveDelete;
 
 
-//[System.Serializable]
+[System.Serializable]
 public class SaveData
 {
     public int session, day = 0, week = 1;
@@ -62,7 +62,22 @@ public class Datacontroller : MonoBehaviour
     public string devAndroid, devkeyIos;
     public string urlLevelAndroid, urlLevelIOS;
     public string appIDIos;
-
+    [SerializeField]
+    LoadingPanel loadingPanel;
+    //string pathPopUp;
+    //void ShowSelectLevelPanel()
+    //{
+    //    if (loadingPanel == null)
+    //    {
+    //        pathPopUp = "PopUp/Loading";
+    //        loadingPanel = Instantiate(Resources.Load<LoadingPanel>(pathPopUp));
+    //        loadingPanel.OpenMe();
+    //    }
+    //    else
+    //    {
+    //        loadingPanel.OpenMe();
+    //    }    
+    //}
     public void TakePartDelete(int indexSource,int indexPart)
     {
        saveData.saveDelete.infoSaveDelete[indexSource].takeSprite[indexPart] = true;
@@ -86,17 +101,17 @@ public class Datacontroller : MonoBehaviour
             DestroyImmediate(gameObject);
         }
 
-#if UNITY_IOS
-       // urlMoreGame = urlIos;
-        urlLevel = urlLevelIOS;
-#else
-        //  urlMoreGame = urlAdroid;
-        urlLevel = urlLevelAndroid;
-#endif
+        //#if UNITY_IOS
+        //       // urlMoreGame = urlIos;
+        //        urlLevel = urlLevelIOS;
+        //#else
+        //        //  urlMoreGame = urlAdroid;
+        //        urlLevel = urlLevelAndroid;
+        //#endif
 
-        wwwLevel = UnityWebRequest.Get(urlLevel);
+        //        wwwLevel = UnityWebRequest.Get(urlLevel);
 
-
+        Debug.LogError("============== zo day phai ko");
     }
     UnityWebRequest wwwLevel;
 
@@ -104,7 +119,7 @@ public class Datacontroller : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            Application.LoadLevel("DeleteScene");
+            loadingPanel.OpenMe();
         }    
     }
 
@@ -137,7 +152,7 @@ public class Datacontroller : MonoBehaviour
     }
     void CreateDataBegin()
     {
-
+        Debug.LogError(saveData + ":" + saveData.saveDelete);
         for(int i = saveData.saveDelete.infoSaveDelete.Count; i < deleteData.infoDelete.Length; i ++)
         {
             InfoSaveDelete _infoDelete = new InfoSaveDelete();

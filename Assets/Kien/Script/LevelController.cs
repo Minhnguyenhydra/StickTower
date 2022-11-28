@@ -7,6 +7,8 @@ using UnityEngine.EventSystems;
 
 public class LevelController : MonoBehaviour, IDragHandler, IEndDragHandler
 {
+    public GameObject lockObj, unlockObj;
+    public GameObject[] manhs;
 
     SkeletonAnimation animVisibleInsideMask;
 
@@ -26,22 +28,55 @@ public class LevelController : MonoBehaviour, IDragHandler, IEndDragHandler
         StartCoroutine(IELevel());
     }
 
+    public void DisplayLockOrUnlock()
+    {
+        if (Datacontroller.instance.saveData.saveDelete.infoSaveDelete[DataParam.currentLevel].unlock)
+        {
+            if (Datacontroller.instance.saveData.saveDelete.infoSaveDelete[DataParam.currentLevel].takeSprite.FindAll(x => x == true).Count == Datacontroller.instance.saveData.saveDelete.infoSaveDelete[DataParam.currentLevel].takeSprite.Count)
+            {
+                lockObj.SetActive(false);
+                unlockObj.SetActive(true);
+                SetStep();
+            }
+            else
+            {
+                for (int i = 0; i < Datacontroller.instance.saveData.saveDelete.infoSaveDelete[DataParam.currentLevel].takeSprite.Count; i++)
+                {
+                    manhs[i].SetActive(Datacontroller.instance.saveData.saveDelete.infoSaveDelete[DataParam.currentLevel].takeSprite[i]);
+                }
+                lockObj.SetActive(true);
+                unlockObj.SetActive(false);
+            }    
+        }
+        else
+        {
+            for (int i = 0; i < Datacontroller.instance.saveData.saveDelete.infoSaveDelete[DataParam.currentLevel].takeSprite.Count; i++)
+            {
+                manhs[i].SetActive(Datacontroller.instance.saveData.saveDelete.infoSaveDelete[DataParam.currentLevel].takeSprite[i]);
+            }
+            lockObj.SetActive(true);
+            unlockObj.SetActive(false);
+        }
 
+    }
 
     private void Start()
     {
         currentStep = 0;
-        SetStep();
-
+        DisplayLockOrUnlock();
     }
 
     public void OnDrag(PointerEventData eventData)
     {
+        if (!unlockObj.activeSelf)
+            return;
         correctObj.isDelete = true;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        if (!unlockObj.activeSelf)
+            return;
         correctObj.isDelete = false;
 
     }
@@ -104,9 +139,9 @@ public class LevelController : MonoBehaviour, IDragHandler, IEndDragHandler
     public void Load()
     {
         stepOfLevel.Clear();
-        for (int i = 0; i < transform.childCount; i++)
+        for (int i = 0; i < unlockObj.transform.childCount; i++)
         {
-            StepOfLevel _stepOfLevel = transform.GetChild(i).GetComponent<StepOfLevel>();
+            StepOfLevel _stepOfLevel = unlockObj.transform.GetChild(i).GetComponent<StepOfLevel>();
             if (_stepOfLevel != null)
             {
                 stepOfLevel.Add(_stepOfLevel);

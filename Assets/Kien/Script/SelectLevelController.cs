@@ -7,19 +7,37 @@ public class SelectLevelController : PopUpProperties
 {
     public ScrollRect sc;
     public List<BouderSelectLevel> bouderSelectLevels = new List<BouderSelectLevel>();
+    public GameObject btnUnlock;
+    public void BtnUnlock()
+    {
+        Datacontroller.instance.saveData.saveDelete.infoSaveDelete[DataParam.currentLevel].unlock = true;
+        bouderSelectLevels[DataParam.currentLevel].Display();
+        GameController.instance.levelController.DisplayLockOrUnlock();
+        btnUnlock.SetActive(false);
+    }    
     public override void OpenMe()
     {
         base.OpenMe();
         sc.verticalNormalizedPosition = 1;
-        Display();
+        btnUnlock.SetActive(false);
     }
     public override void CloseMe()
     {
-        base.CloseMe();
-        DataParam.canDelete = true;
-        GameController.instance.LoadLevel();
+        //  base.CloseMe();
+        sc.gameObject.SetActive(false);
+
+        if (Datacontroller.instance.saveData.saveDelete.infoSaveDelete[DataParam.currentLevel].unlock)
+        {
+            btnUnlock.SetActive(false);
+            DataParam.canDelete = true;
+        }
+        else
+        {
+            btnUnlock.SetActive(true);
+            DataParam.canDelete = false;
+        }
     }
-    void Display()
+   public void Display()
     {
         for(int i = 0; i < bouderSelectLevels.Count; i++)
         {
@@ -28,11 +46,21 @@ public class SelectLevelController : PopUpProperties
     }
     public void BtnBack()
     {
-        Application.LoadLevel("Loading");
+        GameController.instance.BackToLoading();
+
+      //  UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }   
-    public void BtnClose()
+    public void BtnSelect()
     {
-        base.CloseMe();
+        if (sc.gameObject.activeSelf)
+            return;
+        btnUnlock.SetActive(false);
+        sc.gameObject.SetActive(true);
+        sc.verticalNormalizedPosition = 1;
+        if (GameController.instance.levelController != null)
+        {
+            GameController.instance.levelController.gameObject.SetActive(false);
+        }
     }    
     public void Load()
     {
