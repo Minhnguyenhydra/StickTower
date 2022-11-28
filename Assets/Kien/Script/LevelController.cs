@@ -19,12 +19,52 @@ public class LevelController : MonoBehaviour, IDragHandler, IEndDragHandler
     int currentStep;
     public List<StepOfLevel> stepOfLevel = new List<StepOfLevel>();
 
-    void SetStep()
+    public void SetStep()
     {
-        animVisibleInsideMask = stepOfLevel[currentStep].animVisibleInsideMask;
-        animNormal = stepOfLevel[currentStep].animNormal;
-        correctObj = stepOfLevel[currentStep].correctObj;
-        stepOfLevel[currentStep].gameObject.SetActive(true);
+        for (int i = 0; i < stepOfLevel.Count; i++)
+        {
+            stepOfLevel[i].gameObject.SetActive(false);
+        }
+        if (currentStep == 0)
+        {
+            animVisibleInsideMask = stepOfLevel[currentStep].animVisibleInsideMask;
+            animNormal = stepOfLevel[currentStep].animNormal;
+            correctObj = stepOfLevel[currentStep].correctObj;
+            stepOfLevel[currentStep].gameObject.SetActive(true);
+            StartCoroutine(IELevel());
+            DataParam.begin = true;
+        }
+        else if (currentStep == stepOfLevel.Count)
+        {
+            animVisibleInsideMask = stepOfLevel[currentStep - 1].animVisibleInsideMask;
+            animNormal = stepOfLevel[currentStep - 1].animNormal;
+            correctObj = stepOfLevel[currentStep - 1].correctObj;
+
+            correctObj.isDelete = false;
+            correctObj.gameObject.SetActive(false);
+            animNormal.gameObject.SetActive(false);
+            animVisibleInsideMask.maskInteraction = SpriteMaskInteraction.None;
+
+            stepOfLevel[currentStep - 1].gameObject.SetActive(true);
+            animVisibleInsideMask.AnimationState.SetAnimation(0, "win", true);
+            DataParam.begin = false;
+        }
+        else
+        {
+            animVisibleInsideMask = stepOfLevel[currentStep].animVisibleInsideMask;
+            animNormal = stepOfLevel[currentStep].animNormal;
+            correctObj = stepOfLevel[currentStep].correctObj;
+            stepOfLevel[currentStep].gameObject.SetActive(true);
+            GameController.instance.ShowPopUpWatchAds();
+            //  StartCoroutine(IELevel());
+            DataParam.begin = false;
+        }
+  
+
+
+    }
+    public void CallIELevel()
+    {
         StartCoroutine(IELevel());
     }
 
@@ -46,7 +86,7 @@ public class LevelController : MonoBehaviour, IDragHandler, IEndDragHandler
                 }
                 lockObj.SetActive(true);
                 unlockObj.SetActive(false);
-            }    
+            }
         }
         else
         {
@@ -62,7 +102,7 @@ public class LevelController : MonoBehaviour, IDragHandler, IEndDragHandler
 
     private void Start()
     {
-        currentStep = 0;
+        currentStep = Datacontroller.instance.saveData.saveDelete.infoSaveDelete[DataParam.currentLevel].currentStep;
         DisplayLockOrUnlock();
     }
 
@@ -119,20 +159,22 @@ public class LevelController : MonoBehaviour, IDragHandler, IEndDragHandler
         animNormal.gameObject.SetActive(false);
         animVisibleInsideMask.maskInteraction = SpriteMaskInteraction.None;
 
-        //  currentStep++;
+         // currentStep++;
 
         if (currentStep == stepOfLevel.Count - 1)
         {
             PlayAnimWin();
+
         }
         else
         {
-            stepOfLevel[currentStep].gameObject.SetActive(false);
-            currentStep++;
-            SetStep();
+            //   stepOfLevel[currentStep].gameObject.SetActive(false);
+
             GameController.instance.ShowPopUpWatchAds();
             Debug.LogError("======= hien thi popup");
         }
+        currentStep++;
+        Datacontroller.instance.saveData.saveDelete.infoSaveDelete[DataParam.currentLevel].currentStep = currentStep;
         Debug.LogError("========= xoa het");
 
     }

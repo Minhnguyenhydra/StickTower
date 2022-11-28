@@ -8,7 +8,7 @@ public class ResultPanel : PopUpProperties
     GameObject btnNext;
     public void BtnNext()
     {
-        DataParam.currentLevel++;
+      //  DataParam.currentLevel++;
         Application.LoadLevel(Application.loadedLevelName);
         Debug.LogError("======= load next level");
     }
@@ -16,6 +16,7 @@ public class ResultPanel : PopUpProperties
     {
         base.OpenMe();
         btnNext.SetActive(false);
+        GameController.instance.selectLevelController.DisableBtn();
         StartCoroutine(delayDisplayBtnNext());
     }
     IEnumerator delayDisplayBtnNext()

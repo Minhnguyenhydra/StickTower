@@ -27,6 +27,7 @@ public class SaveDelete
     {
         public List<bool> takeSprite = new List<bool>();
         public bool unlock;
+        public int currentStep = 0;
     }
 }
 [System.Serializable]
@@ -78,10 +79,10 @@ public class Datacontroller : MonoBehaviour
     //        loadingPanel.OpenMe();
     //    }    
     //}
-    public void TakePartDelete(int indexSource,int indexPart)
+    public void TakePartDelete(int indexSource, int indexPart)
     {
-       saveData.saveDelete.infoSaveDelete[indexSource].takeSprite[indexPart] = true;
-    }    
+        saveData.saveDelete.infoSaveDelete[indexSource].takeSprite[indexPart] = true;
+    }
     private void Awake()
     {
         if (instance == null)
@@ -117,10 +118,10 @@ public class Datacontroller : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             loadingPanel.OpenMe();
-        }    
+        }
     }
 
 
@@ -153,20 +154,20 @@ public class Datacontroller : MonoBehaviour
     void CreateDataBegin()
     {
         Debug.LogError(saveData + ":" + saveData.saveDelete);
-        for(int i = saveData.saveDelete.infoSaveDelete.Count; i < deleteData.infoDelete.Length; i ++)
+        for (int i = saveData.saveDelete.infoSaveDelete.Count; i < deleteData.infoDelete.Length; i++)
         {
             InfoSaveDelete _infoDelete = new InfoSaveDelete();
-            if(i <= 1)
+            if (i <= 1)
             {
                 _infoDelete.unlock = true;
             }
-            for(int j = 0; j < deleteData.infoDelete[i].resourceSprite.sp.Length ; j ++)
+            for (int j = 0; j < deleteData.infoDelete[i].resourceSprite.sp.Length; j++)
             {
                 bool takeSprite = new bool();
                 _infoDelete.takeSprite.Add(takeSprite);
             }
             saveData.saveDelete.infoSaveDelete.Add(_infoDelete);
-        }    
+        }
     }
 
     void Start()

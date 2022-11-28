@@ -7,24 +7,33 @@ public class SelectLevelController : PopUpProperties
 {
     public ScrollRect sc;
     public List<BouderSelectLevel> bouderSelectLevels = new List<BouderSelectLevel>();
-    public GameObject btnUnlock;
+    public GameObject btnUnlock,btnSelect,btnBack;
+    public void DisableBtn()
+    {
+        btnSelect.SetActive(false);
+        btnBack.SetActive(false);
+    }    
     public void BtnUnlock()
     {
         Datacontroller.instance.saveData.saveDelete.infoSaveDelete[DataParam.currentLevel].unlock = true;
         bouderSelectLevels[DataParam.currentLevel].Display();
         GameController.instance.levelController.DisplayLockOrUnlock();
         btnUnlock.SetActive(false);
+        Debug.LogError("===== click unlock");
     }    
     public override void OpenMe()
     {
         base.OpenMe();
         sc.verticalNormalizedPosition = 1;
         btnUnlock.SetActive(false);
+
     }
     public override void CloseMe()
     {
         //  base.CloseMe();
         sc.gameObject.SetActive(false);
+        btnSelect.SetActive(true);
+        btnBack.SetActive(true);
 
         if (Datacontroller.instance.saveData.saveDelete.infoSaveDelete[DataParam.currentLevel].unlock)
         {
@@ -56,6 +65,8 @@ public class SelectLevelController : PopUpProperties
             return;
         btnUnlock.SetActive(false);
         sc.gameObject.SetActive(true);
+        btnSelect.SetActive(false);
+        btnBack.SetActive(true);
         sc.verticalNormalizedPosition = 1;
         if (GameController.instance.levelController != null)
         {

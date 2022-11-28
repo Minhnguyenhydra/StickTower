@@ -13,7 +13,7 @@ public class GameController : MonoBehaviour
     string pathLevel = "LevelDelete/Level";
     string pathPopUp = "PopUp/";
     PopUpWatchAds popUpWatchAds;
-    SelectLevelController selectLevelController;
+    public SelectLevelController selectLevelController;
     ResultPanel resultPanel;
     [SerializeField]
     Transform canvasParent,canvasParent1;

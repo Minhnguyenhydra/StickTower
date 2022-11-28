@@ -5618,6 +5618,8 @@ MonoBehaviour:
   - {fileID: 4757268548854182069}
   - {fileID: 3467488204365054530}
   btnUnlock: {fileID: 5988402119805234015}
+  btnSelect: {fileID: 8889680462677852894}
+  btnBack: {fileID: 8889680463869385102}
 --- !u!1 &8258864673530013507
 GameObject:
   m_ObjectHideFlags: 0
