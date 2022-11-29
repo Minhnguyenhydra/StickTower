@@ -179,6 +179,8 @@ public class CanvasFight_Boss : UICanvas
         list_Obj_Head_Enemy[idBoss].SetActive(true);
 
         StartCoroutine(IE_DelayClose_CanvasFight_Start());
+
+        Obj_Panel_Hit.transform.GetChild(1).gameObject.SetActive(false);
     }
     public int Convert_ID(int _id)
     {
