@@ -5,64 +5,64 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/__Game__Play__+/Scenes/Level/Loading.unity
     guid: 4da3412d0c3980e4fb3652caab10caa4
-  - enabled: 1
+  - enabled: 0
     path: Assets/__Game__Play__+/Scenes/Level/Level_0.unity
     guid: e95b64cbd2d5bb445b888955a8a030dc
-  - enabled: 1
+  - enabled: 0
     path: Assets/__Game__Play__+/Scenes/Level/Level_1.unity
     guid: f023ce19e547c52489ff4aa559be60a4
-  - enabled: 1
+  - enabled: 0
     path: Assets/__Game__Play__+/Scenes/Level/Level_2.unity
     guid: 09a96e1bd106c0543a53cfa3b9d3b60c
-  - enabled: 1
+  - enabled: 0
     path: Assets/__Game__Play__+/Scenes/Level/Level_3.unity
     guid: d33fc1719ee5d9046801dddb31fed9fd
-  - enabled: 1
+  - enabled: 0
     path: Assets/__Game__Play__+/Scenes/Level/Level_4.unity
     guid: 05b3ca0e509abb84185359eba8504aa0
-  - enabled: 1
+  - enabled: 0
     path: Assets/__Game__Play__+/Scenes/Level/Level_5.unity
     guid: e8600043108f0c745aeef23591a7c43e
-  - enabled: 1
+  - enabled: 0
     path: Assets/__Game__Play__+/Scenes/Level/Level_6.unity
     guid: 37a000b1b65c3cb41a8e3908a9f95499
-  - enabled: 1
+  - enabled: 0
     path: Assets/__Game__Play__+/Scenes/Level/Level_7.unity
     guid: 81e9516a96e639c4eacae9c7b4c4bd78
-  - enabled: 1
+  - enabled: 0
     path: Assets/__Game__Play__+/Scenes/Level/Level_8.unity
     guid: d2a094152586f0540a76dd7367055d0b
-  - enabled: 1
+  - enabled: 0
     path: Assets/__Game__Play__+/Scenes/Level/Level_9.unity
     guid: c9e8f74add8a6734dbe8427ff15df911
-  - enabled: 1
+  - enabled: 0
     path: Assets/__Game__Play__+/Scenes/Level/Level_10.unity
     guid: ad50de2a61e2bb443b63fcd52df92e9e
-  - enabled: 1
+  - enabled: 0
     path: Assets/__Game__Play__+/Scenes/Level/Level_11.unity
     guid: 4c66480f50ceb8b4e967361e8188f38e
-  - enabled: 1
+  - enabled: 0
     path: Assets/__Game__Play__+/Scenes/Level/Level_12.unity
     guid: 2359dad9831ed304a9378331095e1bd1
-  - enabled: 1
+  - enabled: 0
     path: Assets/__Game__Play__+/Scenes/Level/Level_13.unity
     guid: 2ca2c6e85d679074ba4aa2dd75b1e8ae
-  - enabled: 1
+  - enabled: 0
     path: Assets/__Game__Play__+/Scenes/Level/Level_14.unity
     guid: b48a3e61b0e50a446ad2ccdd71eaeb84
-  - enabled: 1
+  - enabled: 0
     path: Assets/__Game__Play__+/Scenes/Level/Level_15.unity
     guid: d206b7ed7e91ead41a9837294ff7f2c5
-  - enabled: 1
+  - enabled: 0
     path: Assets/__Game__Play__+/Scenes/Level/Level_16.unity
     guid: f0a900c5b6c57bf449f57b3d58244d8b
-  - enabled: 1
+  - enabled: 0
     path: Assets/__Game__Play__+/Scenes/Level/Level_17.unity
     guid: ebc67f4707ce87b4e8d10c92884959f4
-  - enabled: 1
+  - enabled: 0
     path: Assets/__Game__Play__+/Scenes/Level/Level_18.unity
     guid: c6382f45429c53749945c22a727534d6
   - enabled: 1
