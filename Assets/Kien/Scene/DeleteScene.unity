@@ -417,15 +417,15 @@ MonoBehaviour:
   CurCamSize: 15
   Resolutions:
   - Name: Fold 2 5G Tablet
-    Aspect: 0.5
+    Aspect: 1.2488688
     CamSize: 0
     PerspectiveSize: 60
     Scaler: 0
   - Name: Ipad
-    Aspect: 2.5
+    Aspect: 1.3339844
     CamSize: 0
     PerspectiveSize: 60
-    Scaler: 0.6
+    Scaler: 0
   - Name: Iphone 7
     Aspect: 1.7777778
     CamSize: 0
@@ -557,126 +557,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4973469075793816, guid: 211df3921ba166e4d97f049834dc5490, type: 3}
   m_PrefabInstance: {fileID: 973271090}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1309920259
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5118076745211551587, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
-      propertyPath: m_Name
-      value: Loading
-      objectReference: {fileID: 0}
-    - target: {fileID: 5118076745211551587, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5118076745211551588, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
-      propertyPath: scenes
-      value: Loading
-      objectReference: {fileID: 0}
-    - target: {fileID: 5118076745211551591, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 1449013870}
-    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5118076745211551592, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
---- !u!114 &1309920260 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5118076745211551588, guid: 5023ed4f513c99c45b59cc7dd9ac7ae8, type: 3}
-  m_PrefabInstance: {fileID: 1309920259}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a8d9fa2114085845a09930500f1cfa7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1449013868
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,7 +689,6 @@ MonoBehaviour:
   canvasParent: {fileID: 497946894}
   canvasParent1: {fileID: 1909904079}
   effectWin: {fileID: 796173465}
-  loading: {fileID: 1309920260}
 --- !u!4 &1464012426
 Transform:
   m_ObjectHideFlags: 0
@@ -929,7 +808,6 @@ GameObject:
   - component: {fileID: 1909904083}
   - component: {fileID: 1909904082}
   - component: {fileID: 1909904081}
-  - component: {fileID: 1909904080}
   m_Layer: 5
   m_Name: Canvas (1)
   m_TagString: Untagged
@@ -956,55 +834,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1909904080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1909904078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1bfd24bf80a3164397276bd347fbf10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Aspect: 1.7777778
-  GizmosUpdate: 1
-  IsInvert: 1
-  changeCamSize: 0
-  CurCamSize: 15
-  Resolutions:
-  - Name: Fold 2 5G Tablet
-    Aspect: 0.5
-    CamSize: 0
-    PerspectiveSize: 60
-    Scaler: 0
-  - Name: Ipad
-    Aspect: 2.5
-    CamSize: 0
-    PerspectiveSize: 60
-    Scaler: 0.6
-  - Name: Iphone 7
-    Aspect: 1.7777778
-    CamSize: 0
-    PerspectiveSize: 60
-    Scaler: 0
-  - Name: Iphone XS Max
-    Aspect: 2.1662223
-    CamSize: 0
-    PerspectiveSize: 60
-    Scaler: 0
-  - Name: Redmi
-    Aspect: 2.2222223
-    CamSize: 0
-    PerspectiveSize: 60
-    Scaler: 0
-  - Name: Fold2 5G Phone
-    Aspect: 2.76875
-    CamSize: 0
-    PerspectiveSize: 60
-    Scaler: 0
-  _cam: {fileID: 1449013870}
 --- !u!114 &1909904081
 MonoBehaviour:
   m_ObjectHideFlags: 0

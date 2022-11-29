@@ -8,7 +8,7 @@ public class BouderSelectLevel : MonoBehaviour
     public SelectLevelController mySelectLevel;
     [SerializeField]
     GameObject lockObj, unlockObj;
-
+    [SerializeField] Text numberPartText;
     public int index;
     public void Display()
     {
@@ -16,6 +16,7 @@ public class BouderSelectLevel : MonoBehaviour
         {
             lockObj.SetActive(false);
             unlockObj.SetActive(true);
+            numberPartText.text = Datacontroller.instance.saveData.saveDelete.infoSaveDelete[index].takeSprite.FindAll(x=>x == true).Count+ "/" + Datacontroller.instance.saveData.saveDelete.infoSaveDelete[index].takeSprite.Count;
         }
         else
         {

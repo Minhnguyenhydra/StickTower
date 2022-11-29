@@ -10,11 +10,12 @@ public class ManhTranh : MonoBehaviour
     private GameObject objCollection;
     [SerializeField]
     private Transform trfFragment;
-
+    [SerializeField]
+    Point_In_Floor floor;
 
     private void Start()
     {
-        Point_In_Floor floor = GetComponentInParent<Point_In_Floor>();
+        floor = GetComponentInParent<Point_In_Floor>();
         if (floor != null)
         {
             floor.SetPictureFragment(this);
@@ -29,6 +30,7 @@ public class ManhTranh : MonoBehaviour
 
     public void FlyToCollection()
     {
+        Debug.LogError("======= an manh tranh");
         objCollection.SetActive(true);
         trfFragment.DOMove(objCollection.transform.position, 1f).OnComplete(() => 
         {

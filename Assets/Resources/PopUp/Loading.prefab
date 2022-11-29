@@ -332,7 +332,6 @@ GameObject:
   - component: {fileID: 5118076745211551590}
   - component: {fileID: 5118076745211551589}
   - component: {fileID: 5118076745211551588}
-  - component: {fileID: 5118076745211551593}
   m_Layer: 5
   m_Name: Loading
   m_TagString: Untagged
@@ -436,52 +435,3 @@ MonoBehaviour:
   fillImage: {fileID: 5118076744757195945}
   scenes: DeleteScene
   myCanvas: {fileID: 5118076745211551591}
---- !u!114 &5118076745211551593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5118076745211551587}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1bfd24bf80a3164397276bd347fbf10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Aspect: 1.7777778
-  GizmosUpdate: 1
-  IsInvert: 1
-  changeCamSize: 0
-  CurCamSize: 15
-  Resolutions:
-  - Name: Fold 2 5G Tablet
-    Aspect: 1.2488688
-    CamSize: 0
-    PerspectiveSize: 60
-    Scaler: 0
-  - Name: Ipad
-    Aspect: 1.3339844
-    CamSize: 0
-    PerspectiveSize: 60
-    Scaler: 0
-  - Name: Iphone 7
-    Aspect: 1.7777778
-    CamSize: 0
-    PerspectiveSize: 60
-    Scaler: 0
-  - Name: Iphone XS Max
-    Aspect: 2.1662223
-    CamSize: 0
-    PerspectiveSize: 60
-    Scaler: 0
-  - Name: Redmi
-    Aspect: 2.2222223
-    CamSize: 0
-    PerspectiveSize: 60
-    Scaler: 0
-  - Name: Fold2 5G Phone
-    Aspect: 2.76875
-    CamSize: 0
-    PerspectiveSize: 60
-    Scaler: 0
-  _cam: {fileID: 0}

@@ -16,6 +16,7 @@ public class RemoteDefaultInfo
 }
 public class EventController : MonoBehaviour
 {
+
     Firebase.FirebaseApp app;
     static bool fireBaseInitDone;
     public RemoteDefaultInfo[] remoteDefault;
@@ -25,7 +26,6 @@ public class EventController : MonoBehaviour
     private void Start()
     {
 
-        DontDestroyOnLoad(this);
 
         Firebase.FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task =>
         {

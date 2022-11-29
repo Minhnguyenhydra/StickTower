@@ -48,11 +48,7 @@ public class CanvasFollowDevice : MonoBehaviour
             Name = "Fold2 5G Phone",
             Aspect = 2658f / 960f
         },
-        new ResolutionInfor
-        {
-            Name = "Quynh",
-            Aspect = 3200f / 1440f
-        },
+  
     };
 
     private CanvasScaler _canvasScaler;

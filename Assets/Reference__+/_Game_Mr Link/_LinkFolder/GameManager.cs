@@ -76,6 +76,7 @@ public class GameManager : Singleton<GameManager>
         ///// TOTEST:  StartCoroutine(IE_Load_Fade_In());
         //SoundManager.Ins.PlaySound(SoundID.menu);
         //corShowCanvasWin = StartCoroutine(Set_Delay_Show_Canvas_Win());
+        Datacontroller.instance.ShowLoadingPanel(false, "");
     }
 
     public void Set_Mai_Xanh_Delay_Win(Floor _floor)
