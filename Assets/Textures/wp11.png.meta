@@ -1,20 +1,12 @@
 fileFormatVersion: 2
 guid: 56f5e0d439fe92746ab463d47f6738a3
-timeCreated: 1660402884
-licenseType: Free
 TextureImporter:
-  serializedVersion: 11
-  objectHideFlags: 0
-  correspondingSourceObject: {fileID: 0}
-  prefabInstance: {fileID: 0}
-  prefabAsset: {fileID: 0}
-  name:
   internalIDToNameTable:
   - first:
       213: 21300000
     second: 11
   externalObjects: {}
-  usedFileIDs: []
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -73,6 +65,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -84,6 +77,42 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 65
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 65
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -202,112 +231,7 @@ TextureImporter:
       - {x: 4, y: 302}
       - {x: 1, y: 301}
       - {x: 1, y: 294}
-      indices:
-      - 26
-      - 25
-      - 22
-      - 24
-      - 22
-      - 25
-      - 21
-      - 22
-      - 24
-      - 23
-      - 22
-      - 21
-      - 15
-      - 20
-      - 14
-      - 19
-      - 14
-      - 20
-      - 13
-      - 14
-      - 19
-      - 12
-      - 13
-      - 19
-      - 18
-      - 20
-      - 17
-      - 15
-      - 17
-      - 20
-      - 19
-      - 20
-      - 18
-      - 12
-      - 19
-      - 18
-      - 11
-      - 12
-      - 18
-      - 6
-      - 4
-      - 9
-      - 7
-      - 9
-      - 4
-      - 8
-      - 9
-      - 7
-      - 3
-      - 8
-      - 7
-      - 17
-      - 15
-      - 16
-      - 10
-      - 16
-      - 15
-      - 14
-      - 10
-      - 15
-      - 13
-      - 10
-      - 14
-      - 12
-      - 10
-      - 13
-      - 11
-      - 10
-      - 12
-      - 5
-      - 10
-      - 11
-      - 6
-      - 10
-      - 5
-      - 1
-      - 10
-      - 6
-      - 9
-      - 1
-      - 6
-      - 8
-      - 1
-      - 9
-      - 3
-      - 1
-      - 8
-      - 0
-      - 3
-      - 5
-      - 7
-      - 5
-      - 3
-      - 4
-      - 5
-      - 7
-      - 6
-      - 5
-      - 4
-      - 1
-      - 3
-      - 0
-      - 2
-      - 1
-      - 0
+      indices: 1a00000019000000160000001800000016000000190000001500000016000000180000001700000016000000150000000f000000140000000e000000130000000e000000140000000d0000000e000000130000000c0000000d000000130000001200000014000000110000000f00000011000000140000001300000014000000120000000c00000013000000120000000b0000000c00000012000000060000000400000009000000070000000900000004000000080000000900000007000000030000000800000007000000110000000f000000100000000a000000100000000f0000000e0000000a0000000f0000000d0000000a0000000e0000000c0000000a0000000d0000000b0000000a0000000c000000050000000a0000000b000000060000000a00000005000000010000000a00000006000000090000000100000006000000080000000100000009000000030000000100000008000000000000000300000005000000070000000500000003000000040000000500000007000000060000000500000004000000010000000300000000000000020000000100000000000000
       edges: []
       weights:
       - weight[0]: 1
@@ -529,39 +453,16 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID:
+    spriteID: 
     internalID: 0
     vertices: []
-    indices: []
+    indices: 
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag:
-  output:
-    textureImportInstructions:
-      compressedFormat: 0
-      uncompressedFormat: 0
-      desiredFormat: 0
-      usageMode: 0
-      colorSpace: 0
-      androidETC2FallbackFormat: 0
-      width: 0
-      height: 0
-      depth: 0
-      cubeIntermediateSize: 0
-      cubeMode: 0
-      cubeLayout: 0
-      compressionQuality: 0
-      androidETC2FallbackDownscale: 0
-      vtOnly: 0
-    sourceTextureInformation:
-      width: 0
-      height: 0
-      doesTextureContainAlpha: 0
-      sourceWasHDR: 0
-    importInspectorWarnings:
+  spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
-  userData:
-  assetBundleName:
-  assetBundleVariant:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

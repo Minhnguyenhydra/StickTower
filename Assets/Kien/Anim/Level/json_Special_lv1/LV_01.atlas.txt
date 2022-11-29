@@ -1,152 +1,152 @@
 
 LV_01.png
-size: 1693,1693
+size: 2168,1316
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 bangdo
   rotate: false
-  xy: 585, 27
+  xy: 716, 52
   size: 157, 61
   orig: 157, 61
   offset: 0, 0
   index: -1
 bg
   rotate: false
-  xy: 2, 493
+  xy: 2, 115
   size: 1080, 1198
   orig: 1080, 1198
   offset: 0, 0
   index: -1
 body
   rotate: true
-  xy: 2, 89
+  xy: 1657, 911
   size: 402, 506
   orig: 402, 506
   offset: 0, 0
   index: -1
 chan
-  rotate: false
-  xy: 1237, 861
+  rotate: true
+  xy: 1553, 748
   size: 161, 465
   orig: 161, 465
   offset: 0, 0
   index: -1
 chan 2
   rotate: false
-  xy: 1419, 1334
+  xy: 1419, 26
   size: 166, 357
   orig: 166, 357
   offset: 0, 0
   index: -1
 dau
   rotate: true
-  xy: 1400, 907
+  xy: 1895, 270
   size: 175, 243
   orig: 175, 243
   offset: 0, 0
   index: -1
 ghile
   rotate: false
-  xy: 1385, 512
+  xy: 1587, 41
   size: 306, 347
   orig: 306, 347
   offset: 0, 0
   index: -1
 khay
   rotate: true
-  xy: 1385, 154
+  xy: 1490, 390
   size: 356, 289
   orig: 356, 289
   offset: 0, 0
   index: -1
 lm2
   rotate: false
-  xy: 150, 43
+  xy: 864, 6
   size: 147, 44
   orig: 147, 44
   offset: 0, 0
   index: -1
 mat nham 2
   rotate: false
-  xy: 2, 39
+  xy: 716, 2
   size: 146, 48
   orig: 146, 48
   offset: 0, 0
   index: -1
 mattr
   rotate: false
-  xy: 744, 29
+  xy: 875, 54
   size: 149, 59
   orig: 149, 59
   offset: 0, 0
   index: -1
 mieng
-  rotate: true
-  xy: 895, 44
+  rotate: false
+  xy: 645, 3
   size: 44, 35
   orig: 44, 35
   offset: 0, 0
   index: -1
 somi
   rotate: false
-  xy: 979, 119
+  xy: 1084, 385
   size: 404, 372
   orig: 404, 372
   offset: 0, 0
   index: -1
 tai
   rotate: false
-  xy: 979, 18
+  xy: 2, 14
   size: 273, 99
   orig: 273, 99
   offset: 0, 0
   index: -1
 tap de
   rotate: false
-  xy: 1084, 1328
+  xy: 1084, 20
   size: 333, 363
   orig: 333, 363
   offset: 0, 0
   index: -1
 tay
-  rotate: false
-  xy: 1084, 755
+  rotate: true
+  xy: 1084, 1162
   size: 151, 571
   orig: 151, 571
   offset: 0, 0
   index: -1
 tay 2
   rotate: true
-  xy: 1254, 25
+  xy: 277, 21
   size: 92, 366
   orig: 92, 366
   offset: 0, 0
   index: -1
 toc sau
   rotate: false
-  xy: 510, 90
+  xy: 1084, 759
   size: 467, 401
   orig: 467, 401
   offset: 0, 0
   index: -1
 toc trc
   rotate: false
-  xy: 1400, 1084
+  xy: 1895, 26
   size: 228, 242
   orig: 228, 242
   offset: 0, 0
   index: -1
 tất da
-  rotate: false
-  xy: 1084, 498
+  rotate: true
+  xy: 1895, 447
   size: 299, 255
   orig: 299, 255
   offset: 0, 0
   index: -1
 vong tay
-  rotate: false
-  xy: 510, 19
+  rotate: true
+  xy: 645, 40
   size: 73, 69
   orig: 73, 69
   offset: 0, 0

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using Spine.Unity;
 using DG.Tweening;
 using System.Linq;
+using System;
 
 public class Player : MonoBehaviour
 {
@@ -172,6 +173,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        skeletonAnimation.AnimationState.Event += EventFunc;
         LoadAnim();
 
         Init_sfx_char_skill_Player();
@@ -194,6 +196,14 @@ public class Player : MonoBehaviour
         Set_Fix_Pos_Player();
 
         StartCoroutine(GetButtonsInGame());
+    }
+
+    private void EventFunc(TrackEntry trackEntry, Spine.Event e)
+    {
+        if(e.Data.Name == "hit")
+        {
+            Camera_Manager.Ins.ShakeCam();
+        }    
     }
 
     private void LoadAnim()
