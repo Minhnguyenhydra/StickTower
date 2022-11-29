@@ -26,7 +26,7 @@ public class SelectLevelController : PopUpProperties
         base.OpenMe();
         sc.verticalNormalizedPosition = 1;
         btnUnlock.SetActive(false);
-
+        btnSelect.SetActive(false);
     }
     public override void CloseMe()
     {

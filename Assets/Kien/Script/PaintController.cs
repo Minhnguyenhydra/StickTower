@@ -25,6 +25,8 @@ public class PaintController : MonoBehaviour
     bool canDraw = false;
     bool selected;
 
+
+    GameObject erase;
     public virtual Texture2D GetSourceTexture()
     {
         var renderer = GetComponent<SpriteRenderer>();
@@ -43,10 +45,12 @@ public class PaintController : MonoBehaviour
             renderer.sprite = Sprite.Create(m_Texture, renderer.sprite.rect, new Vector2(0.5f, 0.5f));
         }
     }
-
+    Vector2 posOriginal;
 
     public virtual void Start()
     {
+        erase = GameController.instance.eraser;
+        posOriginal = erase.transform.position;
         Init();
     }
 
@@ -67,16 +71,19 @@ public class PaintController : MonoBehaviour
 
         ApplyTexture(m_Texture);
 
+
         Debug.LogError("====== step active");
     }
-
+    Vector2 pos;
     void Update()
     {
         if (!DataParam.canDelete)
             return;
         if (Input.GetMouseButtonDown(0))
         {
+            pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             canDraw = true;
+            erase.transform.position = pos;
         }
 
         if (!canDraw)
@@ -87,9 +94,9 @@ public class PaintController : MonoBehaviour
 
         if (Input.GetMouseButton(0))
         {
-            Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             bool inside = drawBoundCollider.OverlapPoint(pos);
-
+            erase.transform.position = pos;
             if (inside && currentPaint == null)
             {
                 currentPaint = this;
@@ -110,6 +117,7 @@ public class PaintController : MonoBehaviour
             {
                 currentPaint = null;
             }
+            erase.transform.position = posOriginal;
         }
 
         isDelete = false;

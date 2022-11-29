@@ -147,7 +147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9005382}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -4.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1986564026}
@@ -352,7 +352,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1080, y: 1920}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0.24957985
+  m_MatchWidthOrHeight: 0.38333336
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -410,7 +410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1bfd24bf80a3164397276bd347fbf10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Aspect: 1.3319328
+  Aspect: 1.7777778
   GizmosUpdate: 1
   IsInvert: 1
   changeCamSize: 0
@@ -805,6 +805,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eraser: {fileID: 9005382}
   levelController: {fileID: 0}
+  selectLevelController: {fileID: 0}
   canvasParent: {fileID: 497946894}
   canvasParent1: {fileID: 1909904079}
   effectWin: {fileID: 796173465}
@@ -967,7 +968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1bfd24bf80a3164397276bd347fbf10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Aspect: 1.3319328
+  Aspect: 1.7777778
   GizmosUpdate: 1
   IsInvert: 1
   changeCamSize: 0
@@ -1038,7 +1039,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1080, y: 1920}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0.24957985
+  m_MatchWidthOrHeight: 0.38333336
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96

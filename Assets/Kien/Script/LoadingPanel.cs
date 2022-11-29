@@ -12,6 +12,7 @@ public class LoadingPanel : MonoBehaviour
     public Image fillImage;
     public AsyncOperation currentLoadingOperation = null;
     public string scenes;
+    public Canvas myCanvas;
    // Datacontroller dataController;
 
     //  public Text countText;
@@ -19,14 +20,18 @@ public class LoadingPanel : MonoBehaviour
     // public SkeletonGraphic sg;
     string pathLoadResources;
 
-    public void OpenMe()
+    public void OpenMe(string name)
     {
         //  dataController = Datacontroller.instance;
-        SetUp();
+        myCanvas.worldCamera = Camera.main;
+        fillImage.fillAmount = 0;
+        SetUp(name);
         gameObject.SetActive(true);
+
     }
-    public void SetUp()
+    public void SetUp(string name)
     {
+        scenes = name;
         currentLoadingOperation = null;
         currentLoadingOperation = SceneManager.LoadSceneAsync(scenes);
         currentLoadingOperation.allowSceneActivation = false;
@@ -46,6 +51,7 @@ public class LoadingPanel : MonoBehaviour
             if (!currentLoadingOperation.allowSceneActivation)
             {
                 currentLoadingOperation.allowSceneActivation = true;
+                //gameObject.SetActive(false);
             }
         }
     }

@@ -435,6 +435,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fillImage: {fileID: 5118076744757195945}
   scenes: DeleteScene
+  myCanvas: {fileID: 5118076745211551591}
 --- !u!114 &5118076745211551593
 MonoBehaviour:
   m_ObjectHideFlags: 0

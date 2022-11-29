@@ -65,20 +65,30 @@ public class Datacontroller : MonoBehaviour
     public string appIDIos;
     [SerializeField]
     LoadingPanel loadingPanel;
-    //string pathPopUp;
-    //void ShowSelectLevelPanel()
-    //{
-    //    if (loadingPanel == null)
-    //    {
-    //        pathPopUp = "PopUp/Loading";
-    //        loadingPanel = Instantiate(Resources.Load<LoadingPanel>(pathPopUp));
-    //        loadingPanel.OpenMe();
-    //    }
-    //    else
-    //    {
-    //        loadingPanel.OpenMe();
-    //    }    
-    //}
+    string pathPopUp;
+
+   public void ShowLoadingPanel(bool openScene, string Scene)
+    {
+        if (openScene)
+        {
+            if (loadingPanel == null)
+            {
+                pathPopUp = "PopUp/Loading";
+                loadingPanel = Instantiate(Resources.Load<LoadingPanel>(pathPopUp));
+                loadingPanel.transform.parent = transform;
+                loadingPanel.OpenMe(Scene);
+            }
+            else
+            {
+                loadingPanel.OpenMe(Scene);
+            }
+        }
+        else
+        {
+            if (loadingPanel != null)
+                loadingPanel.gameObject.SetActive(false);
+        }
+    }
     public void TakePartDelete(int indexSource, int indexPart)
     {
         saveData.saveDelete.infoSaveDelete[indexSource].takeSprite[indexPart] = true;
@@ -87,7 +97,7 @@ public class Datacontroller : MonoBehaviour
     {
         if (instance == null)
         {
-            //  Application.targetFrameRate = 300;
+              Application.targetFrameRate = 60;
             Debug.unityLogger.logEnabled = debug;
             //    Input.multiTouchEnabled = false;
             CultureInfo ci = new CultureInfo("en-us");
@@ -116,13 +126,13 @@ public class Datacontroller : MonoBehaviour
     }
     UnityWebRequest wwwLevel;
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            loadingPanel.OpenMe();
-        }
-    }
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Space))
+    //    {
+    //        ShowLoadingPanel("DeleteScene");
+    //    }
+    //}
 
 
     void ReadPlayer(string value)

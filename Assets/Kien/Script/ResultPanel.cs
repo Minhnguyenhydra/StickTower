@@ -8,8 +8,9 @@ public class ResultPanel : PopUpProperties
     GameObject btnNext;
     public void BtnNext()
     {
-      //  DataParam.currentLevel++;
-        Application.LoadLevel(Application.loadedLevelName);
+        //  DataParam.currentLevel++;
+        // Application.LoadLevel(Application.loadedLevelName);
+        Datacontroller.instance.ShowLoadingPanel(true, "DeleteScene");
         Debug.LogError("======= load next level");
     }
     public override void OpenMe()

@@ -16,15 +16,16 @@ public class GameController : MonoBehaviour
     public SelectLevelController selectLevelController;
     ResultPanel resultPanel;
     [SerializeField]
-    Transform canvasParent,canvasParent1;
+    Transform canvasParent, canvasParent1;
     [SerializeField]
     GameObject effectWin;
-    [SerializeField]
-    LoadingPanel loading;
+    //[SerializeField]
+    //LoadingPanel loading;
     public void BackToLoading()
     {
-        loading.OpenMe();
-    }    
+        //loading.OpenMe();
+        Datacontroller.instance.ShowLoadingPanel(true, "Loading");
+    }
     private void Awake()
     {
         instance = this;
@@ -36,6 +37,7 @@ public class GameController : MonoBehaviour
         resultPanel.SetRect(canvasParent1);
         resultPanel.OpenMe();
         effectWin.SetActive(true);
+        eraser.SetActive(false);
     }
     void ShowSelectLevelPanel()
     {
@@ -45,10 +47,13 @@ public class GameController : MonoBehaviour
         selectLevelController.OpenMe();
         selectLevelController.Display();
     }
+    //  Vector2 originalPosErase;
     private void Start()
     {
         DataParam.canDelete = true;
         ShowSelectLevelPanel();
+        Datacontroller.instance.ShowLoadingPanel(false, "");
+        // originalPosErase = eraser.transform.position;
     }
     public void ShowPopUpWatchAds()
     {
@@ -64,6 +69,7 @@ public class GameController : MonoBehaviour
         {
             popUpWatchAds.OpenMe();
         }
+        eraser.SetActive(false);
         DataParam.canDelete = false;
     }
     public void LoadLevel()
@@ -74,7 +80,7 @@ public class GameController : MonoBehaviour
         if (level != null)
         {
             levelController = Instantiate(level);
-         //   levelController.DisplayLockOrUnlock();
+            //   levelController.DisplayLockOrUnlock();
         }
         else
         {
