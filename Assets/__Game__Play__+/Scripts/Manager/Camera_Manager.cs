@@ -43,19 +43,7 @@ public class Camera_Manager : Singleton<Camera_Manager>
     }
     private void Start()
     {
-        cam.gameObject.AddComponent<ProCamera2D>();
-        procamShake = cam.gameObject.AddComponent<ProCamera2DShake>();
 
-        ShakePreset newShakePreset = new ShakePreset();
-        newShakePreset.Strength = new Vector3(2, 2, 0);
-        newShakePreset.Duration = 0.2f;
-        newShakePreset.Vibrato = 3;
-        newShakePreset.Smoothness = 0.1f;
-        newShakePreset.Randomness = 0.1f;
-        newShakePreset.UseRandomInitialAngle = true;
-        newShakePreset.Rotation = Vector3.zero;
-        newShakePreset.IgnoreTimeScale = false;
-        procamShake.ShakePresets.Add(newShakePreset);
         //soNha_Enemy_Trong_Level = Constant.Get_Type_Castle_By_Level(PlayerPrefs_Manager.Get_Index_Level_Normal());
         pos_Start_Cam = transform.position;
         if (soNha_Enemy_Trong_Level > 1)
@@ -78,6 +66,21 @@ public class Camera_Manager : Singleton<Camera_Manager>
 
         cam = Camera.main;
         tf_Cam = cam.transform;
+
+
+        cam.gameObject.AddComponent<ProCamera2D>();
+        procamShake = cam.gameObject.AddComponent<ProCamera2DShake>();
+
+        ShakePreset newShakePreset = new ShakePreset();
+        newShakePreset.Strength = new Vector3(2, 2, 0);
+        newShakePreset.Duration = 0.2f;
+        newShakePreset.Vibrato = 3;
+        newShakePreset.Smoothness = 0.1f;
+        newShakePreset.Randomness = 0.1f;
+        newShakePreset.UseRandomInitialAngle = true;
+        newShakePreset.Rotation = Vector3.zero;
+        newShakePreset.IgnoreTimeScale = false;
+        procamShake.ShakePresets.Add(newShakePreset);
     }
     public void Move_Cam(int _index_Move)
     {

@@ -7,10 +7,6 @@ public class ManhTranh : MonoBehaviour
 {
     public int tranh, manhtranh;
     [SerializeField]
-    private GameObject objCollection;
-    [SerializeField]
-    private Transform trfFragment;
-    [SerializeField]
     Point_In_Floor floor;
 
     private void Start()
@@ -31,15 +27,15 @@ public class ManhTranh : MonoBehaviour
     public void FlyToCollection()
     {
         Debug.LogError("======= an manh tranh");
-        objCollection.SetActive(true);
-        trfFragment.DOMove(objCollection.transform.position, 1f).OnComplete(() => 
+        CanvasGamePlay.instance.targetPartDelete.SetActive(true);
+        transform.DOMove(CanvasGamePlay.instance.targetPartDelete.transform.position, 1f).OnComplete(() => 
         {
-            trfFragment.DOScale(1.3f, 1f).OnComplete(() => 
+            transform.DOScale(1.3f, 1f).OnComplete(() => 
             {
                 NhanManhTranh();
                 SoundManager.Ins.PlayFx(FxID.collect_coin);
 
-                objCollection.SetActive(false);
+                CanvasGamePlay.instance.targetPartDelete.SetActive(false);
                 gameObject.SetActive(false);
             });
         });

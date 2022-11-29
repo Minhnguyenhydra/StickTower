@@ -10,6 +10,8 @@ using Scene = UnityEngine.SceneManagement.Scene;
 
 public class CanvasGamePlay : UICanvas
 {
+    public static CanvasGamePlay instance;
+    public GameObject targetPartDelete;
     public Grandfather_Castle grandfather_Castle;//biến này để xét bao nhiêu Castle được bật tùy từng level... Castle là ảnh các tường thành trên màn hình, cứ chiếm được 1 nhà là cái ảnh này sẽ được in đậm
     private int level_curent;
     public GameObject obj_Btn_ADs_Sword;
@@ -22,6 +24,8 @@ public class CanvasGamePlay : UICanvas
     public TextMeshProUGUI txt_Damge;
     private void Start()
     {
+        instance = this;
+        targetPartDelete.SetActive(false);
         Debug.LogError("============= gamplay");
     }
     private void OnEnable()
