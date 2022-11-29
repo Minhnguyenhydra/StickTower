@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using TMPro;
-using UnityEditor.SearchService;
+
 using UnityEngine.SceneManagement;
 using Scene = UnityEngine.SceneManagement.Scene;
 

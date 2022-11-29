@@ -45,12 +45,12 @@ public class UIManager : Singleton<UIManager>
             {
                 UICanvas canvas = Instantiate(Resources.Load<UICanvas>("UI/" + ID.ToString()), CanvasParentTF);
                 UICanvas[ID] = canvas;
+  
             }
             //Mr Link
             //UICanvas canvas = Instantiate(Resources.Load<UICanvas>("UI/" + ID.ToString()), CanvasParentTF);
             //UICanvas[ID] = canvas;
         }
-
         return UICanvas[ID];
     } 
     

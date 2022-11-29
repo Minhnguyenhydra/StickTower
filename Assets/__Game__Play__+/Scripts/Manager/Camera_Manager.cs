@@ -39,14 +39,13 @@ public class Camera_Manager : Singleton<Camera_Manager>
         bgOld = GameObject.Find("==Obj==Canvas_BG");
         if (bgOld != null)
             bgOld.SetActive(false);
-      //  bg.transform.parent = cam.transform;
+        //  bg.transform.parent = cam.transform;
     }
     private void Start()
     {
-        // cam.gameObject.AddComponent<CameraShaker>();
         cam.gameObject.AddComponent<ProCamera2D>();
-        procamShake =  cam.gameObject.AddComponent<ProCamera2DShake>();
-       
+        procamShake = cam.gameObject.AddComponent<ProCamera2DShake>();
+
         ShakePreset newShakePreset = new ShakePreset();
         newShakePreset.Strength = new Vector3(2, 2, 0);
         newShakePreset.Duration = 0.2f;
