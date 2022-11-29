@@ -54,7 +54,11 @@ public class Trap_Hit : MonoBehaviour
     }
     public void Set_Destroy_This_Trap()
     {
-        SetCharacterState_NoLoop(Action_Close);
+        if (Action_Close)
+            SetCharacterState_NoLoop(Action_Close);
+        else
+            gameObject.SetActive(false);
+
         Destroy(health_Bar.gameObject);
     }
 
@@ -68,7 +72,7 @@ public class Trap_Hit : MonoBehaviour
         if (skeletonAnimation)
             skeletonAnimation.state.SetAnimation(0, _anim, _loop).TimeScale = _time_Scale;
 
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
     }
     //TODO: đổi skin
     public void Set_Skin(string _str_Skin)

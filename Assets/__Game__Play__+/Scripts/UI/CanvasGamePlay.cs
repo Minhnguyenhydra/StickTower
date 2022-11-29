@@ -89,7 +89,7 @@ public class CanvasGamePlay : UICanvas
         if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 3)
         {
             level_curent = PlayerPrefs_Manager.Get__QLevel_Challenge();
-            txt_Level.text = Constant.Get_Tile_Game_Play_By_Level(level_curent);
+            txt_Level.text = "CHALLENGE " + level_curent;
 
             if (UIManager.Ins.IsOpenedUI(UIID.UICPay_Gold_To_Play))
             {

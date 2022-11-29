@@ -472,7 +472,8 @@ public class Drag_Drop_Manager : Singleton_Q<Drag_Drop_Manager>
 
                 floor_Raycast_Before = floor_Raycast_To;
             }
-
+            #endregion
+            #region Nếu phía trước là mảnh tranh
             else if (_floor.list_Point_In_Floor[_indexPoint - 1].pictureFragment != null)
             {
                 Player.ins.Set_Un_Block_Colider_Player();
@@ -480,7 +481,15 @@ public class Drag_Drop_Manager : Singleton_Q<Drag_Drop_Manager>
                 Player.ins.Set_Check_Reach_Last_Point_Level();
                 floor_Raycast_Before = floor_Raycast_To;
             }
-
+            #endregion
+            #region Nếu phía trước là rương
+            else if (_floor.list_Point_In_Floor[_indexPoint - 1].reward_Attack_This_Point != null)
+            {
+                Player.ins.Set_Un_Block_Colider_Player();
+                _floor.list_Point_In_Floor[_indexPoint - 1].reward_Attack_This_Point.Set_Open();
+                Player.ins.Set_Check_Reach_Last_Point_Level();
+                floor_Raycast_Before = floor_Raycast_To;
+            }
             #endregion
             #region  Set Empty điểm Player đang đứng + Set Floor có thể sụp xuống
             //--- điểm Player đang đứng trên 1 Floor, nhưng Player ko bao h đến đc điểm cuối cùng của 1 Floor, vì điểm đó có lính, Boss hoặc Rương,...

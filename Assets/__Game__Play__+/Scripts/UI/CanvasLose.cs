@@ -277,7 +277,7 @@ public class CanvasLose : UICanvas
     public void RePlay_Challenge_Button()
     {
        int level = PlayerPrefs_Manager.Get__QLevel_Challenge();
-        Scene_Manager_Q.Load_Scene("Level_"+ level.ToString());
+        Scene_Manager_Q.Load_Scene(Constant.StringChallengeLevel + level.ToString());
         SoundManager.Ins.PlayFx(FxID.click);
     }
 }

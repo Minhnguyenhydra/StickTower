@@ -30,7 +30,7 @@ public class ManhTranh : MonoBehaviour
         CanvasGamePlay.instance.targetPartDelete.SetActive(true);
         transform.DOMove(CanvasGamePlay.instance.targetPartDelete.transform.position, 1f).OnComplete(() => 
         {
-            transform.DOScale(1.3f, 1f).OnComplete(() => 
+            transform.DOScale(1.5f, 1f).OnComplete(() => 
             {
                 NhanManhTranh();
                 SoundManager.Ins.PlayFx(FxID.collect_coin);

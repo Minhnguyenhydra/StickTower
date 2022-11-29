@@ -49,7 +49,7 @@ public class Camera_Manager : Singleton<Camera_Manager>
         if (soNha_Enemy_Trong_Level > 1)
         {
 
-            tf_Cam.DOMoveX(list_Pos_Cam_move[soNha_Enemy_Trong_Level - 2].position.x, Constant.Time_Cam_Move).OnComplete(
+            tf_Cam.DOMoveX(list_Pos_Cam_move[soNha_Enemy_Trong_Level - 1].localPosition.x, Constant.Time_Cam_Move).OnComplete(
                 () => tf_Cam.DOMoveX(pos_Start_Cam.x, Constant.Time_Cam_Move).OnComplete(
                     () =>
                     {
@@ -85,7 +85,7 @@ public class Camera_Manager : Singleton<Camera_Manager>
     public void Move_Cam(int _index_Move)
     {
         //Debug.Log("====");
-        tf_Cam.DOMoveX(list_Pos_Cam_move[_index_Move].position.x, Constant.Time_Cam_Move);
+        tf_Cam.DOMoveX(list_Pos_Cam_move[_index_Move].localPosition.x, Constant.Time_Cam_Move);
         //StartCoroutine(IE_Delay_Move_Cam_Next_House(_index_Move));
     }
     IEnumerator IE_Delay_Move_Cam_Next_House(int _index_Move)
