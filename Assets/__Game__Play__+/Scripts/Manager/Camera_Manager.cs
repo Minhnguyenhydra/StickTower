@@ -33,7 +33,7 @@ public class Camera_Manager : Singleton<Camera_Manager>
     GameObject bgOld;
     private void Awake()
     {
-        bg = Instantiate(Resources.Load<ScrollBG>("BG/BG"));
+        bg = Instantiate(Resources.Load<ScrollBG>("BG/BG" + PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge()));
 
         bg.SetUp(PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge());
         bgOld = GameObject.Find("==Obj==Canvas_BG");
