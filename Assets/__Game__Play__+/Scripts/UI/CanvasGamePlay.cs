@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using TMPro;
+using UnityEditor.SearchService;
+using UnityEngine.SceneManagement;
+using Scene = UnityEngine.SceneManagement.Scene;
 
 public class CanvasGamePlay : UICanvas
 {
@@ -176,8 +179,13 @@ public class CanvasGamePlay : UICanvas
                 obj_Btn_NextLevel.SetActive(false);
 
                 //trước khi vào Challenge đã lưu chỉ số level Challenge sẽ chơi rồi, Replay Challenge chỉ load lại chỉ số đó
-               int level_Current_Challenge = PlayerPrefs_Manager.Get__QLevel_Challenge();
-                Scene_Manager_Q.Load_Scene("Level_"+ level_Current_Challenge.ToString());
+                Scene scene = SceneManager.GetActiveScene();
+                int level_Current_Challenge = PlayerPrefs_Manager.Get__QLevel_Challenge();
+                if (scene.name.Contains("Challenge"))
+                    Scene_Manager_Q.Load_Scene("Challenge_Level_" + level_Current_Challenge.ToString());
+                
+                else
+                    Scene_Manager_Q.Load_Scene("Level_"+ level_Current_Challenge.ToString());
             }
         }
 

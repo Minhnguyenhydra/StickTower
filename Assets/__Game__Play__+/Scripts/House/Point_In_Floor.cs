@@ -13,23 +13,17 @@ public class Point_In_Floor : MonoBehaviour
     public Sword sword_Attack_This_Point;
     public Princess princess_Attack_This_Point;
     public Reward_At_Point reward_Attack_This_Point;
+    public ManhTranh pictureFragment;
     //
     public bool isFist_config;
     public Floor floor_This;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         isEmpty = true;
         tf_Point_In_Floor = transform;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    
-    //
     public void Set_Enemy_Attach(Enemy _enemy)
     {
         enemy_Attack_This_Point = _enemy;
@@ -58,6 +52,11 @@ public class Point_In_Floor : MonoBehaviour
     public void Set_Reward_Attach(Reward_At_Point _reward)
     {
         reward_Attack_This_Point = _reward;
+    }
+
+    public void SetPictureFragment(ManhTranh frament)
+    {
+        pictureFragment = frament;
     }
     //***********************************************************
     public void ReSet_Enemy_Attach()

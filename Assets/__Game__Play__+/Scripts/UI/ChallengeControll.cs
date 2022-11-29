@@ -52,12 +52,9 @@ public class ChallengeControll : MonoBehaviour
         ii = 0;
         level = PlayerPrefs_Manager.Get_Index_Level_Normal();
         canvasChallenge = (CanvasChallenge)UIManager.Ins.GetUI(UIID.UICChallenge);
-        Check_Active_Btn();
+        //Check_Active_Btn();
     }
-    private void Update()
-    {
-        
-    }
+
     public void Check_Active_Btn()
     {
         
@@ -182,7 +179,7 @@ public class ChallengeControll : MonoBehaviour
             }
         }
     }
-    private void FixedUpdate()
+    private void Update()
     {
         float distance = 1f / (pos.Length - 1.0f);
 
@@ -285,7 +282,7 @@ public class ChallengeControll : MonoBehaviour
             rightBtn.SetActive(true);
             leftBtn.SetActive(true);
         }
-        Check_Active_Btn();
+        //Check_Active_Btn();
     }
 
     public void OpenShopEndCheckTab(int tabIdx)

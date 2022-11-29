@@ -240,7 +240,7 @@ public class PlayerPrefs_Manager
     }
     public static int Get__QLevel_Challenge()
     {
-        return PlayerPrefs.GetInt(Constant.String_Level_Challenge, 22);
+        return PlayerPrefs.GetInt(Constant.String_Level_Challenge, 1);
     }
     #endregion
 
