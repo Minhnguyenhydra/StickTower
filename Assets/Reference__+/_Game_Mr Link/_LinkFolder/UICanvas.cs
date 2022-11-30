@@ -9,8 +9,8 @@ public class UICanvas : MonoBehaviour
 
     protected RectTransform m_RectTransform;
     private Animator m_Animator;
-    private bool m_IsInit = false;
-    private float m_OffsetY = 0;
+    //private bool m_IsInit = false;
+   // private float m_OffsetY = 0;
     #region Quan Add
     [Header(" các UICanvas sinh ra bằng Prefabs ko dùng đến biến này")]
     [Header(" chỉ UICanvas Custom mới dùng đến biến này")]

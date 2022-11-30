@@ -193,48 +193,48 @@ public class Datacontroller : MonoBehaviour
         //  LoadSaveMoreGame(PlayerPrefs.GetString(DataParam.SAVEMOREGAME));
 
     }
-    IEnumerator WaitForRequest(WWW www)
-    {
-        yield return www;
+    //IEnumerator WaitForRequest(WWW www)
+    //{
+    //    yield return www;
 
-        // check for errors
+    //    // check for errors
 
-        if (www.error == null)
-        {
-            //  Debug.LogError("=====WWW MoreGame!: " + www.text);
-            //jData = JsonMapper.ToObject(www.text);
-            //if (jData != null)
-            //{
-            getMoreGame = JsonMapper.ToObject<GetMoreGame>(www.text/*jData.ToJson()*/);
-            //}
-        }
-        else
-        {
-            //   Debug.Log("======WWW Error MoreGame: " + www.error);
-        }
+    //    if (www.error == null)
+    //    {
+    //        //  Debug.LogError("=====WWW MoreGame!: " + www.text);
+    //        //jData = JsonMapper.ToObject(www.text);
+    //        //if (jData != null)
+    //        //{
+    //        getMoreGame = JsonMapper.ToObject<GetMoreGame>(www.text/*jData.ToJson()*/);
+    //        //}
+    //    }
+    //    else
+    //    {
+    //        //   Debug.Log("======WWW Error MoreGame: " + www.error);
+    //    }
 
-        for (int i = 0; i < getMoreGame.infoMoreGame.Count; i++)
-        {
-            SetImage(getMoreGame.infoMoreGame[i].linkIcon, i);
-        }
-    }
+    //    for (int i = 0; i < getMoreGame.infoMoreGame.Count; i++)
+    //    {
+    //        SetImage(getMoreGame.infoMoreGame[i].linkIcon, i);
+    //    }
+    //}
 
-    IEnumerator WaitForRequestLevel(UnityWebRequest www)
-    {
-        yield return www.SendWebRequest();
+    //IEnumerator WaitForRequestLevel(UnityWebRequest www)
+    //{
+    //    yield return www.SendWebRequest();
 
-        if (www.isNetworkError || www.isHttpError)
-        {
-            Debug.Log("======WWW Error Level: " + www.error);
-        }
-        else
-        {
-            //  DataParam.wwwLevel = www.downloadHandler.text;
-            Debug.LogError("=====WWW Level!: " + www.downloadHandler.text);
-        }
+    //    if (www.isNetworkError || www.isHttpError)
+    //    {
+    //        Debug.Log("======WWW Error Level: " + www.error);
+    //    }
+    //    else
+    //    {
+    //        //  DataParam.wwwLevel = www.downloadHandler.text;
+    //        Debug.LogError("=====WWW Level!: " + www.downloadHandler.text);
+    //    }
 
 
-    }
+    //}
 
     static bool calculate;
     GetMoreGame getMoreGame = new GetMoreGame();
@@ -255,24 +255,24 @@ public class Datacontroller : MonoBehaviour
         }
         calculate = true;
     }
-    public void SetImage(string url, int i)
-    {
-        StartCoroutine(DownloadImage(url, i));
-    }
-    Texture2D texture;
-    IEnumerator DownloadImage(string url, int i)
-    {
-        UnityWebRequest request = UnityWebRequestTexture.GetTexture(url);
-        yield return request.SendWebRequest();
-        if (request.isNetworkError || request.isHttpError)
-            Debug.LogError("======" + request.error);
-        else
-        {
-            texture = ((DownloadHandlerTexture)request.downloadHandler).texture;
-            getMoreGame.infoMoreGame[i].myTexture = texture;
-            Debug.LogError("======" + "texture ok");
-        }
-    }
+    //public void SetImage(string url, int i)
+    //{
+    //    StartCoroutine(DownloadImage(url, i));
+    //}
+    //Texture2D texture;
+    //IEnumerator DownloadImage(string url, int i)
+    //{
+    //    UnityWebRequest request = UnityWebRequestTexture.GetTexture(url);
+    //    yield return request.SendWebRequest();
+    //    if (request.isNetworkError || request.isHttpError)
+    //        Debug.LogError("======" + request.error);
+    //    else
+    //    {
+    //        texture = ((DownloadHandlerTexture)request.downloadHandler).texture;
+    //        getMoreGame.infoMoreGame[i].myTexture = texture;
+    //        Debug.LogError("======" + "texture ok");
+    //    }
+    //}
     void CreateTestMoreGame()
     {
         getMoreGame.infoMoreGame.Clear();

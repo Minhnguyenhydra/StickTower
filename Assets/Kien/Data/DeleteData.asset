@@ -21,6 +21,9 @@ MonoBehaviour:
       - {fileID: 21300000, guid: ac0802b4b1006954392e247e177cc561, type: 3}
       - {fileID: 21300000, guid: 666ab4283df17774dbf05fb87f52f2c1, type: 3}
       - {fileID: 21300000, guid: d9b320199ed070b48bcb903139f1b312, type: 3}
+      iconSp:
+      - {fileID: 21300000, guid: e5e471603f4c27a45a23649f6c3246b5, type: 3}
+      - {fileID: 21300000, guid: a0a46e3f4183c2740917149aae52f6b5, type: 3}
   - resourceSprite:
       sp:
       - {fileID: 21300000, guid: 43b5ea4dc01d07448b87d6ccbf27e0d8, type: 3}
@@ -29,6 +32,9 @@ MonoBehaviour:
       - {fileID: 21300000, guid: e7a3dc84854f9fd4c8df8de35dd99f67, type: 3}
       - {fileID: 21300000, guid: e9dbc32234cc0cb419da35582e105418, type: 3}
       - {fileID: 21300000, guid: 83cfa69c85176b84fad8f6deb9e15a18, type: 3}
+      iconSp:
+      - {fileID: 21300000, guid: f7fe14337ecec364fbfa8d13f8ec9b5e, type: 3}
+      - {fileID: 21300000, guid: 12d64b1aad3f30a46963a463c581e2a0, type: 3}
   - resourceSprite:
       sp:
       - {fileID: 21300000, guid: e4f0410433f9f8b42ad35b22654546df, type: 3}
@@ -37,6 +43,9 @@ MonoBehaviour:
       - {fileID: 21300000, guid: 1f6ff20d2d0f69b4b8b9328e7bd28a63, type: 3}
       - {fileID: 21300000, guid: 8fa4579955975a549833739f2f407bfd, type: 3}
       - {fileID: 21300000, guid: eb07819ca717f234bac96139e9b2848b, type: 3}
+      iconSp:
+      - {fileID: 21300000, guid: 6f21ffbbed2c8064bac3d750bd056f9e, type: 3}
+      - {fileID: 21300000, guid: 5c5bedc6307f8eb41a8332c2d2dce0c4, type: 3}
   - resourceSprite:
       sp:
       - {fileID: 21300000, guid: 473f1ad645e2eee408b3a48c02e3e693, type: 3}
@@ -45,6 +54,9 @@ MonoBehaviour:
       - {fileID: 21300000, guid: a2969fb6baedbf84fab18ce4fa3eb4fe, type: 3}
       - {fileID: 21300000, guid: 5b7d95ae31e14ec4e8f5b33cf0a50a8c, type: 3}
       - {fileID: 21300000, guid: 42f1414605e81e84ca5e18db1aa956e0, type: 3}
+      iconSp:
+      - {fileID: 21300000, guid: 8e7c4156ebe9a434ea2f478a92e01665, type: 3}
+      - {fileID: 21300000, guid: a206b8b414676104ba47ca1d538e848b, type: 3}
   - resourceSprite:
       sp:
       - {fileID: 21300000, guid: 3970cbc074a3758448cc92c1554d059d, type: 3}
@@ -53,3 +65,6 @@ MonoBehaviour:
       - {fileID: 21300000, guid: 37cffc26c6b77e6419f5958773271961, type: 3}
       - {fileID: 21300000, guid: f97d2c4f305eeea4c8888dc2a5e12105, type: 3}
       - {fileID: 21300000, guid: 0e0c5a71ad6077949afbe1c057373268, type: 3}
+      iconSp:
+      - {fileID: 21300000, guid: f6847d70d24d7814b9ef243b3bb3fc35, type: 3}
+      - {fileID: 21300000, guid: 9181113965f8549489703ad7a021cb10, type: 3}

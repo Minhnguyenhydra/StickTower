@@ -17,6 +17,7 @@ public class Camera_Manager : Singleton<Camera_Manager>
     //
     public Transform tf_FloorBoss;
     ProCamera2DShake procamShake;
+    ProCamera2D procam;
     ScrollBG bg;
     //private void Update()
     //{
@@ -87,8 +88,15 @@ public class Camera_Manager : Singleton<Camera_Manager>
         tf_Cam = cam.transform;
 
 
-        cam.gameObject.AddComponent<ProCamera2D>();
+        procam = cam.gameObject.AddComponent<ProCamera2D>();
         procamShake = cam.gameObject.AddComponent<ProCamera2DShake>();
+        procam.IsRelativeOffset = false;
+        procam.FollowHorizontal = false;
+        procam.FollowVertical = false;
+
+        procam.CameraTargetPositionSmoothed = Vector2.zero;
+        procam.HorizontalFollowSmoothness = 0;
+        procam.VerticalFollowSmoothness = 0;
 
         ShakePreset newShakePreset = new ShakePreset();
         newShakePreset.Strength = new Vector3(2, 2, 0);

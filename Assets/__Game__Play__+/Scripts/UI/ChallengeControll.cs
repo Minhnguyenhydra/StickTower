@@ -25,7 +25,7 @@ public class ChallengeControll : MonoBehaviour
     public int level;
 
     private bool clickBtn = false;
-    private bool resetClick = false;
+ //   private bool resetClick = false;
     private int tmp;
     //
     public List<int> list_Gold;//số gold mỗi Challenge ứng với chỉ số trong list này

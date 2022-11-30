@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -85,7 +85,8 @@ public class GameController : MonoBehaviour
         else
         {
             DataParam.currentLevel = 0;
-            Application.LoadLevel(Application.loadedLevelName);
+           // Application.LoadLevel(Application.loadedLevelName);
+            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
         }
     }
 }

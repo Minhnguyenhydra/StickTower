@@ -28,7 +28,7 @@ public class AppOpenAdManager
 
     private bool isShowingAd = false;
 
-    private bool showFirstOpen = false;
+  //  private bool showFirstOpen = false;
 
     public static bool ConfigOpenApp = true;
     public static bool ConfigResumeApp = true;

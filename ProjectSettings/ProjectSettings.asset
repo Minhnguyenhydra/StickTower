@@ -719,7 +719,12 @@ PlayerSettings:
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
   cloudServicesEnabled:
-    Unity Ads: 1
+    Build: 0
+    Collab: 0
+    Game Performance: 0
+    Purchasing: 0
+    UDP: 0
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -733,11 +738,11 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 0
-  cloudProjectId: ae51e98e-247e-4392-adde-441e0cb2861c
+  cloudProjectId: ed4a0a3c-6b42-4b94-87bf-970f3cbf1e6b
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: StickTower
-  organizationId: mrtrum191
+  projectName: 'Stick Hero Tower: Mighty Party'
+  organizationId: kien261193
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   virtualTexturingSupportEnabled: 0

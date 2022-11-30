@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BtnShowManhTranh : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class BtnShowManhTranh : MonoBehaviour
         Datacontroller.instance.ShowLoadingPanel(true,"DeleteScene");
         SoundManager.Ins.PlayFx(FxID.click);
 
-        if(Application.loadedLevelName == "Loading")
+        if(SceneManager.GetActiveScene().name == "Loading")
         {
             EventController.MAIN_CLICK("icon_manhtranh_click");
         }    
