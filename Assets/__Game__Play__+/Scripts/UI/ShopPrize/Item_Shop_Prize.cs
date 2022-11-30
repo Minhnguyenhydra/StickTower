@@ -28,15 +28,17 @@ public class Item_Shop_Prize : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    IEnumerator Delay_Increa_Gem()
     {
-        
+        yield return Cache.GetWFS(0.5f);
+        gold_Gem_Reward_Fly.Set_Fly();
     }
     public void Set_Open()
     {
         if (canvasShop_Prize.intKey > 0)
         {
-            gold_Gem_Reward_Fly.Set_Fly();
+            StartCoroutine(Delay_Increa_Gem());
+           // gold_Gem_Reward_Fly.Set_Fly();
             SetCharacterState_NoLoop(Action_Open);
             Destroy(obj_Btn);
         }

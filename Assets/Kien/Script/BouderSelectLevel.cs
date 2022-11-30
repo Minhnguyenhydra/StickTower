@@ -39,6 +39,7 @@ public class BouderSelectLevel : MonoBehaviour
     }
     public void BtnWatchAdsUnlock()
     {
+        SoundManager.Ins.PlayFx(FxID.click);
 #if UNITY_EDITOR
         Reward();
 #else
@@ -53,7 +54,7 @@ public class BouderSelectLevel : MonoBehaviour
     public void BtnPlay()
     {
 
-
+        SoundManager.Ins.PlayFx(FxID.click);
         if (DataParam.currentLevel == index)
         {
             if (GameController.instance.levelController != null)

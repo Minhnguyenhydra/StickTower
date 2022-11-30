@@ -169,11 +169,16 @@ public class GameManager : Singleton<GameManager>
 
         //Mở khóa canvas rương nếu level đủ 3 chìa
         int lv = PlayerPrefs_Manager.Get_Index_Level_Normal();
-        if (lv == 3 || lv == 8 || lv == 13 || lv == 17 || lv == 20 || lv == 23 || lv == 31 || lv == 46)
+        //if (lv == 3 || lv == 8 || lv == 13 || lv == 17 || lv == 20 || lv == 23 || lv == 31 || lv == 46)
+        //{
+        //PlayerPrefs_Manager.Set_Number_Key_Treasure(0);
+        Debug.LogError("=========number key:" + PlayerPrefs_Manager.Get_Number_Key_Treasure());
+        if (PlayerPrefs_Manager.Get_Number_Key_Treasure() >= 3)
         {
-            //PlayerPrefs_Manager.Set_Number_Key_Treasure(0);
             UIManager.Ins.OpenUI(UIID.UICShopPrize);
+            Debug.LogError("========= open shop");
         }
+       // }
 
         if (lv == 6)
         {

@@ -169,7 +169,27 @@ public class EventController : MonoBehaviour
     }
 
     static string nameTempParam;
+    public static void PLAY_LEVEL_DELETE_EVENT(int value)
+    {
+        if (fireBaseInitDone)
+        {
+            if (value < 10)
+            {
+                nameTempParam = "00";
+            }
+            else if (value >= 10 && value < 100)
+            {
+                nameTempParam = "0";
+            }
+            else
+            {
+                nameTempParam = "";
+            }
 
+            // Parameter param = new Parameter("play_level_para", "play_level_" + nameTempParam + value);
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("play_level_delete_event_" + nameTempParam + value/*, param*/);
+        }
+    }
     public static void PLAY_LEVEL_EVENT(int value)
     {
         if (fireBaseInitDone)

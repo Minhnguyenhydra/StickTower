@@ -13,13 +13,23 @@ public class SelectLevelController : PopUpProperties
         btnSelect.SetActive(false);
         btnBack.SetActive(false);
     }    
-    public void BtnUnlock()
+    void RewardUnlock()
     {
         Datacontroller.instance.saveData.saveDelete.infoSaveDelete[DataParam.currentLevel].unlock = true;
         bouderSelectLevels[DataParam.currentLevel].Display();
         GameController.instance.levelController.DisplayLockOrUnlock();
         btnUnlock.SetActive(false);
+        SoundManager.Ins.PlayFx(FxID.click);
         Debug.LogError("===== click unlock");
+    }    
+    public void BtnUnlock()
+    {
+#if UNITY_EDITOR
+        RewardUnlock();
+#else
+        AdsManager.Instance.WatchRewardedAds(RewardUnlock, "video_show_unlock_delete_" + (DataParam.currentLevel + 1));
+#endif
+        SoundManager.Ins.PlayFx(FxID.click);
     }    
     public override void OpenMe()
     {
@@ -55,6 +65,7 @@ public class SelectLevelController : PopUpProperties
     }
     public void BtnBack()
     {
+        SoundManager.Ins.PlayFx(FxID.click);
         GameController.instance.BackToLoading();
 
       //  UnityEngine.SceneManagement.SceneManager.LoadScene(0);
@@ -63,6 +74,7 @@ public class SelectLevelController : PopUpProperties
     {
         if (sc.gameObject.activeSelf)
             return;
+        SoundManager.Ins.PlayFx(FxID.click);
         btnUnlock.SetActive(false);
         sc.gameObject.SetActive(true);
         btnSelect.SetActive(false);

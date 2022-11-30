@@ -25,7 +25,7 @@ public class CanvasGamePlay : UICanvas
     private void Start()
     {
         instance = this;
-        targetPartDelete.SetActive(false);
+    //    targetPartDelete.SetActive(false);
         Debug.LogError("============= gamplay");
     }
     private void OnEnable()

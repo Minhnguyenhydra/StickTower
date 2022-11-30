@@ -929,7 +929,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8afe0acc02f340341bbff1017807d6ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debug: 1
+  debug: 0
   saveData:
     session: 0
     day: 0
@@ -3727,6 +3727,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sound
       objectReference: {fileID: 0}
+    - target: {fileID: 7055542804314294530, guid: 4065c55acf896e74090a7548a869a169, type: 3}
+      propertyPath: fxAus.Array.data[71]
+      value: 
+      objectReference: {fileID: 8300000, guid: cc2f98308ba5e5540b024c45d171ac3e, type: 3}
+    - target: {fileID: 7055542804314294530, guid: 4065c55acf896e74090a7548a869a169, type: 3}
+      propertyPath: fxAus.Array.data[72]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d12c600a2f501647a37e9528eb4a03c, type: 3}
+    - target: {fileID: 7055542804314294530, guid: 4065c55acf896e74090a7548a869a169, type: 3}
+      propertyPath: soundAus.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d12c600a2f501647a37e9528eb4a03c, type: 3}
+    - target: {fileID: 7055542804314294530, guid: 4065c55acf896e74090a7548a869a169, type: 3}
+      propertyPath: soundAus.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: cc2f98308ba5e5540b024c45d171ac3e, type: 3}
     - target: {fileID: 7055542804314294531, guid: 4065c55acf896e74090a7548a869a169, type: 3}
       propertyPath: m_RootOrder
       value: 6

@@ -27,7 +27,7 @@ public class ManhTranh : MonoBehaviour
     public void FlyToCollection()
     {
         Debug.LogError("======= an manh tranh");
-        CanvasGamePlay.instance.targetPartDelete.SetActive(true);
+       // CanvasGamePlay.instance.targetPartDelete.SetActive(true);
         transform.DOMove(CanvasGamePlay.instance.targetPartDelete.transform.position, 1f).OnComplete(() => 
         {
             transform.DOScale(1.5f, 1f).OnComplete(() => 
@@ -35,7 +35,7 @@ public class ManhTranh : MonoBehaviour
                 NhanManhTranh();
                 SoundManager.Ins.PlayFx(FxID.collect_coin);
 
-                CanvasGamePlay.instance.targetPartDelete.SetActive(false);
+              //  CanvasGamePlay.instance.targetPartDelete.SetActive(false);
                 gameObject.SetActive(false);
             });
         });

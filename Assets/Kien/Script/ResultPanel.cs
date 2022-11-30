@@ -10,9 +10,14 @@ public class ResultPanel : PopUpProperties
     {
         //  DataParam.currentLevel++;
         // Application.LoadLevel(Application.loadedLevelName);
-        Datacontroller.instance.ShowLoadingPanel(true, "DeleteScene");
+        SoundManager.Ins.PlayFx(FxID.click);
+        AdsManager.Instance.WatchInterstitialAds(LoadScene);
         Debug.LogError("======= load next level");
     }
+    void LoadScene()
+    {
+        Datacontroller.instance.ShowLoadingPanel(true, "DeleteScene");
+    }    
     public override void OpenMe()
     {
         base.OpenMe();

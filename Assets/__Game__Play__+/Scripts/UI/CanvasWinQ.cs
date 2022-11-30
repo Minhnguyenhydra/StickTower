@@ -566,7 +566,7 @@ public class CanvasWinQ : UICanvas
 
     IEnumerator Delay_Increa_Gem()
     {
-        yield return Cache.GetWFS(0.2f);
+        yield return Cache.GetWFS(0.5f);
         Set_Step_By_Step_Gold(PlayerPrefs_Manager.Get_Gold(), PlayerPrefs_Manager.Get_Gold() + (int)(goldCollected) * multiX, 1);
         EfxManager.ins.Set_GoldTop_FX();
 

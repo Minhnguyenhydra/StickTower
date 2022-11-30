@@ -23,6 +23,7 @@ public class GameController : MonoBehaviour
     //LoadingPanel loading;
     public void BackToLoading()
     {
+        SoundManager.Ins.PlayFx(FxID.click);
         //loading.OpenMe();
         Datacontroller.instance.ShowLoadingPanel(true, "Loading");
     }
@@ -80,6 +81,7 @@ public class GameController : MonoBehaviour
         if (level != null)
         {
             levelController = Instantiate(level);
+            EventController.PLAY_LEVEL_DELETE_EVENT((DataParam.currentLevel + 1));
             //   levelController.DisplayLockOrUnlock();
         }
         else
