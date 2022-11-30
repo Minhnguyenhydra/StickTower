@@ -47,14 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 938a15601901da54391004f28c355b32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spsNormal:
-  - {fileID: 21300000, guid: 43db04d6c4e588a4fa5dd0b13c95e702, type: 3}
-  - {fileID: 21300000, guid: 1e6da130a3c5c35439cbefe6568979fe, type: 3}
-  - {fileID: 21300000, guid: 0fa36b540e1c17a4f948430a41b5639f, type: 3}
-  - {fileID: 21300000, guid: 0abb41e2ee0ec5a47a73cdf4c6d1b8b3, type: 3}
-  spsArea:
-  - {fileID: 21300000, guid: a5f3db71111304a4a962372f3c03aea0, type: 3}
-  spChallenge:
+  sps:
   - {fileID: 21300000, guid: 044dbb77b9c0a6e42be75d3a1329a062, type: 3}
   sp:
   - {fileID: 2145792800504682819}

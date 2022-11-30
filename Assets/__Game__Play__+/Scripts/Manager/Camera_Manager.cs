@@ -33,9 +33,28 @@ public class Camera_Manager : Singleton<Camera_Manager>
     GameObject bgOld;
     private void Awake()
     {
-        bg = Instantiate(Resources.Load<ScrollBG>("BG/BG" + PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge()));
-
-        bg.SetUp(PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge());
+        Debug.LogError("====== level:" + PlayerPrefs_Manager.Get_Index_Level_Normal());
+        if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 1)
+        {
+            // bg = Instantiate(Resources.Load<ScrollBG>("BG/BG" + PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge()));
+            if (PlayerPrefs_Manager.Get_Index_Level_Normal() < 11)
+            {
+                bg = Instantiate(Resources.Load<ScrollBG>("BG/BG" + PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() + "_XMAS"));
+            }
+            else
+            {
+                bg = Instantiate(Resources.Load<ScrollBG>("BG/BG" + PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge()));
+            }
+        }
+        else if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 2)
+        {
+            bg = Instantiate(Resources.Load<ScrollBG>("BG/BG" + PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge()));
+        }
+        else if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 3)
+        {
+            bg = Instantiate(Resources.Load<ScrollBG>("BG/BG" + PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() + "_XMAS"));
+        }
+        bg.SetUp();
         bgOld = GameObject.Find("==Obj==Canvas_BG");
         if (bgOld != null)
             bgOld.SetActive(false);

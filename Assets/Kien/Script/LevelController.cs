@@ -45,7 +45,7 @@ public class LevelController : MonoBehaviour, IDragHandler, IEndDragHandler
             correctObj = stepOfLevel[currentStep].correctObj;
             stepOfLevel[currentStep].gameObject.SetActive(true);
             StartCoroutine(IELevel());
-
+            DataParam.canDelete = true;
             GameController.instance.eraser.SetActive(true);
         }
         else if (currentStep == stepOfLevel.Count)

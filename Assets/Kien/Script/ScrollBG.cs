@@ -4,37 +4,18 @@ using UnityEngine;
 using UnityEngine.UI;
 public class ScrollBG : MonoBehaviour
 {
-    public Sprite[] spsNormal,spsArea,spChallenge;
+    public Sprite[] sps;
     public SpriteRenderer[] sp;
     int currentBG;
 
-    public void SetUp(int type)
+    public void SetUp()
     {
-        if (type == 1)
-        {
-            currentBG = Random.Range(0, spsNormal.Length);
-            for (int i = 0; i < sp.Length; i++)
-            {
-                sp[i].sprite = spsNormal[currentBG];
-            }
-        }
-        else if(type == 2)
-        {
-            currentBG = Random.Range(0, spsArea.Length);
-            for (int i = 0; i < sp.Length; i++)
-            {
-                sp[i].sprite = spsArea[currentBG];
-            }
-        }   
-        else
-        {
-            currentBG = Random.Range(0, spChallenge.Length);
-            for (int i = 0; i < sp.Length; i++)
-            {
-                sp[i].sprite = spChallenge[currentBG];
-            }
-        }    
 
+        currentBG = Random.Range(0, sps.Length);
+        for (int i = 0; i < sp.Length; i++)
+        {
+            sp[i].sprite = sps[currentBG];
+        }
 
 
         transform.localScale = new Vector3(1, 1, 1);
@@ -45,7 +26,7 @@ public class ScrollBG : MonoBehaviour
         float worldScreenHeight = Camera.main.orthographicSize * 2f;
         float worldScreenWidth = worldScreenHeight / Screen.height * Screen.width;
 
-        transform.localScale = new Vector3((worldScreenWidth / width) * 1.1f, (worldScreenHeight / height) * 1.1f, 1f);
+        transform.localScale = new Vector3((worldScreenWidth / width) * 1.5f, (worldScreenHeight / height) * 1.1f, 1f);
     }
 
 }

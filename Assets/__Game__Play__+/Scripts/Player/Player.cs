@@ -980,8 +980,11 @@ public class Player : MonoBehaviour
     #region Set action Boss last Level
     public void Set_Config_Boss_Die_End_Level()
     {
-        floor_stay.list_Point_In_Floor[0].enemy_Attack_This_Point.Set_Show_Blood();
-        floor_stay.list_Point_In_Floor[0].enemy_Attack_This_Point.Set_Anim_Die();
+        if (floor_stay.list_Point_In_Floor[0].enemy_Attack_This_Point != null)
+        {
+            floor_stay.list_Point_In_Floor[0].enemy_Attack_This_Point.Set_Show_Blood();
+            floor_stay.list_Point_In_Floor[0].enemy_Attack_This_Point.Set_Anim_Die();
+        }
     }
     public void Set_Config_Boss_Win_End_Level()
     {

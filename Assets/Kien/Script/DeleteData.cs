@@ -13,6 +13,7 @@ public class DeleteData : ScriptableObject
         public struct ResourceSprite
         {
             public Sprite[] sp;
+            public Sprite[] iconSp;
         }
     }
 }

@@ -5,6 +5,8 @@ using DG.Tweening;
 [DefaultExecutionOrder(5)]
 public class House_Build : MonoBehaviour
 {
+    public SpriteRenderer mai;
+    public Sprite[] nenSp,maiSp;
     public Enum_TypeHouse houseType;
     public Transform tf_Mai_Nha;//đây là cái Mái Nhà
     public Transform tf_Nen;
@@ -37,12 +39,41 @@ public class House_Build : MonoBehaviour
         
         Drag_Drop_Manager.Instance.list_House_Build.Add(this);
     }
-
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+        if (obj_Nen_Enemy == null)
+            return;
+        if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 1)
+        {
+            // bg = Instantiate(Resources.Load<ScrollBG>("BG/BG" + PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge()));
+            if (PlayerPrefs_Manager.Get_Index_Level_Normal() < 11)
+            {
+                obj_Nen_Enemy.GetComponent<SpriteRenderer>().sprite = nenSp[1];
+                mai.sprite = maiSp[1];
+            }
+            else
+            {
+                obj_Nen_Enemy.GetComponent<SpriteRenderer>().sprite = nenSp[0];
+                mai.sprite = maiSp[0];
+            }
+        }
+        else if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 2)
+        {
+            obj_Nen_Enemy.GetComponent<SpriteRenderer>().sprite = nenSp[0];
+            mai.sprite = maiSp[0];
+        }
+        else if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 3)
+        {
+            obj_Nen_Enemy.GetComponent<SpriteRenderer>().sprite = nenSp[1];
+            mai.sprite = maiSp[1];
+        }
+
     }
+    // Update is called once per frame
+    //void Update()
+    //{
+
+    //}
     public void Set_Floor_Fall_Downt(Floor _this_Floor_Downt)
     {
         number_Floor_Remain--;

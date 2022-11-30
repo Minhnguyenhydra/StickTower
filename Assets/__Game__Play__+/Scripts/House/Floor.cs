@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Floor : MonoBehaviour//obj gắn Script này có Colider
 {
+    public Sprite[] nenSp;
     public bool isLocking;
     public Transform tf_Floor;
     [Tooltip("Nếu là Level Rewward chỉ cần điền 2 điểm: đầu và điểm cuối vào list này")]
@@ -40,6 +41,32 @@ public class Floor : MonoBehaviour//obj gắn Script này có Colider
             Debug.Log("house_Build_Of_This__ NULL" + this.gameObject.name);
         }
 #endif
+        // 0 1 2 3 4 5
+
+        if (obj_Floor_Enemy == null)
+            return;
+        if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 1)
+        {
+            // bg = Instantiate(Resources.Load<ScrollBG>("BG/BG" + PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge()));
+            if (PlayerPrefs_Manager.Get_Index_Level_Normal() < 11)
+            {
+                obj_Floor_Enemy.GetComponent<SpriteRenderer>().sprite = nenSp[Random.Range(3,6)];
+            }
+            else
+            {
+                obj_Floor_Enemy.GetComponent<SpriteRenderer>().sprite = nenSp[Random.Range(0, 3)];
+            }
+        }
+        else if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 2)
+        {
+            obj_Floor_Enemy.GetComponent<SpriteRenderer>().sprite = nenSp[Random.Range(0, 3)];
+        }
+        else if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 3)
+        {
+            obj_Floor_Enemy.GetComponent<SpriteRenderer>().sprite = nenSp[Random.Range(3, 6)];
+        }
+
+
     }
 
     public void Set_Open_Reward()

@@ -128,15 +128,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b850648a66aa6f945bfa1c3a5b9699df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nenSp:
+  - {fileID: 21300000, guid: 2ada202a5017785448686981857048b8, type: 3}
+  - {fileID: 21300000, guid: 3f1afe10a7d71e7468470df3f3fab40a, type: 3}
+  - {fileID: 21300000, guid: b6a7fec0c12758543a6a0867d168849f, type: 3}
+  - {fileID: 21300000, guid: ea566f2ac95e7ff4c90cc2d05ed458f6, type: 3}
+  - {fileID: 21300000, guid: 149f340595b97284d90d818c00abb342, type: 3}
+  - {fileID: 21300000, guid: 0fb301961e2aea149a7dc6693422e5be, type: 3}
+  isLocking: 0
   tf_Floor: {fileID: 2243400755946876681}
   list_Point_In_Floor: []
+  stroke_Blue: {fileID: 0}
   is_Floor_Last_Of_house: 0
   is_Floor_Last_Of_Level: 0
   obj_Floor_Player_To_Change: {fileID: 2243400754717780565}
   obj_Floor_Enemy: {fileID: 7046344317223501275}
   tf_Point_End_Level: {fileID: 0}
+  parent_3_Chest: {fileID: 0}
   is_Floor_Off_Tree_Empty: 0
   isReady_Downt: 0
+  isFloorOpenedReward: 0
   house_Build_Of_This: {fileID: 0}
 --- !u!65 &2243400755946876683
 BoxCollider:

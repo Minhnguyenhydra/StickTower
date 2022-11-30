@@ -380,6 +380,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b462436fd3218044966eebf5e986ac3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mai: {fileID: 7568951595871065043}
+  nenSp:
+  - {fileID: 21300000, guid: 2ec58c0fe4fc35a498b6d36bfe30c844, type: 3}
+  - {fileID: 21300000, guid: 2655c1340953e9e40ad8401fefbb43bd, type: 3}
+  maiSp:
+  - {fileID: 21300000, guid: 02635c593c30091469b36e3c4082f5f6, type: 3}
+  - {fileID: 21300000, guid: 2658b04f28fdee644a3849dadc277189, type: 3}
   houseType: 1
   tf_Mai_Nha: {fileID: 3806242788869944776}
   tf_Nen: {fileID: 3806242787801483323}
@@ -388,7 +395,14 @@ MonoBehaviour:
   obj_Mai_Do: {fileID: 3806242787344263583}
   obj_Nen_Player: {fileID: 3806242787363414663}
   obj_Nen_Enemy: {fileID: 5512606953321668067}
+  number_Floor_Remain: 0
+  isHouseLast_Level: 0
+  isSenconHouse_LevelReward: 0
+  indext_House: 0
   tf_This_House: {fileID: 3806242787801483323}
+  index_lv_26: 0
+  isGo_ToaNha_2: 0
+  is_Trigger_add_To_4: 0
 --- !u!1 &3806242787673088302
 GameObject:
   m_ObjectHideFlags: 0
@@ -753,7 +767,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5512606953321668067}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0598, y: 2.1965, z: 0}
+  m_LocalPosition: {x: -0.0598, y: 2.1965, z: -0.001}
   m_LocalScale: {x: 2.3165913, y: 2.3311958, z: 1}
   m_Children: []
   m_Father: {fileID: 3806242787367258266}
@@ -798,7 +812,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 20
   m_Sprite: {fileID: 21300000, guid: 2ec58c0fe4fc35a498b6d36bfe30c844, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

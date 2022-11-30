@@ -10,13 +10,26 @@ public class BouderSelectLevel : MonoBehaviour
     GameObject lockObj, unlockObj;
     [SerializeField] Text numberPartText;
     public int index;
+    public Image icon;
+    int part, totalPart;
     public void Display()
     {
         if (Datacontroller.instance.saveData.saveDelete.infoSaveDelete[index].unlock)
         {
             lockObj.SetActive(false);
             unlockObj.SetActive(true);
-            numberPartText.text = Datacontroller.instance.saveData.saveDelete.infoSaveDelete[index].takeSprite.FindAll(x=>x == true).Count+ "/" + Datacontroller.instance.saveData.saveDelete.infoSaveDelete[index].takeSprite.Count;
+            part = Datacontroller.instance.saveData.saveDelete.infoSaveDelete[index].takeSprite.FindAll(x => x == true).Count;
+            totalPart = Datacontroller.instance.saveData.saveDelete.infoSaveDelete[index].takeSprite.Count;
+            numberPartText.text = part + "/" + totalPart;
+
+            if (part < totalPart)
+            {
+                icon.sprite = Datacontroller.instance.deleteData.infoDelete[index].resourceSprite.iconSp[0];
+            }
+            else
+            {
+                icon.sprite = Datacontroller.instance.deleteData.infoDelete[index].resourceSprite.iconSp[1];
+            }    
         }
         else
         {
