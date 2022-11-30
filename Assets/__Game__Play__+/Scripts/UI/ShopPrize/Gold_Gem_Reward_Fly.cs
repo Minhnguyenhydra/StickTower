@@ -47,13 +47,13 @@ public class Gold_Gem_Reward_Fly : MonoBehaviour
         {
             EfxManager.ins.Set_Step_By_Step_Inscrease(PlayerPrefs_Manager.Get_Gold(), PlayerPrefs_Manager.Get_Gold() + ggold, canvasShop_Prize.txt_Gold,1);
             PlayerPrefs_Manager.Set_Gold(PlayerPrefs_Manager.Get_Gold() + ggold);
-            EfxManager.ins.GetGoldFx(rect_Gold_Reward_Fly.position, canvasShop_Prize.txt_Gold.gameObject.transform.position);
+           // EfxManager.ins.GetGoldFx(rect_Gold_Reward_Fly.position, canvasShop_Prize.txt_Gold.gameObject.transform.position);
         }
         else if(ggem != 0)
         {
             EfxManager.ins.Set_Step_By_Step_Inscrease(PlayerPrefs_Manager.Get_Gem(), PlayerPrefs_Manager.Get_Gem() + ggem, canvasShop_Prize.txt_Gem, 1);
             PlayerPrefs_Manager.Set_Gem(PlayerPrefs_Manager.Get_Gem() + ggem);
-            EfxManager.ins.GetGemFx(rect_Gold_Reward_Fly.position, canvasShop_Prize.txt_Gem.gameObject.transform.position);
+          //  EfxManager.ins.GetGemFx(rect_Gold_Reward_Fly.position, canvasShop_Prize.txt_Gem.gameObject.transform.position);
         }
 
         if (rect_Gold_Reward_Fly != null)

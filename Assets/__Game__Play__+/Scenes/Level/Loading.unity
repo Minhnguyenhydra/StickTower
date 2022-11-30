@@ -929,7 +929,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8afe0acc02f340341bbff1017807d6ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debug: 0
+  debug: 1
   saveData:
     session: 0
     day: 0
@@ -5776,6 +5776,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5861756894188218954}
     m_Modifications:
+    - target: {fileID: 1742185780102947636, guid: 35e5dd44d7b6ffc4bbf96a8d8c1d2c97, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -107
+      objectReference: {fileID: 0}
     - target: {fileID: 8797440987499217867, guid: 35e5dd44d7b6ffc4bbf96a8d8c1d2c97, type: 3}
       propertyPath: m_Name
       value: Canvas_Game_Play

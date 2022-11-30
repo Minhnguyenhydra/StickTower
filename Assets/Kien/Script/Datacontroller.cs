@@ -92,6 +92,8 @@ public class Datacontroller : MonoBehaviour
     public void TakePartDelete(int indexSource, int indexPart)
     {
         saveData.saveDelete.infoSaveDelete[indexSource].takeSprite[indexPart] = true;
+        DataParam.newPartDelete = true;
+        DataParam.displayWarningPart();
     }
     private void Awake()
     {

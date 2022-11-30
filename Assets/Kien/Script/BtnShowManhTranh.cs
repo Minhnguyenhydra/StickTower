@@ -5,6 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class BtnShowManhTranh : MonoBehaviour
 {
+    public GameObject warning;
+    void DisplayWarningPart()
+    {
+        Debug.LogError("=========" + DataParam.newPartDelete);
+        warning.SetActive(DataParam.newPartDelete);
+    }    
+    private void Start()
+    {
+        DataParam.displayWarningPart = DisplayWarningPart;
+        DataParam.displayWarningPart();
+    }
     public void BtnManhTranh()
     {
         Datacontroller.instance.ShowLoadingPanel(true,"DeleteScene");
@@ -17,6 +28,8 @@ public class BtnShowManhTranh : MonoBehaviour
         else
         {
             EventController.GAME_PLAY("icon_manhtranh_click");
-        }    
+        }
+
+        DataParam.newPartDelete = false;
     }
 }

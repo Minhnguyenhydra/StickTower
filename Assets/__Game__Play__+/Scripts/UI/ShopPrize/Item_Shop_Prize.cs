@@ -30,6 +30,16 @@ public class Item_Shop_Prize : MonoBehaviour
     // Update is called once per frame
     IEnumerator Delay_Increa_Gem()
     {
+        if (gold_Gem_Reward_Fly.ggold != 0)
+        {
+            EfxManager.ins.GetGoldFx(gold_Gem_Reward_Fly.rect_Gold_Reward_Fly.position, canvasShop_Prize.txt_Gold.gameObject.transform.position);
+        }
+        else if (gold_Gem_Reward_Fly.ggem != 0)
+        {
+
+            EfxManager.ins.GetGemFx(gold_Gem_Reward_Fly.rect_Gold_Reward_Fly.position, canvasShop_Prize.txt_Gem.gameObject.transform.position);
+        }
+
         yield return Cache.GetWFS(0.5f);
         gold_Gem_Reward_Fly.Set_Fly();
     }
