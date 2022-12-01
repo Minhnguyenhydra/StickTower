@@ -423,10 +423,10 @@ public class Constant
     public static int[] Get_Reward_Gold_Gem_By_Pay_Gold(int level)
     {
         if (level == 22)
-            return new int[] { 200, 1 };
+            return new int[] { 1500, 5 };
 
         else
-            return new int[] { 100, 1 };
+            return new int[] { 1500, 5 };
     }
     public static string Get_Tile_Game_Play_By_Level(int _level)
     {

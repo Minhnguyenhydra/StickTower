@@ -44,6 +44,9 @@ public class CanvasMainMenu : UICanvas
             }
         }
         ((CanvasFade)UIManager.Ins.GetUI(UIID.UICFade)).Set_Fade_In();
+
+        int idSkin = PlayerPrefs_Manager.Get_ID_Name_Skin_Wearing();
+        Set_Skin(Constant.Get_Skin_Name_By_Id(idSkin));
     }
     #region
 
