@@ -221,10 +221,7 @@ public class CanvasGamePlay : UICanvas
     {
         GameManager.Ins.GMState = GameManager.GameState.Stoped;
         level_curent += 1;
-        if (level_curent == 51)
-        {
-            level_curent = 30;
-        }
+        level_curent = Mathf.Min(level_curent, 70);
         anim_GamePlay.SetTrigger(Constant.Trigger_GamePlay_Close);
         StartCoroutine(IE_Delay_SkipLevel());
 

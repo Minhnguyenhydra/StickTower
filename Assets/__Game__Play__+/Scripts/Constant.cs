@@ -537,26 +537,46 @@ public class Constant
             case 50:
                 return "Level 50 - Kill enemies";
             case 51:
-                return "Level 51 - Save Ally";
+                return "Level 51 - Kill enemies";
             case 52:
-                return "Level 52 - Save Ally";
+                return "Level 52 - Kill enemies";
             case 53:
                 return "Level 53 - Save Ally";
             case 54:
-                return "Level 54 - Save Ally";
+                return "Level 54 - Kill enemies";
             case 55:
-                return "Level 55 - Save Ally";
+                return "Level 55 - Kill enemies";
             case 56:
-                return "Level 56 - Save Ally";
+                return "Level 56 - Kill enemies";
             case 57:
-                return "Level 57 - Save Ally";
+                return "Level 57 - Kill enemies";
             case 58:
-                return "Level 58 - Save Ally";
+                return "Level 58 - Kill enemies";
             case 59:
-                return "Level 59 - Save Ally";
+                return "Level 59 - Bonus level";
             case 60:
                 return "Level 60 - Save Ally";
-            
+            case 61:
+                return "Level 61 - Kill enemies";
+            case 62:
+                return "Level 62 - Save Ally";
+            case 63:
+                return "Level 63 - Kill enemies";
+            case 64:
+                return "Level 64 - Kill enemies";
+            case 65:
+                return "Level 65 - Save Ally";
+            case 66:
+                return "Level 66 - Kill enemies";
+            case 67:
+                return "Level 67 - Kill enemies";
+            case 68:
+                return "Level 68 -Kill enemies";
+            case 69:
+                return "Level 69 - Kill enemies";
+            case 70:
+                return "Level 70 - Kill enemies";
+
             default:
                 return "Level 0 - Save Ally";
         }

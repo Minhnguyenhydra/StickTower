@@ -117,14 +117,7 @@ public class PlayerPrefs_Manager
     #region Level
     public static int Get_Index_Level_Normal()
     {
-        if (PlayerPrefs.GetInt(Constant.Player_IndexLevel_Normal, 0) > 50)
-        {
-            return 30;
-        }
-        else
-        {
-            return PlayerPrefs.GetInt(Constant.Player_IndexLevel_Normal, 0);
-        }
+        return Mathf.Min(PlayerPrefs.GetInt(Constant.Player_IndexLevel_Normal, 0), 70);
     }
     public static int Get_Index_Level_Area()
     {
