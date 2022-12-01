@@ -1,0 +1,51 @@
+{
+"skeleton": {
+	"hash": "NtsFycI1WoN7NjR/6Vc8Ux8QrA0",
+	"spine": "3.8.85",
+	"x": 115,
+	"y": -315,
+	"width": 242,
+	"height": 263,
+	"images": "./images/",
+	"audio": "C:/Users/PC/Downloads/Collection"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "COLLECTION", "parent": "root", "x": 235.64, "y": -325.22 },
+	{ "name": "Home_Icon_Collection", "parent": "COLLECTION", "y": 180.12 }
+],
+"slots": [
+	{ "name": "Home_Icon_Collection", "bone": "Home_Icon_Collection", "attachment": "Home_Icon_Collection" },
+	{ "name": "Layer 9 copy 2", "bone": "COLLECTION", "attachment": "Layer 9 copy 2" },
+	{ "name": "COLLECTION", "bone": "COLLECTION", "attachment": "COLLECTION" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"COLLECTION": {
+				"COLLECTION": { "x": 1.36, "y": 43.22, "width": 170, "height": 22 }
+			},
+			"Home_Icon_Collection": {
+				"Home_Icon_Collection": { "x": -8.64, "y": -11.9, "width": 194, "height": 210 }
+			},
+			"Layer 9 copy 2": {
+				"Layer 9 copy 2": { "x": 0.36, "y": 38.72, "width": 242, "height": 57 }
+			}
+		}
+	}
+],
+"animations": {
+	"animation": {
+		"bones": {
+			"Home_Icon_Collection": {
+				"scale": [
+					{ "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.5, "x": 1.116, "y": 1.116, "curve": 0.25, "c3": 0.75 },
+					{ "time": 1 }
+				]
+			}
+		}
+	}
+}
+}

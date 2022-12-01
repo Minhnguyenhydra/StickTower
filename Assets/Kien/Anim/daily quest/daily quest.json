@@ -1,0 +1,51 @@
+{
+"skeleton": {
+	"hash": "C0G77yl5VdWSYXn1A29LvyWpz0E",
+	"spine": "3.8.85",
+	"x": 115,
+	"y": -309,
+	"width": 242,
+	"height": 250,
+	"images": "C:/Users/PC/Downloads/daily quest/images/",
+	"audio": "C:\\Users\\PC\\Downloads\\daily quest"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "Home_Icon_Quest", "parent": "root", "x": 234.11, "y": -318.24 },
+	{ "name": "Home_Icon_Quest3", "parent": "Home_Icon_Quest", "x": 4.48, "y": 149.2 }
+],
+"slots": [
+	{ "name": "Home_Icon_Quest", "bone": "Home_Icon_Quest3", "attachment": "Home_Icon_Quest" },
+	{ "name": "Layer 9 copy 6", "bone": "Home_Icon_Quest", "attachment": "Layer 9 copy 6" },
+	{ "name": "daily QUesT", "bone": "Home_Icon_Quest", "attachment": "daily QUesT" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"Home_Icon_Quest": {
+				"Home_Icon_Quest": { "x": 1.91, "y": 6.54, "width": 233, "height": 207 }
+			},
+			"Layer 9 copy 6": {
+				"Layer 9 copy 6": { "x": 1.89, "y": 37.74, "width": 242, "height": 57 }
+			},
+			"daily QUesT": {
+				"daily QUesT": { "x": 1.89, "y": 36.24, "width": 178, "height": 28 }
+			}
+		}
+	}
+],
+"animations": {
+	"animation": {
+		"bones": {
+			"Home_Icon_Quest3": {
+				"scale": [
+					{ "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.5, "x": 1.117, "y": 1.117, "curve": 0.25, "c3": 0.75 },
+					{ "time": 1 }
+				]
+			}
+		}
+	}
+}
+}

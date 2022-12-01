@@ -1,0 +1,51 @@
+{
+"skeleton": {
+	"hash": "Yor0YnRaxjE50sWwH33hx9XAPzk",
+	"spine": "3.8.85",
+	"x": 115,
+	"y": -299,
+	"width": 243,
+	"height": 231,
+	"images": "./images/",
+	"audio": "C:/Users/PC/Downloads/challenge"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "CHALLENGE", "parent": "root", "x": 237.72, "y": -306.78 },
+	{ "name": "Home_Icon_Challenge", "parent": "CHALLENGE", "x": -2.44, "y": 151.03 }
+],
+"slots": [
+	{ "name": "Home_Icon_Challenge", "bone": "Home_Icon_Challenge", "attachment": "Home_Icon_Challenge" },
+	{ "name": "Home_Icon_Name copy", "bone": "CHALLENGE", "attachment": "Home_Icon_Name copy" },
+	{ "name": "CHALLENGE", "bone": "CHALLENGE", "attachment": "CHALLENGE" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"CHALLENGE": {
+				"CHALLENGE": { "x": -1.22, "y": 39.78, "width": 161, "height": 22 }
+			},
+			"Home_Icon_Challenge": {
+				"Home_Icon_Challenge": { "x": 0.72, "y": -4.25, "width": 198, "height": 184 }
+			},
+			"Home_Icon_Name copy": {
+				"Home_Icon_Name copy": { "x": -1.22, "y": 36.78, "width": 243, "height": 58 }
+			}
+		}
+	}
+],
+"animations": {
+	"animation": {
+		"bones": {
+			"Home_Icon_Challenge": {
+				"scale": [
+					{ "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.5, "x": 1.131, "y": 1.131, "curve": 0.25, "c3": 0.75 },
+					{ "time": 1 }
+				]
+			}
+		}
+	}
+}
+}

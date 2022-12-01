@@ -1,0 +1,51 @@
+{
+"skeleton": {
+	"hash": "iIBNZuhiwjvyaRpcrlGawh5DoNQ",
+	"spine": "3.8.85",
+	"x": 115,
+	"y": -311,
+	"width": 243,
+	"height": 255,
+	"images": "C:/Users/PC/Downloads/skin/images/",
+	"audio": "C:\\Users\\PC\\Downloads\\skin"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "Home_Icon_Name", "parent": "root", "x": 249.36, "y": -316.93 },
+	{ "name": "Home_Icon_Skin", "parent": "Home_Icon_Name", "x": -1.27, "y": 156.98 }
+],
+"slots": [
+	{ "name": "Home_Icon_Skin", "bone": "Home_Icon_Skin", "attachment": "Home_Icon_Skin" },
+	{ "name": "Home_Icon_Name", "bone": "Home_Icon_Name", "attachment": "Home_Icon_Name" },
+	{ "name": "SKIN", "bone": "Home_Icon_Name", "attachment": "SKIN" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"Home_Icon_Name": {
+				"Home_Icon_Name": { "x": -12.86, "y": 34.93, "width": 243, "height": 58 }
+			},
+			"Home_Icon_Skin": {
+				"Home_Icon_Skin": { "x": -8.1, "y": 2.94, "width": 184, "height": 202 }
+			},
+			"SKIN": {
+				"SKIN": { "x": -13.36, "y": 36.43, "width": 66, "height": 23 }
+			}
+		}
+	}
+],
+"animations": {
+	"animation": {
+		"bones": {
+			"Home_Icon_Skin": {
+				"scale": [
+					{ "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.5, "x": 1.12, "y": 1.12, "curve": 0.25, "c3": 0.75 },
+					{ "time": 1 }
+				]
+			}
+		}
+	}
+}
+}

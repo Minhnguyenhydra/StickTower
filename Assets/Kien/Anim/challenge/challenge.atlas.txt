@@ -1,0 +1,27 @@
+
+challenge.png
+size: 248,248
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+CHALLENGE
+  rotate: true
+  xy: 202, 85
+  size: 161, 22
+  orig: 161, 22
+  offset: 0, 0
+  index: -1
+Home_Icon_Challenge
+  rotate: false
+  xy: 2, 62
+  size: 198, 184
+  orig: 198, 184
+  offset: 0, 0
+  index: -1
+Home_Icon_Name copy
+  rotate: false
+  xy: 2, 2
+  size: 243, 58
+  orig: 243, 58
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,27 @@
+
+collection.png
+size: 248,260
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+COLLECTION
+  rotate: true
+  xy: 214, 85
+  size: 170, 22
+  orig: 170, 22
+  offset: 0, 0
+  index: -1
+Home_Icon_Collection
+  rotate: true
+  xy: 2, 61
+  size: 194, 210
+  orig: 194, 210
+  offset: 0, 0
+  index: -1
+Layer 9 copy 2
+  rotate: false
+  xy: 2, 2
+  size: 242, 57
+  orig: 242, 57
+  offset: 0, 0
+  index: -1

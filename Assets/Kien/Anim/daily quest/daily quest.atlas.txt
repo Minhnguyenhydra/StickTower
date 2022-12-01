@@ -1,0 +1,27 @@
+
+daily quest.png
+size: 272,268
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Home_Icon_Quest
+  rotate: true
+  xy: 2, 32
+  size: 233, 207
+  orig: 233, 207
+  offset: 0, 0
+  index: -1
+Layer 9 copy 6
+  rotate: true
+  xy: 211, 23
+  size: 242, 57
+  orig: 242, 57
+  offset: 0, 0
+  index: -1
+daily QUesT
+  rotate: false
+  xy: 2, 2
+  size: 178, 28
+  orig: 178, 28
+  offset: 0, 0
+  index: -1

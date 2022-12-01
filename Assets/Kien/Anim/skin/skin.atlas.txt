@@ -1,0 +1,27 @@
+
+skin.png
+size: 248,248
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Home_Icon_Name
+  rotate: true
+  xy: 188, 2
+  size: 243, 58
+  orig: 243, 58
+  offset: 0, 0
+  index: -1
+Home_Icon_Skin
+  rotate: false
+  xy: 2, 43
+  size: 184, 202
+  orig: 184, 202
+  offset: 0, 0
+  index: -1
+SKIN
+  rotate: false
+  xy: 2, 18
+  size: 66, 23
+  orig: 66, 23
+  offset: 0, 0
+  index: -1

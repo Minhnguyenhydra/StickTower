@@ -1,0 +1,51 @@
+{
+"skeleton": {
+	"hash": "zQ52qqkCxjyfpySc41BcPC4lB1k",
+	"spine": "3.8.85",
+	"x": 115,
+	"y": -314,
+	"width": 243,
+	"height": 260,
+	"images": "C:/Users/PC/Downloads/arena/images/",
+	"audio": "C:\\Users\\PC\\Downloads\\arena"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "ARENA", "parent": "root", "x": 238.03, "y": -319.86 },
+	{ "name": "Home_Icon_Arena", "parent": "ARENA", "x": -0.58, "y": 149.9 }
+],
+"slots": [
+	{ "name": "Home_Icon_Arena", "bone": "Home_Icon_Arena", "attachment": "Home_Icon_Arena" },
+	{ "name": "Home_Icon_Name copy 2", "bone": "ARENA", "attachment": "Home_Icon_Name copy 2" },
+	{ "name": "ARENA", "bone": "ARENA", "attachment": "ARENA" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"ARENA": {
+				"ARENA": { "x": 3.47, "y": 39.36, "width": 99, "height": 23 }
+			},
+			"Home_Icon_Arena": {
+				"Home_Icon_Arena": { "x": 3.55, "y": 12.46, "width": 224, "height": 207 }
+			},
+			"Home_Icon_Name copy 2": {
+				"Home_Icon_Name copy 2": { "x": -1.53, "y": 34.86, "width": 243, "height": 58 }
+			}
+		}
+	}
+],
+"animations": {
+	"animation": {
+		"bones": {
+			"Home_Icon_Arena": {
+				"scale": [
+					{ "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.5, "x": 1.137, "y": 1.137, "curve": 0.25, "c3": 0.75 },
+					{ "time": 1 }
+				]
+			}
+		}
+	}
+}
+}

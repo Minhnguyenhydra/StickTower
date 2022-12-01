@@ -1,0 +1,27 @@
+
+arena.png
+size: 272,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ARENA
+  rotate: false
+  xy: 2, 2
+  size: 99, 23
+  orig: 99, 23
+  offset: 0, 0
+  index: -1
+Home_Icon_Arena
+  rotate: true
+  xy: 2, 27
+  size: 224, 207
+  orig: 224, 207
+  offset: 0, 0
+  index: -1
+Home_Icon_Name copy 2
+  rotate: true
+  xy: 211, 8
+  size: 243, 58
+  orig: 243, 58
+  offset: 0, 0
+  index: -1
