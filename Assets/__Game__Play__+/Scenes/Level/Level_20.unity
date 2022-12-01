@@ -329,6 +329,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b462436fd3218044966eebf5e986ac3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mai: {fileID: 0}
+  nenSp: []
+  maiSp: []
   houseType: 2
   tf_Mai_Nha: {fileID: 0}
   tf_Nen: {fileID: 0}
@@ -1993,7 +1996,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8797440987499217867, guid: 35e5dd44d7b6ffc4bbf96a8d8c1d2c97, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8797440987499217869, guid: 35e5dd44d7b6ffc4bbf96a8d8c1d2c97, type: 3}
       propertyPath: m_Pivot.x
@@ -3315,6 +3318,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 394060274}
     m_Modifications:
+    - target: {fileID: 5001714265004086284, guid: ce14ef297ed9253408f622e8690ce469, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8343629655301455764, guid: ce14ef297ed9253408f622e8690ce469, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3402,6 +3409,10 @@ PrefabInstance:
     - target: {fileID: 8343629655301455765, guid: ce14ef297ed9253408f622e8690ce469, type: 3}
       propertyPath: m_Name
       value: CanvasWin
+      objectReference: {fileID: 0}
+    - target: {fileID: 8343629655301455765, guid: ce14ef297ed9253408f622e8690ce469, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8343629657060541600, guid: ce14ef297ed9253408f622e8690ce469, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -8340,6 +8351,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18d122c0c9ab7e04198c9cc68aa8cb96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isChallengeMode: 0
+  lastLevel: 0
   enemyBoss_auto_Asign: {fileID: 0}
   GMState: 0
 --- !u!1 &1989891923
