@@ -213,9 +213,13 @@ public class CanvasWinQ : UICanvas
     }
     public void Set_Gold_EFX()
     {
-        EfxManager.ins.Set_GoldTop_FX();
-        EfxManager.ins.Set_Gold_Fly_Pig_OK();
-        Invoke("Set_Up_Gold_Fly", 1.5f);
+        if (EfxManager.ins != null)
+        {
+            EfxManager.ins.Set_GoldTop_FX();
+            EfxManager.ins.Set_Gold_Fly_Pig_OK();
+            Invoke("Set_Up_Gold_Fly", 1.5f);
+        }
+
     }
     public void Set_update_Gold()
     {
@@ -624,8 +628,8 @@ public class CanvasWinQ : UICanvas
             () =>
             {
                 txt_Gold.text = _score.ToString("N0");
-               // PlayerPrefs_Manager.Set_Gold(_score);
-               // Debug.LogError("========== vao day nua");
+                // PlayerPrefs_Manager.Set_Gold(_score);
+                // Debug.LogError("========== vao day nua");
             });
     }
 
