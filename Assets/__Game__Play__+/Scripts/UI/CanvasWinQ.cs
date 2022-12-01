@@ -66,6 +66,7 @@ public class CanvasWinQ : UICanvas
 
     private void OnEnable()
     {
+        Set_Init_Gold_Gem_Title();
         if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 1)
         {
             EventController.WIN_LEVEL_EVENT(PlayerPrefs_Manager.Get_Index_Level_Normal());
@@ -74,14 +75,19 @@ public class CanvasWinQ : UICanvas
                 DataParam.ActionRewardPayGoldToPlay();
                 DataParam.ActionRewardPayGoldToPlay = null;
             }
+            Set_Init();
         }
         else if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 3)
         {
             EventController.WIN_LEVEL_EVENT_CHALLENGE(PlayerPrefs_Manager.Get__QLevel_Challenge());
             this.PostEvent(QuestManager.QuestID.Quest06, 1);
+            SetRewardChallenge();
+        }
+        else
+        {
+            Set_Init();
         }
 
-        Set_Init();
 
 
         if (isArenaMode)
@@ -95,7 +101,7 @@ public class CanvasWinQ : UICanvas
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -109,6 +115,21 @@ public class CanvasWinQ : UICanvas
         //rewardTxt.text = ((int)((int)(gemCollected * wallXTime) * multiX)).ToString();
         reward_ADsTxt.text = ((int)((int)(goldCollected) * multiX)).ToString();
     }
+
+    void SetRewardChallenge()
+    {
+        SoundManager.Ins.PlayFx(FxID.win);
+        isFist_Click = false;
+        goldCollected = PlayerPrefs_Manager.Get_Gold() + 200;
+        txt_Gold_Boot.text = "200";
+        txt_Gem_Boot.text = "1";
+        StartCoroutine(Set_Delay_Show_No_Thank());
+        PlayerPrefs_Manager.Set_Gold(goldCollected);
+        PlayerPrefs_Manager.Set_Gem(PlayerPrefs_Manager.Get_Gem() + 1);
+
+        Set_Spawn_Icon(7);
+        Set_Init_Gold_Gem_Title();
+    }
     public void Set_Init()
     {
         SoundManager.Ins.PlayFx(FxID.win);
@@ -116,7 +137,7 @@ public class CanvasWinQ : UICanvas
         //
         isFist_Click = false;
         int level = PlayerPrefs_Manager.Get_Index_Level_Normal() - 1;//trước khi vào đây đã tăng level ở Gamanager rồi
-        if(level == 0)
+        if (level == 0)
         {
             if (obj_Hand_Tut_Lv_0 != null)
             {
@@ -156,7 +177,7 @@ public class CanvasWinQ : UICanvas
             Set_Gold_EFX();
 
         }
-        
+        Debug.LogError("=====:" + Constant.Get_Gold_Bonus_By_Level(PlayerPrefs_Manager.Get_Index_Level_Normal() - 1));
 
         int gold_Current = PlayerPrefs_Manager.Get_Gold() + Constant.Get_Gold_Bonus_By_Level(PlayerPrefs_Manager.Get_Index_Level_Normal() - 1);
 
@@ -166,6 +187,7 @@ public class CanvasWinQ : UICanvas
         //
         PlayerPrefs_Manager.Set_Gold(gold_Current);
         PlayerPrefs_Manager.Set_Gem(gem_Current);
+
         if (PlayerPrefs_Manager.Get_Index_Level_Normal() > 3)
         {
             PlayerPrefs_Manager.Set_Pink_Bank_Gold(PlayerPrefs_Manager.Get_Pink_Bank_Gold() + 100);
@@ -183,10 +205,10 @@ public class CanvasWinQ : UICanvas
         string name_Skin = Constant.Get_Skin_Name_By_Id(id_Skin);
         Set_Skin(name_Skin);
         //
-        
+
         //
         Set_Tile_BG();
-        Set_Spawn_Icon(level+2);
+        Set_Spawn_Icon(level + 2);
         StartCoroutine(IE_Scale_iceon_before());
     }
     public void Set_Gold_EFX()
@@ -201,11 +223,11 @@ public class CanvasWinQ : UICanvas
     }
     public void Set_Up_Gold_Fly()
     {
-        
+
         Set_Step_By_Step_Gold(PlayerPrefs_Manager.Get_Gold(), PlayerPrefs_Manager.Get_Gold() + Constant.Get_Gold_Reward_By_level(PlayerPrefs_Manager.Get_Index_Level_Normal() - 1), 1);
         Set_Step_By_Step_Gem(PlayerPrefs_Manager.Get_Gem(), PlayerPrefs_Manager.Get_Gem() + Constant.Get_Gem_By_level(PlayerPrefs_Manager.Get_Index_Level_Normal() - 1), 1);
     }
-    
+
     public void Set_Tile_BG()
     {
         //Reset image
@@ -308,7 +330,7 @@ public class CanvasWinQ : UICanvas
 
         if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 1)
         {
-            txt_Level.text = "LEVEL " + (PlayerPrefs_Manager.Get_Index_Level_Normal()+1).ToString();
+            txt_Level.text = "LEVEL " + (PlayerPrefs_Manager.Get_Index_Level_Normal() + 1).ToString();
 
         }
         else if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 2)
@@ -317,7 +339,7 @@ public class CanvasWinQ : UICanvas
         }
         else if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 3)
         {
-            
+
             txt_Level.text = "CHALLENGE " + (PlayerPrefs_Manager.Get__QLevel_Challenge()).ToString();
             PlayerPrefs_Manager.Set_Key_1GamPlay_Or_2Area_Or_3Challenge(3);
         }
@@ -405,7 +427,7 @@ public class CanvasWinQ : UICanvas
 
     public int GetXRewardCount()
     {
-        
+
         if (Mathf.Abs(arrow.anchoredPosition.x) < Constant.Pos_X_Rollbar_X5)
         {
             //claimTxt.text = "CLAIM X5";
@@ -469,7 +491,7 @@ public class CanvasWinQ : UICanvas
         SoundManager.Ins.PlayFx(FxID.click);
 
 #if WatchADs
-        AdsManager.Instance.WatchRewardedAds(GetGoldRandom,"video_get_randomGold_screenWin");
+        AdsManager.Instance.WatchRewardedAds(GetGoldRandom, "video_get_randomGold_screenWin");
 #else
         GetGoldRandom();
 #endif
@@ -498,8 +520,8 @@ public class CanvasWinQ : UICanvas
         ((CanvasFade)UIManager.Ins.GetUI(UIID.UICFade)).Set_Fade_Out();
         yield return Cache.GetWFS(Constant.Time_Fade);
         Close();
-        
-        
+
+
         ////PlayerPrefs_Manager.Set_Index_Level_Normal(indexLevel);
 
         if (PlayerPrefs.GetInt(UserData.Key_1GamPlay_Or_2Area_Or_3Challenge) == 1)
@@ -518,13 +540,13 @@ public class CanvasWinQ : UICanvas
 
         //SceneManager.LoadScene(Constant.StringLevel + indexLevel.ToString(), LoadSceneMode.Single);
     }
-    
+
     public void Set_No_Thank()
     {
         SoundManager.Ins.PlayFx(FxID.click);
 
 #if WatchADs
-         if (PlayerPrefs_Manager.Get_Index_Level_Normal() >= 4)
+        if (PlayerPrefs_Manager.Get_Index_Level_Normal() >= 4)
             AdsManager.Instance.WatchInterstitialAds(NoThanksClicked);
         else
             NoThanksClicked();
@@ -577,7 +599,7 @@ public class CanvasWinQ : UICanvas
 
         }
     }
-    
+
 
     IEnumerator Delay_Increa_Gem()
     {
@@ -602,7 +624,8 @@ public class CanvasWinQ : UICanvas
             () =>
             {
                 txt_Gold.text = _score.ToString("N0");
-                PlayerPrefs_Manager.Set_Gold(_score);
+               // PlayerPrefs_Manager.Set_Gold(_score);
+               // Debug.LogError("========== vao day nua");
             });
     }
 
@@ -624,7 +647,7 @@ public class CanvasWinQ : UICanvas
 
 
 
-#region Get Icon prefabs
+    #region Get Icon prefabs
     IEnumerator IE_Scale_iceon_before()
     {
         yield return Cache.GetWFS(1f);
@@ -853,6 +876,6 @@ public class CanvasWinQ : UICanvas
                 return 0;
         }
     }
-#endregion
+    #endregion
 
 }

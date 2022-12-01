@@ -23,38 +23,44 @@ public class EfxManager : SingletonMonoBehaviour<EfxManager>
     [ContextMenu("Set_GoldTop_FX")]
     public void Set_GoldTop_FX()
     {
-        GetGoldFx(rect_Start.position, rect_Gold.position);
+        if (rect_Start != null && rect_Gold != null)
+            GetGoldFx(rect_Start.position, rect_Gold.position);
     }
     [ContextMenu("Set_GemTop_FX")]
     public void Set_GemTop_FX()
     {
-        GetGemFx(rect_Start.position, rect_Gem.position);
+        if (rect_Start != null && rect_Gem != null)
+            GetGemFx(rect_Start.position, rect_Gem.position);
     }
     [ContextMenu("Set_Piggy_FX")]
     public void Set_Piggy_FX()
     {
-        GetGoldFx(rect_Start.position, rect_Piggy.position);
+        if (rect_Start != null && rect_Piggy != null)
+            GetGoldFx(rect_Start.position, rect_Piggy.position);
     }
     IEnumerator IE_Set_GoldTop_FX()
     {
         yield return Cache.GetWFS(1);
-        GetGoldFx(rect_Start.position, rect_Gold.position);
+        if (rect_Start != null && rect_Gold != null)
+            GetGoldFx(rect_Start.position, rect_Gold.position);
 
     }
     IEnumerator IE_Set_GemTop_FX()
     {
 
         yield return Cache.GetWFS(1);
-        GetGemFx(rect_Start.position, rect_Gem.position);
+        if (rect_Start != null && rect_Gem != null)
+            GetGemFx(rect_Start.position, rect_Gem.position);
     }
     IEnumerator IE_Set_Piggy_FX()
     {
 
         yield return Cache.GetWFS(1);
-        GetGoldFx(rect_Start.position, rect_Piggy.position);
+        if (rect_Start != null && rect_Piggy != null)
+            GetGoldFx(rect_Start.position, rect_Piggy.position);
     }
 
-    public void Set_Step_By_Step_Inscrease(int _score, int target,Text txt_Inscrease, float transitionTime)
+    public void Set_Step_By_Step_Inscrease(int _score, int target, Text txt_Inscrease, float transitionTime)
     {
         Tween t = DOTween.To(() => _score, x => _score = x, target, transitionTime).OnUpdate(() => txt_Inscrease.text = _score.ToString("N0"));
     }
@@ -74,8 +80,10 @@ public class EfxManager : SingletonMonoBehaviour<EfxManager>
             tempImg.position = startPos;
             tempImg.transform.localScale = Vector3.one * 0.65f;
             Vector3 firstDesPos = new Vector3(tempImg.position.x + randomX, tempImg.position.y + randomY, 0);
-            tempImg.transform.DOMove(firstDesPos, Random.Range(0.3f, 0.8f)).SetEase(Ease.InQuad).OnComplete(() => {
-                tempImg.transform.DOMove(new Vector3(endPos.x, endPos.y, 0), Random.Range(0.8f, 1.2f)).SetEase(Ease.InQuad).OnComplete(() => {
+            tempImg.transform.DOMove(firstDesPos, Random.Range(0.3f, 0.8f)).SetEase(Ease.InQuad).OnComplete(() =>
+            {
+                tempImg.transform.DOMove(new Vector3(endPos.x, endPos.y, 0), Random.Range(0.8f, 1.2f)).SetEase(Ease.InQuad).OnComplete(() =>
+                {
                     //++++++++SoundController.PlaySoundOneShot(SoundController.ins.gem_collect);
                     SoundManager.Ins.PlayFx(FxID.collect_coin);
                     SimplePool.Despawn(tempImg.gameObject);
@@ -109,7 +117,8 @@ public class EfxManager : SingletonMonoBehaviour<EfxManager>
 
 
         tempImg.transform.DOMove(endPos, 1f);
-        tempImg.transform.DOScale(0, 1f).OnComplete(() => {
+        tempImg.transform.DOScale(0, 1f).OnComplete(() =>
+        {
             //++++++++SoundController.PlaySoundOneShot(SoundController.ins.gem_collect);
             SoundManager.Ins.PlayFx(FxID.collect_coin);
             SimplePool.Despawn(tempImg.gameObject);
@@ -129,8 +138,10 @@ public class EfxManager : SingletonMonoBehaviour<EfxManager>
             tempImg.position = startPos;
             tempImg.transform.localScale = Vector3.one * 0.65f;
             Vector3 firstDesPos = new Vector3(tempImg.position.x + randomX, tempImg.position.y + randomY, 0);
-            tempImg.transform.DOMove(firstDesPos, Random.Range(0.3f, 0.8f)).SetEase(Ease.InQuad).OnComplete(() => {
-                tempImg.transform.DOMove(new Vector3(endPos.x, endPos.y, 0), Random.Range(0.8f, 1.2f)).SetEase(Ease.InQuad).OnComplete(() => {
+            tempImg.transform.DOMove(firstDesPos, Random.Range(0.3f, 0.8f)).SetEase(Ease.InQuad).OnComplete(() =>
+            {
+                tempImg.transform.DOMove(new Vector3(endPos.x, endPos.y, 0), Random.Range(0.8f, 1.2f)).SetEase(Ease.InQuad).OnComplete(() =>
+                {
                     //++++++++SoundController.PlaySoundOneShot(SoundController.ins.gem_collect);
                     SoundManager.Ins.PlayFx(FxID.diamondCollect);
                     SimplePool.Despawn(tempImg.gameObject);
@@ -150,8 +161,10 @@ public class EfxManager : SingletonMonoBehaviour<EfxManager>
             tempImg.position = startPos;
             tempImg.transform.localScale = Vector3.one * 0.35f;
             Vector3 firstDesPos = new Vector3(tempImg.position.x + ran.x, tempImg.position.y + ran.y, 0);
-            tempImg.transform.DOMove(firstDesPos, Random.Range(0.3f, 0.8f)).SetEase(Ease.InQuad).OnComplete(() => {
-                tempImg.transform.DOMove(new Vector3(endPos.x, endPos.y, 0), Random.Range(1f, 1.5f)).SetEase(Ease.InQuad).OnComplete(() => {
+            tempImg.transform.DOMove(firstDesPos, Random.Range(0.3f, 0.8f)).SetEase(Ease.InQuad).OnComplete(() =>
+            {
+                tempImg.transform.DOMove(new Vector3(endPos.x, endPos.y, 0), Random.Range(1f, 1.5f)).SetEase(Ease.InQuad).OnComplete(() =>
+                {
                     //++++++SoundController.PlaySoundOneShot(SoundController.ins.gem_collect);
                     SimplePool.Despawn(tempImg.gameObject);
                 });
