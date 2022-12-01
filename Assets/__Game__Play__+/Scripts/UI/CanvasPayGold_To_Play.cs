@@ -13,7 +13,7 @@ public class CanvasPayGold_To_Play : UICanvas
     public GameObject obj_RewardArea;//Khối viết chữ gold, gem nhận được.. có level có.. có level ko, đây đang gộp lại
     public Animator anim;
 
-    private int[] rewards = new int[] {100, 1};
+    private int[] rewards = new int[] {1500, 5};
 
     private void OnEnable()
     {
@@ -23,26 +23,36 @@ public class CanvasPayGold_To_Play : UICanvas
         txtGoldReward.text = rewards[0].ToString();
         txtGemReward.text = rewards[1].ToString();
 
-        obj_RewardArea.SetActive(false);
+        DataParam.ActionRewardPayGoldToPlay = null;
+
+        //  obj_RewardArea.SetActive(false);
     }
 
     //
     public void PlayButton()
     {
-        GameManager.Ins.isChallengeMode = true;
+       // GameManager.Ins.isChallengeMode = true;
         SoundManager.Ins.PlayFx(FxID.click);
 #if WatchADs
-        AdsManager.Instance.WatchRewardedAds(CloseButton, "video_play_level_" + PlayerPrefs_Manager.Get_Index_Level_Normal().ToString());
+        AdsManager.Instance.WatchRewardedAds(PayToPlay, "video_play_level_" + PlayerPrefs_Manager.Get_Index_Level_Normal().ToString());
 #else
         CloseButton();
 #endif
     }
 
-    private void PayToPlay()
+    void PlayDoneLevel()
     {
         int _gold_current = PlayerPrefs_Manager.Get_Gold();
-        _gold_current = Mathf.Clamp(_gold_current - rewards[0], 0, int.MaxValue);
+        _gold_current = Mathf.Clamp(_gold_current + rewards[0], 0, int.MaxValue);
         PlayerPrefs_Manager.Set_Gold(_gold_current);
+        Debug.LogError("==============play done level");
+    }
+    private void PayToPlay()
+    {
+        DataParam.ActionRewardPayGoldToPlay = PlayDoneLevel;
+        //int _gold_current = PlayerPrefs_Manager.Get_Gold();
+        //_gold_current = Mathf.Clamp(_gold_current + rewards[0], 0, int.MaxValue);
+        //PlayerPrefs_Manager.Set_Gold(_gold_current);
         CloseButton();
     }
 

@@ -69,6 +69,11 @@ public class CanvasWinQ : UICanvas
         if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 1)
         {
             EventController.WIN_LEVEL_EVENT(PlayerPrefs_Manager.Get_Index_Level_Normal());
+            if (DataParam.ActionRewardPayGoldToPlay != null)
+            {
+                DataParam.ActionRewardPayGoldToPlay();
+                DataParam.ActionRewardPayGoldToPlay = null;
+            }
         }
         else if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 3)
         {

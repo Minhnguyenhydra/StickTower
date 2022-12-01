@@ -12,6 +12,7 @@ public class DataParam
     public static string SAVEDATA = "kiensavedata";
     public static string SAVEDELETEDATA = "kiensavedeletedata";
     public static Action displayWarningPart;
+    public static Action ActionRewardPayGoldToPlay = null;
     public static WaitForSeconds WAITDELETECHECK
     {
         get
