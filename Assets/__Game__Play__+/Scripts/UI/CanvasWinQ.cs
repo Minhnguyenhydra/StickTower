@@ -120,12 +120,12 @@ public class CanvasWinQ : UICanvas
     {
         SoundManager.Ins.PlayFx(FxID.win);
         isFist_Click = false;
-        goldCollected = PlayerPrefs_Manager.Get_Gold() + 200;
-        txt_Gold_Boot.text = "200";
-        txt_Gem_Boot.text = "1";
+        goldCollected = PlayerPrefs_Manager.Get_Gold() + 1500;
+        txt_Gold_Boot.text = "1500";
+        txt_Gem_Boot.text = "5";
         StartCoroutine(Set_Delay_Show_No_Thank());
         PlayerPrefs_Manager.Set_Gold(goldCollected);
-        PlayerPrefs_Manager.Set_Gem(PlayerPrefs_Manager.Get_Gem() + 1);
+        PlayerPrefs_Manager.Set_Gem(PlayerPrefs_Manager.Get_Gem() + 5);
 
         Set_Spawn_Icon(7);
         Set_Init_Gold_Gem_Title();
