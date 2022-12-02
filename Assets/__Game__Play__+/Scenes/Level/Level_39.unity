@@ -1960,6 +1960,10 @@ PrefabInstance:
       propertyPath: health
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 2057444916566645418, guid: 708eed0a5ee1123449b78984f53aba02, type: 3}
+      propertyPath: isBossLass
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2057444916566645419, guid: 708eed0a5ee1123449b78984f53aba02, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -5469,11 +5473,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2243400755946876682, guid: 036d2a9a9a6c286438b4dbaf4526e173, type: 3}
       propertyPath: is_Floor_Last_Of_Level
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2243400755946876682, guid: 036d2a9a9a6c286438b4dbaf4526e173, type: 3}
       propertyPath: is_Floor_Last_Of_house
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2243400755946876682, guid: 036d2a9a9a6c286438b4dbaf4526e173, type: 3}
       propertyPath: list_Point_In_Floor.Array.size
@@ -5543,7 +5547,7 @@ MonoBehaviour:
   - {fileID: 1209333929}
   - {fileID: 74926628}
   - {fileID: 1399827722}
-  soNha_Enemy_Trong_Level: 0
+  soNha_Enemy_Trong_Level: 2
   pos_Start_Cam: {x: 0, y: 0, z: 0}
   tf_FloorBoss: {fileID: 0}
 --- !u!4 &1200495103

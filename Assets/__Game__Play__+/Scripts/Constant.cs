@@ -465,7 +465,7 @@ public class Constant
             case 15:
                 return "Level 15 - Kill enemies";
             case 16:
-                return "Level 16 - Bonus level";
+                return "Level 16 - Kill enemies";
             case 17:
                 return "Level 17 - Save ally";
             case 18:

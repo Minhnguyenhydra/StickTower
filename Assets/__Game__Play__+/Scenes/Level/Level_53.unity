@@ -5603,6 +5603,10 @@ PrefabInstance:
       propertyPath: health
       value: 120
       objectReference: {fileID: 0}
+    - target: {fileID: 1307083927815842411, guid: 33bf6e504c444d44cbda1f878c00fa76, type: 3}
+      propertyPath: isBig_Enemy
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1307083927815842412, guid: 33bf6e504c444d44cbda1f878c00fa76, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -5754,11 +5758,11 @@ PrefabInstance:
       objectReference: {fileID: 1133129156}
     - target: {fileID: 2243400755946876682, guid: 036d2a9a9a6c286438b4dbaf4526e173, type: 3}
       propertyPath: is_Floor_Last_Of_Level
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2243400755946876682, guid: 036d2a9a9a6c286438b4dbaf4526e173, type: 3}
       propertyPath: is_Floor_Last_Of_house
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2243400755946876682, guid: 036d2a9a9a6c286438b4dbaf4526e173, type: 3}
       propertyPath: list_Point_In_Floor.Array.size
