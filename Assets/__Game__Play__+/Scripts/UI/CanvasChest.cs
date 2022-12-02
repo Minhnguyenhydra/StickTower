@@ -32,7 +32,7 @@ public class CanvasChest : UICanvas
     {
         SoundManager.Ins.PlayFx(FxID.click);
         int result = System.Int32.Parse(txt_Level_Set.text);
-        result = Mathf.Clamp(result, 0, 50);
+        result = Mathf.Clamp(result, 0, 70);
         PlayerPrefs_Manager.Set_Index_Level_Normal(result);
     }
     
