@@ -1076,34 +1076,36 @@ public class Player : MonoBehaviour
     {
         Set_Block_Colider_Player();
         Set_Anim_Run();
-        tf_Player.DOMove(_tf_End_Level.position, Constant.Time_Player_Move_End_Level).OnComplete(() =>
-        {
-            if (_type_Take_Last_Level == Enum_Type_Take_Last_Level.Enemy)
-            {
-                if (health > _health_If_Enemy)
-                {
-                    Set_Attack();
-                }
-                else
-                {
 
-                    Set_Anim_Die();
-                }
-            }
-            else if (_type_Take_Last_Level == Enum_Type_Take_Last_Level.Reward)
+
+            tf_Player.DOMove(_tf_End_Level.position, Constant.Time_Player_Move_End_Level).OnComplete(() =>
             {
+                if (_type_Take_Last_Level == Enum_Type_Take_Last_Level.Enemy)
+                {
+                    if (health > _health_If_Enemy)
+                    {
+                        Set_Attack();
+                    }
+                    else
+                    {
+
+                        Set_Anim_Die();
+                    }
+                }
+                else if (_type_Take_Last_Level == Enum_Type_Take_Last_Level.Reward)
+                {
                 //UNDONE.............
                 //Set anim Hòm bị mở+ vàng bay lên
                 Set_Attack(true);
-                if (floor_stay.list_Point_In_Floor[0].reward_Attack_This_Point != null)
-                {
-                    floor_stay.list_Point_In_Floor[0].reward_Attack_This_Point.Set_Open();
+                    if (floor_stay.list_Point_In_Floor[0].reward_Attack_This_Point != null)
+                    {
+                        floor_stay.list_Point_In_Floor[0].reward_Attack_This_Point.Set_Open();
 
+                    }
+                    StartCoroutine(Delay_Win());
                 }
-                StartCoroutine(Delay_Win());
-            }
-            else if (_type_Take_Last_Level == Enum_Type_Take_Last_Level.Princess)
-            {
+                else if (_type_Take_Last_Level == Enum_Type_Take_Last_Level.Princess)
+                {
                 //UNDONE.............
                 //Set anim Hòm bị mở+ vàng bay lên
                 SetCharacterState_Loop(Action_Victory);
@@ -1111,14 +1113,16 @@ public class Player : MonoBehaviour
                 //Debug.Log("Player victory");
 #endif
                 if (floor_stay.list_Point_In_Floor[0].princess_Attack_This_Point != null)
-                {
-                    floor_stay.list_Point_In_Floor[0].princess_Attack_This_Point.Set_Victory();
-                    this.PostEvent(QuestManager.QuestID.Quest02, 1);
-                }
-                GameManager.Ins.Set_Mai_Xanh_Delay_Win(floor_stay);
+                    {
+                        floor_stay.list_Point_In_Floor[0].princess_Attack_This_Point.Set_Victory();
+                        this.PostEvent(QuestManager.QuestID.Quest02, 1);
+                    }
+                    GameManager.Ins.Set_Mai_Xanh_Delay_Win(floor_stay);
                 //StartCoroutine(Delay_Win());
             }
-        });
+            });
+        
+
     }
     #endregion
     #region Kiểm tra đã đến điểm cuối của 1 Level

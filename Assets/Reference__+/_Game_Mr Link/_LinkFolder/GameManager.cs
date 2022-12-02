@@ -128,7 +128,6 @@ public class GameManager : Singleton<GameManager>
 
         Player.ins.Set_Anim_Victory();
         SoundManager.Ins.PlayFx(FxID.yes);
-        //GameObject obj = (GameObject)Instantiate(Resources.Load(Constant.Path_Frefab_fx_win_ball), Player.ins.tf_Player.position, Player.ins.tf_Player.rotation);
 
         ((CanvasGamePlay)UIManager.Ins.GetUI(UIID.UICGamePlay)).Set_Active_Castle_Nha_Cuoi_Chiem_Duoc();
 

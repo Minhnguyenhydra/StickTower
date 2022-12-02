@@ -334,7 +334,7 @@ public class CanvasWinQ : UICanvas
 
         if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 1)
         {
-            txt_Level.text = "LEVEL " + (PlayerPrefs_Manager.Get_Index_Level_Normal() + 1).ToString();
+            txt_Level.text = "LEVEL " + (PlayerPrefs_Manager.Get_Index_Level_Normal()/* + 1*/).ToString();
 
         }
         else if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 2)
