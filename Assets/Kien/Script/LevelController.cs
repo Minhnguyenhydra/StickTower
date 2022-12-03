@@ -47,6 +47,14 @@ public class LevelController : MonoBehaviour, IDragHandler, IEndDragHandler
             StartCoroutine(IELevel());
             DataParam.canDelete = true;
             GameController.instance.eraser.SetActive(true);
+
+            if (Datacontroller.instance.saveData.showTut == false)
+            {
+                GameController.instance.tut.gameObject.SetActive(true);
+                GameController.instance.tut.Play(DataParam.currentLevel.ToString());
+                Datacontroller.instance.saveData.showTut = true;
+            }
+
         }
         else if (currentStep == stepOfLevel.Count)
         {
@@ -70,7 +78,7 @@ public class LevelController : MonoBehaviour, IDragHandler, IEndDragHandler
             GameController.instance.ShowPopUpWatchAds();
 
         }
-  
+
 
 
     }

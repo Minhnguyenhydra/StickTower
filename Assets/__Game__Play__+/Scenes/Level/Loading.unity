@@ -931,11 +931,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8afe0acc02f340341bbff1017807d6ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debug: 1
+  debug: 0
   saveData:
     session: 0
     day: 0
     week: 1
+    showTut: 0
     saveDelete:
       infoSaveDelete: []
   deleteData: {fileID: 11400000, guid: db6b8d0bc70f95a4d91d06288d007caa, type: 2}

@@ -15,6 +15,7 @@ using static SaveDelete;
 public class SaveData
 {
     public int session, day = 0, week = 1;
+    public bool showTut = false;
     public DateTime oldDay = System.DateTime.Now;
     public SaveDelete saveDelete = new SaveDelete();
 }

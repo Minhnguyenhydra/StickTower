@@ -19,6 +19,8 @@ public class GameController : MonoBehaviour
     Transform canvasParent, canvasParent1;
     [SerializeField]
     GameObject effectWin;
+  
+
     //[SerializeField]
     //LoadingPanel loading;
     public void BackToLoading()
@@ -73,6 +75,7 @@ public class GameController : MonoBehaviour
         eraser.SetActive(false);
         DataParam.canDelete = false;
     }
+    public Animator tut;
     public void LoadLevel()
     {
         pathLevel = "LevelDelete/Level" + (DataParam.currentLevel + 1);
@@ -82,6 +85,7 @@ public class GameController : MonoBehaviour
         {
             levelController = Instantiate(level);
             EventController.PLAY_LEVEL_DELETE_EVENT((DataParam.currentLevel + 1));
+
             //   levelController.DisplayLockOrUnlock();
         }
         else

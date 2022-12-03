@@ -53,8 +53,9 @@ public class PaintController : MonoBehaviour
         erase = GameController.instance.eraser;
         posOriginal = erase.transform.position;
         Init();
+        tut = GameController.instance.tut.gameObject;
     }
-
+    GameObject tut;
     public void Init()
     {
         var tex = GetSourceTexture();
@@ -85,6 +86,8 @@ public class PaintController : MonoBehaviour
             pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             canDraw = true;
             erase.transform.position = pos;
+            if (tut.activeSelf)
+                tut.SetActive(false);
         }
 
         if (!canDraw)

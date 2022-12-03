@@ -24,10 +24,14 @@ public class PopUpWatchAds : PopUpProperties
     public void BtnNext()
     {
        // DataParam.currentLevel++;
-        GameController.instance.ShowPopUpResult();
+      //  GameController.instance.ShowPopUpResult();
         CloseMe();
-
+        LoadScene();
         //Application.LoadLevel(Application.loadedLevelName);
         //Debug.LogError("======= load next level");
+    }
+    void LoadScene()
+    {
+        Datacontroller.instance.ShowLoadingPanel(true, "DeleteScene");
     }
 }
