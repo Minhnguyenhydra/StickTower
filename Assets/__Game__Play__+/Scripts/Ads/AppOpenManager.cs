@@ -22,6 +22,8 @@ public class AppOpenManager : MonoBehaviour
 
     public void ShowAdIfReady()
     {
+        if (Datacontroller.instance.noAdsTest)
+            return;
         if (MaxSdk.IsAppOpenAdReady(AppOpenAdUnitId))
         {
             MaxSdk.ShowAppOpenAd(AppOpenAdUnitId);
@@ -36,7 +38,10 @@ public class AppOpenManager : MonoBehaviour
     {
         if (MaxSdk.IsAppOpenAdReady(AppOpenAdUnitId))
         {
-            MaxSdk.ShowAppOpenAd(AppOpenAdUnitId);
+            if (!Datacontroller.instance.noAdsTest)
+            {
+                MaxSdk.ShowAppOpenAd(AppOpenAdUnitId);
+            }
         }
         else
         {
@@ -44,7 +49,10 @@ public class AppOpenManager : MonoBehaviour
             {
                 yield return null;
             }
-            MaxSdk.ShowAppOpenAd(AppOpenAdUnitId);
+            if (!Datacontroller.instance.noAdsTest)
+            {
+                MaxSdk.ShowAppOpenAd(AppOpenAdUnitId);
+            }
         }
     }
 }

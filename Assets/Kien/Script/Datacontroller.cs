@@ -53,7 +53,7 @@ public class GetMoreGame
 }
 public class Datacontroller : MonoBehaviour
 {
-    public bool debug;
+    public bool debug, noAdsTest;
     public SaveData saveData;
 
     public DeleteData deleteData;

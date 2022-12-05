@@ -932,6 +932,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debug: 0
+  noAdsTest: 1
   saveData:
     session: 0
     day: 0

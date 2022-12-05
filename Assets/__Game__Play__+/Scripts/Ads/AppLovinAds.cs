@@ -55,10 +55,13 @@ public class AppLovinAds : MonoBehaviour
 
     public void ShowBannerAfter10S()
     {
-        if (corShowBanner != null)
-            StopCoroutine(corShowBanner);
+        if (!Datacontroller.instance.noAdsTest)
+        {
+            if (corShowBanner != null)
+                StopCoroutine(corShowBanner);
 
-        corShowBanner = StartCoroutine(ShowBannerAd());
+            corShowBanner = StartCoroutine(ShowBannerAd());
+        }
     }
 
     #region AOA
@@ -99,12 +102,14 @@ public class AppLovinAds : MonoBehaviour
 
     private IEnumerator ShowBannerAd()
     {
-        yield return new WaitForSeconds(7f);
+        if (!Datacontroller.instance.noAdsTest)
+        {
+            yield return new WaitForSeconds(7f);
 #if UNITY_EDITOR
 #else
         MaxSdk.ShowBanner(bannerAdUnitId);
 #endif
-
+        }
     }
 
     private void OnBannerAdLoadedEvent(string adUnitId, MaxSdkBase.AdInfo adInfo) 
@@ -168,14 +173,23 @@ public class AppLovinAds : MonoBehaviour
 
     public void ShowInterstitialAds(CallBackAds cbAds)
     {
-        if (MaxSdk.IsInterstitialReady(adUnitId))
+        if (!Datacontroller.instance.noAdsTest)
         {
-            AppOpenManager.ResumeFromAds = true;
-            callBackAds = cbAds;
 
-            Debug.Log("Interstitial Showing...");
-            MaxSdk.ShowInterstitial(adUnitId);
+            if (MaxSdk.IsInterstitialReady(adUnitId))
+            {
+                AppOpenManager.ResumeFromAds = true;
+                callBackAds = cbAds;
+
+                Debug.Log("Interstitial Showing...");
+                MaxSdk.ShowInterstitial(adUnitId);
+            }
         }
+        else
+        {
+            if (cbAds != null)
+                cbAds();
+        }    
     }
 
     private void OnInterstitialLoadedEvent(string adUnitId, MaxSdkBase.AdInfo adInfo)
@@ -263,14 +277,22 @@ public class AppLovinAds : MonoBehaviour
     string nameVideo;
     public void ShowRewardedAds(CallBackAds cbAds,string _nameVideo)
     {
-        if (MaxSdk.IsRewardedAdReady(adUnitRewardedId))
+        if (!Datacontroller.instance.noAdsTest)
         {
-            callBackAds = cbAds;
-            nameVideo = _nameVideo;
-            AppOpenManager.ResumeFromAds = true;
-            Debug.Log("Rewarded Showing...");
-            MaxSdk.ShowRewardedAd(adUnitRewardedId);
+            if (MaxSdk.IsRewardedAdReady(adUnitRewardedId))
+            {
+                callBackAds = cbAds;
+                nameVideo = _nameVideo;
+                AppOpenManager.ResumeFromAds = true;
+                Debug.Log("Rewarded Showing...");
+                MaxSdk.ShowRewardedAd(adUnitRewardedId);
+            }
         }
+        else
+        {
+            if (cbAds != null)
+                cbAds();
+        }    
     }
 
     private void OnRewardedAdLoadedEvent(string adUnitId, MaxSdkBase.AdInfo adInfo)
