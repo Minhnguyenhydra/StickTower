@@ -14,62 +14,62 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   QuestInfos:
   - id: 1
-    name: "Thu th\u1EADp 9 ch\xECa kh\xF3a"
+    name: Collect 9 keys
     number: 9
     goldRewarded: 1000
     gemRewarded: 7
   - id: 2
-    name: "Gi\u1EA3i c\u1EE9u 5 c\xF4ng ch\xFAa"
+    name: Rescue the 5 princesses
     number: 5
     goldRewarded: 1500
     gemRewarded: 10
   - id: 3
-    name: "Ti\xEAu di\u1EC7t 7 Boss"
+    name: Defeat 7 Bosses
     number: 7
     goldRewarded: 1500
     gemRewarded: 20
   - id: 4
-    name: "Thu th\u1EADp 10 h\u1ED9p \u1EA9n"
+    name: Collect 10 hidden boxes
     number: 10
     goldRewarded: 3000
     gemRewarded: 5
   - id: 5
-    name: "Ti\xEAu di\u1EC7t 40 enemy (kh\xF4ng bao g\u1ED3m enemy challenge)"
+    name: Kill 40 enemies (not counting enemies in arena and challenge)
     number: 40
     goldRewarded: 1000
     gemRewarded: 15
   - id: 6
-    name: "V\u01B0\u1EE3t \u1EA3i challenge 4 l\u1EA7n"
+    name: Pass the challenge 4 times
     number: 4
     goldRewarded: 1000
     gemRewarded: 7
   - id: 7
-    name: "Chi\u1EBFn th\u1EAFng Arena 5 l\u1EA7n"
+    name: Win Arena 5 times
     number: 5
     goldRewarded: 0
     gemRewarded: 10
   - id: 8
-    name: "V\u01B0\u1EE3t 7 level li\xEAn ti\u1EBFp"
+    name: Pass 7 levels
     number: 7
     goldRewarded: 2000
     gemRewarded: 15
   - id: 9
-    name: "Unlock 1 skin b\u1EA5t k\u1EF3"
+    name: Unlock 1 skin
     number: 1
     goldRewarded: 0
     gemRewarded: 10
   - id: 10
-    name: "Thu th\u1EADp 3 m\u1EA3nh gh\xE9p"
+    name: Collect 3 puzzle pieces
     number: 3
     goldRewarded: 0
     gemRewarded: 25
   - id: 11
-    name: "Thu th\u1EADp 5  m\u1EA3nh gh\xE9p"
+    name: Collect 5 puzzle pieces
     number: 5
     goldRewarded: 0
     gemRewarded: 25
   - id: 12
-    name: "M\u1EDF 5 h\xF2m"
+    name: Open 5 chests
     number: 5
     goldRewarded: 0
     gemRewarded: 12

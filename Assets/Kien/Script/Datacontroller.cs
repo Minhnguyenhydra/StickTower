@@ -68,7 +68,7 @@ public class Datacontroller : MonoBehaviour
     LoadingPanel loadingPanel;
     string pathPopUp;
 
-   public void ShowLoadingPanel(bool openScene, string Scene)
+    public void ShowLoadingPanel(bool openScene, string Scene)
     {
         if (openScene)
         {
@@ -90,19 +90,48 @@ public class Datacontroller : MonoBehaviour
                 loadingPanel.gameObject.SetActive(false);
         }
     }
-    public void TakePartDelete(int indexSource, int indexPart)
+    int indexSource, indexPart;
+    public void TakePartDelete(int _indexSource, int _indexPart)
     {
-        saveData.saveDelete.infoSaveDelete[indexSource].takeSprite[indexPart] = true;
-        DataParam.newPartDelete = true;
-        DataParam.displayWarningPart();
+        indexSource = -1;
+        for (int i = 0; i < saveData.saveDelete.infoSaveDelete.Count; i++)
+        {
+            if (saveData.saveDelete.infoSaveDelete[i].takeSprite.FindAll(x => x == true).Count < saveData.saveDelete.infoSaveDelete[i].takeSprite.Count)
+            {
+                indexSource = i;
+                break;
+            }
+        }
+        if(indexSource >= 0)
+        {
+            indexPart = -1;
+            for (int j = 0; j < saveData.saveDelete.infoSaveDelete[indexSource].takeSprite.Count; j++)
+            {
+                if (saveData.saveDelete.infoSaveDelete[indexSource].takeSprite[j] == false)
+                {
+                    indexPart = j;
+                    break;
+                }
+            }
+            if(indexPart >= 0)
+            {
+                saveData.saveDelete.infoSaveDelete[indexSource].takeSprite[indexPart] = true;
+                DataParam.newPartDelete = true;
+                DataParam.displayWarningPart();
+                Debug.LogError("=======tranh_" + indexSource + "_manh_" + indexPart);
+            }    
+        }
+
+
+
     }
     private void Awake()
     {
         if (instance == null)
         {
-              Application.targetFrameRate = 60;
+            Application.targetFrameRate = 60;
             Debug.unityLogger.logEnabled = debug;
-            //    Input.multiTouchEnabled = false;
+            Input.multiTouchEnabled = false;
             CultureInfo ci = new CultureInfo("en-us");
             Thread.CurrentThread.CurrentCulture = ci;
             Thread.CurrentThread.CurrentUICulture = ci;
