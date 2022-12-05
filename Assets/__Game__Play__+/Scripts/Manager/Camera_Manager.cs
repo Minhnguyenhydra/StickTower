@@ -19,6 +19,8 @@ public class Camera_Manager : Singleton<Camera_Manager>
     ProCamera2DShake procamShake;
     ProCamera2D procam;
     ScrollBG bg;
+
+    private Vector3 originCamPos;
     //private void Update()
     //{
     //    if (Input.GetKeyDown(KeyCode.Space))
@@ -125,10 +127,19 @@ public class Camera_Manager : Singleton<Camera_Manager>
     }
     public void SetMove_To_Floor_Boss(Transform tff)
     {
+        originCamPos = tf_Cam.localPosition;
         Vector3 pos = new Vector3(tff.position.x, tff.position.y, 0) + new Vector3(0, 0, -2);
         tf_Cam.DOMove(pos, 0.5f);
         cam.DOOrthoSize(8.5f, 0.5f);
     }
+
+    public void Back()
+    {
+        tf_Cam.DOMove(originCamPos, 0.5f);
+        cam.DOOrthoSize(21f, 0.5f);
+    }
+
+
     [ContextMenu("TEEE")]
     public void Teeee()
     {

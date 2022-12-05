@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Spine.Unity;
+using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using UnityEngine;
@@ -10,8 +11,11 @@ yield return new WaitUntil(() => isDone);
 public class GameManager : Singleton<GameManager>
 {
     public static bool isStarted;
-    public bool isChallengeMode;
+    public static bool isChallengeMode;
     public int lastLevel;
+    public SkeletonAnimation superBoss;
+
+
     public enum GameState
     {
         Playing,
@@ -83,6 +87,7 @@ public class GameManager : Singleton<GameManager>
 
     public void Set_Mai_Xanh_Delay_Win(Floor _floor)
     {
+        Debug.Log("Set_Mai_Xanh_Delay_Win");
         if (GMState == GameState.Stoped)
             return;
 
@@ -158,6 +163,23 @@ public class GameManager : Singleton<GameManager>
     //
     IEnumerator Set_Delay_Show_Canvas_Win()
     {
+        if (isChallengeMode)
+        {
+            UIManager.Ins.OpenUI(UIID.UICFade);
+            ((CanvasFade)UIManager.Ins.GetUI(UIID.UICFade)).Set_Fade_Out();
+            yield return Cache.GetWFS(1.45f);
+
+            Player.ins.gameObject.SetActive(false);
+
+            if (Player.ins.enemy_Hitting != null && Player.ins.enemy_Hitting.isBoss_UNTIL)
+                Camera_Manager.Ins.Back();
+            
+            superBoss.Skeleton.SetSkin(Constant.Get_Skin_Name_By_Id(PlayerPrefs_Manager.Get_ID_Name_Skin_Wearing()));
+            superBoss.gameObject.SetActive(true);
+
+            yield return Cache.GetWFS(Constant.Time_SuperBossAttack);
+        }
+
 #if UNITY_EDITOR
         //Debug.Log("~~~~~");
 #endif
@@ -182,7 +204,7 @@ public class GameManager : Singleton<GameManager>
             UIManager.Ins.OpenUI(UIID.UICShopPrize);
             Debug.LogError("========= open shop");
         }
-       // }
+        // }
 
         if (lv == 6)
         {

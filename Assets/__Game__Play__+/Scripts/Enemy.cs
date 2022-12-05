@@ -216,7 +216,7 @@ public class Enemy : MonoBehaviour
         else
         {
             Destroy(this.gameObject);
-            if (!GameManager.Ins.isChallengeMode)
+            if (!GameManager.isChallengeMode)
             {
                 this.PostEvent(QuestManager.QuestID.Quest05, 1);
             }

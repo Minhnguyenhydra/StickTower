@@ -33,7 +33,7 @@ public class CanvasChallenge : UICanvas
 
     private void PlayChallenge()
     {
-        GameManager.Ins.isChallengeMode = true;
+        GameManager.isChallengeMode = true;
         PlayerPrefs_Manager.Set_Key_1GamPlay_Or_2Area_Or_3Challenge(3);
 
         PlayerPrefs_Manager.Set_QLevel_Challenge(challengeControll.ii + 1);

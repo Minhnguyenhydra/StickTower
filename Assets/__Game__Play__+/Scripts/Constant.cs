@@ -39,6 +39,7 @@ public class Constant
     public readonly static float Time_Player_Go_End_OpenReward = 0.5f;
     public readonly static float Time_Delay_Run_To_End_Reward = 0.2f;
     public readonly static float Time_DelayClose_CanvasFight_Start = 2f;
+    public readonly static float Time_SuperBossAttack = 4.167f;
     //
     public readonly static float Time_Count_Attack_Player = 1;
     public readonly static float Time_Count_Attack_Enemy = 2;
