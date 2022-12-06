@@ -115,7 +115,7 @@ public class GameManager : Singleton<GameManager>
         _floor.Set_Floor_To_Floor_Of_Player();
         _floor.house_Build_Of_This.Set_Mai_Xanh();
         _floor.house_Build_Of_This.Set_This_To_Team_Player();
-        //Fire work
+
 
         if (PlayerPrefs_Manager.Get_Index_Level_Normal() != 32)
         {
@@ -165,17 +165,22 @@ public class GameManager : Singleton<GameManager>
     {
         if (isChallengeMode)
         {
+            yield return Cache.GetWFS(Player.ins.Action_Victory.Animation.Duration);
             UIManager.Ins.OpenUI(UIID.UICFade);
             ((CanvasFade)UIManager.Ins.GetUI(UIID.UICFade)).Set_Fade_Out();
-            yield return Cache.GetWFS(1.45f);
-
             Player.ins.gameObject.SetActive(false);
+            UIManager.Ins.GetUI(UIID.UICFight_Boss).gameObject.SetActive(false);
+            yield return Cache.GetWFS(1.5f);
 
             if (Player.ins.enemy_Hitting != null && Player.ins.enemy_Hitting.isBoss_UNTIL)
+            {
                 Camera_Manager.Ins.Back();
-            
+                yield return Cache.GetWFS(0.25f);
+            }
+
             superBoss.Skeleton.SetSkin(Constant.Get_Skin_Name_By_Id(PlayerPrefs_Manager.Get_ID_Name_Skin_Wearing()));
-            superBoss.gameObject.SetActive(true);
+            superBoss.transform.parent.gameObject.SetActive(true);
+            SoundManager.Ins.PlayFxWithName("sfx_skill_boss_challenge");
 
             yield return Cache.GetWFS(Constant.Time_SuperBossAttack);
         }
