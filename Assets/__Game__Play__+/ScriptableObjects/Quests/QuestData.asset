@@ -17,59 +17,59 @@ MonoBehaviour:
     name: Collect 9 keys
     number: 9
     goldRewarded: 1000
-    gemRewarded: 7
+    gemRewarded: 1
   - id: 2
     name: Rescue the 5 princesses
     number: 5
     goldRewarded: 1500
-    gemRewarded: 10
+    gemRewarded: 2
   - id: 3
     name: Defeat 7 Bosses
     number: 7
     goldRewarded: 1500
-    gemRewarded: 20
+    gemRewarded: 1
   - id: 4
     name: Collect 10 hidden boxes
     number: 10
     goldRewarded: 3000
-    gemRewarded: 5
+    gemRewarded: 1
   - id: 5
     name: Kill 40 enemies (not counting enemies in arena and challenge)
     number: 40
     goldRewarded: 1000
-    gemRewarded: 15
+    gemRewarded: 3
   - id: 6
     name: Pass the challenge 4 times
     number: 4
     goldRewarded: 1000
-    gemRewarded: 7
+    gemRewarded: 2
   - id: 7
     name: Win Arena 5 times
     number: 5
     goldRewarded: 0
-    gemRewarded: 10
+    gemRewarded: 2
   - id: 8
     name: Pass 7 levels
     number: 7
     goldRewarded: 2000
-    gemRewarded: 15
+    gemRewarded: 1
   - id: 9
     name: Unlock 1 skin
     number: 1
     goldRewarded: 0
-    gemRewarded: 10
+    gemRewarded: 1
   - id: 10
     name: Collect 3 puzzle pieces
     number: 3
     goldRewarded: 0
-    gemRewarded: 25
+    gemRewarded: 2
   - id: 11
     name: Collect 5 puzzle pieces
     number: 5
     goldRewarded: 0
-    gemRewarded: 25
+    gemRewarded: 2
   - id: 12
     name: Open 5 chests
     number: 5
     goldRewarded: 0
-    gemRewarded: 12
+    gemRewarded: 2

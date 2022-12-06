@@ -1,0 +1,433 @@
+
+Challenge_Boss_Yellow.png
+size: 4076,916
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+FX/VS_BOSS/Electricity 002 Shot Ray Up_00000
+  rotate: false
+  xy: 2, 514
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/Electricity 002 Shot Ray Up_00001
+  rotate: false
+  xy: 2, 112
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/Electricity 002 Shot Ray Up_00002
+  rotate: false
+  xy: 404, 514
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/Electricity 002 Shot Ray Up_00003
+  rotate: false
+  xy: 404, 112
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/Electricity 002 Shot Ray Up_00004
+  rotate: false
+  xy: 806, 514
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/Electricity 002 Shot Ray Up_00005
+  rotate: false
+  xy: 806, 112
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/Electricity 002 Shot Ray Up_00006
+  rotate: false
+  xy: 1208, 514
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/Electricity 002 Shot Ray Up_00008
+  rotate: false
+  xy: 1208, 514
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/Electricity 002 Shot Ray Up_00010
+  rotate: false
+  xy: 1208, 514
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/Electricity 012 Impact Charge Up_00003
+  rotate: false
+  xy: 1208, 514
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/Electricity 012 Impact Charge Up_00005
+  rotate: false
+  xy: 1208, 514
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/Electricity 002 Shot Ray Up_00007
+  rotate: false
+  xy: 1208, 112
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/Electricity 002 Shot Ray Up_00009
+  rotate: false
+  xy: 1610, 514
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/Electricity 002 Shot Ray Up_00011
+  rotate: false
+  xy: 1610, 112
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/Electricity 012 Impact Charge Up_00000
+  rotate: false
+  xy: 2012, 514
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/Electricity 012 Impact Charge Up_00001
+  rotate: false
+  xy: 2012, 112
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/Electricity 012 Impact Charge Up_00002
+  rotate: false
+  xy: 2414, 514
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/Electricity 012 Impact Charge Up_00004
+  rotate: false
+  xy: 2414, 112
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/Electricity 012 Impact Charge Up_00006
+  rotate: false
+  xy: 2816, 514
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/Electricity 012 Impact Charge Up_00007
+  rotate: false
+  xy: 2816, 112
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/Electricity 012 Impact Charge Up_00008
+  rotate: false
+  xy: 3218, 514
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/Electricity 012 Impact Charge Up_00009
+  rotate: false
+  xy: 3218, 112
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/Electricity 012 Impact Charge Up_00010
+  rotate: false
+  xy: 3620, 514
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/boom_10 (1)
+  rotate: false
+  xy: 326, 6
+  size: 104, 104
+  orig: 104, 104
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/boom_10 (10)
+  rotate: false
+  xy: 1280, 6
+  size: 104, 104
+  orig: 104, 104
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/boom_10 (11)
+  rotate: false
+  xy: 1386, 6
+  size: 104, 104
+  orig: 104, 104
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/boom_10 (12)
+  rotate: false
+  xy: 1492, 6
+  size: 104, 104
+  orig: 104, 104
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/boom_10 (13)
+  rotate: false
+  xy: 1598, 6
+  size: 104, 104
+  orig: 104, 104
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/boom_10 (14)
+  rotate: false
+  xy: 1704, 6
+  size: 104, 104
+  orig: 104, 104
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/boom_10 (15)
+  rotate: false
+  xy: 1810, 6
+  size: 104, 104
+  orig: 104, 104
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/boom_10 (16)
+  rotate: false
+  xy: 1916, 6
+  size: 104, 104
+  orig: 104, 104
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/boom_10 (17)
+  rotate: false
+  xy: 2022, 6
+  size: 104, 104
+  orig: 104, 104
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/boom_10 (18)
+  rotate: false
+  xy: 2128, 6
+  size: 104, 104
+  orig: 104, 104
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/boom_10 (19)
+  rotate: false
+  xy: 2234, 6
+  size: 104, 104
+  orig: 104, 104
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/boom_10 (2)
+  rotate: false
+  xy: 432, 6
+  size: 104, 104
+  orig: 104, 104
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/boom_10 (20)
+  rotate: false
+  xy: 2340, 6
+  size: 104, 104
+  orig: 104, 104
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/boom_10 (21)
+  rotate: false
+  xy: 2446, 6
+  size: 104, 104
+  orig: 104, 104
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/boom_10 (3)
+  rotate: false
+  xy: 538, 6
+  size: 104, 104
+  orig: 104, 104
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/boom_10 (4)
+  rotate: false
+  xy: 644, 6
+  size: 104, 104
+  orig: 104, 104
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/boom_10 (5)
+  rotate: false
+  xy: 750, 6
+  size: 104, 104
+  orig: 104, 104
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/boom_10 (6)
+  rotate: false
+  xy: 856, 6
+  size: 104, 104
+  orig: 104, 104
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/boom_10 (7)
+  rotate: false
+  xy: 962, 6
+  size: 104, 104
+  orig: 104, 104
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/boom_10 (8)
+  rotate: false
+  xy: 1068, 6
+  size: 104, 104
+  orig: 104, 104
+  offset: 0, 0
+  index: -1
+FX/VS_BOSS/boom_10 (9)
+  rotate: false
+  xy: 1174, 6
+  size: 104, 104
+  orig: 104, 104
+  offset: 0, 0
+  index: -1
+YArm_1 L
+  rotate: false
+  xy: 3157, 5
+  size: 116, 44
+  orig: 116, 44
+  offset: 0, 0
+  index: -1
+YArm_1_R
+  rotate: false
+  xy: 3355, 51
+  size: 113, 59
+  orig: 113, 59
+  offset: 0, 0
+  index: -1
+YArm_2 L
+  rotate: false
+  xy: 2652, 10
+  size: 91, 100
+  orig: 91, 100
+  offset: 0, 0
+  index: -1
+YArm_2_R
+  rotate: false
+  xy: 2873, 2
+  size: 79, 108
+  orig: 79, 108
+  offset: 0, 0
+  index: -1
+YArm_3_L
+  rotate: false
+  xy: 3923, 386
+  size: 150, 126
+  orig: 150, 126
+  offset: 0, 0
+  index: -1
+YArm_3_R
+  rotate: false
+  xy: 3923, 261
+  size: 143, 123
+  orig: 143, 123
+  offset: 0, 0
+  index: -1
+YBody
+  rotate: true
+  xy: 172, 34
+  size: 76, 152
+  orig: 76, 152
+  offset: 0, 0
+  index: -1
+YHead_1
+  rotate: false
+  xy: 3620, 296
+  size: 301, 216
+  orig: 301, 216
+  offset: 0, 0
+  index: -1
+YHead_2
+  rotate: false
+  xy: 3620, 40
+  size: 214, 254
+  orig: 214, 254
+  offset: 0, 0
+  index: -1
+YLeg_1_L
+  rotate: true
+  xy: 3283, 7
+  size: 103, 70
+  orig: 103, 70
+  offset: 0, 0
+  index: -1
+YLeg_1_R
+  rotate: false
+  xy: 3082, 9
+  size: 73, 101
+  orig: 73, 101
+  offset: 0, 0
+  index: -1
+YLeg_2_L
+  rotate: true
+  xy: 3157, 51
+  size: 59, 124
+  orig: 59, 124
+  offset: 0, 0
+  index: -1
+YLeg_2_R
+  rotate: true
+  xy: 2552, 2
+  size: 108, 98
+  orig: 108, 98
+  offset: 0, 0
+  index: -1
+YLeg_3_L
+  rotate: false
+  xy: 2954, 44
+  size: 126, 66
+  orig: 126, 66
+  offset: 0, 0
+  index: -1
+YLeg_3_R
+  rotate: false
+  xy: 2745, 41
+  size: 126, 69
+  orig: 126, 69
+  offset: 0, 0
+  index: -1
+YNeck
+  rotate: true
+  xy: 3836, 53
+  size: 206, 237
+  orig: 206, 237
+  offset: 0, 0
+  index: -1
+YTail
+  rotate: false
+  xy: 2, 10
+  size: 168, 100
+  orig: 168, 100
+  offset: 0, 0
+  index: -1

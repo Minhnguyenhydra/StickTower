@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+  m_Name: Hero1_Atlas
+  m_EditorClassIdentifier: 
+  atlasFile: {fileID: 4900000, guid: 475b8f334bab5d94cb85091ecbde0913, type: 3}
+  materials:
+  - {fileID: 2100000, guid: a3f531f1accefff43946a706d85f59fa, type: 2}
+  - {fileID: 2100000, guid: 019b44fd0ae2dc244801ff7fbee0185e, type: 2}
+  - {fileID: 2100000, guid: 3585f43d69af6824685086f289c2824b, type: 2}
+  - {fileID: 2100000, guid: 6adecaa4e83d25c469ca752a83d7f6f3, type: 2}
