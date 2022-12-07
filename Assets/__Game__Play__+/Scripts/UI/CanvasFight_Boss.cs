@@ -47,6 +47,8 @@ public class CanvasFight_Boss : UICanvas
     public bool isSkill_2;
     public bool isSkill_3;
     public bool isBlock;
+
+    private bool canAttack;
     private void Awake()
     {
         isRated = false;
@@ -61,6 +63,9 @@ public class CanvasFight_Boss : UICanvas
     }
     private void Update()
     {
+        if (canAttack)
+            Attack_Button_();
+        
         time_Count_Downt_attack -= Time.deltaTime;
         if (time_Count_Downt_attack <= 0)
         {
@@ -269,7 +274,7 @@ public class CanvasFight_Boss : UICanvas
     {
         if (!isBlock && !GameManager.Ins.enemyBoss_auto_Asign.isDieing_Fight_Boss && !Player.ins.isD_Dieing_Fight_Boss)
         {
-            SoundManager.Ins.PlayFx(FxID.click);
+            //SoundManager.Ins.PlayFx(FxID.click);
             if (time_Count_Downt_attack <= 0 && Check_Can_Hit() && Player.ins != null)
             {
                 if (!Player.ins.isDoneFight_Boss)
@@ -474,7 +479,8 @@ public class CanvasFight_Boss : UICanvas
         Obj_Panel_Hit.SetActive(true);
         Obj_canvas_Start.SetActive(false);
         Obj_Panel_Start.SetActive(false);
-        Set_Anim_Hand();//lv 5 obj_hand != null mới bật
+        //Set_Anim_Hand();//lv 5 obj_hand != null mới bật
+        canAttack = true;
     }
     [ContextMenu("_Reset_Skill")]
     public void Reset_Skill()

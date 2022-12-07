@@ -147,6 +147,7 @@ public class AppLovinAds : MonoBehaviour
     [SerializeField]
     private string adUnitId = "158fc1f844c580a1";
     int retryAttempt;
+    private bool canShow = true;
 
     public void InitializeInterstitialAds()
     {
@@ -182,7 +183,12 @@ public class AppLovinAds : MonoBehaviour
                 callBackAds = cbAds;
 
                 Debug.Log("Interstitial Showing...");
-                MaxSdk.ShowInterstitial(adUnitId);
+                if (canShow)
+                {
+                    canShow = false;
+                    MaxSdk.ShowInterstitial(adUnitId);
+                    StartCoroutine(Wait30s());
+                }
             }
         }
         else
@@ -190,6 +196,12 @@ public class AppLovinAds : MonoBehaviour
             if (cbAds != null)
                 cbAds();
         }    
+    }
+
+    private IEnumerator Wait30s()
+    {
+        yield return new WaitForSeconds(30f);
+        canShow = true;
     }
 
     private void OnInterstitialLoadedEvent(string adUnitId, MaxSdkBase.AdInfo adInfo)

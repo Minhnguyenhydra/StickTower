@@ -692,42 +692,42 @@ public class Enemy : MonoBehaviour
 
         if (index_Hit_Player == 0)
         {
-            ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).img_Health_Boss.fillAmount = (0.8f);
-            health = 80;
+            ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).img_Health_Boss.fillAmount = (0.5f);
+            health = 50;
             health_Bar.Set_Step_By_Step_Health(100, health, 1);
         }
         else if (index_Hit_Player == 1)
         {
-            ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).img_Health_Boss.fillAmount = (0.6f);
-            health = 60;
-            health_Bar.Set_Step_By_Step_Health(80, 60, 1);
-        }
-        else if (index_Hit_Player == 2)
-        {
-            ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).img_Health_Boss.fillAmount = (0.4f);
-            health = 40;
-            health_Bar.Set_Step_By_Step_Health(60, 40, 1);
-        }
-        else if (index_Hit_Player == 3)
-        {
-            ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).img_Health_Boss.fillAmount = (0.2f);
-            health = 20;
-            health_Bar.Set_Step_By_Step_Health(40, 20, 1);
-        }
-        else
-        {
-            ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).img_Health_Boss.fillAmount = (0.0f);
+            ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).img_Health_Boss.fillAmount = (0f);
             health = 0;
-            health_Bar.Set_Step_By_Step_Health(20, 0, 1);
+            health_Bar.Set_Step_By_Step_Health(50, 0, 1);
+        }
+        //else if (index_Hit_Player == 2)
+        //{
+        //    ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).img_Health_Boss.fillAmount = (0.4f);
+        //    health = 40;
+        //    health_Bar.Set_Step_By_Step_Health(60, 40, 1);
+        //}
+        //else if (index_Hit_Player == 3)
+        //{
+        //    ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).img_Health_Boss.fillAmount = (0.2f);
+        //    health = 20;
+        //    health_Bar.Set_Step_By_Step_Health(40, 20, 1);
+        //}
+        //else
+        //{
+        //    ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).img_Health_Boss.fillAmount = (0.0f);
+        //    health = 0;
+        //    health_Bar.Set_Step_By_Step_Health(20, 0, 1);
             
 
             
-        }
+        //}
         index_Hit_Player++;
 
         Set_Show_Blood();
         //Set_Anim_Takedame();
-        if (index_Hit_Player == 5)
+        if (index_Hit_Player == 2)
         {
             isDieing_Fight_Boss = true;
             health_Bar.Set_Hide_Health_Bar();
@@ -735,7 +735,7 @@ public class Enemy : MonoBehaviour
             this.PostEvent(QuestManager.QuestID.Quest03, 1);
         }
         Cache.GetWFS(0.5f);
-        if (index_Hit_Player == 5)
+        if (index_Hit_Player == 2)
         {
             //isDieing_Fight_Boss = true;
             //Set_Anim_Die();

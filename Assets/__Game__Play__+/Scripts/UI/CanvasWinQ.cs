@@ -28,7 +28,14 @@ public class CanvasWinQ : UICanvas
     public Text gem_all;
     //
     public GameObject obj_Btn_No_Thank;
+    public GameObject obj_Btn_No_Thank2;
     public GameObject obj_Image_Claim_ADs;
+    public GameObject objRollBar;
+    public GameObject objBtnCollection;
+    public GameObject objBtnSkin;
+    public GameObject objBtnArena;
+    public GameObject objBtnQuest;
+    public GameObject objBtnChallenge;
     //
     public GameObject obj_Image_BG_ADs_Xanh;
     public GameObject obj_Image_BG_ADs__Xam;
@@ -66,6 +73,63 @@ public class CanvasWinQ : UICanvas
 
     private void OnEnable()
     {
+        int curLevel = PlayerPrefs_Manager.Get_Index_Level_Normal();
+        if (curLevel > 0 && curLevel % 5 == 0)
+        {
+            obj_Btn_No_Thank.SetActive(true);
+            obj_Image_Claim_ADs.SetActive(true);
+            objRollBar.SetActive(true);
+
+            obj_Btn_No_Thank2.SetActive(false);
+        }
+        else
+        {
+            obj_Btn_No_Thank2.SetActive(true);
+
+            obj_Btn_No_Thank.SetActive(false);
+            obj_Image_Claim_ADs.SetActive(false);
+            objRollBar.SetActive(false);
+        }
+
+        if (curLevel >= 3)
+        {
+            objBtnCollection.SetActive(true);
+            objBtnSkin.SetActive(true);
+        }
+        if (curLevel >= 5)
+        {
+            objBtnArena.SetActive(true);
+            if (curLevel == 5)
+            {
+                objBtnArena.transform.localScale = new Vector2(1.4f, 1.4f);
+                objBtnCollection.transform.localScale = new Vector2(0.8f, 0.8f);
+                objBtnSkin.transform.localScale = new Vector2(0.8f, 0.8f);
+            }
+        }
+        if (curLevel >= 8)
+        {
+            objBtnQuest.SetActive(true);
+            if (curLevel == 8)
+            {
+                objBtnQuest.transform.localScale = new Vector2(1.4f, 1.4f);
+                objBtnArena.transform.localScale = new Vector2(0.8f, 0.8f);
+                objBtnCollection.transform.localScale = new Vector2(0.8f, 0.8f);
+                objBtnSkin.transform.localScale = new Vector2(0.8f, 0.8f);
+            }
+        }
+        if (curLevel >= 11)
+        {
+            objBtnChallenge.SetActive(true);
+            if (curLevel == 11)
+            {
+                objBtnChallenge.transform.localScale = new Vector2(1.4f, 1.4f);
+                objBtnQuest.transform.localScale = new Vector2(0.8f, 0.8f);
+                objBtnArena.transform.localScale = new Vector2(0.8f, 0.8f);
+                objBtnCollection.transform.localScale = new Vector2(0.8f, 0.8f);
+                objBtnSkin.transform.localScale = new Vector2(0.8f, 0.8f);
+            }
+        }
+
         Set_Init_Gold_Gem_Title();
         if (PlayerPrefs_Manager.Get_Key_1GamPlay_Or_2Area_Or_3Challenge() == 1)
         {
@@ -123,7 +187,7 @@ public class CanvasWinQ : UICanvas
         goldCollected =/* PlayerPrefs_Manager.Get_Gold() +*/ 1500;
         txt_Gold_Boot.text = "1500";
         txt_Gem_Boot.text = "1";
-        StartCoroutine(Set_Delay_Show_No_Thank());
+        //StartCoroutine(Set_Delay_Show_No_Thank());
         PlayerPrefs_Manager.Set_Gold(PlayerPrefs_Manager.Get_Gold() + goldCollected);
         PlayerPrefs_Manager.Set_Gem(PlayerPrefs_Manager.Get_Gem() + 1);
 
@@ -161,7 +225,7 @@ public class CanvasWinQ : UICanvas
         goldCollected = Constant.Get_Gold_Reward_By_level(PlayerPrefs_Manager.Get_Index_Level_Normal());
         txt_Gold_Boot.text = goldCollected.ToString();
         txt_Gem_Boot.text = "1";
-        StartCoroutine(Set_Delay_Show_No_Thank());
+        //StartCoroutine(Set_Delay_Show_No_Thank());
         //
         //Set_Check_Show_Btn();
         //Set_Step_By_Step_Gold(PlayerPrefs_Manager.Get_Gold(), PlayerPrefs_Manager.Get_Gold() + Constant.Get_Gold_Reward_By_level(PlayerPrefs_Manager.Get_Index_Level_Normal() - 1), 1);

@@ -579,7 +579,7 @@ public class Player : MonoBehaviour
     #region Function Random Skill
     public void Random_Skill_attack(bool _isOpn_Reward = false)
     {
-        int ii = UnityEngine.Random.Range(1, 5);
+        int ii = UnityEngine.Random.Range(1, 4);
         if (_isOpn_Reward)
         {
             ii = 0;
