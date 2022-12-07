@@ -146,8 +146,8 @@ public class EventController : MonoBehaviour
     {
         if (fireBaseInitDone)
         {
-            Parameter param = new Parameter("video_show_all_game_para", "video_showed_" + value);
-            Firebase.Analytics.FirebaseAnalytics.LogEvent("video_show_all_game", param);
+          //  Parameter param = new Parameter("video_show_all_game_para", "video_showed_" + value);
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("video_show_all_game_" + "video_showed_" + value/*, param*/);
         }
     }
 
@@ -370,32 +370,32 @@ public class EventController : MonoBehaviour
             return;
         if (fireBaseInitDone)
         {
-            Parameter param = new Parameter("flow_first_open_para", value);
-            Firebase.Analytics.FirebaseAnalytics.LogEvent("flow_first_open", param);
+        //    Parameter param = new Parameter("flow_first_open_para", value);
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("flow_first_open_" + value/*, param*/);
         }
     }
     public static void GAME_PLAY(string value)//chua
     {
         if (fireBaseInitDone)
         {
-            Parameter param = new Parameter("game_play_para", value);
-            Firebase.Analytics.FirebaseAnalytics.LogEvent("game_play", param);
+           // Parameter param = new Parameter("game_play_para", value);
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("game_play_"+ value/*, param*/);
         }
     }
     public static void MAIN_CLICK(string value)//chua
     {
         if (fireBaseInitDone)
         {
-            Parameter param = new Parameter("main_para", value);
-            Firebase.Analytics.FirebaseAnalytics.LogEvent("main_click", param);
+         //   Parameter param = new Parameter("main_para", value);
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("main_click_" + value/*, param*/);
         }
     }
     public static void SHOP_EVENT(int value)
     {
         if (fireBaseInitDone)
         {
-            Parameter param = new Parameter("skin_para","skin_" + value);
-            Firebase.Analytics.FirebaseAnalytics.LogEvent("shop_event", param);
+          //  Parameter param = new Parameter("skin_para","skin_" + value);
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("shop_event_" + value/*, param*/);
         }
         Debug.LogError("skin_" + value);
     }
@@ -403,16 +403,16 @@ public class EventController : MonoBehaviour
     {
         if (fireBaseInitDone)
         {
-            Parameter param = new Parameter("card_para","card_" + value);
-            Firebase.Analytics.FirebaseAnalytics.LogEvent("arena_event", param);
+           // Parameter param = new Parameter("card_para","card_" + value);
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("arena_event_" + "card_" + value/*, param*/);
         }
     }
     public static void ARENA_EVENT_ARENA(string value)
     {
         if (fireBaseInitDone)
         {
-            Parameter param = new Parameter("arena_level_para", "arena_level_" + value);
-            Firebase.Analytics.FirebaseAnalytics.LogEvent("arena_event", param);
+           // Parameter param = new Parameter("arena_level_para", "arena_level_" + value);
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("arena_event_" + "arena_level_" + value/*, param*/);
         }
     }
     public static void SHOW_INTER_APPFLYER(int value)
