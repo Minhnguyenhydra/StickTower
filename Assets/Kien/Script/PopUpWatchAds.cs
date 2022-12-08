@@ -23,8 +23,9 @@ public class PopUpWatchAds : PopUpProperties
     }    
     public void BtnNext()
     {
-       // DataParam.currentLevel++;
-      //  GameController.instance.ShowPopUpResult();
+        SoundManager.Ins.PlayFx(FxID.click);
+        // DataParam.currentLevel++;
+        //  GameController.instance.ShowPopUpResult();
         CloseMe();
         LoadScene();
         //Application.LoadLevel(Application.loadedLevelName);

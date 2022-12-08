@@ -1511,7 +1511,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3084026206248775594, guid: fca6fa56ba3fe9d4bb164811d1aaf58e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -343.00003
+      value: -343
       objectReference: {fileID: 0}
     - target: {fileID: 3084026206248775594, guid: fca6fa56ba3fe9d4bb164811d1aaf58e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4241,7 +4241,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4628105178944577885, guid: 872e130c8825abb4c84147a8612238fd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -2.22
       objectReference: {fileID: 0}
     - target: {fileID: 4628105178944577885, guid: 872e130c8825abb4c84147a8612238fd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5484,7 +5484,7 @@ PrefabInstance:
       objectReference: {fileID: 108290308}
     - target: {fileID: 8343629657060541600, guid: ce14ef297ed9253408f622e8690ce469, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -74.99997
+      value: -75
       objectReference: {fileID: 0}
     - target: {fileID: 8343629657099967576, guid: ce14ef297ed9253408f622e8690ce469, type: 3}
       propertyPath: m_AnchorMax.y
@@ -5602,6 +5602,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18d122c0c9ab7e04198c9cc68aa8cb96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lastLevel: 0
+  superBoss: {fileID: 0}
   enemyBoss_auto_Asign: {fileID: 0}
   GMState: 0
 --- !u!1 &1957464815

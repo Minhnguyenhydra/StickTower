@@ -174,28 +174,28 @@ public class AppLovinAds : MonoBehaviour
 
     public void ShowInterstitialAds(CallBackAds cbAds)
     {
+        if (cbAds != null)
+            cbAds();
+
         if (!Datacontroller.instance.noAdsTest)
         {
 
             if (MaxSdk.IsInterstitialReady(adUnitId))
             {
-                AppOpenManager.ResumeFromAds = true;
-                callBackAds = cbAds;
+
+              //  callBackAds = cbAds;
 
                 Debug.Log("Interstitial Showing...");
                 if (canShow)
                 {
+                    AppOpenManager.ResumeFromAds = true;
                     canShow = false;
                     MaxSdk.ShowInterstitial(adUnitId);
                     StartCoroutine(Wait30s());
                 }
             }
         }
-        else
-        {
-            if (cbAds != null)
-                cbAds();
-        }    
+ 
     }
 
     private IEnumerator Wait30s()
@@ -249,8 +249,8 @@ public class AppLovinAds : MonoBehaviour
         LoadInterstitial();
 
         AppOpenManager.ResumeFromAds = false;
-        callBackAds?.Invoke();
-        callBackAds = null;
+        //callBackAds?.Invoke();
+        //callBackAds = null;
         Debug.Log("Interstitial Ad Hidden");
 
     }

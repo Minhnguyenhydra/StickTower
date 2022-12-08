@@ -1350,7 +1350,7 @@ GameObject:
   - component: {fileID: 7538722279384705636}
   - component: {fileID: 1934277887668167689}
   m_Layer: 5
-  m_Name: BtnWatchAdsUnlock
+  m_Name: BtnWatchAdsUnlockPickture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2059,7 +2059,7 @@ GameObject:
   - component: {fileID: 1285171421059263572}
   - component: {fileID: 3034223541155738674}
   m_Layer: 5
-  m_Name: BtnWatchAdsUnlock
+  m_Name: BtnWatchAdsUnlockPickture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3416,7 +3416,7 @@ GameObject:
   - component: {fileID: 5952513271772481710}
   - component: {fileID: 7176908042093882862}
   m_Layer: 5
-  m_Name: BtnWatchAdsUnlock
+  m_Name: BtnWatchAdsUnlockPickture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4614,7 +4614,7 @@ GameObject:
   - component: {fileID: 1905069749891231610}
   - component: {fileID: 1465230271207939931}
   m_Layer: 5
-  m_Name: BtnUnlock
+  m_Name: BtnWatchAdsUnlockPickture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4972,7 +4972,7 @@ GameObject:
   - component: {fileID: 3273910815429536963}
   - component: {fileID: 119923337105016274}
   m_Layer: 5
-  m_Name: BtnWatchAdsUnlock
+  m_Name: BtnWatchAdsUnlockPickture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6791,7 +6791,7 @@ GameObject:
   - component: {fileID: 5849350494905499808}
   - component: {fileID: 4659984064539560824}
   m_Layer: 5
-  m_Name: BtnWatchAdsUnlock
+  m_Name: BtnWatchAdsUnlockPickture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6924,7 +6924,7 @@ GameObject:
   - component: {fileID: 8889680462677852889}
   - component: {fileID: 8889680462677852888}
   m_Layer: 5
-  m_Name: BtnSelect
+  m_Name: BtnSelectLevelDelete
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7544,7 +7544,7 @@ GameObject:
   - component: {fileID: 8889680463869385097}
   - component: {fileID: 8889680463869385096}
   m_Layer: 5
-  m_Name: BtnClose
+  m_Name: BtnCloseLevelDelete
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

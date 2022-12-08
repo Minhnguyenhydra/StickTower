@@ -932,7 +932,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debug: 0
-  noAdsTest: 1
+  noAdsTest: 0
   saveData:
     session: 0
     day: 0
@@ -1678,7 +1678,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 879815432073866156, guid: 1dfafaafba2e9a040a7f4ea9dd8b25c2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -960
+      value: -959.99994
       objectReference: {fileID: 0}
     - target: {fileID: 879815432101192570, guid: 1dfafaafba2e9a040a7f4ea9dd8b25c2, type: 3}
       propertyPath: m_AnchorMax.y
@@ -5624,7 +5624,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7920156534919154237, guid: 54332ff47c7609f4bbfcf2b2486cfacb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -22.709946
+      value: -22.70996
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54332ff47c7609f4bbfcf2b2486cfacb, type: 3}
@@ -6151,7 +6151,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8343629657060541600, guid: ce14ef297ed9253408f622e8690ce469, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -74.99992
+      value: -74.99994
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce14ef297ed9253408f622e8690ce469, type: 3}

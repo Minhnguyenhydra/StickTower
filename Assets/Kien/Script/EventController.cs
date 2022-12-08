@@ -298,7 +298,27 @@ public class EventController : MonoBehaviour
         }
         //  AF_LEVEL_ACHIEVED();
     }
-
+    public static void WIN_LEVEL_EVENT_DELETE(int value)
+    {
+        if (fireBaseInitDone)
+        {
+            if (value < 10)
+            {
+                nameTempParam = "00";
+            }
+            else if (value >= 10 && value < 100)
+            {
+                nameTempParam = "0";
+            }
+            else
+            {
+                nameTempParam = "";
+            }
+            //  Parameter param = new Parameter("win_level_para", "win_challange_" + nameTempParam + value /*+ "_" + age*/);
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("win_level_event_delete_" + nameTempParam + value/*, param*/);
+        }
+        //  AF_LEVEL_ACHIEVED();
+    }
     public static void LOSE_LEVEL_EVENT(int value)
     {
         if (fireBaseInitDone)
@@ -341,6 +361,7 @@ public class EventController : MonoBehaviour
             Firebase.Analytics.FirebaseAnalytics.LogEvent("lose_level_event_challenge_" + nameTempParam + value/*, param*/);
         }
     }
+
 
     public static void REMOVE_ADS(int value)
     {
@@ -407,14 +428,52 @@ public class EventController : MonoBehaviour
             Firebase.Analytics.FirebaseAnalytics.LogEvent("arena_event_" + "card_" + value/*, param*/);
         }
     }
-    public static void ARENA_EVENT_ARENA(string value)
+    public static void ARENA_EVENT_ARENA(int value)
     {
         if (fireBaseInitDone)
         {
-           // Parameter param = new Parameter("arena_level_para", "arena_level_" + value);
-            Firebase.Analytics.FirebaseAnalytics.LogEvent("arena_event_" + "arena_level_" + value/*, param*/);
+
+            if (value < 10)
+            {
+                nameTempParam = "00";
+            }
+            else if (value >= 10 && value < 100)
+            {
+                nameTempParam = "0";
+            }
+            else
+            {
+                nameTempParam = "";
+            }
+            // Parameter param = new Parameter("arena_level_para", "arena_level_" + value);
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("arena_event_" + "arena_level_" + nameTempParam + value/*, param*/);
         }
     }
+    public static void ARENA_EVENT_ARENA_LOSE()
+    {
+        if (fireBaseInitDone)
+        {
+
+            // Parameter param = new Parameter("arena_level_para", "arena_level_" + value);
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("arena_event_lose"/*, param*/);
+        }
+    }
+    public static void ARENA_EVENT_ARENA_WIN()
+    {
+        if (fireBaseInitDone)
+        {
+
+            // Parameter param = new Parameter("arena_level_para", "arena_level_" + value);
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("arena_event_win"/*, param*/);
+        }
+    }
+    public static void DAILYGIFT(string value)
+    {
+        if(fireBaseInitDone)
+        {
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("daily_event_" + value/*, param*/);
+        }    
+    }    
     public static void SHOW_INTER_APPFLYER(int value)
     {
         System.Collections.Generic.Dictionary<string, string> paramEvent = new

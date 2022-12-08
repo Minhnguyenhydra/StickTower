@@ -149,6 +149,7 @@ public class CanvasWinQ : UICanvas
         }
         else
         {
+            EventController.ARENA_EVENT_ARENA_WIN();
             Set_Init();
         }
 

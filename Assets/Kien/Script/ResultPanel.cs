@@ -11,11 +11,13 @@ public class ResultPanel : PopUpProperties
         //  DataParam.currentLevel++;
         // Application.LoadLevel(Application.loadedLevelName);
         SoundManager.Ins.PlayFx(FxID.click);
-#if WatchADs
+        //#if WatchADs
+        //        AdsManager.Instance.WatchInterstitialAds(LoadScene);
+        //#else
+        //        LoadScene();
+        //#endif
         AdsManager.Instance.WatchInterstitialAds(LoadScene);
-#else
-        LoadScene();
-#endif
+
         Debug.LogError("======= load next level");
     }
     void LoadScene()
@@ -27,6 +29,7 @@ public class ResultPanel : PopUpProperties
         base.OpenMe();
         btnNext.SetActive(false);
         GameController.instance.selectLevelController.DisableBtn();
+        EventController.WIN_LEVEL_EVENT_DELETE(DataParam.currentLevel + 1);
         StartCoroutine(delayDisplayBtnNext());
     }
     IEnumerator delayDisplayBtnNext()

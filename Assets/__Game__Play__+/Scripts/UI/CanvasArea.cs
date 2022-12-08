@@ -37,7 +37,7 @@ public class CanvasArea : UICanvas
         txt_gem.text = gem_In_Level.ToString();
         SetOrigin_Boot_Canvas();
 
-        EventController.ARENA_EVENT_ARENA((level_curent + 1).ToString());
+        EventController.ARENA_EVENT_ARENA((level_curent + 1));
     }
     public void Set_Downt_Boot_Canvas()
     {

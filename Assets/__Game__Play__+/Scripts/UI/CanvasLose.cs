@@ -31,6 +31,10 @@ public class CanvasLose : UICanvas
         {
             EventController.LOSE_LEVEL_EVENT_CHALLENGE(PlayerPrefs_Manager.Get__QLevel_Challenge());
         }
+        else
+        {
+            EventController.ARENA_EVENT_ARENA_LOSE();
+        }
 
         SoundManager.Ins.PlayFx(FxID.lose);
         Set_Init_Gold_Gem_Level_Title();

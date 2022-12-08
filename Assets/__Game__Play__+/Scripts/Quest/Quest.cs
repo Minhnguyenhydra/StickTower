@@ -103,5 +103,9 @@ public class Quest : MonoBehaviour
         PlayerPrefs_Manager.SetClaimed(Constant.Quest + questID, true);
 
         ((CanvasMainMenu)UIManager.Ins.GetUI(UIID.UICMainMenu)).Set_Reload_Gold_Gem_Title();
+
+        SoundManager.Ins.PlayFx(FxID.click);
+
+        EventController.DAILYGIFT(Constant.Quest + questID);
     }
 }

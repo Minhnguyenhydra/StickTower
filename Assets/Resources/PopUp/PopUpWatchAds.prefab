@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4492807268028795945}
   - component: {fileID: 4492807268028795946}
   m_Layer: 5
-  m_Name: BtnNext
+  m_Name: BtnNoThanksNextStepDelete
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -382,7 +382,7 @@ GameObject:
   - component: {fileID: 4492807269807669307}
   - component: {fileID: 4492807269807669316}
   m_Layer: 5
-  m_Name: BtnWatchAds
+  m_Name: BtnWatchAdsNextStepDelete
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
