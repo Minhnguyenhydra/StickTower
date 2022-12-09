@@ -29,6 +29,8 @@ public class CanvasMainMenu : UICanvas
 
     private void OnEnable()
     {
+        GameManager.isChallengeMode = false;
+
         SoundManager.Ins.PlaySound(SoundID.menu);
        // Set_Init_Gold_Pink_bank();
         Set_Reload_Gold_Gem_Title();

@@ -128,7 +128,6 @@ public class Enemy : MonoBehaviour
     #region Set IE Delay Action, to die, attack to idle
     IEnumerator Delay_die()
     {
-        floor_This.house_Build_Of_This.numEnemiesKilled++;
 
         //nếu màn có con Enemy này cầm key
         if (isEnemy_Have_Key)
@@ -173,6 +172,8 @@ public class Enemy : MonoBehaviour
 
         //bật anim enemy die........
         SetCharacterState_NoLoop(Action_Die);
+        floor_This.house_Build_Of_This.numEnemiesKilled++;
+
         SoundManager.Ins.Play_FX_Hit_Enemy_Random();
 
         //If level is zero or one need enable tut
