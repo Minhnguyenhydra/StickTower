@@ -731,7 +731,7 @@ MonoBehaviour:
     materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
-  _animationName: Hero11_skill_1
+  _animationName: idle
   loop: 1
   timeScale: 1
 --- !u!1 &4356437555162577535
