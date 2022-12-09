@@ -135,7 +135,7 @@ public class Camera_Manager : Singleton<Camera_Manager>
 
     public void Back()
     {
-        tf_Cam.DOMove(originCamPos, 0.5f);
+        Move_Cam(list_Pos_Cam_move.Count - 1);
         cam.DOOrthoSize(21f, 0.5f);
     }
 

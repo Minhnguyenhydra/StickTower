@@ -8492,7 +8492,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3971907168234526568, guid: ce14ef297ed9253408f622e8690ce469, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 6497421935566991039, guid: ce14ef297ed9253408f622e8690ce469, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6681426625959473366, guid: ce14ef297ed9253408f622e8690ce469, type: 3}
       propertyPath: m_RootOrder
@@ -8612,7 +8616,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8343629655493801286, guid: ce14ef297ed9253408f622e8690ce469, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8343629655501262042, guid: ce14ef297ed9253408f622e8690ce469, type: 3}
       propertyPath: m_RootOrder
@@ -8712,7 +8716,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8343629656259580583, guid: ce14ef297ed9253408f622e8690ce469, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8343629656283110556, guid: ce14ef297ed9253408f622e8690ce469, type: 3}
       propertyPath: m_AnchorMax.y
@@ -8732,7 +8736,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8343629656310398714, guid: ce14ef297ed9253408f622e8690ce469, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8343629656310436905, guid: ce14ef297ed9253408f622e8690ce469, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -8792,7 +8796,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8343629656678907130, guid: ce14ef297ed9253408f622e8690ce469, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8343629656746788232, guid: ce14ef297ed9253408f622e8690ce469, type: 3}
       propertyPath: m_RootOrder
@@ -12652,11 +12656,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3174962663518092566, guid: 09769114ad9cffe4087b4941b205016d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 37.4
+      value: 48.38
       objectReference: {fileID: 0}
     - target: {fileID: 3174962663518092566, guid: 09769114ad9cffe4087b4941b205016d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -13.63
+      value: -13.7
       objectReference: {fileID: 0}
     - target: {fileID: 3174962663518092566, guid: 09769114ad9cffe4087b4941b205016d, type: 3}
       propertyPath: m_LocalPosition.z

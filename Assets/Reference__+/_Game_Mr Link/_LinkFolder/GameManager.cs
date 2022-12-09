@@ -172,11 +172,14 @@ public class GameManager : Singleton<GameManager>
             UIManager.Ins.GetUI(UIID.UICFight_Boss).gameObject.SetActive(false);
             yield return Cache.GetWFS(1.5f);
 
-            if (Player.ins.enemy_Hitting != null && Player.ins.enemy_Hitting.isBoss_UNTIL)
-            {
-                Camera_Manager.Ins.Back();
-                yield return Cache.GetWFS(0.25f);
-            }
+            //if (Player.ins.enemy_Hitting != null && Player.ins.enemy_Hitting.isBoss_UNTIL)
+            //{
+            //    Camera_Manager.Ins.Back();
+            //    yield return Cache.GetWFS(0.25f);
+            //}
+
+            Camera_Manager.Ins.Back();
+            yield return Cache.GetWFS(0.25f);
 
             superBoss.Skeleton.SetSkin(Constant.Get_Skin_Name_By_Id(PlayerPrefs_Manager.Get_ID_Name_Skin_Wearing()));
             superBoss.transform.parent.gameObject.SetActive(true);

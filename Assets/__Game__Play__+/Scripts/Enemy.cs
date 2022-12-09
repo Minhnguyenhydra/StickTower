@@ -67,7 +67,7 @@ public class Enemy : MonoBehaviour
 
     private void HandleAnimationStateEvent(TrackEntry trackEntry, Spine.Event e)
     {
-        
+
     }
 
     // Update is called once per frame
@@ -128,8 +128,8 @@ public class Enemy : MonoBehaviour
     #region Set IE Delay Action, to die, attack to idle
     IEnumerator Delay_die()
     {
-        
-        
+        floor_This.house_Build_Of_This.numEnemiesKilled++;
+
         //nếu màn có con Enemy này cầm key
         if (isEnemy_Have_Key)
         {
@@ -182,9 +182,9 @@ public class Enemy : MonoBehaviour
         float time_action_Die = Constant.Get_Time_action_Die_Enemy(isBig_Enemy);
         yield return Cache.GetWFS(time_action_Die);
 
-
         
-        if (floor_This.is_Floor_Last_Of_house && !floor_This.is_Floor_Last_Of_Level)
+        if (!floor_This.house_Build_Of_This.isLastHouse
+          && floor_This.house_Build_Of_This.numEnemiesKilled >= floor_This.house_Build_Of_This.totalEnemy)
         {
             //Nếu enemy là cuối cùng của Floor cuối cùng của 1 nhà... set delay chuyển nhà
             Point_In_Floor pp = GetComponentInParent<Point_In_Floor>();
@@ -197,34 +197,40 @@ public class Enemy : MonoBehaviour
                 floor_This.house_Build_Of_This.Set_This_To_Team_Player();
                 Drag_Drop_Manager.Instance.Set_Delay_Take_House(floor_This, 0);
             }
-
         }
-        
 
-
-        //xóa enemy...//
-        if (isBossLass)
+        if (floor_This.house_Build_Of_This.isLastHouse
+         && floor_This.house_Build_Of_This.numEnemiesKilled >= floor_This.house_Build_Of_This.totalEnemy)
         {
-            yield return Cache.GetWFS(0.1f);//0.8
-            //Set Mái xanh.....delay win
-            GameManager.Ins.Set_Mai_Xanh_Delay_Win(floor_This);
-#if UNITY_EDITOR
-            
-#endif
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            Destroy(this.gameObject);
-            if (!GameManager.isChallengeMode)
+            bool canWin = true;
+            foreach (var floor in floor_This.house_Build_Of_This.list_Floor)
             {
-                this.PostEvent(QuestManager.QuestID.Quest05, 1);
+                for (int i = 0; i < floor.list_Point_In_Floor.Count; i++)
+                {
+                    if (floor.list_Point_In_Floor[i].princess_Attack_This_Point != null)
+                    {
+                        canWin = false;
+                    }
+                }
             }
 
-            if (isBig_Enemy)
-                this.PostEvent(QuestManager.QuestID.Quest03, 1);
+            if (canWin)
+            {
+                yield return Cache.GetWFS(0.1f);//0.8
+                                                //Set Mái xanh.....delay win
+                GameManager.Ins.Set_Mai_Xanh_Delay_Win(floor_This);
+            }
         }
-        //gameObject.SetActive(false);
+
+        if (!GameManager.isChallengeMode)
+        {
+            this.PostEvent(QuestManager.QuestID.Quest05, 1);
+        }
+
+        if (isBig_Enemy)
+            this.PostEvent(QuestManager.QuestID.Quest03, 1);
+
+        Destroy(gameObject);
     }
     IEnumerator Delay_AttackTo_Idle()
     {
@@ -291,7 +297,7 @@ public class Enemy : MonoBehaviour
         {
             health_Bar.tf_Health_Bar.localPosition = Constant.Enemy_Local_Pos_Health_Bar_Normal;
         }
-        
+
         health_Bar.Set_Health_Imedetly(health);
     }
     public int Get_Health()
@@ -323,7 +329,7 @@ public class Enemy : MonoBehaviour
     }
     IEnumerator IE_Attack_8s(bool _isPlayer_Stronger)
     {
-        
+
         if (_isPlayer_Stronger)
         {
             // tối đa 5 lần
@@ -338,7 +344,7 @@ public class Enemy : MonoBehaviour
             //damge 25
             if (!isDieing_Fight_Boss)
             {
-                Player.ins.health_Bar.Set_Step_By_Step_Health(_health_Player,80, 1);
+                Player.ins.health_Bar.Set_Step_By_Step_Health(_health_Player, 80, 1);
 
                 ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Fill_Health_Player(0.8f);
             }
@@ -358,7 +364,7 @@ public class Enemy : MonoBehaviour
             //damge 25
             if (!isDieing_Fight_Boss && Player.ins != null)
             {
-                Player.ins.health_Bar.Set_Step_By_Step_Health(_health_Player,60, 1);
+                Player.ins.health_Bar.Set_Step_By_Step_Health(_health_Player, 60, 1);
 
                 ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Fill_Health_Player(0.6f);
             }
@@ -378,7 +384,7 @@ public class Enemy : MonoBehaviour
             //damge 25
             if (!isDieing_Fight_Boss && Player.ins != null)
             {
-                Player.ins.health_Bar.Set_Step_By_Step_Health(_health_Player,40, 1);
+                Player.ins.health_Bar.Set_Step_By_Step_Health(_health_Player, 40, 1);
 
                 ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Fill_Health_Player(0.4f);
             }
@@ -418,10 +424,10 @@ public class Enemy : MonoBehaviour
             //damge 25
             if (!isDieing_Fight_Boss && Player.ins != null)
             {
-                Player.ins.health_Bar.Set_Step_By_Step_Health(_health_Player,0, 1);
+                Player.ins.health_Bar.Set_Step_By_Step_Health(_health_Player, 0, 1);
 
                 ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Fill_Health_Player(0.0f);
-                
+
             }
             ////1s
             //yield return Cache.GetWFS(1);
@@ -683,7 +689,7 @@ public class Enemy : MonoBehaviour
         {
             StartCoroutine(IE_Show_Blood_In_8s_Fight_Boot());
         }
-        
+
     }
 
     IEnumerator IE_Show_Blood_In_8s_Fight_Boot()
@@ -719,9 +725,9 @@ public class Enemy : MonoBehaviour
         //    ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).img_Health_Boss.fillAmount = (0.0f);
         //    health = 0;
         //    health_Bar.Set_Step_By_Step_Health(20, 0, 1);
-            
 
-            
+
+
         //}
         index_Hit_Player++;
 

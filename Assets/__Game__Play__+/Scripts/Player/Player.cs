@@ -1146,11 +1146,17 @@ public class Player : MonoBehaviour
             }
             else if (floor_stay.list_Point_In_Floor[0].princess_Attack_This_Point != null)
             {
+                if (floor_stay.house_Build_Of_This.numEnemiesKilled < floor_stay.house_Build_Of_This.totalEnemy)
+                    return;
+
                 isReach_Last_Point_Level = true;
                 Set_Go_To_Point_End_Level(floor_stay.tf_Point_End_Level, Enum_Type_Take_Last_Level.Princess);
             }
             else if (floor_stay.list_Point_In_Floor[0].reward_Attack_This_Point != null)
             {
+                if (floor_stay.house_Build_Of_This.numEnemiesKilled < floor_stay.house_Build_Of_This.totalEnemy)
+                    return;
+
                 isReach_Last_Point_Level = true;
                 Set_Go_To_Point_End_Level(floor_stay.tf_Point_End_Level, Enum_Type_Take_Last_Level.Reward);
             }
@@ -1163,36 +1169,20 @@ public class Player : MonoBehaviour
                 isLast_Point_Level = true;
                 isReach_Last_Point_Level = true;
 
-
-                //
-                int level = PlayerPrefs_Manager.Get_Index_Level_Normal();
-                if (level != 1
-                 && level != 2
-                 && level != 10
-                 && level != 11
-                 && level != 12
-                 && level != 23
-                 && level != 24
-                 && level != 30
-                 && level != 34
-                 && level != 38
-                 && level != 39
-                 && level != 40
-                 && level != 42
-                 && level != 44
-                 && level != 46
-                 && level != 47)
-                {
-                    Set_Go_To_Point_End_Level(floor_stay.tf_Point_End_Level, Enum_Type_Take_Last_Level.Enemy, floor_stay.list_Point_In_Floor[0].enemy_Attack_This_Point.Get_Health());
-                }
             }
             else if (floor_stay.list_Point_In_Floor[0].princess_Attack_This_Point != null)
             {
+                if (floor_stay.house_Build_Of_This.numEnemiesKilled < floor_stay.house_Build_Of_This.totalEnemy)
+                    return;
+
                 isReach_Last_Point_Level = true;
                 Set_Go_To_Point_End_Level(floor_stay.tf_Point_End_Level, Enum_Type_Take_Last_Level.Princess);
             }
             else if (floor_stay.list_Point_In_Floor[0].reward_Attack_This_Point != null)
             {
+                if (floor_stay.house_Build_Of_This.numEnemiesKilled < floor_stay.house_Build_Of_This.totalEnemy)
+                    return;
+
                 isReach_Last_Point_Level = true;
                 Set_Go_To_Point_End_Level(floor_stay.tf_Point_End_Level, Enum_Type_Take_Last_Level.Reward);
             }

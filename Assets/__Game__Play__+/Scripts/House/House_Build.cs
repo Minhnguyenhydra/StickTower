@@ -33,11 +33,27 @@ public class House_Build : MonoBehaviour
     public bool is_Trigger_add_To_4;
     //Load obj_Prefabs_Floor băng Resource.load
     // Start is called before the first frame update
+    public int totalEnemy;
+    public int numEnemiesKilled;
+    public bool isLastHouse;
+
     void Start()
     {
         tf_This_House = transform;
         
         Drag_Drop_Manager.Instance.list_House_Build.Add(this);
+
+        Enemy[] enemies = GetComponentsInChildren<Enemy>();
+        if (enemies != null && enemies.Length > 0)
+            totalEnemy = enemies.Length;
+
+        for (int i = 0; i < list_Floor.Count; i++)
+        {
+            if (list_Floor[i].is_Floor_Last_Of_Level)
+            {
+                isLastHouse = true;
+            }
+        }
     }
     private void Awake()
     {

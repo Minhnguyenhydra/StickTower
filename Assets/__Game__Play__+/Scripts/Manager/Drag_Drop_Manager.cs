@@ -151,7 +151,7 @@ public class Drag_Drop_Manager : Singleton_Q<Drag_Drop_Manager>
                         else if (floor_Raycast_Before != floor_Raycast_To)
                         {
                             //khác cái cũ mà rỗng ko chứa enemy hoặc chap nào thì...
-                            if (floor_Raycast_Before.isReady_Downt && !floor_Raycast_Before.is_Floor_Last_Of_house)
+                            if (floor_Raycast_Before.isReady_Downt)
                             {
                                 //Nếu là Cây Floor thì cho đánh luôn
                                 isDelayPlayer_attack_By_Downt = true;
@@ -160,10 +160,19 @@ public class Drag_Drop_Manager : Singleton_Q<Drag_Drop_Manager>
                                 //Chọn sẵn houseType từ Herachi, search từ house ở Hirarechy rồi điền từng nhà cho nhanh
                                 if (floor_Raycast_To.house_Build_Of_This.houseType == Enum_TypeHouse.enemy_Normal) 
                                 {
-                                    floor_Raycast_Before.house_Build_Of_This.Set_Floor_Fall_Downt(floor_Raycast_Before);
+                                    if (floor_Raycast_Before.house_Build_Of_This.numEnemiesKilled < floor_Raycast_Before.house_Build_Of_This.totalEnemy)
+                                    {
+                                        floor_Raycast_Before.house_Build_Of_This.Set_Floor_Fall_Downt(floor_Raycast_Before);
 
-                                    
-                                    Player.ins.house_Build_Of_Player.Set_Floor_Up_Top();
+                                        Player.ins.house_Build_Of_Player.Set_Floor_Up_Top();
+                                    }
+                                    else if (floor_Raycast_Before.house_Build_Of_This.numEnemiesKilled >= floor_Raycast_Before.house_Build_Of_This.totalEnemy
+                                          && floor_Raycast_To.list_Point_In_Floor[0].princess_Attack_This_Point != null)
+                                    {
+                                        floor_Raycast_Before.house_Build_Of_This.Set_Floor_Fall_Downt(floor_Raycast_Before);
+
+                                        Player.ins.house_Build_Of_Player.Set_Floor_Up_Top();
+                                    }
                                 }
                                 else if (floor_Raycast_To.house_Build_Of_This.houseType == Enum_TypeHouse.enemy_Reward)
                                 {
@@ -491,6 +500,16 @@ public class Drag_Drop_Manager : Singleton_Q<Drag_Drop_Manager>
                 floor_Raycast_Before = floor_Raycast_To;
             }
             #endregion
+            #region Nếu phía trước là Công chúa
+            else if (_floor.list_Point_In_Floor[_indexPoint - 1].princess_Attack_This_Point != null)
+            {
+                if (_floor.house_Build_Of_This.numEnemiesKilled >= _floor.house_Build_Of_This.totalEnemy)
+                {
+                    //floor_Raycast_To.house_Build_Of_This.Set_Floor_Fall_Downt(floor_Raycast_To);
+                    StartCoroutine(SavePricessAfterAFrame(_floor));
+                }
+            }
+            #endregion
             #region  Set Empty điểm Player đang đứng + Set Floor có thể sụp xuống
             //--- điểm Player đang đứng trên 1 Floor, nhưng Player ko bao h đến đc điểm cuối cùng của 1 Floor, vì điểm đó có lính, Boss hoặc Rương,...
             if (_indexPoint > 1)
@@ -501,6 +520,9 @@ public class Drag_Drop_Manager : Singleton_Q<Drag_Drop_Manager>
             //Nếu Player đang đứng là ngay trước điểm cuối của 1 Floor, có nghĩa là Floor này sẵn sàng sụp xuống nếu Player đc kéo đến Floor khác
             else if (_indexPoint - 1 == 0)
             {
+                if (_floor.list_Point_In_Floor[0].princess_Attack_This_Point != null)
+                    return;
+
                 _floor.Set_isReady_Downt();
             }
             #endregion
@@ -527,6 +549,13 @@ public class Drag_Drop_Manager : Singleton_Q<Drag_Drop_Manager>
             _floor.Set_isReady_Downt();
         }
 
+    }
+
+    private IEnumerator SavePricessAfterAFrame(Floor floor)
+    {
+        yield return null;
+        yield return new WaitForSeconds(Constant.Floor_Time_Fall_Downt);
+        Player.ins.Set_Go_To_Point_End_Level(floor.tf_Point_End_Level, Enum_Type_Take_Last_Level.Princess);
     }
     //Quan
     IEnumerator IE_Delay_Go_End_Trap_Priciple()
