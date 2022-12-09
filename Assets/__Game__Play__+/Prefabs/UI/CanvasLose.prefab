@@ -1985,7 +1985,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8206860771373263220
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2061,6 +2061,10 @@ MonoBehaviour:
   obj_Btn_Replay_Arena: {fileID: 1408099407797938657}
   skeletonAnimation: {fileID: 8742961453456563977}
   objQuest: {fileID: 3916562098770938257}
+  objBtnCollection: {fileID: 8580820133209976248}
+  objBtnSkin: {fileID: 1172822231100165043}
+  objBtnArena: {fileID: 8040028527866787990}
+  objBtnChallenge: {fileID: 8053145410992977385}
   txt_Gold: {fileID: 8206860770824038023}
   txt_Gem: {fileID: 8206860771407545758}
   txt_Level: {fileID: 8206860771474576823}
@@ -2912,7 +2916,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6565582799859922943
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3280,6 +3284,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Area
       objectReference: {fileID: 0}
+    - target: {fileID: 8078728892413399027, guid: 46564ee6d47f6cf4191f22d8ee306422, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8078728892413399028, guid: 46564ee6d47f6cf4191f22d8ee306422, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3393,6 +3401,11 @@ PrefabInstance:
 --- !u!224 &8040028527866787985 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8078728892413399028, guid: 46564ee6d47f6cf4191f22d8ee306422, type: 3}
+  m_PrefabInstance: {fileID: 2273898102509139813}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8040028527866787990 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8078728892413399027, guid: 46564ee6d47f6cf4191f22d8ee306422, type: 3}
   m_PrefabInstance: {fileID: 2273898102509139813}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4346970592534855874
@@ -3825,6 +3838,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Challenge
       objectReference: {fileID: 0}
+    - target: {fileID: 691355931311690339, guid: 2386d0b884261504681e1e06a881bdb9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2608404352314624203, guid: 2386d0b884261504681e1e06a881bdb9, type: 3}
       propertyPath: m_Material
       value: 
@@ -3858,6 +3875,11 @@ PrefabInstance:
 --- !u!224 &8053145410992977384 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 691355931311690338, guid: 2386d0b884261504681e1e06a881bdb9, type: 3}
+  m_PrefabInstance: {fileID: 7375407017130518410}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8053145410992977385 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 691355931311690339, guid: 2386d0b884261504681e1e06a881bdb9, type: 3}
   m_PrefabInstance: {fileID: 7375407017130518410}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7641422475031338426
@@ -4129,10 +4151,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skin
       objectReference: {fileID: 0}
+    - target: {fileID: 7597287297136344250, guid: 9f43d15257372d745b833b6ab66c8db5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f43d15257372d745b833b6ab66c8db5, type: 3}
 --- !u!224 &1172822231100165040 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7597287297136344249, guid: 9f43d15257372d745b833b6ab66c8db5, type: 3}
+  m_PrefabInstance: {fileID: 8730314814759253769}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1172822231100165043 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7597287297136344250, guid: 9f43d15257372d745b833b6ab66c8db5, type: 3}
   m_PrefabInstance: {fileID: 8730314814759253769}
   m_PrefabAsset: {fileID: 0}

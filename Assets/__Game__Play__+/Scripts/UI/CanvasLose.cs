@@ -14,6 +14,12 @@ public class CanvasLose : UICanvas
     [Header("Animation")]
     public SkeletonAnimation skeletonAnimation;
     public GameObject objQuest;
+
+    public GameObject objBtnCollection;
+    public GameObject objBtnSkin;
+    public GameObject objBtnArena;
+    public GameObject objBtnChallenge;
+
     //
     #region Gold_Gem,level
     public Text txt_Gold;//gold ở bank đầy
@@ -38,6 +44,24 @@ public class CanvasLose : UICanvas
 
         SoundManager.Ins.PlayFx(FxID.lose);
         Set_Init_Gold_Gem_Level_Title();
+
+
+
+        int curLevel = PlayerPrefs_Manager.Get_Index_Level_Normal();
+
+        if (curLevel >= 3)
+        {
+            objBtnCollection.SetActive(true);
+            objBtnSkin.SetActive(true);
+        }
+        if (curLevel >= 5)
+        {
+            objBtnArena.SetActive(true);
+        }
+        if (curLevel >= 11)
+        {
+            objBtnChallenge.SetActive(true);
+        }
     }
     // Start is called before the first frame update
     void Start()

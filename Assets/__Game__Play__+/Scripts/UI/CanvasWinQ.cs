@@ -31,6 +31,7 @@ public class CanvasWinQ : UICanvas
     public GameObject obj_Btn_No_Thank2;
     public GameObject obj_Image_Claim_ADs;
     public GameObject objRollBar;
+
     public GameObject objBtnCollection;
     public GameObject objBtnSkin;
     public GameObject objBtnArena;

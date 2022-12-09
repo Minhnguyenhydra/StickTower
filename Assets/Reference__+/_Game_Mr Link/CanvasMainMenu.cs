@@ -27,6 +27,12 @@ public class CanvasMainMenu : UICanvas
     public SkeletonAnimation skeletonAnimation;
     public GameObject objQuest;
 
+    public GameObject objBtnCollection;
+    public GameObject objBtnSkin;
+    public GameObject objBtnArena;
+    public GameObject objBtnChallenge;
+    public GameObject objBtnQuest;
+
     private void OnEnable()
     {
         GameManager.isChallengeMode = false;
@@ -49,6 +55,27 @@ public class CanvasMainMenu : UICanvas
 
         int idSkin = PlayerPrefs_Manager.Get_ID_Name_Skin_Wearing();
         Set_Skin(Constant.Get_Skin_Name_By_Id(idSkin));
+
+
+        int curLevel = PlayerPrefs_Manager.Get_Index_Level_Normal();
+
+        if (curLevel >= 3)
+        {
+            objBtnCollection.SetActive(true);
+            objBtnSkin.SetActive(true);
+        }
+        if (curLevel >= 5)
+        {
+            objBtnArena.SetActive(true);
+        }
+        if (curLevel >= 8)
+        {
+            objBtnQuest.SetActive(true);
+        }
+        if (curLevel >= 11)
+        {
+            objBtnChallenge.SetActive(true);
+        }
     }
     #region
 
