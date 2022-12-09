@@ -34,7 +34,6 @@ public class CanvasWinQ : UICanvas
     public GameObject objBtnCollection;
     public GameObject objBtnSkin;
     public GameObject objBtnArena;
-    public GameObject objBtnQuest;
     public GameObject objBtnChallenge;
     //
     public GameObject obj_Image_BG_ADs_Xanh;
@@ -99,35 +98,24 @@ public class CanvasWinQ : UICanvas
         if (curLevel >= 5)
         {
             objBtnArena.SetActive(true);
-            if (curLevel == 5)
-            {
-                objBtnArena.transform.localScale = new Vector2(1.4f, 1.4f);
-                objBtnCollection.transform.localScale = new Vector2(0.8f, 0.8f);
-                objBtnSkin.transform.localScale = new Vector2(0.8f, 0.8f);
-            }
-        }
-        if (curLevel >= 8)
-        {
-            objBtnQuest.SetActive(true);
-            if (curLevel == 8)
-            {
-                objBtnQuest.transform.localScale = new Vector2(1.4f, 1.4f);
-                objBtnArena.transform.localScale = new Vector2(0.8f, 0.8f);
-                objBtnCollection.transform.localScale = new Vector2(0.8f, 0.8f);
-                objBtnSkin.transform.localScale = new Vector2(0.8f, 0.8f);
-            }
+            //if (curLevel == 5)
+            //{
+            //    objBtnArena.transform.localScale = new Vector2(1.4f, 1.4f);
+            //    objBtnCollection.transform.localScale = new Vector2(0.8f, 0.8f);
+            //    objBtnSkin.transform.localScale = new Vector2(0.8f, 0.8f);
+            //}
         }
         if (curLevel >= 11)
         {
             objBtnChallenge.SetActive(true);
-            if (curLevel == 11)
-            {
-                objBtnChallenge.transform.localScale = new Vector2(1.4f, 1.4f);
-                objBtnQuest.transform.localScale = new Vector2(0.8f, 0.8f);
-                objBtnArena.transform.localScale = new Vector2(0.8f, 0.8f);
-                objBtnCollection.transform.localScale = new Vector2(0.8f, 0.8f);
-                objBtnSkin.transform.localScale = new Vector2(0.8f, 0.8f);
-            }
+            //if (curLevel == 11)
+            //{
+            //    objBtnChallenge.transform.localScale = new Vector2(1.4f, 1.4f);
+            //    objBtnQuest.transform.localScale = new Vector2(0.8f, 0.8f);
+            //    objBtnArena.transform.localScale = new Vector2(0.8f, 0.8f);
+            //    objBtnCollection.transform.localScale = new Vector2(0.8f, 0.8f);
+            //    objBtnSkin.transform.localScale = new Vector2(0.8f, 0.8f);
+            //}
         }
 
         Set_Init_Gold_Gem_Title();
