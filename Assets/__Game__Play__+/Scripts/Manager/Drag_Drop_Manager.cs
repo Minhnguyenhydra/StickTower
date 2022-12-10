@@ -689,9 +689,9 @@ public class Drag_Drop_Manager : Singleton_Q<Drag_Drop_Manager>
             }
             else//Show camera đánh Boss
             {
-                Player.ins.is_Block_Raycas = true;
-                UIManager.Ins.OpenUI(UIID.UICFight_Boss);
-                Camera_Manager.Ins.SetMove_To_Floor_Boss(_floor.tf_Floor);
+                    Player.ins.is_Block_Raycas = true;
+                    UIManager.Ins.OpenUI(UIID.UICFight_Boss);
+                    Camera_Manager.Ins.SetMove_To_Floor_Boss(_floor.tf_Floor);
             }
         }
 
@@ -771,7 +771,7 @@ public class Drag_Drop_Manager : Singleton_Q<Drag_Drop_Manager>
         RaycastHit[] hits = new RaycastHit[6];
         //nếu raycast vào gameObject
         int layerMask = 1 << 0;//TODO: dịch bit, (chon giá trị có thể Raycast của Layer index là 6) = 1 ở trong danh sách các layer (layerMask), (các layer còn lại trong layerMask có giá trị Raycast) = 0
-        Physics.RaycastNonAlloc(ray, hits, 1000, layerMask);
+        Physics.RaycastNonAlloc(ray, hits, 1000);
         return hits;
     }
     #endregion

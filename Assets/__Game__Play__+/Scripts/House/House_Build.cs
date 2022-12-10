@@ -199,4 +199,9 @@ public class House_Build : MonoBehaviour
         _Floor.Set_Empty_Floor_Tree();
         list_Floor.Remove(_Floor);
     }
+
+    public bool CanWin()
+    {
+        return numEnemiesKilled >= totalEnemy;
+    }
 }

@@ -464,11 +464,20 @@ public class CanvasFight_Boss : UICanvas
     IEnumerator IE_DelayClose_CanvasFight_Start()
     {
         yield return Cache.GetWFS(Constant.Time_DelayClose_CanvasFight_Start);
-        
-        
 
-        Player.ins.health = 100;
-        Player.ins.health_Bar.Set_Health_Imedetly(100);
+        if (!Player.ins.floor_stay.house_Build_Of_This.CanWin())
+        {
+            Player.ins.health_Bar.gameObject.SetActive(true);
+            //Cho Health Bar chạy tăng máu
+            Player.ins.health_Bar.Set_Step_By_Step_Health(Player.ins.Get_Health(), Player.ins.Get_Health() + GameManager.Ins.enemyBoss_auto_Asign.health, Constant.Time_Player_Attack_idle);
+            //Sau khi set Health Bar mới được gắn Máu thật tăng lên cho Player
+            Player.ins.Set_Add_Health(GameManager.Ins.enemyBoss_auto_Asign.health);
+        }
+        else
+        {
+            Player.ins.health = 100;
+            Player.ins.health_Bar.Set_Health_Imedetly(100);
+        }
 
         GameManager.Ins.enemyBoss_auto_Asign.health = 100;
         GameManager.Ins.enemyBoss_auto_Asign.health_Bar.Set_Health_Imedetly(100);

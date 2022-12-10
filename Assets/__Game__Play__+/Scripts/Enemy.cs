@@ -183,7 +183,7 @@ public class Enemy : MonoBehaviour
         float time_action_Die = Constant.Get_Time_action_Die_Enemy(isBig_Enemy);
         yield return Cache.GetWFS(time_action_Die);
 
-        
+
         if (!floor_This.house_Build_Of_This.isLastHouse
           && floor_This.house_Build_Of_This.numEnemiesKilled >= floor_This.house_Build_Of_This.totalEnemy)
         {
@@ -345,7 +345,7 @@ public class Enemy : MonoBehaviour
             //damge 25
             if (!isDieing_Fight_Boss)
             {
-                Player.ins.health_Bar.Set_Step_By_Step_Health(_health_Player, 80, 1);
+                //Player.ins.health_Bar.Set_Step_By_Step_Health(_health_Player, 80, 1);
 
                 ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Fill_Health_Player(0.8f);
             }
@@ -365,7 +365,7 @@ public class Enemy : MonoBehaviour
             //damge 25
             if (!isDieing_Fight_Boss && Player.ins != null)
             {
-                Player.ins.health_Bar.Set_Step_By_Step_Health(_health_Player, 60, 1);
+                //Player.ins.health_Bar.Set_Step_By_Step_Health(_health_Player, 60, 1);
 
                 ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Fill_Health_Player(0.6f);
             }
@@ -385,7 +385,7 @@ public class Enemy : MonoBehaviour
             //damge 25
             if (!isDieing_Fight_Boss && Player.ins != null)
             {
-                Player.ins.health_Bar.Set_Step_By_Step_Health(_health_Player, 40, 1);
+                //Player.ins.health_Bar.Set_Step_By_Step_Health(_health_Player, 40, 1);
 
                 ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Fill_Health_Player(0.4f);
             }
@@ -405,7 +405,7 @@ public class Enemy : MonoBehaviour
             //damge 25
             if (!isDieing_Fight_Boss && Player.ins != null)
             {
-                Player.ins.health_Bar.Set_Step_By_Step_Health(_health_Player, 20, 1);
+                //Player.ins.health_Bar.Set_Step_By_Step_Health(_health_Player, 20, 1);
 
                 ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Fill_Health_Player(0.2f);
             }
@@ -425,7 +425,7 @@ public class Enemy : MonoBehaviour
             //damge 25
             if (!isDieing_Fight_Boss && Player.ins != null)
             {
-                Player.ins.health_Bar.Set_Step_By_Step_Health(_health_Player, 0, 1);
+                //Player.ins.health_Bar.Set_Step_By_Step_Health(_health_Player, 0, 1);
 
                 ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Fill_Health_Player(0.0f);
 
@@ -751,8 +751,21 @@ public class Enemy : MonoBehaviour
                 SetCharacterState_NoLoop(Action_Die);
                 SoundManager.Ins.PlayFx(FxID.giantDeath);
                 ((CanvasFight_Boss)UIManager.Ins.GetUI(UIID.UICFight_Boss)).Set_Anim_Red_R();
-                Cache.GetWFS(0.1f);//2.5
-                GameManager.Ins.Set_Mai_Xanh_Delay_Win(floor_This);
+                yield return Cache.GetWFS(Action_Die.Animation.Duration);//2.5
+                floor_This.house_Build_Of_This.numEnemiesKilled++;
+                if (floor_This.house_Build_Of_This.CanWin())
+                {
+                    GameManager.Ins.Set_Mai_Xanh_Delay_Win(floor_This);
+                }
+                else
+                {
+                    Player.ins.is_Block_Raycas = false;
+                    Player.ins.Set_Anim_Idle();
+                    Player.ins.Set_Un_Block_Colider_Player();
+                    UIManager.Ins.GetUI(UIID.UICFight_Boss).gameObject.SetActive(false);
+                    Camera_Manager.Ins.Back(2);
+                    yield return Cache.GetWFS(0.25f);
+                }
 
             }
         }

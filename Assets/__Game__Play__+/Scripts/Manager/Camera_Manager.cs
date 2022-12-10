@@ -133,9 +133,12 @@ public class Camera_Manager : Singleton<Camera_Manager>
         cam.DOOrthoSize(8.5f, 0.5f);
     }
 
-    public void Back()
+    public void Back(int index = 1)
     {
-        Move_Cam(list_Pos_Cam_move.Count - 1);
+        cam.nearClipPlane = -0.01f;
+        Vector3 target = list_Pos_Cam_move[list_Pos_Cam_move.Count - index].localPosition;
+        target.z = tf_Cam.localPosition.z;
+        tf_Cam.DOLocalMove(target, Constant.Time_Cam_Move);
         cam.DOOrthoSize(21f, 0.5f);
     }
 

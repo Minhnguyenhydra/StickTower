@@ -1,4 +1,5 @@
-﻿using Spine.Unity;
+﻿using DG.Tweening;
+using Spine.Unity;
 using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
@@ -14,6 +15,9 @@ public class GameManager : Singleton<GameManager>
     public static bool isChallengeMode;
     public int lastLevel;
     public SkeletonAnimation superBoss;
+    public SkeletonAnimation player;
+    public AnimationReferenceAsset superBossAttack;
+    public AnimationReferenceAsset attackBoss;
 
 
     public enum GameState
@@ -117,22 +121,21 @@ public class GameManager : Singleton<GameManager>
         _floor.house_Build_Of_This.Set_This_To_Team_Player();
 
 
-        if (PlayerPrefs_Manager.Get_Index_Level_Normal() != 32)
-        {
-            Set_Spawn_FireWord(Player.ins.tf_Player);
-        }
-        else
-        {
-            if (!isFireWork_1_lv_38)
-            {
-                isFireWork_1_lv_38 = true;
-                Set_Spawn_FireWord(Player.ins.tf_Player);
-            }
-        }
+        //if (PlayerPrefs_Manager.Get_Index_Level_Normal() != 32)
+        //{
+        //    Set_Spawn_FireWord(Player.ins.tf_Player);
+        //}
+        //else
+        //{
+        //    if (!isFireWork_1_lv_38)
+        //    {
+        //        isFireWork_1_lv_38 = true;
+        //        Set_Spawn_FireWord(Player.ins.tf_Player);
+        //    }
+        //}
 
-
-        Player.ins.Set_Anim_Victory();
-        SoundManager.Ins.PlayFx(FxID.yes);
+        //Player.ins.Set_Anim_Victory();
+        //SoundManager.Ins.PlayFx(FxID.yes);
 
         ((CanvasGamePlay)UIManager.Ins.GetUI(UIID.UICGamePlay)).Set_Active_Castle_Nha_Cuoi_Chiem_Duoc();
 
@@ -165,32 +168,41 @@ public class GameManager : Singleton<GameManager>
     {
         if (isChallengeMode)
         {
-            yield return Cache.GetWFS(Player.ins.Action_Victory.Animation.Duration);
-            UIManager.Ins.OpenUI(UIID.UICFade);
-            ((CanvasFade)UIManager.Ins.GetUI(UIID.UICFade)).Set_Fade_Out();
-            Player.ins.gameObject.SetActive(false);
-            UIManager.Ins.GetUI(UIID.UICFight_Boss).gameObject.SetActive(false);
             yield return Cache.GetWFS(1.5f);
-
-            //if (Player.ins.enemy_Hitting != null && Player.ins.enemy_Hitting.isBoss_UNTIL)
-            //{
-            //    Camera_Manager.Ins.Back();
-            //    yield return Cache.GetWFS(0.25f);
-            //}
+            UIManager.Ins.GetUI(UIID.UICFight_Boss).gameObject.SetActive(false);
 
             Camera_Manager.Ins.Back();
+            player.Skeleton.SetSkin(Constant.Get_Skin_Name_By_Id(PlayerPrefs_Manager.Get_ID_Name_Skin_Wearing()));
             yield return Cache.GetWFS(0.25f);
 
-            superBoss.Skeleton.SetSkin(Constant.Get_Skin_Name_By_Id(PlayerPrefs_Manager.Get_ID_Name_Skin_Wearing()));
-            superBoss.transform.parent.gameObject.SetActive(true);
-            SoundManager.Ins.PlayFxWithName("sfx_skill_boss_challenge");
+            Player.ins.Set_Block_Colider_Player();
+            Player.ins.Set_Anim_Run();
+            Player.ins.tf_Player.DOMove(Player.ins.floor_stay.tf_Point_End_Level.position, Constant.Time_Player_Move_End_Level).OnComplete(() =>
+            {
+                Player.ins.gameObject.SetActive(false);
+                player.gameObject.SetActive(true);
+                player.AnimationState.SetAnimation(0, attackBoss, false).TimeScale = 1f;
 
-            yield return Cache.GetWFS(Constant.Time_SuperBossAttack);
+                superBoss.AnimationState.SetAnimation(0, superBossAttack, false).TimeScale = 1f;
+                SoundManager.Ins.PlayFxWithName("sfx_skill_boss_challenge");
+            });
+            yield return Cache.GetWFS(Constant.Time_Player_Move_End_Level + Constant.Time_SuperBossAttack);
+
+            player.gameObject.SetActive(false);
+            Player.ins.gameObject.SetActive(true);
+            Set_Spawn_FireWord(Player.ins.tf_Player);
+            Player.ins.Set_Anim_Victory();
+            SoundManager.Ins.PlayFx(FxID.yes);
+
+
         }
 
-#if UNITY_EDITOR
-        //Debug.Log("~~~~~");
-#endif
+        else
+        {
+            Set_Spawn_FireWord(Player.ins.tf_Player);
+            Player.ins.Set_Anim_Victory();
+            SoundManager.Ins.PlayFx(FxID.yes);
+        }
         yield return Cache.GetWFS(Constant.Time_Delay_Fade_Win);
         UIManager.Ins.OpenUI(UIID.UICFade);
         ((CanvasFade)UIManager.Ins.GetUI(UIID.UICFade)).Set_Fade_Out();
